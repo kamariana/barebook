@@ -1,0 +1,95 @@
+:root {
+  // * Base line-height 
+  --base-line-height: 1.75; // 28px
+
+  // Spacing Methods within layouts and components.
+  --spacing-unit-nano: 0.25rem;   // 4px
+  --spacing-unit-tiny: 0.5rem;    // 8px
+  --spacing-unit-small: 0.75rem;   // 12px
+  --spacing-unit-medium: 1rem;      // 16px 
+  --spacing-unit-large: 1.5rem;    // 24px
+  --spacing-unit-larger: 2rem;     // 32px
+  --spacing-unit-largest: 3rem;     // 48px
+  --spacing-unit-huge: 4rem;     // 64px
+
+  // Container widths
+  --contain-width-nano: 20rem;
+  --contain-width-tiny: 23.438rem;
+  --contain-width-small: 26.563rem;
+  --contain-width-medium-small: 38rem;
+  --contain-width-medium: 48rem;
+  --contain-width-large: 64rem;
+  --contain-width-larger: 85.375rem;
+  --contain-width-largest: 90rem;
+  --contain-width-huge: 160rem;
+  
+  --header-height-small: 64px;
+  --header-height-medium: 96px;
+  --sidebar-width-small: 124px;
+
+  // Icons, Buttons, Input heights
+  --shape-unit-tiny: 12px;
+  --shape-unit-small: 16px;
+  --shape-unit-medium: 24px;
+  --shape-unit-large: 28px;
+  --shape-unit-larger: 32px;
+  --shape-unit-largest: 48px;
+  
+
+
+  // * Typography
+
+  // typefaces
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-secondary: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --font-code: 'Fira Code', 'Courier New', Courier, monospace;
+  --font-quotes: Georgia, serif;
+
+  // font sizes
+  --font-size-body-tiny: 0.75rem;      // 12px
+  --font-size-body-small: 0.875rem;     // 14px
+  --font-size-body: 1rem;         // 16px
+  --font-size-body-large: 1.125rem;     // 18px
+  
+  --font-size-heading-nano: 1.25rem;      // 20px
+  --font-size-heading-tiny: 1.5rem;       // 24px
+  --font-size-heading-small: 1.75rem;      // 28px
+  --font-size-heading-medium: 2.25rem;      // 36px
+  --font-size-heading-large: 2.75rem;      // 44px
+  --font-size-heading-larger: 3.25rem;      // 52px
+  --font-size-heading-largest: 3.75rem;      // 60px
+  --font-size-heading-huge: 4.5rem;      // 72px
+
+
+
+  // Border radius widths
+  --bd-radius-nano: 2px;
+  --bd-radius-tiny: 5px;
+  --bd-radius-small: 8px;
+  --bd-radius-large: 56px;
+  --bd-radius-circle: 50%;
+
+
+
+  // * box shadows
+  --bs-border-gray-lightest: 0 0 0 1px var(--gray-lightest);
+  --bs-border-gray-light: 0 0 0 1px var(--gray-light);
+  --bs-card: 0 1px 4px 0 hsla(240, 4%, 5%, 0.1);
+  --bs-card-hover: 0 0 0 5px hsla(0, 0%, 88%, 0.7);
+  --bs-box: 0 10px 15px -8px hsla(240, 4%, 5%, 0.3);
+
+
+
+  // * Z-Index layers
+  --layer-surface: 90;
+  --layer-modal-content: 80;
+  --layer-modal: 70;
+  --layer-overlay: 60;
+  --layer-dropdown: 50;
+  --layer-navbar: 40;
+  --layer-front: 30;
+  --layer-forward: 20;
+  --layer-back: 10;
+  --layer-backward: 0;
+  --layer-under: -1;
+}
