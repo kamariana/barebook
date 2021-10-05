@@ -1,0 +1,11 @@
+{
+  "name": "barebook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:camariana/barebook.git",
+  "author": "camariana <camariana40@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bundle exec jekyll serve  --trace --livereload"
+  }
+}

@@ -1,0 +1,23 @@
+/* @docs
+label: Turn off browser defaults
+
+Note: |
+  1. Off for the following browsers Chrome, Safari, Edge, Opera
+  2. Firefox 
+
+category: forms
+ */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+[type='checkbox'],
+[type='radio'],
+select {
+  appearance: none;
+}
+
+[type='number'] {
+  appearance: textfield;
+}

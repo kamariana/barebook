@@ -1,0 +1,69 @@
+/**
+ *  Base settings
+ */
+html {
+  //line-sizing: normal;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--gray-darkest);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--base-line-height);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+/**
+ *  A consistent vertical rhythm using the base line-height
+ */
+ul,
+ol,
+dl,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre {
+  margin-top: var(--spacing-unit-larger);
+}
+
+
+ 
+ 
+ 
+ 
+ul,
+ol {
+  margin-left: var(--base-spacing-unit);
+  padding-left: var(--base-spacing-unit-tiny);
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Form elements render using OS defaults,
+ * so font-family inheritance must be specifically declared
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}

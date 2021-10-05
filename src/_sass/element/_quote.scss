@@ -1,0 +1,19 @@
+blockquote {
+  font-family: var(--font-quotes);
+  font-size: var(--font-size-body-large);
+  line-height: 1.5;
+  max-width: var(--contain-width-medium);
+  padding: var(--spacing-unit-small);
+  
+  > p {
+    margin-top: 0;
+  }
+
+  > * + * {
+    margin-top: var(--spacing-unit-medium);
+  }
+}
+
+q {
+  font-style: italic;
+}

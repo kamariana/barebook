@@ -1,0 +1,84 @@
+{% assign component = include.item %}
+{% assign source = item.url | prepend: site.baseurl %}
+{% assign slug = item.slug %}
+{% assign title = item.slug | replace: "-", " " | capitalize %}
+{% assign description = item.description | markdownify %}
+{% assign hint = item.hint | markdownify %}
+{% assign html = item.content %}
+{% assign parameters = item.parameters %}
+{% assign tab_name = slug | append: "-tab" %}
+
+
+<li class="component" id="{{ slug }}">
+  <div class="component-doc">
+    <h2 class="component-title">
+      {{ title }}
+    </h2>
+    <p>
+      {{ description }}
+    </p>
+
+    <table class="component-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for parameter in parameters %}
+          {% assign parameter_name =
+          parameter[0] %}
+          {% assign parameter_desc = parameter[1] | markdownify
+          %}
+          <tr>
+            <td>
+              <code>{{ parameter_name }}</code>
+            </td>
+            <td>{{ parameter_desc }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if hint %}
+      <div class="component-hint">
+        {{ hint }}
+      </div>
+    {% endif %}
+
+  </div>
+  <div class="component-showcase">
+    <div class="component-output">
+      <a class="component-fullscreen" href="{{ source }}" title="Open in a New window" target="_blank">
+        <img alt="" aria-hidden="true" src="/styleguide/img/full-screen.svg"/>
+        <span class="u-sr-only">Open in a New window</span>
+      </a>
+
+      <!-- <iframe class="component-iframe" src="{{ source }}" title="{{ title }}"></iframe> -->
+      {{ html }}
+    </div>
+    <div class="component-code">
+      <!-- tabs -->
+      <div class="component-tabbed js-component-tabbed">
+        <nav class="component-tabs">
+          <a class="component-tab" href="#{{ tab_name }}-html">
+            HTML
+          </a>
+          <a class="component-tab" href="#{{ tab_name }}-scss">
+            SCSS
+          </a>
+        </nav>
+
+        <div class="component-tabs-panels">
+          <section id="{{ tab_name }}-html" class="component-tab-panel">
+            {% highlight html %}{{ html }}{% endhighlight %}
+          </section>
+          <section id="{{ tab_name }}-scss" class="component-tab-panel">
+            {% highlight css %}{{ css }}{% endhighlight %}
+          </section>
+        </div>
+      </div>
+      <!-- /tabs -->
+    </div>
+  </div>
+</li>

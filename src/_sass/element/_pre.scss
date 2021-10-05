@@ -1,0 +1,18 @@
+pre {
+  background-color: #ECEFF1;
+  color: var(--black);
+  font-family: var(--font-code);
+  font-size: var(--font-size-body-small);
+  padding: var(--spacing-unit-medium);
+  white-space: pre-wrap;
+
+  code {
+    background-color: transparent;
+  }
+}
+
+@include respond(laptop-m) {
+  pre {
+    padding: var(--spacing-unit-large);
+  } 
+}   // 1366px

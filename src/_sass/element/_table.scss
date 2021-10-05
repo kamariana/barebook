@@ -1,0 +1,21 @@
+table {
+  background-color: var(--white);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: var(--spacing-unit-tiny);
+  text-align: left;
+}
+
+caption {
+  caption-side: bottom;
+  color: var(--gray-dark);
+  font-size: var(--font-size-body-tiny);
+  font-style: italic;
+  font-style: italic;
+  line-height: 1.375;
+  text-align: left;
+}
