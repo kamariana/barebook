@@ -1,0 +1,33 @@
+# Site settings
+title: Barebook
+description: "Barebook is a scalable and maintainable CSS library base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)"
+keywords:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: 
+type: website
+image: 
+author: A Camariana
+permalink: pretty
+
+# Global Configuration
+source: src
+
+# Sass Settings
+sass:
+  add_charset: true
+  sass_dir: _sass
+  style: :compressed
+
+# Collections Settings
+collections_dir: the_collections
+collections:
+  design:
+    output: true
+  elements:
+    output: true
+  components:
+    output: true
+  patterns:
+    output: true
+
+# Contact & Social Details
