@@ -1,0 +1,73 @@
+{% assign component = include.component %}
+{% assign iframe_source = component.url | prepend: site.baseurl %}
+{% assign slug = component.slug %}
+{% assign title = slug | replace: "-", " " | capitalize %}
+{% assign description = component.description | markdownify %}
+{% assign html_code = component.content %}
+{% assign liquid_code = component.example %}
+{% assign parameters = component.parameters %}
+{% assign tab_name = slug | append: "-" | append: "-tab" %}
+
+<div class="s-styleguide-showcase" id="{{ slug }}">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{ title }}</h2>
+    </div>
+
+    <div class="panel-body">
+      {{ description }}
+
+      <!-- Component include parameters -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for parameter in parameters %}
+          {% assign parameter_name = parameter[0] %}
+          {% assign parameter_desc = parameter[1] | markdownify %}
+          <tr>
+            <td><code>{{ parameter_name }}</code></td>
+            <td>{{ parameter_desc }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#{{ tab_name }}-demo" aria-controls="{{ tab_name }}-demo" role="tab" data-toggle="tab">Demo</a>
+        </li>
+        <li role="presentation">
+          <a href="#{{ tab_name }}-liquid" aria-controls="{{ tab_name }}-liquid" role="tab" data-toggle="tab">Liquid</a>
+        </li>
+        <li role="presentation">
+          <a href="#{{ tab_name }}-html" aria-controls="{{ tab_name }}-html" role="tab" data-toggle="tab">HTML</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane active" id="{{ tab_name }}-demo">
+          <iframe src="{{ iframe_source }}" title="{{ title }}"></iframe>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-liquid">
+          {% highlight liquid %}{{ liquid_code }}{% endhighlight %}
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-html">
+          {% highlight html %}{{ html_code }}{% endhighlight %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
