@@ -1,0 +1,61 @@
+---
+title: Elements
+layout: styleguide
+
+permalink: /elements/
+---
+
+<h1>
+  {{ page.title }}
+</h1>
+
+<p class="u-lead-text">
+  These are the fundamental visual elements that shape how we design all the experiences across the websites and apps built with Barebook.
+</p>
+
+<p>
+  This includes guidance on colors, typography, iconography, etc.
+</p>
+
+
+{% assign elementsByType = site.elements | group_by: "type" | sort: 'order'  %}
+{% for component in elementsByType %}
+
+  {% assign asc = component.items | sort: 'order' %}
+  {% for item in asc %}
+    
+  {% endfor %}
+{% endfor %}
+
+
+
+<!-- <ul class="elements">
+  {% assign elementsByType = site.elements | group_by: "type"  %}
+  {% for component in elementsByType %}
+  {% assign asc = component.items | sort: 'order' %}
+
+  {{ asc }}
+  
+    {% if component.category == "elements" %} 
+      {% assign asc = component.items | sort: 'order' %}
+      {% for item in asc %}
+       
+        {% include component-template.html component = component %}
+
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul> -->
+
+
+
+<ul>
+  {% assign elements = site.elements %}
+  {% for element in elements %}
+    <li class="">
+      <a class="" href="{{ element.url }}">
+        {{ element.title }}
+      </a>
+    </li> 
+  {% endfor %}
+</ul>

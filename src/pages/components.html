@@ -1,0 +1,26 @@
+---
+title: Components
+layout: styleguide
+
+permalink: /components/
+---
+
+<h1>
+    {{ page.title }}
+</h1>
+
+<p class="u-lead-text">
+    These are the fundamental visual elements that shape how we design all the experiences across the websites and apps built with Barebook.
+</p>
+
+<p>
+    This includes guidance on colors, typography, iconography, etc.
+</p>
+
+{% for component in site.components %}
+
+{{ component }}
+  {% include utils/output.html
+    component = component
+  %}
+{% endfor %}
