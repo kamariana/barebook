@@ -1,0 +1,117 @@
+/**
+ * Breakpoint 
+ */
+$bps: (
+  mobile-s:     20rem,
+  mobile-m:     23.438rem,
+  mobile-l:     26.563rem,
+  tablet:       48rem,
+  laptop-s:     64rem,
+  laptop-m:     85.375rem,
+  laptop-l:     90rem,
+) !default;
+
+@mixin respond($bp) {
+  @if map-has-key($bps, $bp) {
+    @media screen and (min-width: #{map-get($bps, $bp)}) {
+      @content;
+    }
+  } @else {
+    @warn 'Unknown `#{$bp}` in $bps, please check';
+  }
+}
+
+// usage
+/* 
+@include respond(mobile-s) {}   // 320px,
+@include respond(mobile-m) {}   // 375px
+@include respond(mobile-l) {}   // 425px,
+@include respond(tablet) {}     // 768px
+@include respond(laptop-s) {}   // 1024px
+@include respond(laptop-m) {}   // 1366px
+@include respond(laptop-l) {}   // 1440px
+*/
+
+
+
+// * List bare to reset ol, ul and dl elements
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// Flexboxs
+@mixin dp-flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+// Positions
+@mixin pos-rel-overflow-hidden {
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin pos-rel-object-on-top {
+  position: relative;
+  z-index: var(--layer-forward);
+}
+
+@mixin pos-fix-zero-all-sides {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+@mixin pos-abs-zero-all-sides {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+@mixin pos-abs-zero-all-sides-pseudo-class {
+  bottom: 0;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: var(--layer-back);
+}
+
+
+
+// Fit media (img,video,picture) into its parent box
+@mixin fit-media-into-container {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+
+
+// Transform and scale
+@mixin trans-and-scale {
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+@mixin scale-out-on-hover-and-focus {
+  transform: scale(1.03);
+}
