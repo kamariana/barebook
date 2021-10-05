@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barebook</title>
+    <link rel="stylesheet" href="/public/css/barebook.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body class="bb-body">
+    <div class="bb-app">
+
+        {% include utils/header.html %}
+
+        <main class="bb-main">
+
+            <div class="bb-content">
+              
+                <article class="bb-content-main">
+                      
+                    {{ content }}                 
+
+                </article>
+
+                <aside class="bb-toc">
+                  <h3 class="bb-toc-title">CONTENTS</h3>
+                  <nav class="bb-toc-nav">
+                    <ul class="bb-toc-nav__list">
+                        <li class="bb-toc-nav__item">
+                            <a href="#" class="bb-toc-nav__link is-active">
+                                Some example healine
+                            </a>
+                        </li>
+                        <li class="bb-toc-nav__item">
+                            <a href="#" class="bb-toc-nav__link">
+                                Some example healine
+                            </a>
+                        </li>
+                        <li class="bb-toc-nav__item">
+                            <a href="#" class="bb-toc-nav__link">
+                                Some example healine
+                            </a>
+                        </li>
+                        <li class="bb-toc-nav__item">
+                            <a href="#" class="bb-toc-nav__link">
+                                Some example healine
+                            </a>
+                        </li>
+                        <li class="bb-toc-nav__item">
+                            <a href="#" class="bb-toc-nav__link">
+                                Some example healine
+                            </a>
+                        </li>
+                    </ul>
+                  </nav>
+                  
+                </aside>
+                
+            </div>
+
+            {% include utils/sidebar.html %}
+
+        </main>
+
+        {% include utils/footer.html %}
+
+    </div>
+</body>
+</html>
