@@ -1,0 +1,12 @@
+// * Selection to avoid text-shadow during text highlighting
+::selection {
+  background: var(--gray-darkest);
+  color: var(--gray-lightest);
+  text-shadow: none;
+}
+  
+::selection {
+  background: var(--gray-darkest);
+  color: var(--gray-lightest);
+  text-shadow: none;
+}
