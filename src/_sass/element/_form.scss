@@ -1,0 +1,51 @@
+// Default styles
+fieldset {
+  border: 0;
+  width: 100%;
+}
+
+legend {
+  line-height: 1.375;
+  margin-bottom: var(--spacing-unit-tiny);
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.375;
+}
+
+textarea {
+  min-height: 10rem;
+}
+
+select {
+  background-color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+
+
+input,
+select,
+textarea {
+  color: inherit;
+  transition-duration: 150ms;
+  transition-property: border-color;
+  width: 100%;
+}
+
+[type='checkbox'],
+[type='radio'],
+[type='submit'] {
+  height: auto;
+  width: auto;
+}
+
+[type='file'],
+[type='range'] {
+  border-style: dotted;
+  cursor: pointer;
+  touch-action: manipulation;
+}
