@@ -12,20 +12,20 @@
 
         {% include utils/header.html %}
 
-        <main class="bb-main">
+        {% include utils/banner.html %}
 
-            <div class="bb-content">
-              
-                <article class="bb-content-main">
-                      
-                    {{ content }}                 
-
-                </article>
-                
+        <main class="bb-main bb-main--styleguide">
+            <div class="bb-contain">
+               
+                <div class="bb-content">
+                    {{ content }}
+                </div>
+                                
             </div>
-
-           {{ page.title }}
-
+           
+           <span class="bb-page-title-alt">
+            {{ page.title }}
+           </span>
         </main>
 
         {% include utils/footer.html %}

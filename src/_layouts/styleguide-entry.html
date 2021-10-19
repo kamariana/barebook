@@ -12,54 +12,29 @@
 
         {% include utils/header.html %}
 
-        <main class="bb-main">
+        {% include utils/banner.html %}
 
+        <main class="bb-main bb-main--styleguide-entry">
             <div class="bb-content">
-              
-                <article class="bb-content-main">
-                      
-                    {{ content }}                 
-
-                </article>
-
-                <aside class="bb-toc">
-                  <h3 class="bb-toc-title">CONTENTS</h3>
-                  <nav class="bb-toc-nav">
-                    <ul class="bb-toc-nav__list">
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link is-active">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                    </ul>
-                  </nav>
-                  
-                </aside>
                 
+                {{ content }}
+                                
             </div>
-
-            {% include utils/sidebar.html %}
-
+           
+           <aside class="bb-sidebar">
+            <nav class="bb-toc-nav">
+                <ul class="bb-toc-nav__list">
+                    {% assign designs = site.design %}
+                    {% for item in designs %}
+                        <li class="bb-toc-nav__item">
+                            <a class="bb-toc-nav__link" href="{{ item.url }}">
+                                {{ item.title }}
+                            </a>
+                        </li> 
+                    {% endfor %}
+                  </ul>
+                </nav>
+           </aside>
         </main>
 
         {% include utils/footer.html %}
