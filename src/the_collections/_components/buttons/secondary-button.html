@@ -1,0 +1,24 @@
+---
+title:  Secondary Button
+type: button
+order: 2
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<a class="button" href="#">
+  Secondary Button - Link
+</a>
+
+<button class="button" type="button">
+  Secondary Button - Button
+</button>
+
+<input class="button" type="button" value="Secondary Button - Input">
