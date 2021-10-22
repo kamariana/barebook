@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barebook</title>
+    <title>{{ page.title }} - Barebook</title>
     <link rel="stylesheet" href="/public/css/barebook.css">
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
@@ -14,8 +14,13 @@
 
         {% include utils/banner.html %}
 
+        
+
         <main class="bb-main bb-main--styleguide-entry">
             <div class="bb-content">
+                <h1 class="bb-page-title">
+                    {{ page.title }}
+                </h1>
                 
                 {{ content }}
                                 
@@ -24,13 +29,18 @@
            <aside class="bb-sidebar">
             <nav class="bb-toc-nav">
                 <ul class="bb-toc-nav__list">
-                    {% assign designs = site.design %}
-                    {% for item in designs %}
-                        <li class="bb-toc-nav__item">
-                            <a class="bb-toc-nav__link" href="{{ item.url }}">
-                                {{ item.title }}
-                            </a>
-                        </li> 
+                    {% assign components = site.data.components-menu %}
+                    {% for component in components %}
+                    {% if component.title == page.title %} 
+                            {% for entry in component.sub %}
+                            {% assign url = entry.url | replace: " ", "-" | downcase %}
+                            <li class="bb-toc-nav__item">
+                                <a class="bb-toc-nav__link" href="{{ url }}">
+                                    {{ entry.title }}
+                                </a>
+                            </li> 
+                            {% endfor%}
+                        {% endif %} 
                     {% endfor %}
                   </ul>
                 </nav>
