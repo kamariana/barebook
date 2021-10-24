@@ -1,2 +1,14 @@
+- title: Alerts
+  url: /components/alerts/
+  sub:
+    - title: Alert Info
+      url: /components/alerts#alert-info
+    - title: Alert Warning
+      url: /components/alerts#alert-warning
 - title: Buttons
   url: /components/buttons/
+  sub:
+    - title: Primary button
+      url: /components/buttons/#primary-button
+    - title: Secondary button
+      url: /components/buttons/#secondary-button
