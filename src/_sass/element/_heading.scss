@@ -1,6 +1,5 @@
 h1 {
   font-size: var(--font-size-heading-medium);
-  margin-top: 0.67em;
 }
 
 h2 {
@@ -30,10 +29,10 @@ h6 {
   line-height: 1.25;
 
   &:not(:first-child) {
-    margin-top: var(--spacing-unit-larger);
+    margin-top: var(--spacing-unit-largest);
   }
 
   + * {
-    margin-top: var(--spacing-unit-small);
+    margin-top: var(--spacing-unit-medium);
   }
 }
