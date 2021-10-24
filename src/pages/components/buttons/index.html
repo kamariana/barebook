@@ -1,18 +1,8 @@
 ---
 title: Buttons
 layout: styleguide-entry
-
+type: button
 permalink: /components/buttons/
 ---
 
-<ul class="components">
-  {% assign componentsByType = site.components | group_by: "type"  %}
-  {% for component in componentsByType %}
-    {% if component.name == "button" %}
-      {% assign asc = component.items | sort: 'order' %}
-      {% for item in asc %}
-        {% include component-template.html component = component %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include component-type.html %}
