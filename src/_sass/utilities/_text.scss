@@ -5,6 +5,7 @@
 
 .u-lead-text {
   font-size: var(--font-size-heading-nano);
+  line-height: 1.5;
 }
 
 
@@ -14,6 +15,6 @@
   }
 
   .u-lead-text {
-    font-size: var(--font-size-heading-small);
+    font-size: var(--font-size-heading-tiny);
   }
 }   // 1024px
