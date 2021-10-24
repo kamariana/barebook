@@ -35,12 +35,12 @@
 
 
 // Objects
-@import './object/page/index';
-@import './object/container/index';
+@import './object/page/page';
+@import './object/container/container';
 
 
 // Components
-
+@import './component/alert/alert';
 
 
 
@@ -55,3 +55,6 @@
 
 
 // Utilities
+@import './utilities/spacing';
+@import './utilities/text';
+@import './utilities/visually-hidden';
