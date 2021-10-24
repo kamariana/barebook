@@ -1,0 +1,19 @@
+.u-lead-headline {
+  font-size: var(--font-size-heading-small);
+  line-height: 1.25;
+}
+
+.u-lead-text {
+  font-size: var(--font-size-heading-nano);
+}
+
+
+@include respond(laptop-s) {
+  .u-lead-headline {
+    font-size: var(--font-size-heading-larger);
+  }
+
+  .u-lead-text {
+    font-size: var(--font-size-heading-small);
+  }
+}   // 1024px
