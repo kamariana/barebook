@@ -11,16 +11,21 @@
   --gray-lighter: #ededed;
   --gray-lightest: #f5f5f5;
 
+  // * Primary & secondary
   --primary-dark: #30001f;
   --primary: #5d1049;
   --primary-light: #8a3e71;
 
   --secondary-dark: #00796a;
-  --secondary: #009688;
-  --secondary-light: #26a699;
+  --secondary: #ccc;
+  --secondary-light: #f6f6f7;
    
 
   // * Notifications
+  --interactive: #2c6ecb;
+  --interactive-lighter: #2c6ecb;
+  --interactive-lightest: #f2f7fe;
+
   --success: #1f7b5c;
   --success-lighter: #b5e0d3;
   --success-lightest: #e1f2ee;
@@ -36,6 +41,12 @@
   --error: #d63312;
   --error-lighter: #f95446;
   --error-lightest: #fbe8e7;
+
+  // * Decoratives
+    
+
+
+
     
   // * link colors
   --link: var(--primary);
