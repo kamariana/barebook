@@ -1,0 +1,10 @@
+.article a {
+  border-bottom: 2px solid var(--link);
+  padding: 0 2.5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--link-hover-bg-color);
+    color: var(--link-hover-color);
+  }
+}
