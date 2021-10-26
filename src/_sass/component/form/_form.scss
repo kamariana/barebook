@@ -1,0 +1,83 @@
+.form-group {
+
+}
+
+.form-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit-small);
+  justify-content: center;
+
+  //outline: 1px solid red;
+
+  &__item {
+    display: inline-flex;
+    gap: var(--spacing-unit-tiny);
+  }
+
+  // Overides
+  .form-caption {
+    margin: 0;
+  }
+
+  .form-control {
+    min-height: auto;
+  }
+}
+
+.form-caption {
+  cursor: pointer;
+  display: inline-flex;
+  margin-bottom: var(--spacing-unit-nano);
+}
+
+.form-control {
+  border: 2px solid var(--gray);
+  padding: var(--spacing-unit-medium);
+  min-height: var(--shape-unit-largest);
+  border-radius: var(--bd-radius-tiny);
+  font-weight: bold;
+  font-size: var(--font-size-body);
+
+  &:hover {
+    border-color: var(--gray-darkest);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--gray-darkest);
+    box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.7);
+  }
+
+  &:disabled {
+    background-color: var(--gray-light);
+    cursor: not-allowed;
+    color: var(--black);
+  }
+
+  &[type='file'] {
+    border-style: dotted;
+  }
+}
+
+.form-hint {
+  display: block;
+  font-size: var(--font-size-body-small);
+  margin-bottom: var(--spacing-unit-nano);
+  color: var(--gray-dark);
+}
+
+
+
+
+
+
+
+//Modifiers
+.form-groups--inline {
+  flex-direction: row;
+  gap: var(--spacing-unit-larger);
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
