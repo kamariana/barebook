@@ -1,0 +1,21 @@
+---
+title:  Text Input
+layout: styleguide-fullscreen
+type: form
+order: 1
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="form-group">
+  <label class="form-caption" for="first-name">First name</label>
+  <input class="form-control" type="text" id="first-name" name="first-name" />
+</div>
+

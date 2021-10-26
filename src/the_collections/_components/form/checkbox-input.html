@@ -1,0 +1,34 @@
+---
+title:  Checkbox
+layout: styleguide-fullscreen
+type: form
+order: 3
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="form-group">
+  <fieldset aria-describedby="nationality-hint">
+    <legend>What is your nationality?</legend>
+    <span class="form-hint" id="nationality-hint">
+      If you have dual nationality, select all options that are relevant to you.
+    </span>
+    <div class="form-groups">
+      <div class="form-groups__item">
+        <input class="form-control" id="nationality" name="nationality" type="checkbox" value="gambian">
+        <label class="form-caption" for="nationality">Gambian</label>
+      </div>
+      <div class="form-groups__item">
+        <input class="form-control" id="nationality-2" name="nationality" type="checkbox" value="other">
+        <label class="form-caption" for="nationality-2">Citizen of another country</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
