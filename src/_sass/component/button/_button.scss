@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  min-height: var(--shape-unit-larger);
   font-size: var(--font-size-body);
   cursor: pointer;
   user-select: none;
@@ -25,6 +25,9 @@ a.button {
 // Modofiers
 .button--plain {
   color: var(--primary);
+  padding: var(--spacing-unit-small) var(--spacing-unit-tiny);
+
+  outline: 1px solid red;
 
   &:hover {
     color: var(--primary-dark);
@@ -43,4 +46,9 @@ a.button {
   &:hover {
     background-color: var(--primary-light);
   }
+}
+
+.button--destructive {
+  background-color: var(--error);
+  color: var(--white);
 }
