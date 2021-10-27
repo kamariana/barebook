@@ -2,29 +2,6 @@
 
 }
 
-.form-groups {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-unit-small);
-  justify-content: center;
-
-  //outline: 1px solid red;
-
-  &__item {
-    display: inline-flex;
-    gap: var(--spacing-unit-tiny);
-  }
-
-  // Overides
-  .form-caption {
-    margin: 0;
-  }
-
-  .form-control {
-    min-height: auto;
-  }
-}
-
 .form-caption {
   cursor: pointer;
   display: inline-flex;
@@ -73,11 +50,84 @@
 
 
 
-//Modifiers
-.form-groups--inline {
-  flex-direction: row;
-  gap: var(--spacing-unit-larger);
-  justify-content: start;
+
+
+
+
+
+
+
+
+
+// take them to their own css file
+@mixin center-user-input {
+  input,
+  select {
+    text-align: center;
+  }
+}
+
+
+.form-groups {
+  display: flex;
+  gap: var(--spacing-unit-largest);
   align-items: center;
   flex-wrap: wrap;
+
+  // Overides
+  .form-caption {
+    margin: 0;
+  }
+
+  .form-control {
+    min-height: auto;
+  }
+}
+
+.form-groups-multiple {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-unit-small);
+}
+
+
+
+
+
+
+
+//Modifiers
+.form-groups--block {
+  flex-direction: column;
+  gap: var(--spacing-unit-large);
+  align-items: start;
+}
+
+
+.form-groups-multiple--date {
+  @include center-user-input;
+
+  > :nth-child(1) {
+    width: 96px;
+  } 
+
+  > :nth-child(2) {
+    width: 156px;
+  } 
+
+  > :nth-child(3) {
+    width: 124px;
+  } 
+}
+
+.form-groups-multiple--pin {
+  @include center-user-input;
+
+  input {
+    font-size: var(--font-size-heading-tiny);
+  }
+
+  > * {
+    width: 124px;
+  }
 }
