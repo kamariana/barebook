@@ -1,0 +1,78 @@
+---
+title:  Pin Input
+layout: styleguide-fullscreen
+type: form
+order: 5
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="form-group">
+  <fieldset role="group">
+    <legend>16-digit pin code</legend>
+    <div class="form-groups-multiple form-groups-multiple--pin">
+        <div>
+            <label class="form-caption u-visually-hidden" for="digit-1-of-6">
+                Digit 1 of 4 of 16
+            </label>
+            <input 
+              autofocus 
+              class="form-control" 
+              type="text"  
+              id="digit-1-of-6"  
+              maxlength="4" 
+              inputmode="numeric" 
+              pattern="\d+"
+            />
+        </div>
+        <div>
+            <label class="form-caption u-visually-hidden" for="digit-2-of-6">
+                Digit 5 of 8 of 16
+            </label>
+            <input 
+              class="form-control" 
+              type="text"  
+              id="digit-2-of-6" 
+              maxlength="4" 
+              inputmode="numeric" 
+              pattern="\d+"
+            />
+        </div>
+        <div>
+            <label class="form-caption u-visually-hidden" for="digit-3-of-6">
+                Digit 9 of 12 of 16
+            </label>
+            <input 
+              class="form-control" 
+              type="text"
+              id="digit-3-of-6" 
+              maxlength="4" 
+              inputmode="numeric" 
+              pattern="\d+" 
+            />
+        </div>
+        <div>
+            <label class="form-caption u-visually-hidden" for="digit-4-of-6">
+                Digit 13 of 16 of 16
+            </label>
+            <input 
+              class="form-control" 
+              type="text"  
+              id="digit-4-of-6" 
+              maxlength="4" 
+              inputmode="numeric" 
+              pattern="\d+" 
+            />
+        </div>
+        <input type="hidden" required="required" name="16-digit-pin-code"/>
+    </div>
+</fieldset>
+</div>
+
