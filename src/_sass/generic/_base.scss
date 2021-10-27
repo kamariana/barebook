@@ -47,23 +47,3 @@ ol {
   margin-left: var(--base-spacing-unit);
   padding-left: var(--base-spacing-unit-tiny);
 }
-
-
-
-
-
-
-
-
-
-/**
- * Form elements render using OS defaults,
- * so font-family inheritance must be specifically declared
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-}
