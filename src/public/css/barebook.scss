@@ -5,40 +5,107 @@
     background-color: #f5f5f5;
 }
 
-// Layouts
-.bb-app {
-    
-}
-
-.bb-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.bb-contain {
     max-width: 1440px;
     margin: auto;
     padding: 1rem;
 }
 
-.bb-main {
-    display: grid;
-    gap: 1.75rem;
-    max-width: 1440px;
-    margin: auto;
+.bb-contain--output {
+    background-color: #fff;
+    padding: 16px;
 }
 
-    .bb-content {
-        position: relative;
-        display: grid;
-        gap: 48px;
-        max-width: 900px;
-        margin: auto;      
-        background-color: white;
-        padding: 1rem;
+
+// Layouts
+.bb-app {
+    max-width: 160rem;
+}
+
+.bb-app--fullscreen {
+    max-width: 1024px;
+    margin: auto;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    resize: both;
+}
+
+
+.bb-header {
+    
+}
+
+.bb-header__contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bb-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    font-size: 24px;
+
+    &__img {
+        //outline: 1px solid red;
     }
 
-        .bb-content-main {
-            
-        }
+    &__text {
+        
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+.bb-page-title {
+
+}
+
+.bb-page-title-alt {
+    position: absolute;
+    left: 1280px;
+    bottom: 0;
+}
+
+
+
+.bb-main {
+    position: relative;
+}
+
+
+.bb-main--styleguide {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1280px;
+        background-color: white;
+        z-index: -1;
+    }
+
+    .bb-contain {
+        max-width: 1024px;
+        margin-left: 0;
+    }
+}
+
+
+
+.bb-sidebar {
+    display: none;
+}
 
         .bb-toc {
             
@@ -49,27 +116,13 @@
             text-transform: uppercase;
         }
 
-    .bb-sidebar {
-
-    }
+    
 
 
 .bb-footer {
 
 }
 
-
-
-
-
-// IDentity
-.bb-logo {
-    display: block;
-    text-decoration: none;
-    border: none;
-    font-weight: bold;
-    font-size: 18px;
-}
 
 
 
@@ -129,40 +182,156 @@
         font-weight: bold;
     }
 }
-
                            
 
+.components {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 24px;
+}
+
+.component {
+    display: grid;
+}
+
+.component-doc {
+    background-color: #ededed;
+    padding: 1rem
+}
+
+.component-showcase {
+    position: relative;
+    background-color: #fff;
+    padding: 1rem
+}
+
+.component-title {
+
+}
+
+.component-table {
+    background-color: transparent;
+    font-size: var(--font-size-s);
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.component-code {
+    
+    
+
+    figure {
+        margin: 0;
+      }
+  
+      pre {
+        margin: 0;
+        overflow: auto;
+        padding: 0;
+        background-color: transparent;
+      }
+}
+
+.component-code,
+.component-output {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 
 
 
+.component-output {
+    position: relative;
+}
 
+.component-fullscreen {
+    position: absolute;
+    right: 32px;
+    top: 0;
+
+    border: none;
+}
+
+.component-tabbed {
+
+}
+
+.component-tabs {
+    display: flex;
+}
+
+.component-tab {
+    padding: 0.5rem 1em;
+    text-decoration: none;
+}
+
+
+.component-tab[aria-selected="true"] {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-bottom: 0;
+    position: relative;
+    top: 1px;
+}
+
+.component-tabs-panels {
+
+}
+
+.component-tab-panel {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
 
 
 
 // MQs
+@media (min-width: 1024px) {
+   
+    .component-code,
+    .component-output {
+        padding: 32px;
+    }
+
+    .bb-contain--output {
+        padding: 32px;
+    }
+
+}
+
 @media (min-width: 1280px) {
-    .bb-main {
-        grid-template-columns: 260px 1fr;
+   
+    .component {
+        grid-template-columns: 1fr 1.75fr;
+    }
+
+}
+
+
+@media (min-width: 1800px) {
+   
+    
+    .bb-main--styleguide-entry {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 1fr 0.2fr;
     }
 
     .bb-content {
-        order: 1;
-        max-width: 100%;        
-        grid-template-columns: 1fr 224px;
+    
     }
 
-    .bb-sidebar-nav {
-        position: sticky;
-        top: 24px;
-    }
-
-    .bb-toc-nav {
-        position: sticky;
-        top: 24px;
-    }
-
-    .bb-content-main {
-        
+    .bb-sidebar {
+        display: block;
     }
 
 }

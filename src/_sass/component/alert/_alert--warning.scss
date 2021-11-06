@@ -1,0 +1,8 @@
+.alert--warning {
+  border-left-color: var(--warning);  
+
+  .alert__caption,
+  .alert__title {
+    color: var(--warning);
+  }
+}

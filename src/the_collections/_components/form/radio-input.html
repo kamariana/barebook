@@ -1,0 +1,32 @@
+---
+title:  Radio
+layout: styleguide-fullscreen
+type: form
+order: 2
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="form-group">
+  <fieldset>
+    <legend>What is your gender?</legend>
+    <div class="form-groups form-groups--block">
+      <div>
+        <input class="form-control" id="male" name="gender" type="radio" value="male"/>
+        <label class="form-caption" for="male">Male</label>
+      </div>
+      <div>
+        <input class="form-control" id="female" name="gender" type="radio" value="female"/>
+        <label class="form-caption" for="female">Female</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+

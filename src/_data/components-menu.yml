@@ -1,0 +1,33 @@
+- title: Alerts
+  url: /components/alerts/
+  sub:
+    - title: Alert Info
+      url: /components/alerts#alert-info
+    - title: Alert Warning
+      url: /components/alerts#alert-warning
+- title: Buttons
+  url: /components/buttons/
+  sub:
+    - title: Primary button
+      url: /components/buttons/#primary-button
+    - title: Secondary button
+      url: /components/buttons/#secondary-button
+- title: Form
+  url: /components/form/
+  sub:
+    - title: Text Input
+      url: /components/form/#text-input
+    - title: Radio Input
+      url: /components/form/#radio-input
+    - title: Checkbox Input
+      url: /components/form/#checkbox-input
+    - title: File Input
+      url: /components/form/#file-input
+    - title: Date Input
+      url: /components/form/#date-input
+    - title: Pin Input
+      url: /components/form/#pin-input
+    - title: Select
+      url: /components/form/#select
+    - title: Textarea
+      url: /components/form/#textarea

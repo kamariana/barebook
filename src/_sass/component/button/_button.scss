@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--shape-unit-larger);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  line-height: 1.15;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--bd-radius-tiny);
+  padding: var(--spacing-unit-small) var(--spacing-unit-large);
+  white-space: nowrap;
+  width: auto;
+  text-transform: uppercase;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+
+// Modofiers
+.button--plain {
+  color: var(--primary);
+  padding: var(--spacing-unit-small) var(--spacing-unit-tiny);
+
+  outline: 1px solid red;
+
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+.button--primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.button--secondary {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+
+  &:hover {
+    background-color: var(--primary-light);
+  }
+}
+
+.button--destructive {
+  background-color: var(--error);
+  color: var(--white);
+}

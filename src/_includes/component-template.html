@@ -14,9 +14,8 @@
     <h2 class="component-title">
       {{ title }}
     </h2>
-    <p>
-      {{ description }}
-    </p>
+   
+    {{ description }}
 
     <table class="component-table">
       <thead>
@@ -50,8 +49,10 @@
   <div class="component-showcase">
     <div class="component-output">
       <a class="component-fullscreen" href="{{ source }}" title="Open in a New window" target="_blank">
-        <img alt="" aria-hidden="true" src="/styleguide/img/full-screen.svg"/>
-        <span class="u-sr-only">Open in a New window</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+        </svg>
+        <span class="u-visually-hidden">Open in a New window</span>
       </a>
 
       <!-- <iframe class="component-iframe" src="{{ source }}" title="{{ title }}"></iframe> -->
@@ -60,22 +61,22 @@
     <div class="component-code">
       <!-- tabs -->
       <div class="component-tabbed js-component-tabbed">
-        <nav class="component-tabs">
-          <a class="component-tab" href="#{{ tab_name }}-html">
+        <nav class="component-tabs" role="tablist">
+          <a class="component-tab" aria-selected="true" role="tab" id="{{ tab_name }}-html"  href="#{{ tab_name }}-html">
             HTML
           </a>
-          <a class="component-tab" href="#{{ tab_name }}-scss">
+          <!-- <a class="component-tab" href="#{{ tab_name }}-scss">
             SCSS
-          </a>
+          </a> -->
         </nav>
 
         <div class="component-tabs-panels">
-          <section id="{{ tab_name }}-html" class="component-tab-panel">
+          <section id="{{ tab_name }}-html" role="tabpanel" aria-labelledby="{{ tab_name }}-html" class="component-tab-panel">
             {% highlight html %}{{ html }}{% endhighlight %}
           </section>
-          <section id="{{ tab_name }}-scss" class="component-tab-panel">
+          <!-- <section id="{{ tab_name }}-scss" class="component-tab-panel">
             {% highlight css %}{{ css }}{% endhighlight %}
-          </section>
+          </section> -->
         </div>
       </div>
       <!-- /tabs -->

@@ -1,0 +1,68 @@
+---
+title:  Date Input
+layout: styleguide-fullscreen
+type: form
+order: 5
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="form-group">
+  <fieldset aria-describedby="date-of-birth-hint" role="group">
+    <legend>What is your Date of Birth?</legend>
+    <span class="form-hint" id="date-of-birth-hint">
+      For example, 23 December 1990
+    </span>
+    <div class="form-groups-multiple form-groups-multiple--date">
+      <div>
+        <label class="form-caption" for="date-of-birth-day">Day</label>
+        <input 
+          class="form-control" 
+          type="text"
+          id="date-of-birth-day" 
+          name="date-of-birth-day" 
+          inputmode="numeric" 
+          pattern="[0-9]*" 
+          maxlength="2"
+          />
+      </div>
+      <div>
+        <label class="form-caption" for="date-of-birth-month">Month</label>
+        <select class="form-control" id="date-of-birth-month" name="date-of-birth-month">
+          <option selected value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-caption" for="date-of-birth-year">Year</label>
+        <input 
+          class="form-control" 
+          type="text"
+          id="date-of-birth-year" 
+          name="date-of-birth-year" 
+          inputmode="numeric" 
+          pattern="[0-9]*" 
+          maxlength="4"
+          />
+      </div>
+    </div>
+  </fieldset>
+</div>
+

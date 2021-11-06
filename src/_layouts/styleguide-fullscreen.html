@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barebook</title>
+    <title>{{ page.title }} - Barebook</title>
+    <link rel="stylesheet" href="/public/css/barebook.css">
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
-<body>
-  <div class="page">
-    {{ content }}
-  </div>
+<body class="bb-body">
+    <div class="bb-app bb-app--fullscreen">
+
+      {{ content }}
+
+    </div>
 </body>
 </html>

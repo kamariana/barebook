@@ -1,4 +1,3 @@
-// Default styles
 fieldset {
   border: 0;
   width: 100%;
@@ -10,22 +9,15 @@ legend {
 }
 
 label {
-  cursor: pointer;
-  display: inline-block;
   line-height: 1.375;
 }
 
-textarea {
-  min-height: 10rem;
-}
 
 select {
   background-color: inherit;
   cursor: pointer;
   touch-action: manipulation;
 }
-
-
 
 input,
 select,
@@ -36,6 +28,7 @@ textarea {
   width: 100%;
 }
 
+[type='reset'],
 [type='checkbox'],
 [type='radio'],
 [type='submit'] {
@@ -44,8 +37,76 @@ textarea {
 }
 
 [type='file'],
-[type='range'] {
-  border-style: dotted;
+[type='range'] {  
   cursor: pointer;
   touch-action: manipulation;
+}
+
+
+// custom checkbox and radio input
+[type='checkbox'],
+[type='radio'] {
+  opacity: 0;
+  + label {
+    position: relative;
+    padding-left: 16px; 
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -20px;
+    }
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--gray);
+      background-color: transparent;
+    }
+
+    &::after {
+      margin-left: 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &:hover {
+    + label::before {
+      border-color: var(--gray-darkest);
+    }
+  }
+
+  &:focus {
+    + label::before {
+      box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.7);
+      border-color: var(--gray-darkest);
+      outline: 3px solid transparent; /* For Windows high contrast mode. */
+    }
+  }
+
+  &:checked {
+    + label::before {
+        border-color: var(--gray-darkest);
+    }
+    + label::after {
+        background-color: var(--gray-darkest);
+    }
+  }
+}
+
+input[type="radio"] {
+  + label::before,
+  + label::after {
+    border-radius: 100%;
+  }
+}
+
+[type='checkbox'] {
+  + label::before {
+    border-radius: var(--bd-radius-nano);
+  }
 }

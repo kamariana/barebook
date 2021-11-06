@@ -1,0 +1,19 @@
+.alert {
+  padding: var(--spacing-unit-medium);
+  background-color: var(--white);
+  box-shadow: var(--bs-box);
+  border-left: 8px solid var(--gray);
+
+  @include respond(laptop-l) {
+    padding: var(--spacing-unit-larger);
+  }   // 1440px
+}
+
+
+// Elements
+@import './alert__caption';
+
+
+// Modifiers
+@import './alert--info';
+@import './alert--warning';

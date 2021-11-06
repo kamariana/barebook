@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barebook</title>
+    <title>{{ page.title }} - Barebook</title>
     <link rel="stylesheet" href="/public/css/barebook.css">
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
@@ -12,54 +12,39 @@
 
         {% include utils/header.html %}
 
-        <main class="bb-main">
+        {% include utils/banner.html %}
 
+        
+
+        <main class="bb-main bb-main--styleguide-entry">
             <div class="bb-content">
-              
-                <article class="bb-content-main">
-                      
-                    {{ content }}                 
-
-                </article>
-
-                <aside class="bb-toc">
-                  <h3 class="bb-toc-title">CONTENTS</h3>
-                  <nav class="bb-toc-nav">
-                    <ul class="bb-toc-nav__list">
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link is-active">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                        <li class="bb-toc-nav__item">
-                            <a href="#" class="bb-toc-nav__link">
-                                Some example healine
-                            </a>
-                        </li>
-                    </ul>
-                  </nav>
-                  
-                </aside>
+                <h1 class="bb-page-title">
+                    {{ page.title }}
+                </h1>
                 
+                {{ content }}
+                                
             </div>
-
-            {% include utils/sidebar.html %}
-
+           
+           <aside class="bb-sidebar">
+            <nav class="bb-toc-nav">
+                <ul class="bb-toc-nav__list">
+                    {% assign components = site.data.components-menu %}
+                    {% for component in components %}
+                    {% if component.title == page.title %} 
+                            {% for entry in component.sub %}
+                            {% assign url = entry.url | replace: " ", "-" | downcase %}
+                            <li class="bb-toc-nav__item">
+                                <a class="bb-toc-nav__link" href="{{ url }}">
+                                    {{ entry.title }}
+                                </a>
+                            </li> 
+                            {% endfor%}
+                        {% endif %} 
+                    {% endfor %}
+                  </ul>
+                </nav>
+           </aside>
         </main>
 
         {% include utils/footer.html %}
