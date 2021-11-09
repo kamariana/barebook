@@ -1,0 +1,72 @@
+---
+layout: styleguide-fullscreen
+title:  Full screen nav
+order: 1
+type: full-screen-nav
+
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="full-screen-nav" role="navigation" aria-label="Full Screen Navigation">
+  <div class="full-screen-nav__contain">
+
+    <div class="full-screen-nav__header">
+      <button class="toggle-nav-icon toggle-nav-icon--white toggle-nav-icon--close js-close-off-canvas" aria-hidden="true">
+        <span class="toggle-nav-icon__text">Close</span>
+        <div class="toggle-nav-icon__icon">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="full-screen-nav__main">
+      <nav class="full-screen-menu">
+          <ul class="full-screen-menu__list">
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Home</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Projects</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Case studies</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Blog</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">About</a>
+              </li>
+          </ul>
+
+          <ul class="full-screen-menu__list full-screen-menu__list--alt">
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">CV</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Certificates</a>
+              </li>
+              <li class="full-screen-menu__item">
+                  <a href="" class="full-screen-menu__link">Contact</a>
+              </li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="full-screen-nav__footer">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed assumenda provident voluptatibus ex quaerat, consequatur blanditiis, neque error perspiciatis nam aliquam temporibus dolores, porro vitae? Tempora facere magni quibusdam ipsum.
+      </p>
+    </div>
+
+  </div>
+</div>
