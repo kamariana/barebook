@@ -35,8 +35,10 @@
 
 
 // Objects
-@import './object/page/page';
-@import './object/container/container';
+@import './object/page';
+@import './object/container';
+@import './object/media';
+@import './object/avatar';
 
 
 // Components
@@ -45,11 +47,13 @@
 @import './component/form/form';
 @import './component/logo/logo';
 @import './component/toggle-nav-icon/toggle-nav-icon';
+@import './component/masthead/masthead-plain';
 
 
 
 // Patterns
-
+@import './pattern/full-screen-nav';
+@import './pattern/full-screen-menu';
 
 
 
