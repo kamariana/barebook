@@ -1,0 +1,13 @@
+{% assign col = page.col  %}
+
+<ul class="components">
+  {% assign componentsByType = site[col] | group_by: "type"  %}
+  {% for component in componentsByType %}
+    {% if component.name == page.type %}
+      {% assign asc = component.items | sort: 'order' %}
+      {% for item in asc %}
+        {% include template.html component = component %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
