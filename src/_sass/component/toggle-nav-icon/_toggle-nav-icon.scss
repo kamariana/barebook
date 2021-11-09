@@ -51,6 +51,19 @@
 }
 
 // Modifiers
+.toggle-nav-icon--white {
+
+  .toggle-nav-icon__text {
+    color: var(--white);
+  }
+
+  .toggle-nav-icon__icon {
+    > span {
+      background-color: var(--white);
+    }
+  }
+}
+
 .toggle-nav-icon--close {
 
   .toggle-nav-icon__icon {
@@ -62,20 +75,6 @@
       &:nth-child(2) {
         transform: translate(0, -14px) rotate(-45deg);
       }
-    }
-  }
-}
-
-
-.toggle-nav-icon--white {
-
-  .toggle-nav-icon__text {
-    color: var(--white);
-  }
-
-  .toggle-nav-icon__icon {
-    > span {
-      background-color: var(--white);
     }
   }
 }
