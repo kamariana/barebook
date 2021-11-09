@@ -1,0 +1,39 @@
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--spacing-unit-medium);
+  margin: 0;
+}
+
+
+
+
+
+// Elements
+.media__caption {
+  flex: 1;
+  display: block;
+  font-style: normal;
+}
+
+.media__author-name {
+  display: block;
+  font-weight: bold;
+  font-size: var(--font-size-heading-nano);
+}
+
+.media__author-role {
+  color: var(--gray-darker);
+  font-size: var(--font-size-body-tiny);
+  text-transform: uppercase;
+}
+
+
+
+
+
+// States
+.media.at-center {
+  align-items: center;
+}

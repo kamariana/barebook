@@ -1,0 +1,50 @@
+.avatar {
+  background-color: var(--white);
+}
+
+
+
+
+
+// Modifiers 
+.avatar--circle {
+  border-radius: 100%;
+}
+
+.avatar--rounded {
+  border-radius: 1rem;
+}
+
+.avatar--bordered {
+  border: 1px solid var(--gray-light);
+}
+
+.avatar--ring {
+  border: 1px solid var(--gray-light);
+  padding: 0.25rem;
+}
+
+
+
+
+
+// States
+.avatar.is-tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.avatar.is-small {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.avatar.is-medium {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.avatar.is-large {
+  width: 8.5rem;
+  height: 8.5rem;
+}
