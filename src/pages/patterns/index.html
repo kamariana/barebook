@@ -1,0 +1,29 @@
+---
+title: Patterns
+layout: styleguide
+
+permalink: /patterns/
+---
+
+<p class="u-lead-text">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati necessitatibus velit harum quasi maiores cum eos non magnam omnis, aperiam, rem, porro similique neque tenetur sint laudantium accusamus minus deserunt!
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias amet ad natus porro alias corrupti veritatis et corporis incidunt voluptatibus quae temporibus dolorum, quaerat, dolor quos nisi saepe delectus magnam.
+</p>
+
+<p>
+  This includes guidance on colors, typography, iconography, etc.
+</p>
+
+<ul>
+  {% assign components = site.data.patterns-menu %}
+  {% for component in components %}
+    <li class="">
+      <a class="" href="{{ component.url }}">
+        {{ component.title }}
+      </a>
+    </li> 
+  {% endfor %}
+</ul>
