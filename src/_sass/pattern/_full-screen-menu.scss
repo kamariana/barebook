@@ -1,0 +1,45 @@
+.full-screen-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--spacing-unit-medium);
+  text-align: center;
+}
+
+
+// Elements
+.full-screen-menu__list {
+  @include reset-list;
+}
+
+.full-screen-menu__item {
+
+}
+
+.full-screen-menu__link {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  padding: var(--spacing-unit-tiny) var(--spacing-unit-medium);
+  font-size: var(--font-size-heading-small);
+}
+
+
+// Modifiers
+.full-screen-menu__list--alt {
+  .full-screen-menu__link {
+    padding: var(--spacing-unit-nano);
+    font-size: var(--font-size-body-large);
+    color: var(--gray);
+  }
+}
+
+
+// MQs
+@include respond(laptop-s) {
+  .full-screen-menu {
+    flex-direction: row;
+    gap: var(--spacing-unit-huge);
+    text-align: left;
+  }
+} // 1024px
