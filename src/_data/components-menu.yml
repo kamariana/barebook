@@ -57,3 +57,13 @@
       url: /components/buttons/#text
     - title: Toggle off-canvas nav icon close
       url: /components/buttons/#svg
+
+- title: Masthead
+  url: /components/masthead/
+  sub:
+    - title: Masthead Plain
+      url: /components/masthead/#masthead-plain
+    - title: Masthead Picture
+      url: /components/masthead/#masthead-picture
+    - title: Masthead Video
+      url: /components/masthead/#masthead-video
