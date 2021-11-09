@@ -1,0 +1,49 @@
+---
+title:  Masthead plain
+layout: styleguide-fullscreen
+type: masthead
+order: 1
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="masthead-plain is-two-third" role="banner">
+  <div class="masthead-plain__text at-center">
+    <h1 id="title" class="masthead-plain__title masthead-plain__title--huge">
+        CSS40
+    </h1>
+    <p class="masthead-plain__sub-title">
+        Take your CSS skills to the next level with 40 CSS challenges. 
+    </p>
+
+    <p>
+        A series by:
+    </p>
+
+    <figure class="media at-center">
+        <img class="avatar avatar--circle avatar--ring is-small" src="/assets/images/avatar.jpg" alt="A Camariana"> 
+        <figcaption class="media__caption">
+          <span class="media__author-name">A. Camariana</span>
+          <span class="media__author-role">Teacher at Ntolu</span>
+        </figcaption>
+    </figure>
+  </div>
+
+  <svg
+    class="masthead-plain__pattern"
+    width="100%" 
+    height="150" 
+    viewBox="0 0 1440 150" 
+    preserveAspectRatio="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+  >
+    <path d="M339 122C220.647 106.212 176.609 -12.2323 58 1.50005C29.0671 4.84984 -14.5 19.0001 -14.5 19.0001V303H1443V184C1443 184 1296.24 217.673 1200.5 221C974.265 228.862 864.366 79.4709 638 81.0001C520.143 81.7962 455.825 137.584 339 122Z"></path>
+  </svg>
+</div>
