@@ -1,0 +1,120 @@
+.cover {
+  @include pos-rel-overflow-hidden;
+  @include dp-flex-direction-column;
+  padding: var(--spacing-unit-largest) var(--spacing-unit-medium);
+  background-color: var(--gray-darkest);
+  color: var(--white);
+}
+
+
+
+.cover__text {
+  @include dp-flex-direction-column;
+  @include pos-rel-object-on-top;
+  max-width: var(--contain-width-medium);
+  padding: var(--spacing-unit-largest) var(--spacing-unit-medium);
+  background-color: var(--black);
+
+  outline: 1px solid red;
+
+  > * + * {
+    margin-top: var(--spacing-unit-large);
+  }
+}
+
+.cover__date {
+  display: block;
+  text-transform: uppercase;
+}
+
+.cover__tag {
+  display: block;
+  order: -1;
+  margin-top: 0;
+  margin-bottom: var(--spacing-unit-huge);
+  font-size: var(--font-size-body-tiny);
+  text-transform: uppercase;
+
+  &::before {
+    content: "#";
+  }
+}
+
+.cover__button {
+  margin-top: var(--spacing-unit-largest);
+  align-self: flex-start;
+}
+
+.cover__figure {
+  @include pos-abs-zero-all-sides;
+
+  &::before {
+    @include pos-abs-zero-all-sides-pseudo-class;
+    background-color: var(--tp-black-light);
+  }
+}
+
+.cover__picture {
+  @include fit-media-into-container;
+}
+
+.cover__img {
+  @include fit-media-into-container;
+}
+
+
+
+
+
+// Modifiers 
+
+
+
+
+
+
+// States
+.cover.is-zoomable {
+  .cover__img {
+    @include fit-media-into-container;
+    transition: transform 0.3s ease-in;
+    transform: scale(1);
+  }
+  
+  &:hover  {
+    .cover__img {
+      transform: scale(1.07);
+    }
+  }
+}
+
+.cover__text.at-center {
+  margin: auto;
+}
+
+.cover__text.at-left-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cover__text.at-bottom {
+  margin-top: auto;
+}
+
+
+// MQs
+@include respond(laptop-m) {
+
+  .cover {
+    min-height: 575px;
+  }
+
+  .cover__text{
+    padding: var(--spacing-unit-largest);
+  }
+
+  .cover__title {
+    font-size: var(--font-size-heading-medium);
+    line-height: 1.3;
+  }
+}   // 1366px

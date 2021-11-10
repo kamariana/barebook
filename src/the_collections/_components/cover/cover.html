@@ -1,0 +1,39 @@
+---
+title:  Cover
+layout: styleguide-fullscreen
+type: cover
+order: 1
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="cover is-zoomable">
+  <div class="cover__text at-center">
+      <h3 class="cover__title">
+          How have we steragise content for institutions
+      </h3>
+         
+      <span class="cover__tag">
+        Case Studies
+      </span>
+      
+      <a href="#" class="button button--secondary cover__button">
+        See Case Studies
+      </a>
+  </div>
+
+  <div class="cover__figure">
+      <picture class="cover__picture">
+        <source media="(max-width: 1024px)" srcset="/assets/images/masthead-sm.jpg"/>
+        <source media="(min-width:1025px)" srcset="/assets/images/masthead.jpg"/>
+        <img class="cover__img" src="/assets/images/masthead-sm.jpg" alt="" />
+      </picture>
+  </div>
+</div>
