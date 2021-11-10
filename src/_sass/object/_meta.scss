@@ -1,0 +1,8 @@
+.meta {
+  font-size: var(--font-size-body-small);
+}
+
+.meta__items {
+  display: flex;
+  gap: var(--spacing-unit-large);
+}
