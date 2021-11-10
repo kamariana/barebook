@@ -1,0 +1,140 @@
+.alternate-cards {
+  @include reset-list;
+}
+
+
+
+.alternate-card {
+  @include dp-flex-direction-column;
+  position: relative;
+}
+
+
+
+
+.alternate-cards-list  {
+  display: grid;
+  gap: var(--spacing-unit-medium);
+}
+
+
+
+
+
+// Elements
+.alternate-card__text-wrapper {
+  @include dp-flex-direction-column;
+  flex-grow: 1;
+  background-color: var(--white);
+
+
+  outline: 1px solid red;
+}
+
+.alternate-card__text {
+  position: relative;
+  flex-grow: unset;
+  padding: var(--spacing-unit-medium);
+  margin-top: auto;
+  margin-bottom: auto;
+
+  & > :last-child {
+    margin-top: auto;
+  }
+
+  & > :nth-last-child(2) {
+    margin-bottom: var(--spacing-unit-largest);
+  }
+}
+
+.alternate-card__title {
+  > a {
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      @include pos-abs-zero-all-sides-pseudo-class;
+    }
+
+    &:focus {
+      color: var(--primary);
+    }
+  }  
+}
+
+.alternate-cards__list {
+  @include reset-list;
+  margin-top: var(--spacing-unit-largest);
+}
+
+.alternate-card__button {
+  @include pos-rel-object-on-top;
+  align-self: flex-start;
+}
+
+.alternate-card__figure {
+  overflow: hidden;
+}
+
+.alternate-card__img {
+  @include fit-media-into-container;
+  @include trans-and-scale;
+
+  &:hover {
+    @include scale-out-on-hover-and-focus;
+  }
+}
+
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  .alternate-cards-list  {
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  }
+}     // 768px
+
+
+
+@include respond(laptop-s) {
+
+  .alternate-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &:nth-child(even) > .alternate-card__figure {
+      order: -1;
+    }
+  }
+
+
+
+  // Elements
+  .alternate-card__text-wrapper {
+    @include dp-flex-direction-column;
+    flex-grow: 1;
+    background-color: var(--white);
+  }
+ 
+}   // 1024px
+
+
+
+@include respond(laptop-m) {
+
+  .alternate-card__text {
+    max-width: var(--contain-width-medium-small);
+  }  
+
+}   // 1366px
+
+
+
+@include respond(laptop-l) {
+  .alternate-card__text {
+    margin: auto;
+  }
+}   // 1440px
