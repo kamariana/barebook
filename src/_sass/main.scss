@@ -39,6 +39,7 @@
 @import './object/container';
 @import './object/media';
 @import './object/avatar';
+@import './object/meta';
 
 
 // Components
@@ -47,7 +48,9 @@
 @import './component/form/form';
 @import './component/logo/logo';
 @import './component/toggle-nav-icon/toggle-nav-icon';
-@import './component/masthead/masthead-plain';
+@import './component/masthead/masthead';
+@import './component/masthead/masthead--gradient';
+@import './component/masthead/masthead--media';
 
 
 
