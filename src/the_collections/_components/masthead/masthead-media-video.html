@@ -1,0 +1,57 @@
+---
+title:  Masthead media video
+layout: styleguide-fullscreen
+type: masthead
+order: 4
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="masthead masthead--media is-full" role="banner">
+
+  <div class="masthead__text at-bottom">
+    <h1 id="title" class="masthead__title">
+        What are we living for?
+    </h1>
+    <p class="masthead__sub-title">
+      Take your CSS skills to the next level with 40 CSS challenges. 
+    </p>
+
+    <span class="masthead__tag">
+      Meaning
+    </span>
+
+    <a class="button button--primary masthead__button" href="#" >
+      <span class="c-cta-icon__text">Read full story</span>
+      <i class="c-cta-icon__icon">&#10138;</i>
+    </a>
+
+    <div class="meta masthead__meta">
+      <div class="meta__items">
+        <span class="meta__byline">
+          By Ebrahim Press Bah
+        </span>
+        <time class="meta__date" datetime="">
+          November 10, 2021
+        </time>
+      </div>
+    </div>
+  </div>
+
+  <div class="masthead__figure">
+    <video class="masthead__video" autoplay loop muted>
+      <source src="/assets/videos/LenovoCES2019.mp4" type="video/mp4">
+      <source src="/assets/videos/experience-sph.mp4" type="video/mp4">
+      <source src="/assets/videos/experience-sph.webm" type="video/webm">
+      <source src="/assets/videos/experience-sph.ogv" type="video/ogg">
+    </video>
+  </div>
+
+</div>

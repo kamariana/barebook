@@ -1,0 +1,56 @@
+---
+title:  Masthead media picture
+layout: styleguide-fullscreen
+type: masthead
+order: 3
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="masthead masthead--media is-two-third" role="banner">
+
+  <div class="masthead__text at-center">
+    <h1 id="title" class="masthead__title">
+        What are we living for?
+    </h1>
+    <p class="masthead__sub-title">
+      Take your CSS skills to the next level with 40 CSS challenges. 
+    </p>
+
+    <span class="masthead__tag">
+      Meaning
+    </span>
+
+    <a class="button button--primary masthead__button" href="#" >
+      <span class="c-cta-icon__text">Read full story</span>
+      <i class="c-cta-icon__icon">&#10138;</i>
+    </a>
+
+    <div class="meta masthead__meta">
+      <div class="meta__items">
+        <span class="meta__byline">
+          By Ebrahim Press Bah
+        </span>
+        <time class="meta__date" datetime="">
+          November 10, 2021
+        </time>
+      </div>
+    </div>
+  </div>
+
+  <div class="masthead__figure">
+    <picture class="masthead__picture">
+      <source media="(max-width: 1024px)" srcset="/assets/images/masthead-sm.jpg"/>
+      <source media="(min-width:1025px)" srcset="/assets/images/masthead.jpg"/>
+      <img class="masthead__img" src="/assets/images/masthead-sm.jpg" alt="" />
+    </picture>
+  </div>
+
+</div>
