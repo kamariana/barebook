@@ -10,3 +10,28 @@
     padding-left: 0;
   }
 }
+
+
+
+
+
+
+// States
+.contain.is-small {
+  max-width: var(--contain-width-small);
+}
+
+.contain.is-medium {
+  max-width: var(--contain-width-medium);
+} 
+
+.contain.is-large {
+  max-width: var(--contain-width-large);
+}
+
+// This will apply a uniform gap between containers/box in the parent o-contain.
+.contain.with-vr-gaps {
+  > * + * {
+    margin-top: var(--spacing-unit-largest);
+  }
+}

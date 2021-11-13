@@ -1,39 +1,37 @@
-.o-section {
-    padding-top: var(--spacing-unit-largest);
-    padding-bottom: var(--spacing-unit-largest);
-
-        &_header {
-            display: flex;
-            flex-direction: column;
-        } 
+.section {
+  padding-top: var(--spacing-unit-largest);
+  padding-bottom: var(--spacing-unit-largest);
 }
 
 
 
 
 
-// Modifiers and States
-.o-section {
-    &--gray-lightest {
-        background-color: var(--gray-lightest);
-    }
+// Elements
+.section__header {
+  display: flex;
+  flex-direction: column;
+} 
 
-    &--primary {
-        background-color: var(--primary);
-        color: var(--white);
-    }
 
-    &.with-no-pad {
-        padding: 0;
-    }
 
-        &__header {
-            &.at-center {
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-        }
+
+
+// Modifiers
+
+
+
+
+
+// States
+.section.with-no-pad {
+  padding: 0;
+}
+
+.section__header.at-center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -42,8 +40,8 @@
 
 // * MQs
 @include respond(laptop-m) {
-    .o-section {
-        padding-top: calc(2 * var(--spacing-unit-largest));
-        padding-bottom: calc(2 * var(--spacing-unit-largest));
-    }
+  .section {
+    padding-top: calc(2 * var(--spacing-unit-largest));
+    padding-bottom: calc(2 * var(--spacing-unit-largest));
+  }
 } // 1366px
