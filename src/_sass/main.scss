@@ -37,9 +37,11 @@
 // Objects
 @import './object/page';
 @import './object/container';
+@import './object/section';
 @import './object/media';
 @import './object/avatar';
 @import './object/meta';
+@import './object/artwork';
 
 
 // Components
@@ -51,12 +53,17 @@
 @import './component/masthead/masthead';
 @import './component/masthead/masthead--gradient';
 @import './component/masthead/masthead--media';
+@import './component/cover/cover';
+@import './component/quote/quote';
+@import './component/gallery/gallery';
 
 
 
 // Patterns
 @import './pattern/full-screen-nav';
 @import './pattern/full-screen-menu';
+@import './pattern/alternate-card-list';
+@import './pattern/case-study';
 
 
 
@@ -69,3 +76,7 @@
 @import './utilities/spacing';
 @import './utilities/text';
 @import './utilities/visually-hidden';
+@import './utilities/figure-border';
+@import './utilities/article-link';
+@import './utilities/highlighters';
+@import './utilities/table';
