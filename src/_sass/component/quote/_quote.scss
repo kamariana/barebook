@@ -1,0 +1,71 @@
+.quote {
+  position: relative;
+  max-width: 36rem;
+  margin: var(--spacing-unit-large) auto;
+
+  p {
+      margin-top: 0;
+      position: relative;
+      z-index: var(--layer-back);
+  }
+
+  > * + * {
+      margin-top: var(--spacing-unit-medium);
+  }
+}
+
+
+
+
+
+// Elements
+.quote__citation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--font-size-body-large);
+  font-style: normal;
+}
+
+.quote__avatar {
+  max-width: 4.375rem;
+  max-height: 4.375rem;
+  margin-right: var(--spacing-unit-small);
+  border-radius: var(--bd-radius-circle);
+}
+
+.quote__author {
+  flex: 1;
+  display: inline-block;
+}
+
+.quote__author-name {
+  display: block;
+}
+
+.quote__author-role {
+  display: block;
+  color: var(--gray-dark);
+}
+
+
+
+
+// States
+.quote.is-small {
+  max-width: var(--contain-width-small);
+}
+
+.quote.with-mark-left {
+  &::before {
+    content: "\201C";
+    position: absolute;
+    z-index: var(--layer-backward);
+    color: var(--gray-lighter);
+    font-size: calc(var(--font-size-heading-largest) * 4);
+    line-height: 1;
+    top: -48px;
+    left: -48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
