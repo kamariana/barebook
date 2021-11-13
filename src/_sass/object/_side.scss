@@ -1,0 +1,65 @@
+.sides {
+  display: grid;
+}
+
+
+
+
+
+// Elements
+.sides__text {
+  padding: var(--spacing-unit-medium);
+
+  & :last-child {
+    margin-top: var(--spacing-unit-medium);
+  }
+} 
+
+
+
+// States
+.sides.at-center{
+  align-items: center;
+}
+
+.sides.with-gap-larger {
+  gap: var(--spacing-unit-larger);
+}
+
+.sides.with-gap-largest {
+  gap: var(--spacing-unit-largest);
+}
+
+.sides.with-gap-huge {
+  gap: var(--base-spacing-unit-medium);
+}
+
+
+
+
+// MQs
+@include respond(tablet) {
+  .sides {
+    grid-template-columns: 1fr 1fr;
+  }
+} // 768px
+
+
+
+@include respond(laptop-m) {
+
+  .sides__text {
+    padding: 0 10%;
+  }
+
+
+  // States
+  .sides.is-two-third {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .sides.is-two-third-reverse  {
+    grid-template-columns: 1fr 1.35fr;
+  }
+
+}   // 1366px
