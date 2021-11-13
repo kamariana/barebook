@@ -1,0 +1,67 @@
+.gallery {
+  @include reset-list;
+  display: grid;
+  gap: var(--spacing-unit-tiny);
+  grid-auto-flow: dense;
+}
+
+
+
+// ELements
+.gallery__img {
+  @include fit-media-into-container;
+  cursor: zoom-in;
+}
+
+
+
+
+
+// States
+.gallery.with-gap-larger {
+  gap: var(--spacing-unit-larger);
+}
+
+.gallery.with-gap-largest {
+  gap: var(--spacing-unit-largest);
+}
+
+
+
+
+
+// MQs
+@include respond(mobile-l) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}   // 425px,
+
+
+@include respond(tablet) {
+
+  .gallery.is-half {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery__item.is-span-wide {
+    grid-column: span 2;
+  }
+    
+  .gallery__item.is-span-tall {
+    grid-row: span 2;
+  }
+
+  .gallery__item.is-span-box {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+} // 768px
+
+
+@include respond(laptop-m) {
+  .gallery.is-third {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} // 1366px
