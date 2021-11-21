@@ -115,3 +115,16 @@ $bps: (
 @mixin scale-out-on-hover-and-focus {
   transform: scale(1.03);
 }
+
+
+
+
+
+// Container
+@mixin default-contain {
+  max-width: var(--contain-width-larger);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-unit-medium);
+  padding-left: var(--spacing-unit-medium);
+}
