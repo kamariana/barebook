@@ -1,9 +1,5 @@
 .contain {
-  max-width: var(--contain-width-larger);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--spacing-unit-medium);
-  padding-left: var(--spacing-unit-medium);
+  @include default-contain;  
 
   .contain {
     padding-right: 0;
