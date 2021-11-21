@@ -58,6 +58,16 @@
     - title: Toggle off-canvas nav icon close
       url: /components/buttons/#svg
 
+- title: Navigations
+  url: /components/navigation/
+  sub:
+    - title: Primary Navigation 
+      url: /components/navigation/#primary-nav
+    - title: Primary Navigation Mobile
+      url: /components/navigation/#primary-nav-mobile
+    - title: Fullscreen Navigation
+      url: /components/navigation/#fullscreen-nav
+
 - title: Masthead
   url: /components/masthead/
   sub:
@@ -73,5 +83,3 @@
 
 - title: Quote
   url: /components/quote/
-
-  
