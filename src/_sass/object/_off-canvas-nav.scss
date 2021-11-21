@@ -1,0 +1,28 @@
+.off-canvas-nav {
+  @include pos-fix-zero-all-sides;
+}
+
+
+
+// Elements
+.off-canvas-nav__contain {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--contain-width-larger);
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
+}
+
+.off-canvas-nav__header {
+  padding: var(--spacing-unit-medium);
+}
+
+.off-canvas-nav__main {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.off-canvas-nav__footer {
+  padding: var(--spacing-unit-medium);
+}
