@@ -1,0 +1,54 @@
+---
+layout: styleguide-fullscreen
+title:  Primary nav
+order: 1
+type: navigation
+
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="header__contain">
+
+  <a class="logo" href="/" title="Home">
+    <span class="logo__text">
+      Barebook
+    </span>
+  </a>
+
+  <nav class="primary-nav" aria-label="Primary Navigation">
+    <ul class="primary-nav__list">
+      <li class="primary-nav__item">
+          <a href="" class="primary-nav__link">Home</a>
+      </li>
+      <li class="primary-nav__item">
+          <a href="" class="primary-nav__link">Projects</a>
+      </li>
+      <li class="primary-nav__item">
+          <a href="" class="primary-nav__link">Case studies</a>
+      </li>
+      <li class="primary-nav__item">
+          <a href="" class="primary-nav__link">Blog</a>
+      </li>
+      <li class="primary-nav__item">
+          <a href="" class="primary-nav__link">About</a>
+      </li>
+    </ul>
+
+    <button class="toggle-nav-icon toggle-nav-icon--mobile js-open-off-canvas" aria-hidden="true">
+      <span class="toggle-nav-icon__text">Menu</span>
+      <div class="toggle-nav-icon__icon">
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+      </div>
+    </button>
+  </nav>
+</div>

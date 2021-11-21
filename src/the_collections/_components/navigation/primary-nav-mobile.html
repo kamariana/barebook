@@ -1,0 +1,54 @@
+---
+layout: styleguide-fullscreen
+title:  Primary nav mobile
+order: 2
+type: navigation
+
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="mobile-navigation off-canvas-nav is-open" role="navigation" aria-label="Mobile Navigation" hidden>
+  <div class="off-canvas-nav__contain">
+
+    <div class="off-canvas-nav__header">
+      <button class="toggle-nav-icon toggle-nav-icon--white toggle-nav-icon--close js-close-off-canvas" aria-hidden="true">
+        <span class="toggle-nav-icon__text">Close</span>
+        <div class="toggle-nav-icon__icon">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="off-canvas-nav__main">
+      <nav class="primary-nav-mobile">
+        <ul class="primary-nav-mobile__list">
+          <li class="primary-nav-mobile__item">
+            <a href="" class="primary-nav-mobile__link">Home</a>
+          </li>
+          <li class="primary-nav-mobile__item">
+            <a href="" class="primary-nav-mobile__link">Projects</a>
+          </li>
+          <li class="primary-nav-mobile__item">
+            <a href="" class="primary-nav-mobile__link">Case studies</a>
+          </li>
+          <li class="primary-nav-mobile__item">
+            <a href="" class="primary-nav-mobile__link">Blog</a>
+          </li>
+          <li class="primary-nav-mobile__item">
+            <a href="" class="primary-nav-mobile__link">About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</div>

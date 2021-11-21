@@ -1,0 +1,36 @@
+.primary-nav {
+  display: flex;
+  align-items:  center;
+}
+
+.primary-nav__list {
+  @include reset-list;
+  display: none;
+}
+
+.primary-nav__item {
+
+}
+
+.primary-nav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  padding: var(--spacing-unit-small) var(--spacing-unit-large);
+  font-size: var(--font-size-body-small);
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  .primary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}     // 768px

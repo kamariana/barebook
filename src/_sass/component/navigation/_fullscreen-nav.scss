@@ -1,0 +1,63 @@
+.fullscreen-navigation {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  z-index: var(--layer-under);
+  background-color: var(--black);
+}
+
+
+.fullscreen-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--spacing-unit-medium);
+  text-align: center;
+}
+
+
+// Elements
+.fullscreen-nav__list {
+  @include reset-list;
+}
+
+.fullscreen-nav__item {
+
+}
+
+.fullscreen-nav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  padding: var(--spacing-unit-tiny) var(--spacing-unit-medium);
+  font-size: var(--font-size-heading-small);
+}
+
+
+// Modifiers
+.fullscreen-nav__list--alt {
+  .fullscreen-nav__link {
+    padding: var(--spacing-unit-nano);
+    font-size: var(--font-size-body-large);
+    color: var(--gray);
+  }
+}
+
+
+
+// States
+.fullscreen-navigation.is-open {
+  display: block;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  z-index: var(--layer-surface);
+}
+
+
+// MQs
+@include respond(laptop-s) {
+  .fullscreen-nav {
+    flex-direction: row;
+    gap: var(--spacing-unit-huge);
+    text-align: left;
+  }
+} // 1024px

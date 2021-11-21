@@ -1,0 +1,53 @@
+.mobile-navigation {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  z-index: var(--layer-under);
+  background-color: var(--black);
+}
+
+.primary-nav-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+.primary-nav-mobile__list {
+  @include reset-list;
+}
+
+.primary-nav-mobile__item {
+  
+}
+
+.primary-nav-mobile__link {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  padding: var(--spacing-unit-tiny) var(--spacing-unit-medium);
+  font-size: var(--font-size-heading-small);
+}
+
+
+
+
+
+// States
+.mobile-navigation.is-open {
+  display: block;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  z-index: var(--layer-surface);
+}
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  .mobile-navigation.is-open {
+    opacity: 0;
+    display: none;
+  }
+}     // 768px

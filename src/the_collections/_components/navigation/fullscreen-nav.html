@@ -1,0 +1,91 @@
+---
+layout: styleguide-fullscreen
+title:  Fullscreen nav
+order: 3
+type: navigation
+
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+<div class="header__contain">
+
+  <a class="logo" href="/" title="Home">
+    <span class="logo__text">
+      Barebook
+    </span>
+  </a>
+
+  <button class="toggle-nav-icon js-open-off-canvas" aria-hidden="true">
+    <span class="toggle-nav-icon__text">Menu</span>
+    <div class="toggle-nav-icon__icon">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </div>
+  </button>
+
+</div>
+
+
+<div class="fullscreen-navigation off-canvas-nav" role="navigation" aria-label="Fullscreen Navigation" hidden>
+  <div class="off-canvas-nav__contain">
+
+    <div class="off-canvas-nav__header">
+      <button class="toggle-nav-icon toggle-nav-icon--white toggle-nav-icon--close js-close-off-canvas" aria-hidden="true">
+        <span class="toggle-nav-icon__text">Close</span>
+        <div class="toggle-nav-icon__icon">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="off-canvas-nav__main">
+      <nav class="fullscreen-nav">
+          <ul class="fullscreen-nav__list">
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Home</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Projects</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Case studies</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Blog</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">About</a>
+              </li>
+          </ul>
+
+          <ul class="fullscreen-nav__list fullscreen-nav__list--alt">
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">CV</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Certificates</a>
+              </li>
+              <li class="fullscreen-nav__item">
+                  <a href="" class="fullscreen-nav__link">Contact</a>
+              </li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="off-canvas-nav__footer">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed assumenda provident voluptatibus ex quaerat, consequatur blanditiis, neque error perspiciatis nam aliquam temporibus dolores, porro vitae? Tempora facere magni quibusdam ipsum.
+      </p>
+    </div>
+
+  </div>
+</div>
