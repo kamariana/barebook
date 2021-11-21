@@ -42,10 +42,14 @@
 @import './object/avatar';
 @import './object/meta';
 @import './object/artwork';
+@import './object/off-canvas-nav';
 
 
 // Components
-@import './component/alert/alert';
+@import './component/header/header';
+@import './component/navigation/primary-nav';
+@import './component/navigation/primary-nav-mobile';
+@import './component/navigation/fullscreen-nav';
 @import './component/button/button';
 @import './component/form/form';
 @import './component/logo/logo';
@@ -60,8 +64,6 @@
 
 
 // Patterns
-@import './pattern/full-screen-nav';
-@import './pattern/full-screen-menu';
 @import './pattern/alternate-card-list';
 @import './pattern/case-study';
 
