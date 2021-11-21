@@ -1,0 +1,23 @@
+.header {
+
+}
+
+.header__contain {
+  @include default-contain;
+  display: flex;
+  gap: var(--spacing-unit-medium);
+  align-items:  center;
+  justify-content: space-between;
+  padding-top: var(--spacing-unit-medium);
+}
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  .header__contain {
+    padding-top: var(--spacing-unit-larger);
+  }
+}     // 768px
