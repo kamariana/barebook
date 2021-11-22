@@ -1,0 +1,60 @@
+---
+layout: styleguide-fullscreen
+title:  Pager
+order: 1
+type: pager
+
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<nav class="pager">
+  <a href="" class="pager__link">
+    <svg 
+      class="icon pager__icon" 
+      xmlns="http://www.w3.org/2000/svg" 
+      fill="none" 
+      viewBox="0 0 16 16"
+      preserveAspectRatio="xMidYMid meet"
+      aria-hidden="true"
+    >
+    <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+    </svg>
+    <div class="pager__content">
+      <span class="pager__counter">
+        Previous
+      </span>
+      <span class="pager__title">
+        Part 0 - Fundamentals of Web apps
+      </span>
+    </div>
+  </a>
+
+  <a href="" class="pager__link">
+    <div class="pager__content">
+      <span class="pager__counter">
+        Next
+      </span>
+      <span class="pager__title">
+        Part 1 - Introduction to React
+      </span>
+    </div>
+    <svg 
+      class="icon pager__icon" 
+      xmlns="http://www.w3.org/2000/svg" 
+      fill="none" 
+      viewBox="0 0 16 16"
+      preserveAspectRatio="xMidYMid meet"
+      aria-hidden="true"
+    >
+    <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+    </svg>
+  </a>
+</nav>
