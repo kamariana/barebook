@@ -43,6 +43,7 @@
 @import './object/meta';
 @import './object/artwork';
 @import './object/off-canvas-nav';
+@import './object/icon';
 
 
 // Components
@@ -50,16 +51,17 @@
 @import './component/navigation/primary-nav';
 @import './component/navigation/primary-nav-mobile';
 @import './component/navigation/fullscreen-nav';
-@import './component/button/button';
-@import './component/form/form';
-@import './component/logo/logo';
 @import './component/toggle-nav-icon/toggle-nav-icon';
+@import './component/logo/logo';
 @import './component/masthead/masthead';
 @import './component/masthead/masthead--gradient';
 @import './component/masthead/masthead--media';
+@import './component/button/button';
+@import './component/form/form';
 @import './component/cover/cover';
 @import './component/quote/quote';
 @import './component/gallery/gallery';
+@import './component/pager/pager';
 
 
 
@@ -82,3 +84,4 @@
 @import './utilities/article-link';
 @import './utilities/highlighters';
 @import './utilities/table';
+@import './utilities/definition-list';
