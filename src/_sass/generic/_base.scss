@@ -47,3 +47,9 @@ ol {
   margin-left: var(--base-spacing-unit);
   padding-left: var(--base-spacing-unit-tiny);
 }
+
+
+img,
+svg {
+  vertical-align: middle;
+}
