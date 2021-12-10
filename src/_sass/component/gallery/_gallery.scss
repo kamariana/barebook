@@ -1,14 +1,14 @@
-.gallery {
+.cp-gallery {
   @include reset-list;
   display: grid;
-  gap: var(--spacing-unit-tiny);
+  gap: var(--spacing-nano);
   grid-auto-flow: dense;
 }
 
 
 
 // ELements
-.gallery__img {
+.cp-gallery__img {
   @include fit-media-into-container;
   cursor: zoom-in;
 }
@@ -17,13 +17,9 @@
 
 
 
-// States
-.gallery.with-gap-larger {
-  gap: var(--spacing-unit-larger);
-}
-
-.gallery.with-gap-largest {
-  gap: var(--spacing-unit-largest);
+// Modifiers
+.cp-gallery--with-gap-larger {
+  gap: var(--spacing-larger);
 }
 
 
@@ -31,37 +27,36 @@
 
 
 // MQs
-@include respond(mobile-l) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  }
-}   // 425px,
-
-
 @include respond(tablet) {
+  .cp-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}   // 600px
 
-  .gallery.is-half {
+
+@include respond(tablet-l) {
+
+  .cp-gallery.is-half {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery__item.is-span-wide {
+  .cp-gallery__item.is-span-wide {
     grid-column: span 2;
   }
     
-  .gallery__item.is-span-tall {
+  .cp-gallery__item.is-span-tall {
     grid-row: span 2;
   }
 
-  .gallery__item.is-span-box {
+  .cp-gallery__item.is-span-box {
     grid-column: span 2;
     grid-row: span 2;
   }
 
-} // 768px
+} // 900px
 
-
-@include respond(laptop-m) {
-  .gallery.is-third {
+@include respond(laptop) {
+  .cp-gallery.is-third {
     grid-template-columns: 1fr 1fr 1fr;
   }
-} // 1366px
+}   // 1240px

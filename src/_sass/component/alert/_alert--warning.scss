@@ -1,8 +1,8 @@
-.alert--warning {
+.cp-alert--warning {
   border-left-color: var(--warning);  
 
-  .alert__caption,
-  .alert__title {
+  .cp-alert__caption,
+  .cp-alert__title {
     color: var(--warning);
   }
 }

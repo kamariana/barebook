@@ -1,12 +1,12 @@
-.alert {
-  padding: var(--spacing-unit-medium);
+.cp-alert {
+  padding: var(--spacing-small);
   background-color: var(--white);
-  box-shadow: var(--bs-box);
-  border-left: 8px solid var(--gray);
+  box-shadow: var(--elevation-medium);
+  border-left: 8px solid var(--border);
 
-  @include respond(laptop-l) {
-    padding: var(--spacing-unit-larger);
-  }   // 1440px
+  @include respond(laptop) {
+    padding: var(--spacing-large);
+  }   // 1240px
 }
 
 

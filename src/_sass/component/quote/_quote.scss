@@ -1,16 +1,20 @@
-.quote {
+.cp-quote {
   position: relative;
-  max-width: 36rem;
-  margin: var(--spacing-unit-large) auto;
+  max-width: var(--contain-width-large);
+  margin: var(--spacing-medium) auto;
 
   p {
-      margin-top: 0;
-      position: relative;
-      z-index: var(--layer-back);
+    margin-top: 0;
+    position: relative;
+    z-index: var(--layer-back);
+  }
+
+  blockquote {
+    max-width: 100%;
   }
 
   > * + * {
-      margin-top: var(--spacing-unit-medium);
+    margin-top: var(--spacing-small);
   }
 }
 
@@ -19,7 +23,7 @@
 
 
 // Elements
-.quote__citation {
+.cp-quote__citation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,45 +31,51 @@
   font-style: normal;
 }
 
-.quote__avatar {
+.cp-quote__avatar {
   max-width: 4.375rem;
   max-height: 4.375rem;
-  margin-right: var(--spacing-unit-small);
+  margin-right: var(--spacing-small);
   border-radius: var(--bd-radius-circle);
 }
 
-.quote__author {
+.cp-quote__author {
   flex: 1;
   display: inline-block;
 }
 
-.quote__author-name {
+.cp-quote__author-name {
   display: block;
 }
 
-.quote__author-role {
+.cp-quote__author-role {
   display: block;
-  color: var(--gray-dark);
+  color: var(--text-subdued);
+  font-size: var(--font-size-body-small);
 }
 
 
 
 
-// States
-.quote.is-small {
-  max-width: var(--contain-width-small);
-}
 
-.quote.with-mark-left {
+// Modifiers
+.cp-quote--with-mark-left {
   &::before {
     content: "\201C";
     position: absolute;
     z-index: var(--layer-backward);
     color: var(--gray-lighter);
-    font-size: calc(var(--font-size-heading-largest) * 4);
+    font-size: calc(var(--font-size-title-largest) * 4);
     line-height: 1;
-    top: -48px;
-    left: -48px;
+    top: calc(var(--spacing-larger) * -1);
+    left: calc(var(--spacing-larger) * -1);
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 }
+
+
+// States
+.cp-quote.is-medium {
+  max-width: var(--contain-width-medium);
+}
+
+

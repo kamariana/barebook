@@ -2,19 +2,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--shape-unit-larger);
-  font-size: var(--font-size-body);
+  min-height: var(--shape-size-larger);
+  font-size: var(--font-size-body-smal);
   cursor: pointer;
   user-select: none;
   text-align: center;
   line-height: 1.15;
   background-color: transparent;
   border: none;
-  border-radius: var(--bd-radius-tiny);
-  padding: var(--spacing-unit-small) var(--spacing-unit-large);
+  border-radius: var(--bd-radius-large);
+  padding: var(--spacing-tiny) var(--spacing-small);
   white-space: nowrap;
   width: auto;
-  text-transform: uppercase;
+  font-weight: bold;
 }
 
 a.button {
@@ -24,31 +24,44 @@ a.button {
 
 // Modofiers
 .button--plain {
-  color: var(--primary);
-  padding: var(--spacing-unit-small) var(--spacing-unit-tiny);
-
-  outline: 1px solid red;
+  color: var(--primary-enabled);
 
   &:hover {
-    color: var(--primary-dark);
+    background-color: var(--primary-hovered-subdued);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused-subdued);
   }
 }
 
 .button--primary {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--primary-enabled);
+  color: var(--text-on-primary);
+
+  &:hover {
+    background-color: var(--primary-hovered);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused);
+  }
 }
 
 .button--secondary {
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--primary-enabled);
+  border: 2px solid var(--primary-enabled);
 
   &:hover {
-    background-color: var(--primary-light);
+    background-color: var(--primary-hovered-subdued);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused-subdued);
   }
 }
 
 .button--destructive {
   background-color: var(--error);
-  color: var(--white);
+  color: var(--text-on-primary);
 }
