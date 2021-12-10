@@ -1,42 +1,105 @@
-h1 {
-  font-size: var(--font-size-heading-medium);
-  line-height: 1.25;
-}
-
-h2 {
-  font-size: var(--font-size-heading-small);
-  line-height: 1.25;
-}
-
-h3 {
-  font-size: var(--font-size-heading-tiny);
-  line-height: 1.5;
-}
-
-h4 {
-  font-size: var(--font-size-heading-nano);
-  line-height: 1.25;
-}
-
-h5,
-h6 {
-  font-size: var(--font-size-body-large);
-  line-height: 1.25;
-}
-
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  
+  font-family: var(--typeface-secondary);  
+  color: var(--black);
+  font-weight: bold;
+
   &:not(:first-child) {
-    margin-top: var(--spacing-unit-largest);
+    margin-top: var(--spacing-larger);
   }
 
-  + * {
-    margin-top: var(--spacing-unit-medium);
-  }
+  & + * {
+    margin-top: var(--spacing-tiny);
+  } 
 }
+
+
+h1 {
+  font-size: var(--font-size-title-medium);
+  line-height: var(--leading-small);
+}
+
+h2 {
+  font-size: var(--font-size-title-small);
+  line-height: var(--leading-medium);
+}
+
+h3 {
+  font-size: var(--font-size-body-large);
+  line-height: var(--leading-large);
+}
+
+h4 {
+  font-size: var(--font-size-body-medium);
+  line-height: var(--leading-large);
+}
+
+h5,
+h6 {
+  font-size: var(--font-size-body-default);
+  line-height: var(--leading-large);
+}
+
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  h1 {
+    font-size: var(--font-size-title-large);
+    line-height: var(--leading-tiny);
+  }
+  
+  h2 {
+    font-size: var(--font-size-title-medium);
+    line-height: var(--leading-small);
+    
+  }
+  
+  h3 {
+    font-size: var(--font-size-title-small);
+    line-height: var(--leading-medium);
+  }
+  
+  h4 {
+    font-size: var(--font-size-body-large);
+  }
+  
+  h5,
+  h6 {
+    font-size: var(--font-size-body-medium);
+  }
+}   // 600px
+
+@include respond(laptop) {
+  h1 {
+    font-size: var(--font-size-title-larger);
+  }
+  
+  h2 {
+    font-size: var(--font-size-title-large);
+    line-height: var(--leading-tiny);
+  }
+  
+  h3 {
+    font-size: var(--font-size-title-medium);
+    line-height: var(--leading-small);
+  }
+  
+  h4 {
+    font-size: var(--font-size-title-small);
+    line-height: var(--leading-medium);
+  }
+  
+  h5,
+  h6 {
+    font-size: var(--font-size-title-nano);
+  }
+  
+}   // 1240px

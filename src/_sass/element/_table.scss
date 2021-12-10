@@ -6,16 +6,16 @@ table {
 
 td,
 th {
-  padding: var(--spacing-unit-tiny);
+  padding: var(--spacing-tiny);
   text-align: left;
 }
 
 caption {
   caption-side: bottom;
   color: var(--gray-dark);
-  font-size: var(--font-size-body-tiny);
+  font-size: var(--font-size-body-small);
   font-style: italic;
   font-style: italic;
-  line-height: 1.375;
+  line-height: var(--leading-small);
   text-align: left;
 }

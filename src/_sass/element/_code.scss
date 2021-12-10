@@ -1,8 +1,8 @@
 code {
-  background-color: var(--primary-lightest);
-  color: var(--black);
+  background-color: var(--background-code);
+  color: var(--text-on-code);
   display: inline-block;
-  font-family: var(--font-code);
+  font-family: var(--typeface-code);
   font-size: var(--font-size-body-small);
   padding: 0 2.5px;
 }

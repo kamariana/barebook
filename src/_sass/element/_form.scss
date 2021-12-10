@@ -4,19 +4,14 @@ fieldset {
 }
 
 legend {
-  line-height: 1.375;
-  margin-bottom: var(--spacing-unit-tiny);
+  line-height: var(--leading-small);
+  margin-bottom: var(--spacing-tiny);
 }
 
 label {
-  line-height: 1.375;
-}
-
-
-select {
-  background-color: inherit;
   cursor: pointer;
-  touch-action: manipulation;
+  line-height: var(--leading-small);
+  margin-bottom: var(--spacing-nano);
 }
 
 input,
@@ -26,8 +21,42 @@ textarea {
   transition-duration: 150ms;
   transition-property: border-color;
   width: 100%;
+  border: 2px solid var(--border);
+  border-radius: var(--bd-radius-tiny);
+  font-weight: bold;
+  padding: var(--spacing-tiny);
+
+  &:hover {
+    border-color: var(--interactive-hovered);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--interactive-focused);
+    box-shadow: 0 0 0 2px var(--interactive-focused);
+  }
+
+  &:disabled {
+    background-color: var(--interactive-disabled);
+    color: var(--text-disabled);
+    cursor: not-allowed;
+  }
 }
 
+
+select {
+  background-color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+
+textarea {
+
+}
+
+
+// Radio and Checkbox
 [type='reset'],
 [type='checkbox'],
 [type='radio'],
@@ -40,6 +69,8 @@ textarea {
 [type='range'] {  
   cursor: pointer;
   touch-action: manipulation;
+  border-style: dashed;
+  border-width: 3px;
 }
 
 
@@ -49,7 +80,7 @@ textarea {
   opacity: 0;
   + label {
     position: relative;
-    padding-left: 16px; 
+    padding-left: var(--spacing-medium); 
 
     &::before,
     &::after {
@@ -57,43 +88,52 @@ textarea {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -20px;
+      left: calc(var(--spacing-small) * -1);
     }
 
     &::before {
-      width: 24px;
-      height: 24px;
-      border: 2px solid var(--gray);
+      width: 32px;
+      height: 32px;
+      border: 2px solid var(--border);
       background-color: transparent;
     }
 
     &::after {
       margin-left: 4px;
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
     }
   }
 
   &:hover {
     + label::before {
-      border-color: var(--gray-darkest);
+      border-color: var(--interactive-hovered);
     }
   }
 
   &:focus {
     + label::before {
-      box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.7);
-      border-color: var(--gray-darkest);
+      box-shadow: 0 0 0 2px var(--interactive-focused);
+      border-color: var(--interactive-focused);
       outline: 3px solid transparent; /* For Windows high contrast mode. */
     }
   }
 
   &:checked {
     + label::before {
-        border-color: var(--gray-darkest);
+        border-color: var(--interactive-focused);
     }
     + label::after {
-        background-color: var(--gray-darkest);
+        background-color: var(--interactive-focused);
+    }
+  }
+
+  &:disabled {
+    + label {
+      cursor: not-allowed;
+    }
+    + label::before {
+      border-color: var(--interactive-disabled);
     }
   }
 }

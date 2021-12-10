@@ -1,16 +1,15 @@
 blockquote {
-  font-family: var(--font-quotes);
+  font-family: var(--typeface-quotes);
   font-size: var(--font-size-body-large);
-  line-height: 1.5;
   max-width: var(--contain-width-medium);
-  padding: var(--spacing-unit-small);
+  padding: var(--spacing-small);
   
   > p {
     margin-top: 0;
   }
 
   > * + * {
-    margin-top: var(--spacing-unit-medium);
+    margin-top: var(--spacing-medium);
   }
 }
 
