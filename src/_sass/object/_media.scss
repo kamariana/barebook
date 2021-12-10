@@ -1,8 +1,8 @@
-.media {
+.ob-media {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--spacing-unit-medium);
+  gap: var(--spacing-small);
   margin: 0;
 }
 
@@ -11,21 +11,21 @@
 
 
 // Elements
-.media__caption {
+.ob-media__caption {
   flex: 1;
   display: block;
   font-style: normal;
 }
 
-.media__author-name {
+.ob-media__author-name {
   display: block;
   font-weight: bold;
-  font-size: var(--font-size-heading-nano);
+  font-size: var(--font-size-body-medium);
 }
 
-.media__author-role {
-  color: var(--gray-darker);
-  font-size: var(--font-size-body-tiny);
+.ob-media__author-role {
+  color: var(--text-subdued);
+  font-size: var(--font-size-body-small);
   text-transform: uppercase;
 }
 
@@ -33,7 +33,7 @@
 
 
 
-// States
-.media.at-center {
+// Modifiers
+.ob-media--at-center {
   align-items: center;
 }

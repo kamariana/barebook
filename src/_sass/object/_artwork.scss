@@ -1,5 +1,5 @@
 @include respond(tablet) {
-  .artwork {
+  .ob-artwork {
     position: relative;
     left: 50%;
     right: 50%;
@@ -13,17 +13,14 @@
     }
   
     figcaption {
-      margin-left: var(--spacing-unit-small);
+      margin-left: var(--spacing-tiny);
     }
   }
-}     // 768px
+}     // 600px
 
 
-
-@include respond(laptop-m) {
-
-  // States
-  .artwork.at-center {
+@include respond(laptop) {
+  .ob-artwork--at-center {
     left: 25%;
     right: 25%;
     max-width: 75vw;
@@ -31,5 +28,4 @@
     margin-left: -25vw;
     margin-right: -25vw;
   }
-  
-} // 1366px
+}   // 1240px

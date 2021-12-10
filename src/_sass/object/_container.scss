@@ -1,7 +1,7 @@
-.contain {
+.ob-contain {
   @include default-contain;  
 
-  .contain {
+  .ob-contain {
     padding-right: 0;
     padding-left: 0;
   }
@@ -12,22 +12,22 @@
 
 
 
-// States
-.contain.is-small {
-  max-width: var(--contain-width-small);
-}
-
-.contain.is-medium {
+// Modifiers
+.ob-contain--medium {
   max-width: var(--contain-width-medium);
-} 
+}  // 600px
 
-.contain.is-large {
+.ob-contain--large {
   max-width: var(--contain-width-large);
-}
+} // 768px
+
+.ob-contain--larger {
+  max-width: var(--contain-width-larger);
+} // 1024px
 
 // This will apply a uniform gap between containers/box in the parent o-contain.
-.contain.with-vr-gaps {
+.ob-contain--with-vr-gaps {
   > * + * {
-    margin-top: var(--spacing-unit-largest);
+    margin-top: var(--spacing-larger);
   }
 }

@@ -1,4 +1,4 @@
-.sides {
+.ob-sides {
   display: grid;
 }
 
@@ -7,7 +7,7 @@
 
 
 // Elements
-.sides__text {
+.ob-sides__text {
   padding: var(--spacing-unit-medium);
 
   & :last-child {
@@ -17,20 +17,20 @@
 
 
 
-// States
-.sides.at-center{
+// Modifiers
+.ob-sides--at-center{
   align-items: center;
 }
 
-.sides.with-gap-larger {
+.ob-sides--with-gap-larger {
   gap: var(--spacing-unit-larger);
 }
 
-.sides.with-gap-largest {
+.ob-sides--with-gap-largest {
   gap: var(--spacing-unit-largest);
 }
 
-.sides.with-gap-huge {
+.ob-sides--with-gap-huge {
   gap: var(--base-spacing-unit-medium);
 }
 
@@ -39,27 +39,27 @@
 
 // MQs
 @include respond(tablet) {
-  .sides {
+  .ob-sides {
     grid-template-columns: 1fr 1fr;
   }
-} // 768px
+} // 600px
 
 
 
-@include respond(laptop-m) {
+@include respond(laptop) {
 
-  .sides__text {
+  .ob-sides__text {
     padding: 0 10%;
   }
 
 
   // States
-  .sides.is-two-third {
+  .ob-sides.is-two-third {
     grid-template-columns: 1.5fr 1fr;
   }
 
-  .sides.is-two-third-reverse  {
+  .ob-sides.is-two-third-reverse  {
     grid-template-columns: 1fr 1.35fr;
   }
 
-}   // 1366px
+}   // 1240px

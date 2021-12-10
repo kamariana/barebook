@@ -1,4 +1,4 @@
-.avatar {
+.ob-avatar {
   background-color: var(--white);
 }
 
@@ -7,20 +7,20 @@
 
 
 // Modifiers 
-.avatar--circle {
+.ob-avatar--circle {
   border-radius: 100%;
 }
 
-.avatar--rounded {
+.ob-avatar--rounded {
   border-radius: 1rem;
 }
 
-.avatar--bordered {
-  border: 1px solid var(--gray-light);
+.ob-avatar--bordered {
+  border: 1px solid var(--border);
 }
 
-.avatar--ring {
-  border: 1px solid var(--gray-light);
+.ob-avatar--ring {
+  border: 1px solid var(--border);
   padding: 0.25rem;
 }
 

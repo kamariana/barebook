@@ -1,8 +1,8 @@
-.meta {
+.ob-meta {
   font-size: var(--font-size-body-small);
 }
 
-.meta__items {
+.ob-meta__items {
   display: flex;
-  gap: var(--spacing-unit-large);
+  gap: var(--spacing-tiny);
 }

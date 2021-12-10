@@ -1,6 +1,6 @@
-.section {
-  padding-top: var(--spacing-unit-largest);
-  padding-bottom: var(--spacing-unit-largest);
+.ob-section {
+  padding-top: var(--spacing-larger);
+  padding-bottom: var(--spacing-larger);
 }
 
 
@@ -8,7 +8,7 @@
 
 
 // Elements
-.section__header {
+.ob-section__header {
   display: flex;
   flex-direction: column;
 } 
@@ -18,17 +18,11 @@
 
 
 // Modifiers
-
-
-
-
-
-// States
-.section.with-no-pad {
+.ob-section--with-no-pad {
   padding: 0;
 }
 
-.section__header.at-center {
+.ob-section__header--at-center {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -38,10 +32,11 @@
 
 
 
+
 // * MQs
-@include respond(laptop-m) {
-  .section {
-    padding-top: calc(2 * var(--spacing-unit-largest));
-    padding-bottom: calc(2 * var(--spacing-unit-largest));
+@include respond(laptop) {
+  .ob-section {
+    padding-top: calc(2 * var(--spacing-larger));
+    padding-bottom: calc(2 * var(--spacing-larger));
   }
-} // 1366px
+}   // 1240px
