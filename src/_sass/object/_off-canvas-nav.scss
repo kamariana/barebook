@@ -8,14 +8,14 @@
 .ob-off-canvas-nav__contain {
   display: flex;
   flex-direction: column;
-  max-width: var(--contain-width-huge);
+  max-width: var(--container-width-huge);
   margin-right: auto;
   margin-left: auto;
   height: 100vh;
 }
 
 .ob-off-canvas-nav__header {
-  padding: var(--gutter-spacing-small);
+  padding: var(--size-16);
 }
 
 .ob-off-canvas-nav__main {
@@ -24,5 +24,5 @@
 }
 
 .ob-off-canvas-nav__footer {
-  padding: var(--gutter-spacing-small);
+  padding: var(--size-16);
 }

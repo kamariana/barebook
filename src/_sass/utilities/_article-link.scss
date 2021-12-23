@@ -1,10 +1,10 @@
-.article a {
-  border-bottom: 2px solid var(--link);
+.ut-article a {
+  border-bottom: 2px solid var(--interactive-enabled);
   padding: 0 2.5px;
   text-decoration: none;
 
   &:hover {
-    background-color: var(--link-hover-bg-color);
-    color: var(--link-hover-color);
+    background-color: var(--interactive-hovered);
+    color: var(--text-on-interactive);
   }
 }

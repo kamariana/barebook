@@ -1,6 +1,6 @@
 ---
 title:  Cover
-layout: styleguide-fullscreen
+layout: page-entry
 type: cover
 order: 1
 
@@ -14,26 +14,26 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="cover is-zoomable">
-  <div class="cover__text at-center">
-      <h3 class="cover__title">
+<div class="cp-cover cp-cover--zoomable">
+  <div class="cp-cover__text cp-cover__text--at-center">
+      <h3 class="cp-cover__title">
           How have we steragise content for institutions
       </h3>
          
-      <span class="cover__tag">
+      <span class="cp-cover__tag">
         Case Studies
       </span>
       
-      <a href="#" class="button button--secondary cover__button">
+      <a href="#" class="cp-button cp-button--secondary cp-cover__button">
         See Case Studies
       </a>
   </div>
 
-  <div class="cover__figure">
-      <picture class="cover__picture">
+  <div class="cp-cover__figure">
+      <picture class="cp-cover__picture">
         <source media="(max-width: 1024px)" srcset="/assets/images/masthead-sm.jpg"/>
         <source media="(min-width:1025px)" srcset="/assets/images/masthead.jpg"/>
-        <img class="cover__img" src="/assets/images/masthead-sm.jpg" alt="" />
+        <img class="cp-cover__img" src="/assets/images/masthead-sm.jpg" alt="" />
       </picture>
   </div>
 </div>

@@ -1,8 +1,8 @@
 code {
-  background-color: var(--background-code);
-  color: var(--text-on-code);
+  background-color: var(--canvas-code);
+  color: var(--canvas-code-text);
   display: inline-block;
   font-family: var(--typeface-code);
-  font-size: var(--font-size-body-small);
-  padding: 0 2.5px;
+  padding: 0 var(--size-8);
+  border-radius: var(--bd-radius-largest);
 }

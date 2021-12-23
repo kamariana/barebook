@@ -1,0 +1,24 @@
+.cp-menu {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cp-menu__item {
+
+}
+
+.cp-menu__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: var(--size-8) var(--size-12);
+}
+
+
+
+// Modifiers
+.cp-menu__item--divider {
+    border-top: 1px solid var(--border-color-subdued)
+}

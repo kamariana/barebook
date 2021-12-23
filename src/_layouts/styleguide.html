@@ -7,15 +7,11 @@
     <link rel="stylesheet" href="/assets/css/barebook.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body class="bb-body">
-    <div class="bb-app">
-
-        {% include utils/header.html %}
-
-        {% include utils/banner.html %}
+<body>
+    <div class="ob-page">
 
         <main class="bb-main bb-main--styleguide">
-            <div class="bb-contain">
+            <div class="ob-contain">
                
                 <div class="bb-content">
                     {{ content }}
@@ -27,8 +23,6 @@
             {{ page.title }}
            </span>
         </main>
-
-        {% include utils/footer.html %}
 
     </div>
 </body>

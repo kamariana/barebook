@@ -1,6 +1,6 @@
 ---
 title:  Radio
-layout: styleguide-fullscreen
+layout: page-entry
 type: form
 order: 2
 
@@ -14,17 +14,17 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="form-group">
+<div class="cp-field">
   <fieldset>
     <legend>What is your gender?</legend>
-    <div class="form-groups form-groups--block">
+    <div class="cp-field__group">
       <div>
-        <input class="form-control" id="male" name="gender" type="radio" value="male"/>
-        <label class="form-caption" for="male">Male</label>
+        <input id="male" name="gender" type="radio" value="male"/>
+        <label for="male">Male</label>
       </div>
       <div>
-        <input class="form-control" id="female" name="gender" type="radio" value="female"/>
-        <label class="form-caption" for="female">Female</label>
+        <input id="female" name="gender" type="radio" value="female"/>
+        <label for="female">Female</label>
       </div>
     </div>
   </fieldset>

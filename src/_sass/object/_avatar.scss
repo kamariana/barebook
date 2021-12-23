@@ -1,5 +1,5 @@
 .ob-avatar {
-  background-color: var(--white);
+  background-color: var(--canvas-subdued);
 }
 
 
@@ -15,12 +15,12 @@
   border-radius: 1rem;
 }
 
-.ob-avatar--bordered {
-  border: 1px solid var(--border);
+.ob-avatar--border-color-subdueded {
+  border: 1px solid var(--border-color-subdued);
 }
 
 .ob-avatar--ring {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color-subdued);
   padding: 0.25rem;
 }
 
@@ -29,22 +29,22 @@
 
 
 // States
-.avatar.is-tiny {
+.ob-avatar.is-tiny {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.avatar.is-small {
+.ob-avatar.is-small {
   width: 4.5rem;
   height: 4.5rem;
 }
 
-.avatar.is-medium {
+.ob-avatar.is-medium {
   width: 6.5rem;
   height: 6.5rem;
 }
 
-.avatar.is-large {
+.ob-avatar.is-large {
   width: 8.5rem;
   height: 8.5rem;
 }

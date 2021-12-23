@@ -5,43 +5,41 @@ h4,
 h5,
 h6 {
   font-family: var(--typeface-secondary);  
-  color: var(--black);
   font-weight: bold;
 
   &:not(:first-child) {
-    margin-top: var(--spacing-larger);
+    margin-top: var(--size-44);
   }
 
   & + * {
-    margin-top: var(--spacing-tiny);
+    margin-top: var(--size-8);
   } 
 }
 
 
 h1 {
   font-size: var(--font-size-title-medium);
-  line-height: var(--leading-small);
+  line-height: var(--small-line-height);
 }
 
 h2 {
   font-size: var(--font-size-title-small);
-  line-height: var(--leading-medium);
+  line-height: var(--medium-line-height);
 }
 
 h3 {
   font-size: var(--font-size-body-large);
-  line-height: var(--leading-large);
+  line-height: var(--large-line-height);
 }
 
 h4 {
   font-size: var(--font-size-body-medium);
-  line-height: var(--leading-large);
+  line-height: var(--large-line-height);
 }
 
 h5,
 h6 {
-  font-size: var(--font-size-body-default);
-  line-height: var(--leading-large);
+  font-size: var(--font-size-body-base);
 }
 
 
@@ -52,54 +50,55 @@ h6 {
 // MQs
 @include respond(tablet) {
   h1 {
-    font-size: var(--font-size-title-large);
-    line-height: var(--leading-tiny);
+    --font-size-title-medium: var(--font-size-title-large);
+    --small-line-height: var(--tiny-line-height);
   }
   
   h2 {
-    font-size: var(--font-size-title-medium);
-    line-height: var(--leading-small);
+    --font-size-title-small: var(--font-size-title-medium);
+    --medium-line-height: var(--tiny-line-height);
     
   }
   
   h3 {
-    font-size: var(--font-size-title-small);
-    line-height: var(--leading-medium);
+    --font-size-body-large: var(--font-size-title-small);
+    --large-line-height: var(--medium-line-height);
   }
   
   h4 {
-    font-size: var(--font-size-body-large);
+    --font-size-body-medium: var(--font-size-body-large);
   }
   
   h5,
   h6 {
-    font-size: var(--font-size-body-medium);
+    --font-size-body-base: var(--font-size-body-medium);
+    line-height: var(--large-line-height);
   }
 }   // 600px
 
 @include respond(laptop) {
   h1 {
-    font-size: var(--font-size-title-larger);
+    --font-size-title-medium: var(--font-size-title-larger);
   }
   
   h2 {
-    font-size: var(--font-size-title-large);
-    line-height: var(--leading-tiny);
+    --font-size-title-small: var(--font-size-title-large);
+    --medium-line-height: var(--tiny-line-height);
   }
   
   h3 {
-    font-size: var(--font-size-title-medium);
-    line-height: var(--leading-small);
+    --font-size-body-large: var(--font-size-title-medium);
+    --large-line-height: var(--small-line-height);
   }
   
   h4 {
-    font-size: var(--font-size-title-small);
-    line-height: var(--leading-medium);
+    --font-size-body-medium: var(--font-size-title-small);
+    --large-line-height: var(--medium-line-height);
   }
   
   h5,
   h6 {
-    font-size: var(--font-size-title-nano);
+    --font-size-body-base: var(--font-size-title-nano);
   }
   
 }   // 1240px

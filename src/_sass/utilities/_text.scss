@@ -1,20 +1,50 @@
-.lead-headline {
-  font-size: var(--font-size-heading-small);
-  line-height: 1.25;
+.ut-headline-small {
+  font-size: var(--font-size-body-medium);
+  line-height: var(--leading-large)
 }
 
-.lead-text {
-  font-size: var(--font-size-heading-nano);
-  line-height: 1.5;
+.ut-headline-medium {
+  font-size: var(--font-size-title-nano);
+}
+
+.ut-headline-large {
+  font-size: var(--font-size-title-medium);
+  line-height: var(--leading-small);
 }
 
 
-@include respond(laptop-s) {
-  .lead-headline {
-    font-size: var(--font-size-heading-larger);
-  }
 
-  .lead-text {
-    font-size: var(--font-size-heading-tiny);
+// Lead body text and subtitles
+.ut-subtitle-small {
+  font-size: var(--font-size-body-small);
+}
+
+.ut-subtitle-medium {
+  font-size: var(--font-size-body-medium);
+}
+
+.ut-subtitle-large {
+  font-size: var(--font-size-body-large);
+}
+
+
+
+
+
+// MQs
+@include respond(laptop) {
+  .ut-headline-small {
+    font-size: var(--font-size-title-small);
+    line-height: var(--leading-medium)
   }
-}   // 1024px
+  
+  .ut-headline-medium {
+    font-size: var(--font-size-title-medium);
+    line-height: var(--leading-small);
+  }
+  
+  .ut-headline-large {
+    font-size: var(--font-size-title-largest);
+    line-height: var(--leading-tiny);
+  }
+}   // 1240px

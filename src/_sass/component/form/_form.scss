@@ -1,98 +1,110 @@
-.form-group {
-
+// Mixins
+@mixin center-user-input {
+	input,
+	select {
+		text-align: center;
+	}
 }
 
-.form-caption {
-  cursor: pointer;
-  display: inline-flex;
-  margin-bottom: var(--spacing-unit-nano);
-}
-
-.form-control {
-  border: 2px solid var(--gray);
-  padding: var(--spacing-unit-medium);
-  min-height: var(--shape-unit-largest);
-  border-radius: var(--bd-radius-tiny);
-  font-weight: bold;
-  font-size: var(--font-size-body);
-
-  &:hover {
-    border-color: var(--gray-darkest);
-  }
-
-  &:focus {
-    outline: none;
-    border-color: var(--gray-darkest);
-    box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.7);
-  }
-
-  &:disabled {
-    background-color: var(--gray-light);
-    cursor: not-allowed;
-    color: var(--black);
-  }
-
-  &[type='file'] {
-    border-style: dotted;
+.cp-field {
+  &:not(:first-child) {
+    margin-top: var(--spacing-medium);
   }
 }
 
-.form-hint {
+
+
+
+
+// Elements
+.cp-field__group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.cp-field__hint {
   display: block;
   font-size: var(--font-size-body-small);
-  margin-bottom: var(--spacing-unit-nano);
-  color: var(--gray-dark);
+  margin-bottom: var(--spacing-tiny);
+  color: var(--canvas-text-subdued);
 }
 
-.form-control--textarea {
-  min-height: 10rem;
+legend + .cp-field__hint {
+  margin-top: calc(var(--spacing-tiny) * -1);
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// take them to their own css file
-@mixin center-user-input {
-  input,
-  select {
-    text-align: center;
+// Modifiers
+.cp-field--checkadio {
+  &:not(:first-child) {
+    margin-top: var(--spacing-small);
   }
 }
 
+.cp-field__group--grid {
+  flex-direction: row;
+}
 
-.form-groups {
-  display: flex;
-  gap: var(--spacing-unit-largest);
-  align-items: center;
-  flex-wrap: wrap;
+.cp-field__group--checkadio {
+  gap: var(--spacing-larger);
+}
 
-  // Overides
-  .form-caption {
-    margin: 0;
+.cp-field__group--date {
+	@include center-user-input;
+  gap: var(--spacing-tiny);
+
+	> :nth-child(1) {
+		width: 64px;
+	} 
+
+	> :nth-child(2) {
+		width: 156px;
+	} 
+
+	> :nth-child(3) {
+		width: 96px;
+	} 
+}
+
+
+
+.cp-field__group--pin {
+	@include center-user-input;
+
+	input {
+		font-size: var(--font-size-heading-tiny);
+	}
+
+	> * {
+		width: 124px;
+	}
+}
+
+
+
+// MQs
+@include respond(tablet) {
+  .cp-field__group--date {
+    gap: var(--spacing-small);
+
+    > :nth-child(1) {
+      width: 96px;
+    } 
+  
+    > :nth-child(2) {
+      width: 156px;
+    } 
+  
+    > :nth-child(3) {
+      width: 124px;
+    } 
   }
-
-  .form-control {
-    min-height: auto;
-  }
-}
-
-.form-groups-multiple {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-unit-small);
-}
+}     // 600px
 
 
 
@@ -100,38 +112,7 @@
 
 
 
-//Modifiers
-.form-groups--block {
-  flex-direction: column;
-  gap: var(--spacing-unit-large);
-  align-items: start;
-}
 
 
-.form-groups-multiple--date {
-  @include center-user-input;
 
-  > :nth-child(1) {
-    width: 96px;
-  } 
 
-  > :nth-child(2) {
-    width: 156px;
-  } 
-
-  > :nth-child(3) {
-    width: 124px;
-  } 
-}
-
-.form-groups-multiple--pin {
-  @include center-user-input;
-
-  input {
-    font-size: var(--font-size-heading-tiny);
-  }
-
-  > * {
-    width: 124px;
-  }
-}

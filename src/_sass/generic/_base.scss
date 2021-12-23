@@ -8,10 +8,10 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--gray-darkest);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-body);
+  background-color: var(--canvas);
+  color: var(--canvas-text);
+  font-family: var(--typeface-primary);
+  font-size: var(--font-size-body-base);
   line-height: var(--base-line-height);
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -31,22 +31,13 @@ p,
 address,
 hr,
 table,
-fieldset,
 figure,
 pre {
-  margin-top: var(--spacing-unit-larger);
+  margin-top: var(--size-28);
 }
 
 
- 
- 
- 
- 
-ul,
-ol {
-  margin-left: var(--base-spacing-unit);
-  padding-left: var(--base-spacing-unit-tiny);
-}
+
 
 
 img,

@@ -2,57 +2,61 @@
 title: Input fields
 category: elements
 type: Form
-layout: styleguide-fullscreen
+layout: page-entry
 ---
 
 <div class="bb-contain--output">
 
   <form action="#">
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_text">Text Input</label>
         <input id="input_text" type="text" placeholder="Text Input">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
+        <label for="input_text">Text Input</label>
+        <input id="input_text" type="text" placeholder="Text Input" disabled>
+      </div>
+      <div class="cp-field">
         <label for="input_password">Password</label>
         <input id="input_password" type="password" placeholder="Type your Password">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_webaddress">Web Address</label>
         <input id="input_webaddress" type="url" placeholder="http://yoursite.com">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_emailaddress">Email Address</label>
         <input id="input_emailaddress" type="email" placeholder="name@email.com">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_phone">Phone Number</label>
         <input id="input_phone" type="tel" placeholder="(220) 999-9999">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_search">Search</label>
         <input id="input_search" type="search" placeholder="Enter Search Term">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_number">Number Input</label>
         <input id="input_number" type="number" placeholder="Enter a Number">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_date">Date Input</label>
         <input id="input_date" type="date" value="2018-01-01">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_ir">Range Input</label>
         <input id="input_ir" type="range" value="10">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_file">Range Input</label>
         <input id="input_file" type="file">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_error" class="error">Error</label>
         <input id="input_error" class="is-error" type="text" placeholder="Text Input">
       </div>
-      <div class="form-group">
+      <div class="cp-field">
         <label for="input_valid" class="valid">Valid</label>
         <input id="input_valid" class="is-valid" type="text" placeholder="Text Input">
       </div>
@@ -62,15 +66,15 @@ layout: styleguide-fullscreen
   
   
   <form action="#">
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input type="radio" name="size" id="size_1" value="small">
       <label for="size_1">Small</label>
     </div>
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input type="radio" name="size" id="size_2" value="medium">
       <label for="size_2">Medium</label>
     </div>
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input type="radio" name="size" id="size_3" value="large">
       <label for="size_3">Large</label>
     </div>
@@ -79,15 +83,15 @@ layout: styleguide-fullscreen
   
   
   <form action="#">
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input id="first" type="checkbox" name="fruit-1" value="cherry">
       <label for="first">I like cherry</label>
     </div>
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input id="second" type="checkbox" name="fruit-2" value="banana" disabled>
       <label for="second">I can't like banana</label>
     </div>
-    <div class="form-group form-group--checkadio">
+    <div class="cp-field cp-field--checkadio">
       <input id="third" type="checkbox" name="fruit-3" value="strawberry">
       <label for="third">I like strawberry</label>
     </div>

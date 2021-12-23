@@ -1,31 +1,35 @@
-.mobile-navigation {
+.cp-mobile-navigation {
   opacity: 0;
   transform: translate3d(0, -100%, 0);
   z-index: var(--layer-under);
-  background-color: var(--black);
+  background-color: var(--thurab-1000);
 }
 
-.primary-nav-mobile {
+.cp-primary-nav-mobile {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
 }
 
-.primary-nav-mobile__list {
+.cp-primary-nav-mobile__list {
   @include reset-list;
 }
 
-.primary-nav-mobile__item {
+.cp-primary-nav-mobile__item {
   
 }
 
-.primary-nav-mobile__link {
+.cp-primary-nav-mobile__link {
   display: block;
   text-decoration: none;
-  color: var(--white);
-  padding: var(--spacing-unit-tiny) var(--spacing-unit-medium);
-  font-size: var(--font-size-heading-small);
+  color: var(--thurab-50);
+  padding: var(--size-8) var(--size-16);
+  font-size: var(--font-size-title-nano);
+
+  &:hover {
+    color: var(--white);
+  }
 }
 
 
@@ -33,7 +37,7 @@
 
 
 // States
-.mobile-navigation.is-open {
+.cp-mobile-navigation.is-open {
   display: block;
   opacity: 1;
   transform: translate3d(0, 0, 0);
@@ -45,9 +49,9 @@
 
 
 // MQs
-@include respond(tablet) {
-  .mobile-navigation.is-open {
+@include respond(tablet-l) {
+  .cp-mobile-navigation.is-open {
     opacity: 0;
     display: none;
   }
-}     // 768px
+} // 900px

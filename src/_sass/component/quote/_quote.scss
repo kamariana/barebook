@@ -1,7 +1,7 @@
 .cp-quote {
   position: relative;
-  max-width: var(--contain-width-large);
-  margin: var(--spacing-medium) auto;
+  max-width: var(--container-width-medium);
+  margin: var(--size-16) auto;
 
   p {
     margin-top: 0;
@@ -14,7 +14,7 @@
   }
 
   > * + * {
-    margin-top: var(--spacing-small);
+    margin-top: var(--size-8);
   }
 }
 
@@ -29,12 +29,13 @@
   align-items: center;
   font-size: var(--font-size-body-large);
   font-style: normal;
+  padding-left: var(--size-24);
 }
 
 .cp-quote__avatar {
   max-width: 4.375rem;
   max-height: 4.375rem;
-  margin-right: var(--spacing-small);
+  margin-right: var(--size-12);
   border-radius: var(--bd-radius-circle);
 }
 
@@ -49,7 +50,7 @@
 
 .cp-quote__author-role {
   display: block;
-  color: var(--text-subdued);
+  color: var(--canvas-text-subdued);
   font-size: var(--font-size-body-small);
 }
 
@@ -63,19 +64,19 @@
     content: "\201C";
     position: absolute;
     z-index: var(--layer-backward);
-    color: var(--gray-lighter);
+    color: var(--thurab-75);
     font-size: calc(var(--font-size-title-largest) * 4);
     line-height: 1;
-    top: calc(var(--spacing-larger) * -1);
-    left: calc(var(--spacing-larger) * -1);
+    top: calc(var(--size-32) * -1);
+    left: calc(var(--size-32) * -1);
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 }
 
 
 // States
-.cp-quote.is-medium {
-  max-width: var(--contain-width-medium);
+.cp-quote.is-large {
+  max-width: var(--container-width-large);
 }
 
 

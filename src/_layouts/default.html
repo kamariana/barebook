@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include utils/meta-data.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/barebook.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="ob-page">
+
+        {% include header.html %}       
+          
+        {{ content }}
+          
+        {% include footer.html %}
+        
+    </div>
+    <script src="{{ "/assets/js/index.js" | relative_url }}"></script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--spacing-small);
+  gap: var(--size-24);
   margin: 0;
 }
 
@@ -24,8 +24,8 @@
 }
 
 .ob-media__author-role {
-  color: var(--text-subdued);
-  font-size: var(--font-size-body-small);
+  color: var(--canvas-text-subdued);
+  font-size: var(--font-size-caption);
   text-transform: uppercase;
 }
 

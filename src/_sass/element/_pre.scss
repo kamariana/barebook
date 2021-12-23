@@ -1,18 +1,19 @@
 pre {
-  background-color: var(--background-code);
-  color: var(--text-on-code);
+  background-color: var(--canvas-code);
+  color: var(--code-text);
   font-family: var(--typeface-code);
-  font-size: var(--font-size-body-small);
-  padding: var(--spacing-small);
+  font-size: var(--font-size-body-medium);
+  padding: var(--size-16);
   white-space: pre-wrap;
 
   code {
     background-color: transparent;
+    font-size: inherit;
   }
 }
 
 @include respond(laptop) {
   pre {
-    padding: var(--spacing-medium);
+    --size-16: var(--size-32);
   } 
-}   // 1366px
+}   // 1240px

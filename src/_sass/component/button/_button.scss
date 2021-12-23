@@ -1,29 +1,58 @@
-.button {
+.cp-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--shape-size-larger);
-  font-size: var(--font-size-body-smal);
+  height: var(--size-48);
+  font-size: var(--font-size-body-small);
   cursor: pointer;
   user-select: none;
-  text-align: center;
-  line-height: 1.15;
   background-color: transparent;
   border: none;
-  border-radius: var(--bd-radius-large);
-  padding: var(--spacing-tiny) var(--spacing-small);
+  border-radius: var(--bd-radius-largest);
+  padding: var(--size-8) var(--size-24);
   white-space: nowrap;
   width: auto;
   font-weight: bold;
-}
-
-a.button {
+  text-transform: uppercase;
+  vertical-align: middle;
   text-decoration: none;
 }
 
 
+
+// Elements
+.cp-button__icon {
+  width: var(--size-16);
+  height: var(--size-16);
+}
+
+.cp-button__text {
+
+}
+
+
+
+
+
 // Modofiers
-.button--plain {
+.cp-button--small {
+  height: var(--size-32);
+}
+
+.cp-button--muted {
+  color: inherit;
+  border: 2px solid var(--border-color-subdued);
+
+  &:hover {
+    background-color: var(--primary-hovered-subdued);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused-subdued);
+  }
+}
+
+.cp-button--plain {
   color: var(--primary-enabled);
 
   &:hover {
@@ -35,9 +64,9 @@ a.button {
   }
 }
 
-.button--primary {
+.cp-button--primary {
   background-color: var(--primary-enabled);
-  color: var(--text-on-primary);
+  color: var(--primary-text);
 
   &:hover {
     background-color: var(--primary-hovered);
@@ -48,7 +77,7 @@ a.button {
   }
 }
 
-.button--secondary {
+.cp-button--secondary {
   color: var(--primary-enabled);
   border: 2px solid var(--primary-enabled);
 
@@ -61,7 +90,16 @@ a.button {
   }
 }
 
-.button--destructive {
+.cp-button--destructive {
   background-color: var(--error);
-  color: var(--text-on-primary);
+  color: var(--primary-text);
 }
+
+.cp-button--with-icon {
+  gap: var(--size-8);
+}
+
+.cp-button__icon--end {
+
+}
+

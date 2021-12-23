@@ -1,0 +1,54 @@
+.cp-theme-picker {
+    position: relative;
+    
+}
+
+
+
+// Elements
+.cp-theme-picker__button {
+    position: relative;
+    width: calc(var(--size-32) * 2);
+}
+
+.cp-theme-picker__icon-mode {
+    position: absolute;
+    left: var(--size-12);
+    
+    svg {
+        width: var(--size-20);
+        height: var(--size-20);
+    }
+}
+
+.cp-theme-picker__icon-caret {
+    position: absolute;
+    right: var(--size-8);
+}
+
+.cp-theme-picker__popup {
+    width: 144px;
+}
+
+
+
+
+// Attributes
+[aria-haspopup="false"] {
+
+    .cp-theme-picker__icon-light {
+        display: none;  
+    }
+}
+
+[aria-haspopup="true"] {
+
+    .cp-theme-picker__icon-dark {
+        display: none;
+    }
+
+    .cp-theme-picker__icon-light {
+        display: block;
+    }
+    
+}

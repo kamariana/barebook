@@ -2,13 +2,12 @@
  * Breakpoint 
  */
 $bps: (
-  mobile-s:     20rem,
-  mobile-m:     23.438rem,
-  mobile-l:     26.563rem,
-  tablet:       48rem,
-  laptop-s:     64rem,
-  laptop-m:     85.375rem,
-  laptop-l:     90rem,
+  mobile:     22.5rem, // 360px
+  tablet:     37.5rem, // 600px
+  tablet-l:   56.25rem, // 900px
+  laptop:     77.5rem, // 1240px
+  desktop:    90rem, // 1440px
+  tv:         90rem, //TODO find a size/value for that value
 ) !default;
 
 @mixin respond($bp) {
@@ -23,13 +22,12 @@ $bps: (
 
 // usage
 /* 
-@include respond(mobile-s) {}   // 320px,
-@include respond(mobile-m) {}   // 375px
-@include respond(mobile-l) {}   // 425px,
-@include respond(tablet) {}     // 768px
-@include respond(laptop-s) {}   // 1024px
-@include respond(laptop-m) {}   // 1366px
-@include respond(laptop-l) {}   // 1440px
+@include respond(mobile) {}   // 360px
+@include respond(tablet) {}   // 600px
+@include respond(tablet-l) {} // 900px
+@include respond(laptop) {}   // 1240px
+@include respond(desktop) {}  // 1440px
+@include respond(tv) {}   // ?px
 */
 
 
@@ -122,9 +120,7 @@ $bps: (
 
 // Container
 @mixin default-contain {
-  max-width: var(--contain-width-larger);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--spacing-unit-medium);
-  padding-left: var(--spacing-unit-medium);
+  max-width: var(--container-width-huge);  
+  margin: 0 auto;
+  padding: 0 var(--size-16);
 }

@@ -1,21 +1,20 @@
 table {
-  background-color: var(--white);
   border-collapse: collapse;
   width: 100%;
 }
 
 td,
 th {
-  padding: var(--spacing-tiny);
+  padding: var(--size-12);
   text-align: left;
 }
 
 caption {
   caption-side: bottom;
-  color: var(--gray-dark);
+  color: var(--canvas-text-subdued);
   font-size: var(--font-size-body-small);
   font-style: italic;
   font-style: italic;
-  line-height: var(--leading-small);
+  line-height: var(--small-line-height);
   text-align: left;
 }

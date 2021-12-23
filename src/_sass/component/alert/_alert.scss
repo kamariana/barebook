@@ -1,12 +1,8 @@
 .cp-alert {
-  padding: var(--spacing-small);
+  padding: var(--size-24);
   background-color: var(--white);
   box-shadow: var(--elevation-medium);
-  border-left: 8px solid var(--border);
-
-  @include respond(laptop) {
-    padding: var(--spacing-large);
-  }   // 1240px
+  border-left: 8px solid var(--border-color-subdued);
 }
 
 
@@ -17,3 +13,18 @@
 // Modifiers
 @import './alert--info';
 @import './alert--warning';
+
+
+
+// MQs
+@include respond(tablet-l) {
+  .cp-alert {
+    padding: var(--size-32);
+  }
+} // 900px
+
+@include respond(laptop) {
+  .cp-alert {
+    padding: var(--size-48);
+  }
+} // 1240px

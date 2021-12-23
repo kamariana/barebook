@@ -1,6 +1,6 @@
 ---
 title:  Date Input
-layout: styleguide-fullscreen
+layout: page-entry
 type: form
 order: 5
 
@@ -14,17 +14,16 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="form-group">
+<div class="cp-field">
   <fieldset aria-describedby="date-of-birth-hint" role="group">
     <legend>What is your Date of Birth?</legend>
-    <span class="form-hint" id="date-of-birth-hint">
+    <span class="cp-field__hint" id="date-of-birth-hint">
       For example, 23 December 1990
     </span>
-    <div class="form-groups-multiple form-groups-multiple--date">
+    <div class="cp-field__group  cp-field__group--grid cp-field__group--date">
       <div>
-        <label class="form-caption" for="date-of-birth-day">Day</label>
+        <label for="date-of-birth-day">Day</label>
         <input 
-          class="form-control" 
           type="text"
           id="date-of-birth-day" 
           name="date-of-birth-day" 
@@ -34,8 +33,8 @@ parameters:
           />
       </div>
       <div>
-        <label class="form-caption" for="date-of-birth-month">Month</label>
-        <select class="form-control" id="date-of-birth-month" name="date-of-birth-month">
+        <label for="date-of-birth-month">Month</label>
+        <select id="date-of-birth-month" name="date-of-birth-month">
           <option selected value="january">January</option>
           <option value="february">February</option>
           <option value="march">March</option>
@@ -51,9 +50,8 @@ parameters:
         </select>
       </div>
       <div>
-        <label class="form-caption" for="date-of-birth-year">Year</label>
+        <label for="date-of-birth-year">Year</label>
         <input 
-          class="form-control" 
           type="text"
           id="date-of-birth-year" 
           name="date-of-birth-year" 

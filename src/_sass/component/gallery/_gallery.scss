@@ -1,7 +1,7 @@
 .cp-gallery {
   @include reset-list;
   display: grid;
-  gap: var(--spacing-nano);
+  gap: var(--size-4);
   grid-auto-flow: dense;
 }
 
@@ -18,9 +18,9 @@
 
 
 // Modifiers
-.cp-gallery--with-gap-larger {
-  gap: var(--spacing-larger);
-}
+// .cp-gallery--with-gap-larger {
+//   gap: var(--spacing-larger);
+// }
 
 
 

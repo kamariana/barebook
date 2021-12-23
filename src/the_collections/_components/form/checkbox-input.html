@@ -1,6 +1,6 @@
 ---
 title:  Checkbox
-layout: styleguide-fullscreen
+layout: page-entry
 type: form
 order: 3
 
@@ -14,20 +14,40 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="form-group">
-  <fieldset aria-describedby="nationality-hint">
+<div class="cp-field">
+  <fieldset aria-describedby="nationality-hint" role="group">
     <legend>What is your nationality?</legend>
-    <span class="form-hint" id="nationality-hint">
+    <span class="cp-field__hint" id="nationality-hint">
       If you have dual nationality, select all options that are relevant to you.
     </span>
-    <div class="form-groups form-groups--block">
+    <div class="cp-field__group cp-field__group--grid cp-field__group--checkadio">
       <div>
-        <input class="form-control" id="nationality" name="nationality" type="checkbox" value="gambian">
-        <label class="form-caption" for="nationality">Gambian</label>
+        <input id="nationality" name="nationality" type="checkbox" value="gambian">
+        <label for="nationality">Gambian</label>
       </div>
       <div>
-        <input class="form-control" id="nationality-2" name="nationality" type="checkbox" value="other">
-        <label class="form-caption" for="nationality-2">Citizen of another country</label>
+        <input id="nationality-2" name="nationality" type="checkbox" value="other">
+        <label for="nationality-2">Citizen of another country</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<div class="cp-field">
+  <fieldset aria-describedby="nationality-hint">
+    <legend>What is your nationality?</legend>
+    <span class="cp-field__hint" id="nationality-hint">
+      If you have dual nationality, select all options that are relevant to you.
+    </span>
+    <div class="cp-field__group field__group--checkadio field__group--grid">
+      <div>
+        <input id="nationality3" name="nationality" type="checkbox" value="Senegal">
+        <label for="nationality3">Senegal</label>
+      </div>
+      <div>
+        <input id="nationality-4" name="nationality" type="checkbox" value="other">
+        <label for="nationality-4">Citizen of another country</label>
       </div>
     </div>
   </fieldset>

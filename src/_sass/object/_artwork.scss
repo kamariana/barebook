@@ -13,10 +13,13 @@
     }
   
     figcaption {
-      margin-left: var(--spacing-tiny);
+      margin-left: var(--size-8);
     }
   }
 }     // 600px
+
+
+
 
 
 @include respond(laptop) {

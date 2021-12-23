@@ -1,0 +1,23 @@
+---
+title:  Toggle nav icon close
+layout: page-entry
+type: toggle-nav-icon
+order: 3
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<button class="cp-toggle-nav-icon cp-toggle-nav-icon--close  js-close-nav" aria-hidden="true">
+  <span class="cp-toggle-nav-icon__text">Close</span>
+  <div class="cp-toggle-nav-icon__icon">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+  </div>
+</button>

@@ -1,0 +1,16 @@
+.ob-definition-list  {
+  display: grid;
+  gap: var(--size-16);
+}
+
+
+
+
+
+// MQs
+@include respond(tablet) {
+  // Modifiers
+  .ob-definition-list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}     // 600px

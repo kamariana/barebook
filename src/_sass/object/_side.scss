@@ -8,10 +8,10 @@
 
 // Elements
 .ob-sides__text {
-  padding: var(--spacing-unit-medium);
+  padding: var(--size-24);
 
   & :last-child {
-    margin-top: var(--spacing-unit-medium);
+    margin-top: var(--size-24);
   }
 } 
 
@@ -22,17 +22,17 @@
   align-items: center;
 }
 
-.ob-sides--with-gap-larger {
-  gap: var(--spacing-unit-larger);
-}
+// .ob-sides--with-gap-larger {
+//   gap: var(--spacing-unit-larger);
+// }
 
-.ob-sides--with-gap-largest {
-  gap: var(--spacing-unit-largest);
-}
+// .ob-sides--with-gap-largest {
+//   gap: var(--spacing-unit-largest);
+// }
 
-.ob-sides--with-gap-huge {
-  gap: var(--base-spacing-unit-medium);
-}
+// .ob-sides--with-gap-huge {
+//   gap: var(--base-spacing-unit-medium);
+// }
 
 
 

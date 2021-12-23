@@ -4,14 +4,19 @@ fieldset {
 }
 
 legend {
-  line-height: var(--leading-small);
-  margin-bottom: var(--spacing-tiny);
+  line-height: var(--nano-line-height);
+  margin-bottom: var(--size-4);
 }
 
 label {
   cursor: pointer;
-  line-height: var(--leading-small);
-  margin-bottom: var(--spacing-nano);
+  line-height: var(--nano-line-height);
+
+  + input,
+  + select,
+  + textarea {
+    margin-top: var(--size-4);
+  }
 }
 
 input,
@@ -21,10 +26,11 @@ textarea {
   transition-duration: 150ms;
   transition-property: border-color;
   width: 100%;
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color-subdued);
   border-radius: var(--bd-radius-tiny);
   font-weight: bold;
-  padding: var(--spacing-tiny);
+  padding: var(--size-8) var(--size-12);
+  background-color: var(--white);
 
   &:hover {
     border-color: var(--interactive-hovered);
@@ -37,10 +43,16 @@ textarea {
   }
 
   &:disabled {
-    background-color: var(--interactive-disabled);
-    color: var(--text-disabled);
+    border-color: var(--canvas-disabled);
+    background-color: var(--canvas-disabled);
+    color: var(--canvas-disabled-text);
     cursor: not-allowed;
   }
+}
+
+input,
+select {
+  height: var(--size-48);
 }
 
 
@@ -52,7 +64,7 @@ select {
 
 
 textarea {
-
+  min-height: 10rem;
 }
 
 
@@ -62,6 +74,7 @@ textarea {
 [type='radio'],
 [type='submit'] {
   height: auto;
+  min-height: auto;
   width: auto;
 }
 
@@ -70,7 +83,7 @@ textarea {
   cursor: pointer;
   touch-action: manipulation;
   border-style: dashed;
-  border-width: 3px;
+  border-width: 2.5px;
 }
 
 
@@ -80,7 +93,7 @@ textarea {
   opacity: 0;
   + label {
     position: relative;
-    padding-left: var(--spacing-medium); 
+    padding-left: var(--size-28); 
 
     &::before,
     &::after {
@@ -88,13 +101,13 @@ textarea {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: calc(var(--spacing-small) * -1);
+      left: calc(var(--size-16) * -1);
     }
 
     &::before {
       width: 32px;
       height: 32px;
-      border: 2px solid var(--border);
+      border: 2px solid var(--border-color-subdued);
       background-color: transparent;
     }
 
@@ -131,9 +144,13 @@ textarea {
   &:disabled {
     + label {
       cursor: not-allowed;
+      color: var(--canvas-disabled-text);
     }
     + label::before {
-      border-color: var(--interactive-disabled);
+      border-color: var(--canvas-disabled);
+      background-color: var(--canvas-disabled);
+      color: var(--canvas-disabled-text);
+      cursor: not-allowed;
     }
   }
 }

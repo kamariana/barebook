@@ -1,6 +1,6 @@
 .ob-section {
-  padding-top: var(--spacing-larger);
-  padding-bottom: var(--spacing-larger);
+  padding-top: var(--size-48);
+  padding-bottom: var(--size-48);
 }
 
 
@@ -36,7 +36,7 @@
 // * MQs
 @include respond(laptop) {
   .ob-section {
-    padding-top: calc(2 * var(--spacing-larger));
-    padding-bottom: calc(2 * var(--spacing-larger));
+    padding-top: calc(2 * var(--size-48));
+    padding-bottom: calc(2 * var(--size-48));
   }
 }   // 1240px

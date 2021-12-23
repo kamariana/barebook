@@ -1,7 +1,7 @@
 .ob-icon {
   display: inline-flex;
   align-items: center;
-  width: var(--shape-size-small);
-  height: var(--shape-size-small);
-  fill: inherit;
+  width: var(--size-24);
+  height: var(--size-24);
+  fill: var(--icon-color)
 }

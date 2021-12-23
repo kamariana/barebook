@@ -1,23 +1,31 @@
-.header {
+.cp-header {
 
 }
 
-.header__contain {
+
+
+// Elements
+.cp-header__contain {
   @include default-contain;
   display: flex;
-  gap: var(--spacing-unit-medium);
   align-items:  center;
   justify-content: space-between;
-  padding-top: var(--spacing-unit-medium);
+  padding-top: var(--size-16);
 }
 
+
+.cp-header__theme-picker {
+  margin-left: auto;
+}
 
 
 
 
 // MQs
-@include respond(tablet) {
-  .header__contain {
-    padding-top: var(--spacing-unit-larger);
+@include respond(tablet-l) {
+  .cp-header__contain {
+    gap: calc(var(--size-48) * 2);
+    justify-content: normal;
+    padding-top: var(--size-24);
   }
-}     // 768px
+}     // 900px

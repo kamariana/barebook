@@ -1,11 +1,12 @@
 .ob-contain {
-  @include default-contain;  
-
+  @include default-contain;
+  
+  
   .ob-contain {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
-}
+} 
 
 
 
@@ -14,20 +15,20 @@
 
 // Modifiers
 .ob-contain--medium {
-  max-width: var(--contain-width-medium);
+  max-width: var(--container-width-medium);
 }  // 600px
 
 .ob-contain--large {
-  max-width: var(--contain-width-large);
+  max-width: var(--container-width-large);
 } // 768px
 
 .ob-contain--larger {
-  max-width: var(--contain-width-larger);
+  max-width: var(--container-width-larger);
 } // 1024px
 
 // This will apply a uniform gap between containers/box in the parent o-contain.
 .ob-contain--with-vr-gaps {
   > * + * {
-    margin-top: var(--spacing-larger);
+    margin-top: var(--size-44);
   }
 }

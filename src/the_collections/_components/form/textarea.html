@@ -1,6 +1,6 @@
 ---
 title:  Textarea
-layout: styleguide-fullscreen
+layout: page-entry
 type: form
 order: 8
 
@@ -14,11 +14,11 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="form-group">
-  <label class="form-caption" for="more-detail">Can you provide more detail?</label>
-  <span class="form-hint" id="more-detail-hint">
+<div class="cp-field">
+  <label for="more-detail">Can you provide more detail?</label>
+  <span class="cp-field__hint" id="more-detail-hint">
     Do not include personal or financial information, like your credit card details.
   </span>
-  <textarea class="form-control form-control--textarea" aria-describedby="more-detail-hint" id="more-detail" name="more-detail"></textarea>
+  <textarea aria-describedby="more-detail-hint" id="more-detail" name="more-detail"></textarea>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 title:  Masthead media picture
-layout: styleguide-fullscreen
+layout: page-entry
 type: masthead
 order: 3
 
@@ -14,42 +14,41 @@ parameters:
   class: "*(optional)* any extra class"
 ---
 
-<div class="masthead masthead--media is-two-third" role="banner">
+<div class="cp-masthead cp-masthead--media cp-masthead--two-third" role="banner">
 
-  <div class="masthead__text at-center">
-    <h1 id="title" class="masthead__title">
+  <div class="cp-masthead__text cp-masthead__text--at-center">
+    <h1 id="title" class="cp-masthead__title">
         What are we living for?
     </h1>
-    <p class="masthead__sub-title">
+    <p class="cp-masthead__sub-title">
       Take your CSS skills to the next level with 40 CSS challenges. 
     </p>
 
-    <span class="masthead__tag">
+    <span class="cp-masthead__tag">
       Meaning
     </span>
 
-    <a class="button button--primary masthead__button" href="#" >
-      <span class="c-cta-icon__text">Read full story</span>
-      <i class="c-cta-icon__icon">&#10138;</i>
+    <a class="cp-button cp-button--primary cp-masthead__button" href="#" >
+      <span class="">Read full story</span>
     </a>
 
-    <div class="meta masthead__meta">
-      <div class="meta__items">
-        <span class="meta__byline">
+    <div class="ob-meta cp-masthead__meta">
+      <div class="ob-meta__items">
+        <span class="ob-meta__byline">
           By Ebrahim Press Bah
         </span>
-        <time class="meta__date" datetime="">
+        <time class="ob-meta__date" datetime="">
           November 10, 2021
         </time>
       </div>
     </div>
   </div>
 
-  <div class="masthead__figure">
-    <picture class="masthead__picture">
+  <div class="cp-masthead__figure">
+    <picture class="cp-masthead__picture">
       <source media="(max-width: 1024px)" srcset="/assets/images/masthead-sm.jpg"/>
       <source media="(min-width:1025px)" srcset="/assets/images/masthead.jpg"/>
-      <img class="masthead__img" src="/assets/images/masthead-sm.jpg" alt="" />
+      <img class="cp-masthead__img" src="/assets/images/masthead-sm.jpg" alt="" />
     </picture>
   </div>
 
