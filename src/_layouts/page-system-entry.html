@@ -8,13 +8,11 @@
   <body>
     <div class="ob-page">         
           
-        {{ content }}
+        <div class="bb-systems-entry">
+            {{ content }}
+        </div>
           
-        {% include footer.html %}
-        
     </div>
-    
-    {% include utils/mobile-nav-bar.html %}
 
     <script src="{{ "/assets/js/index.js" | relative_url }}"></script>
   </body>
