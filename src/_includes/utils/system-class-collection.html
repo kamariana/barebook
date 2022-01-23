@@ -1,0 +1,14 @@
+{% assign classification = page.classification  %}
+
+<div class="bb-systems">
+  {% assign componentsByType = site[classification] | group_by: "type"  %}
+  {% for component in componentsByType %}
+    {% if component.name == page.type %}
+      {% assign asc = component.items | sort: 'order' %}
+      {% for item in asc %}
+        {% include utils/template.html component = component %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
+
