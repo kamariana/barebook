@@ -1,26 +1,24 @@
 ---
 title: Pre and code
-category: elements
 type: text
-layout: page-entry
+order: 14
 ---
+<pre><code>body {
+  background-color: var(--canvas);
+  color: var(--canvas-text);
+  font-family: var(--typeface-primary);
+  line-height: var(--base-line-height);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-size: clamp(
+      var(--responsive-font-size-min, 1rem),
+      calc(1rem + var(--responsive-font-size-target, 1.25vw)),
+      var(--responsive-font-size-max, 1.5rem)
+  );
+}</code></pre>
 
-<div class="bb-contain--output">
 
-  <h3>Pre-formatted text</h3>
-  <pre><code>/* Basic Reset */ 
-  * { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-  } 
-  
-  html { 
-    font-size: 100%; /* 16px */ 
-  }</code></pre>
-  
-  <h3>Code</h3>
-  <p>
-    Always put a wrapper <code>div</code> with a <code>class="page"</code> attribute within the body before other codes.
-  </p>
-</div>
+<p>
+  Always put a wrapper <code>div</code> with a <code>class="page"</code> attribute within the body before other codes.
+</p>
+
