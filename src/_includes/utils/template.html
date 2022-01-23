@@ -3,21 +3,23 @@
 {% assign slug = item.slug %}
 {% assign title = item.slug | replace: "-", " " | capitalize %}
 {% assign description = item.description | markdownify %}
-{% assign hint = item.hint | markdownify %}
+{% assign hint = item.hint %}
 {% assign html = item.content %}
+{% assign react = "Reat code coming soon!" %}
 {% assign parameters = item.parameters %}
 {% assign tab_name = slug | append: "-tab" %}
 
+<section class="bb-system" id="{{ slug }}">
 
-<li class="component" id="{{ slug }}">
-  <div class="component-doc">
-    <h2 class="component-title">
+  <div class="bb-system__doc">
+
+    <h2 class="bb-system__title">
       {{ title }}
     </h2>
    
     {{ description }}
 
-    <table class="component-table">
+    <table class="bb-system__table">
       <thead>
         <tr>
           <th>Parameter</th>
@@ -40,46 +42,62 @@
       </tbody>
     </table>
     {% if hint %}
-      <div class="component-hint">
+      <div class="bb-system__hint">
         {{ hint }}
       </div>
     {% endif %}
 
   </div>
-  <div class="component-showcase">
-    <div class="component-output">
-      <a class="component-fullscreen" href="{{ source }}" title="Open in a New window" target="_blank">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+
+  <div class="bb-system__code">
+    <div class="bb-system__output">
+
+      <a class="bb-system__open" href="{{ source }}" title="Open in a New window" target="_blank">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="16" 
+          height="16" 
+          class="ob-icon" 
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+        >
+
+          <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
         </svg>
-        <span class="visually-hidden">Open in a New window</span>
+        <span class="ut-visually-hidden">Open in a New window</span>
       </a>
 
       <!-- <iframe class="component-iframe" src="{{ source }}" title="{{ title }}"></iframe> -->
       {{ html }}
     </div>
-    <div class="component-code">
-      <!-- tabs -->
-      <div class="component-tabbed js-component-tabbed">
-        <nav class="component-tabs" role="tablist">
-          <a class="component-tab" aria-selected="true" role="tab" id="{{ tab_name }}-html"  href="#{{ tab_name }}-html">
-            HTML
-          </a>
-          <!-- <a class="component-tab" href="#{{ tab_name }}-scss">
-            SCSS
-          </a> -->
-        </nav>
 
-        <div class="component-tabs-panels">
-          <section id="{{ tab_name }}-html" role="tabpanel" aria-labelledby="{{ tab_name }}-html" class="component-tab-panel">
+    
+
+    
+   
+
+    <details class="cp-accordion bb-system__source" aria-label="Source code">
+      <summary class="cp-accordion__title">Source</summary>
+      <div class="cp-accordion__content">
+        <div class="cp-tab">
+          <nav class="cp-tab__list" role="tablist">
+            <a class="cp-tab__link" aria-selected="true" role="tab" href="#link-{{ tab_name }}-html" id="{{ tab_name }}-html">
+              Html
+            </a>
+            <a class="cp-tab__link" role="tab" href="#link-{{ tab_name }}-react" id="{{ tab_name }}-react">
+              React
+            </a>
+          </nav>
+         
+          <div class="cp-tab__panel" role="tabpanel"  id="link-{{ tab_name }}-html" aria-labelledby="{{ tab_name }}-html">
             {% highlight html %}{{ html }}{% endhighlight %}
-          </section>
-          <!-- <section id="{{ tab_name }}-scss" class="component-tab-panel">
-            {% highlight css %}{{ css }}{% endhighlight %}
-          </section> -->
+          </div>
+          <div class="cp-tab__panel" role="tabpanel"  id="link-{{ tab_name }}-react" aria-labelledby="{{ tab_name }}-react">
+            {% highlight react %}{{ react }}{% endhighlight %}
+          </div>
         </div>
       </div>
-      <!-- /tabs -->
-    </div>
+    </details>
   </div>
-</li>
+
+</section>
