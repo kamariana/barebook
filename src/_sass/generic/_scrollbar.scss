@@ -1,0 +1,23 @@
+html {
+  scrollbar-color: var(--brand-enabled) var(--border-color-subdued);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--border-color-subdued);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--brand-enabled);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-hovered);
+}

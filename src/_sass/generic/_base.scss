@@ -1,29 +1,30 @@
-/**
- *  Base settings
- */
+// Base settings
 html {
-  //line-sizing: normal;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;  
   text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--canvas);
   color: var(--canvas-text);
   font-family: var(--typeface-primary);
-  font-size: var(--font-size-body-base);
-  line-height: var(--base-line-height);
-  overflow-y: scroll;
+  line-height: var(--base-line-height-mobile);
   scroll-behavior: smooth;
+  overflow-y: auto;
+  font-weight: 400;
+  font-size: var(--font-size-body);
+  // font-size: clamp(
+  //     var(--responsive-font-size-min, 1rem),
+  //     calc(1rem + var(--responsive-font-size-target, 1.25vw)),
+  //     var(--responsive-font-size-max, 1.5rem)
+  // );
 }
 
 
 
-
-
-/**
- *  A consistent vertical rhythm using the base line-height
- */
+// A consistent vertical rhythm using the base line-height
 ul,
 ol,
 dl,
@@ -38,9 +39,75 @@ pre {
 
 
 
-
-
 img,
 svg {
   vertical-align: middle;
 }
+
+abbr,
+dfn {
+  cursor: help;
+}
+
+abbr[title] {
+  border-bottom: none; 
+  text-decoration: underline; 
+  text-decoration: underline dotted; 
+}
+
+u,
+ins {
+  text-decoration: none;
+}
+  
+ins {
+  border-bottom: 1px solid;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: var(--font-size-caption);
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+template {
+  display: none;
+}
+
+
+[hidden] {
+  display: none;
+}
+
+
+
+
+
+
+// MQs 
+@include respond(tablet-l) {
+  body {
+    font-size: var(--font-size-body-large);
+    line-height: var(--base-line-height-laptop);
+  }
+} // 900px
