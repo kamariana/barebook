@@ -1,10 +1,9 @@
 img {
-  display: block;
-  height: auto;
-  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+
+  
+  border-style: none;
 }
 
-figcaption {
-  font-size: var(--font-size-caption);
-  font-style: italic;
-}
+

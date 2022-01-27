@@ -1,8 +1,9 @@
 blockquote {
-  font-family: var(--typeface-quotes);
-  font-size: var(--font-size-body-large);
   max-width: var(--container-width-medium);
-  padding: var(--size-24);
+  padding: var(--size-8) var(--size-24);
+  font-family: var(--typeface-quotes);
+  font-size: var(--font-size-subtitle-large);
+  border-left: 8px solid var(--border-color-subdued);
   
   > p {
     margin-top: 0;

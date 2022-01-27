@@ -6,11 +6,19 @@ fieldset {
 legend {
   line-height: var(--nano-line-height);
   margin-bottom: var(--size-4);
+
+
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
 }
 
 label {
   cursor: pointer;
   line-height: var(--nano-line-height);
+  font-size: var(--font-size-body);
 
   + input,
   + select,
@@ -65,10 +73,18 @@ select {
 
 textarea {
   min-height: 10rem;
+
+
+  overflow: auto;
+}
+
+progress {
+  vertical-align: baseline;
 }
 
 
 // Radio and Checkbox
+[type='button'],
 [type='reset'],
 [type='checkbox'],
 [type='radio'],
@@ -166,4 +182,15 @@ input[type="radio"] {
   + label::before {
     border-radius: var(--bd-radius-nano);
   }
+}
+
+
+
+:is(
+  ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button
+) {
+  color: var(--interactive-enabled);
 }

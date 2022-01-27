@@ -14,3 +14,7 @@ dt {
   font-weight: bold;
 }
 
+
+::marker { 
+  color: var(--interactive-enabled);
+}

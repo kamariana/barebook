@@ -1,19 +1,20 @@
 pre {
-  background-color: var(--canvas-code);
-  color: var(--code-text);
-  font-family: var(--typeface-code);
-  font-size: var(--font-size-body-medium);
-  padding: var(--size-16);
+  
   white-space: pre-wrap;
 
   code {
-    background-color: transparent;
-    font-size: inherit;
+    display: block;
+    padding: var(--size-16);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 @include respond(laptop) {
   pre {
-    --size-16: var(--size-32);
+    code {
+      --size-16: var(--size-24);
+    }
   } 
 }   // 1240px

@@ -1,8 +1,16 @@
 code {
-  background-color: var(--canvas-code);
+  background-color: var(--neutral-25);
+  border: 1px solid var(--border-color-subdued-light);
   color: var(--canvas-code-text);
-  display: inline-block;
   font-family: var(--typeface-code);
-  padding: 0 var(--size-8);
-  border-radius: var(--bd-radius-largest);
+  font-size: var(--font-size-caption);
+  padding: 0.125rem 0.25rem;
+  hyphens: none;
+  tab-size: 2;
+  text-align: start;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }

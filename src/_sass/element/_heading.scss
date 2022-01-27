@@ -4,42 +4,41 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: var(--size-44);
   font-family: var(--typeface-secondary);  
   font-weight: bold;
 
-  &:not(:first-child) {
-    margin-top: var(--size-44);
-  }
-
   & + * {
     margin-top: var(--size-8);
-  } 
+  }
+  
+  -webkit-font-smoothing: antialiased;
 }
 
 
 h1 {
-  font-size: var(--font-size-title-medium);
-  line-height: var(--small-line-height);
+  font-size: var(--size-40);
+  line-height: 1.25;
 }
 
 h2 {
-  font-size: var(--font-size-title-small);
-  line-height: var(--medium-line-height);
+  font-size: var(--size-32);
+  line-height: 1.35;
 }
 
 h3 {
-  font-size: var(--font-size-body-large);
-  line-height: var(--large-line-height);
+  font-size: var(--size-24);
+  line-height: 1.45;
 }
 
 h4 {
-  font-size: var(--font-size-body-medium);
-  line-height: var(--large-line-height);
+  font-size: var(--size-24);
+  line-height: 1.45;
 }
 
 h5,
 h6 {
-  font-size: var(--font-size-body-base);
+  font-size: var(--size-20);
 }
 
 
@@ -48,57 +47,28 @@ h6 {
 
 
 // MQs
-@include respond(tablet) {
+@include respond(tablet-l) {
   h1 {
-    --font-size-title-medium: var(--font-size-title-large);
-    --small-line-height: var(--tiny-line-height);
+    font-size: var(--size-68);
   }
   
   h2 {
-    --font-size-title-small: var(--font-size-title-medium);
-    --medium-line-height: var(--tiny-line-height);
-    
+    font-size: var(--size-52);
+    line-height: 1.25;
   }
   
   h3 {
-    --font-size-body-large: var(--font-size-title-small);
-    --large-line-height: var(--medium-line-height);
+    font-size: var(--size-36);
+    line-height: 1.35;
   }
   
   h4 {
-    --font-size-body-medium: var(--font-size-body-large);
+    font-size: var(--size-28);
   }
   
   h5,
   h6 {
-    --font-size-body-base: var(--font-size-body-medium);
-    line-height: var(--large-line-height);
-  }
-}   // 600px
-
-@include respond(laptop) {
-  h1 {
-    --font-size-title-medium: var(--font-size-title-larger);
+    font-size: var(--size-24);
   }
   
-  h2 {
-    --font-size-title-small: var(--font-size-title-large);
-    --medium-line-height: var(--tiny-line-height);
-  }
-  
-  h3 {
-    --font-size-body-large: var(--font-size-title-medium);
-    --large-line-height: var(--small-line-height);
-  }
-  
-  h4 {
-    --font-size-body-medium: var(--font-size-title-small);
-    --large-line-height: var(--medium-line-height);
-  }
-  
-  h5,
-  h6 {
-    --font-size-body-base: var(--font-size-title-nano);
-  }
-  
-}   // 1240px
+} // 900px
