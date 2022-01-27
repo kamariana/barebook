@@ -1,0 +1,112 @@
+---
+title:  Card Media
+type: card
+layout: page-system-entry
+order: 2
+
+description: |
+  Please stay tunned, description of this component is coming soon!
+
+date: 2022-01-01T10:20:00Z
+---
+
+<div class="cp-card">
+    <div class="cp-card__text">
+
+        <h2 class="cp-card__title">
+            <a href="" class="cp-card__link">
+                The new alpha value standard rgb() and rgba() functions
+            </a>
+        </h2>
+        <span class="cp-card__tag">
+            HTML & CSS
+        </span>
+        
+        <p>
+            Learn how the new alpha value rgb() function works in CSS.
+        </p>
+        
+        <dl class="ob-definition-list ob-definition-list--grid">
+            <div>
+            <dt>
+                Published
+            </dt>
+            <dd>
+                <time id="postedon" datetime="{{ page.date | date_to_xmlschema }}">
+                    <span id="postedago"></span>
+                </time>
+            </dd>
+            </div>
+            <div>
+            <dt>
+                <abbr title="Estimated Reading Time">ETA</abbr>
+            </dt>
+            <dd>
+                5 Mins
+            </dd>
+            </div>
+        </dl>
+            
+        <span 
+            class="
+                cp-button 
+                cp-button--text
+                cp-button--with-icon 
+                cp-card__button"
+            >
+            <span>
+                Learn more
+            </span>
+            <span>
+                &rarr;
+            </span>          
+        </span>
+       
+    </div>
+
+    <div class="cp-card__media">
+        <img class="cp-card__img" src="/assets/images/fs-part-1.svg" alt="" >
+    </div>
+</div>
+
+
+<!-- 
+    TODO refactor and move to its own js file 
+    https://excessivelyadequate.com/posts/timeago.html
+-->
+<script>
+    function ago(date) {
+        function render(n, unit) {
+            return n + " " + unit + ((n == 1) ? "" : "s") + " ago";
+        }
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+
+        var interval = Math.floor(seconds / (60 * 60 * 24 * 365));
+        if (Math.floor(seconds / (60 * 60 * 24 * 30 * 365)) >= 1) {
+            return render(interval, "year");
+        }
+        interval = Math.floor(seconds / (60 * 60 * 24 * 30));
+        if (interval >= 1) {
+            return render(interval, "month");
+        }
+        interval = Math.floor(seconds / (60 * 60 * 24));
+        if (interval >= 1) {
+            return render(interval, "day");
+        }
+        interval = Math.floor(seconds / (60 * 60));
+        if (interval >= 1) {
+            return render(interval, "hour");
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval >= 1) {
+            return render(interval, "minute");
+        }
+        interval = Math.floor(seconds);
+        return render(interval, "second");
+    }
+
+    var date = Date.parse(document.getElementById("postedon").getAttribute("datetime"));
+    document.getElementById("postedago").textContent = ago(date);
+
+</script>

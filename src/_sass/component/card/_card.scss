@@ -1,0 +1,118 @@
+.cp-card {
+    @include dp-flex-direction-column;
+    @include pos-rel-overflow-hidden;
+    padding: var(--size-16);
+
+    transition: box-shadow 0.35s ease-in;
+
+    // card interactions
+    &:hover,
+    &:focus {
+        
+        box-shadow: var(--elevation-medium);
+        cursor: pointer;
+
+        .cp-card__img {
+            @include scale-out-on-hover-and-focus;
+        }
+
+        .cp-card__icon {
+            transform: translateX(var(--size-4));
+        }
+    }
+
+    // focus within to match the hover style
+    &:focus-within {
+        outline: 1px dotted red;
+
+        .cp-card__img {
+            @include scale-out-on-hover-and-focus;
+        }
+    }
+
+    // remove the unnecessary "basic focus style" only where :focus-within is supported.
+    &:focus-within .cp-card__link:focus {
+        outline: none;
+    }
+
+    .cp-card__link {
+        &::after {
+            @include pos-abs-zero-all-sides-pseudo-class;
+        }
+    }
+
+}
+
+
+
+
+
+// Elements
+.cp-card__text {
+    @include dp-flex-direction-column;
+}
+
+.cp-card__title {
+    margin-top: 0;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.cp-card__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cp-card__tag {
+    margin-bottom: var(--size-12);
+    order: -1;
+    font-size: var(--font-size-overline);
+    text-transform: uppercase;
+}
+
+.cp-card__button {
+    margin-top: var(--size-32);    
+    align-self: start;
+}
+
+.cp-card__icon {
+    margin-left: var(--size-4);
+    transition: transform 0.35s cubic-bezier(.27,.9,.27,1);
+}
+
+.cp-card__media {
+    margin-top: var(--size-32);
+    max-height: 364px;
+}
+
+.cp-card__img {
+    @include fit-media-into-container;
+    @include trans-and-scale;
+}
+
+
+
+
+// Modifiers
+.cp-card--box {
+    padding: var(--size-16);
+    border-radius: var(--bd-radius-small);
+}
+
+.cp-card--apart {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cp-card__media--landscape {
+    max-height: 564px;
+}
+
+
+
+
+// Card Highlighters
+.cp-card--hl-neutral {
+    background-color: var(--canvas-subdued);
+}
