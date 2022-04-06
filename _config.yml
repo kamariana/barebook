@@ -1,6 +1,6 @@
 # Site settings
 title: Barebook
-description: "Barebook is a scalable and maintainable CSS library base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)"
+description: "Barebook is a scalable and maintainable Design System base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)"
 keywords:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 
@@ -22,9 +22,9 @@ sass:
 collections_dir: the_collections
 collections:
   design:
-    output: true
+    output: false
   elements:
-    output: true
+    output: false
   components:
     output: true
   patterns:
