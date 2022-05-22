@@ -26,23 +26,23 @@ date: 2022-01-01T10:20:00Z
             Learn how the new alpha value rgb() function works in CSS.
         </p>
         
-        <dl class="ob-definition-list ob-definition-list--grid">
+        <dl class="cp-card__meta">
             <div>
             <dt>
                 Published
             </dt>
             <dd>
-                <time id="postedon" datetime="{{ page.date | date_to_xmlschema }}">
-                    <span id="postedago"></span>
+                <time class="js-posted-on" datetime="{{ page.date | date_to_xmlschema }}">
+                    <span class="js-posted-ago"></span>
                 </time>
             </dd>
             </div>
             <div>
             <dt>
-                <abbr title="Estimated Reading Time">ETA</abbr>
+                <abbr title="Estimated Reading Time">ERT</abbr>
             </dt>
             <dd>
-                5 Mins
+                5 Mins Read
             </dd>
             </div>
         </dl>
@@ -106,7 +106,17 @@ date: 2022-01-01T10:20:00Z
         return render(interval, "second");
     }
 
-    var date = Date.parse(document.getElementById("postedon").getAttribute("datetime"));
-    document.getElementById("postedago").textContent = ago(date);
+    
+    const postedDate = document.querySelectorAll(".js-posted-on")
+    const postedAgo = document.querySelectorAll(".js-posted-ago")
+    let date
+
+    postedDate.forEach(time => {
+        date = Date.parse(time.getAttribute('datetime'))
+    })
+
+    postedAgo.forEach(time => {
+        time.textContent = ago(date);
+    })
 
 </script>

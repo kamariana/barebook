@@ -1,6 +1,6 @@
 .ob-definition-list  {
   display: grid;
-  gap: var(--size-16);
+  gap: var(--size-24);
 }
 
 
@@ -11,6 +11,6 @@
 @include respond(tablet) {
   // Modifiers
   .ob-definition-list--grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   }
 }     // 600px

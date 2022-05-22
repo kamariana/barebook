@@ -1,20 +1,18 @@
 pre {
-  
   white-space: pre-wrap;
+  border-radius: var(--bd-radius-medium);
+  font-size: var(--fs-body);
+  background-color: var(--canvas-code);
 
   code {
     display: block;
-    padding: var(--size-16);
+    padding: var(--size-24) var(--size-48) var(--size-24) var(--size-24);
+    -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
+  }
+
+  pre {
+    margin: 0;
   }
 }
-
-@include respond(laptop) {
-  pre {
-    code {
-      --size-16: var(--size-24);
-    }
-  } 
-}   // 1240px

@@ -2,20 +2,21 @@
   @include pos-fix-zero-all-sides;
 }
 
-
-
 // Elements
 .ob-off-canvas-nav__contain {
+  @include default-contain;
+
   display: flex;
-  flex-direction: column;
-  max-width: var(--container-width-huge);
-  margin-right: auto;
-  margin-left: auto;
   height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  overflow-y: auto;
 }
 
 .ob-off-canvas-nav__header {
-  padding: var(--size-16);
+  @include dp-flex-apart-center;
+
+  padding: var(--size-16);  
 }
 
 .ob-off-canvas-nav__main {

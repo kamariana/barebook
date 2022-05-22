@@ -1,23 +1,22 @@
 ---
 title:  Toggle nav icon
-layout: page-entry
+layout: page-system-entry
 type: toggle-nav-icon
 order: 1
 
 description: |
-  The button component should be used as the call-to-action in a form, or as a
-  user interaction mechanism. Generally speaking, a button should not be used
-  when a link would do the trick.
-parameters:
-  content: "*(mandatory)* the content of the button"
-  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
-  class: "*(optional)* any extra class"
+ 
 ---
 
-<button class="cp-toggle-nav-icon js-open-nav" aria-hidden="true">
-  <div class="cp-toggle-nav-icon__icon">
-    <span>&nbsp;</span>
-    <span>&nbsp;</span>
-    <span>&nbsp;</span>
+<button class="cp-toggle-nav-icon js-open-nav">
+  <div class="cp-toggle-nav-icon__icons">
+    <i class="cp-toggle-nav-icon__icon">&nbsp;</i>
+    <i class="cp-toggle-nav-icon__icon">&nbsp;</i>
+    <i class="cp-toggle-nav-icon__icon">&nbsp;</i>
   </div>
 </button>
+
+
+
+
+

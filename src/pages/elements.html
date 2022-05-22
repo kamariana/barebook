@@ -1,21 +1,21 @@
 ---
 title: Elements
-layout: page-entries
+layout: page-sidebar
+description: "These are the fundamental visual elements that shape how we design all the experiences across the websites and apps built with Barebook."
 
 permalink: /elements/
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
-
-<p>
-  These are the fundamental visual elements that shape how we design all the experiences across the websites and apps built with Barebook.
-</p>
-
-<p>
-  This includes guidance on colors, typography, iconography, etc.
-</p>
+{% assign elementsByType = site.elements | sort:"order" | group_by:"type"  %} 
+{%  for type in elementsByType %}
+  <section class="cp-code-block">
+    <h2 id="{{ type.name | slugify }}" class="cp-code-block__category-title">{{ type.name | capitalize }}</h2>
+    {% for entry in type.items %} 
+      {% include utilities/element-entry.html %} 
+    {% endfor %} 
+    <a href="#top">[Back to Top]</a>
+  </section>
+{% endfor %}
 
 
 

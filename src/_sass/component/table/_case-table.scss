@@ -1,0 +1,26 @@
+.cp-case-table {
+  margin: 0;
+  background-color: var(--canvas-subdued-10);
+}
+
+.cp-case-table__head {
+  th {
+    padding: var(--size-12) var(--size-16);
+    border-bottom: 2px solid var(--primary-light);
+  }
+}
+
+.cp-case-table__body {
+  tr {
+    border-top: 1px solid var(--primary-lighter);
+  }
+
+  td {
+    padding: var(--size-16) var(--size-16);
+  }
+}
+
+.cp-case-table__highlight {
+  background-color: var(--primary-enabled);
+  color: var(--neutral-900);
+}

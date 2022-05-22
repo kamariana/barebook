@@ -3,75 +3,81 @@
   @include dp-flex-direction-column;
 }
 
-
-
-
-
 // Elements
 // contain is use to contain the text along side the side container
 // somecase this is not necessary in your html
-.cp-masthead__contain { 
+.cp-masthead__contain {
+  @include default-contain;
+
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  max-width: var(--container-width-tv);
-  margin-right: auto;
-  margin-left: auto;
+  padding-block-end: var(--size-48);
+  padding-block-start: var(--size-48);
 }
 
 .cp-masthead__text {
   @include dp-flex-direction-column;
   @include pos-rel-object-on-top;
-  max-width: var(--container-width-large);
-  padding: var(--size-48) var(--size-16);
+  padding: var(--size-16);
+
+  max-width: 55ch;
+  min-height: 400px;
+  justify-content: center;
 }
 
-.cp-masthead__title {  
-  font-size: var(--font-size-title-medium);
-  line-height: var(--small-line-height);
+.cp-masthead__title {
+  font-size: var(--fs-heading-2);
+  font-weight: 200;
+  line-height: var(--lh-heading-2);
+  margin-block-start: 0;
 }
 
 .cp-masthead__sub-title {
-  margin-top: var(--size-4);
-  font-size: var(--font-size-title-nano);
+  font-size: var(--fs-subtitle);
+  font-weight: 200;
+  margin-block-start: var(--size-4);
+  line-height: inherit;
 }
 
 .cp-masthead__tag {
   order: -1;
-  margin-top: 0;
-  margin-bottom: var(--size-4);
-  font-size: var(--font-size-caption);
+  font-size: var(--fs-caption);
+  margin-block-end: var(--size-4);
   text-transform: uppercase;
 }
 
 .cp-masthead__button {
   align-self: start;
-  margin-top: var(--size-16);
+  margin-block-start: var(--size-16);
 }
 
-.cp-masthead__meta { 
-  margin-top: var(--size-48);  
+.cp-masthead__meta {
+  margin-block-start: var(--size-48);
 
   &::before {
-    content: '';
     display: block;
     width: 96px;
-    padding-bottom: var(--size-16);
-    border-top: 1px solid var(--border-color-subdued);
+    border-top: 1px solid var(--border-color);
+    content: "";
+    padding-block-end: var(--size-16);
   }
 }
 
 .cp-masthead__pattern {
   position: absolute;
   bottom: 0;
-  fill: var(--canvas-subdued);
+  fill: var(--canvas-subdued-20);
 }
 
 .cp-masthead__figure {
   @include pos-abs-zero-all-sides;
-  background-color: var(--canvas-subdued);
+
+  background-color: var(--canvas-subdued-10);
 
   &::after {
     @include pos-abs-zero-all-sides-pseudo-class;
+
     background-color: var(--tp-black-light);
   }
 }
@@ -88,13 +94,28 @@
   @include fit-media-into-container;
 }
 
+.cp-masthead__list {
+  li {
+    padding: var(--size-16);
 
+    &:nth-child(2) {
+      border-right: 2px solid var(--primary-enabled);
+      border-left: 2px solid var(--primary-enabled);
+      border-radius: var(--bd-radius-largest);
+    }
+  }
+}
 
-
+.cp-masthead__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--icon-color);
+  margin-block-end: var(--size-24);
+}
 
 // Modifiers
 .cp-masthead--light-gray {
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 .cp-masthead--fullscreen {
@@ -106,7 +127,7 @@
 }
 
 // changing the heigh large screen
-.cp-masthead--fluid{
+.cp-masthead--fluid {
   min-height: 100vh;
 }
 
@@ -120,25 +141,29 @@
 }
 
 .cp-masthead__text--at-left-center {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-block-end: auto;
+  margin-block-start: auto;
 }
 
 .cp-masthead__text--at-bottom {
-  margin-top: auto;
+  margin-block-start: auto;
 }
 
-
-
-
-
 // MQs
-@include respond(laptop) {
-  .cp-masthead__text {
-    padding-top: var(--size-64);
-    padding-bottom: var(--size-64);
+@include respond(tablet-l) {
+  .cp-masthead__contain {
+    padding-block-end: calc(2 * var(--size-48));
+    padding-block-start: calc(2 * var(--size-48));
   }
 
+  .cp-masthead__text {
+    min-height: 600px;
+  }
+
+  .cp-masthead__title {
+    font-size: var(--fs-lead-heading-small);
+    line-height: var(--lh-heading-2);
+  }
 
   // Modifiers
   .cp-masthead--fluid {

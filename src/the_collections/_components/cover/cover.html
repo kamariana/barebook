@@ -5,13 +5,7 @@ type: cover
 order: 1
 
 description: |
-  The button component should be used as the call-to-action in a form, or as a
-  user interaction mechanism. Generally speaking, a button should not be used
-  when a link would do the trick.
-parameters:
-  content: "*(mandatory)* the content of the button"
-  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
-  class: "*(optional)* any extra class"
+
 ---
 
 <div class="cp-cover cp-cover--zoomable">
@@ -33,7 +27,8 @@ parameters:
       <picture class="cp-cover__picture">
         <source media="(max-width: 1024px)" srcset="/assets/images/masthead-sm.jpg"/>
         <source media="(min-width:1025px)" srcset="/assets/images/masthead.jpg"/>
-        <img class="cp-cover__img" src="/assets/images/masthead-sm.jpg" alt="" />
+        <img class="cp-cover__img" src="/assets/images/masthead-sm.jpg" alt="" loading="lazy"
+        decoding="async" />
       </picture>
   </div>
 </div>

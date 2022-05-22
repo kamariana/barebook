@@ -1,0 +1,24 @@
+<div class="cp-fullscreen-navigation ob-off-canvas-nav js-fullscreen-navigation" role="navigation" aria-label="Fullscreen Navigation" hidden>
+  <div class="ob-off-canvas-nav__contain">
+
+    <div class="ob-off-canvas-nav__header">
+      {% include logo.html %}
+      {% include utilities/toggle-nav-icon-close.html %}
+    </div>
+
+    <div class="ob-off-canvas-nav__main">
+      <nav class="cp-fullscreen-nav">
+          <ul class="cp-fullscreen-nav__list">
+              {% for item in site.data.navigation.primary %}
+              {% assign url = item.url | downcase %}
+                <li>
+                  <a href="{{ .url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+          </ul>
+          
+      </nav>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,97 @@
+---
+title: Code
+layout: page-entry
+type: code
+order: 1
+
+description: |
+  The button component should be used as the call-to-action in a form, or as a
+  user interaction mechanism. Generally speaking, a button should not be used
+  when a link would do the trick.
+parameters:
+  content: "*(mandatory)* the content of the button"
+  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
+  class: "*(optional)* any extra class"
+---
+
+<div class="cp-code">
+  <button class="cp-button cp-button--fab  cp-code__button">
+    <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="16" 
+    height="16" 
+    class="ob-icon" 
+    viewBox="0 0 16 16"
+    aria-hidden="true"
+    >
+      <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+    </svg>
+    <span class="cp-code__tooltip" role="tooltip">
+      Copy code
+    </span>
+  </button>
+
+  <pre><code>Peace World!</code></pre>
+</div>
+
+<p>
+  The new syntax is to use three values without commas followed by a slash and the alpha channel of the color as a percentage.
+</p>
+
+<p>
+  Consider the following example of a slightly-transparent blue:
+</p>
+
+<figure class="cp-compare-code" data-type="bad">
+
+  <p class="cp-compare-code__label">
+      Don't
+  </p>
+
+  <div class="cp-code">
+      <button class="cp-button cp-button--fab  cp-code__button">
+        <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="16" 
+        height="16" 
+        class="ob-icon" 
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+        >
+          <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+        </svg>
+        <span class="cp-code__tooltip" role="tooltip">
+          Copy code
+        </span>
+      </button>
+  <!-- update code here fro till -->
+      
+  </div>
+</figure>
+
+<figure class="cp-compare-code" data-type="good">
+  <p class="cp-compare-code__label">
+      Do
+  </p>
+
+  <div class="cp-code">
+      <button class="cp-button cp-button--fab  cp-code__button">
+        <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="16" 
+        height="16" 
+        class="ob-icon" 
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+        >
+          <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+        </svg>
+        <span class="cp-code__tooltip" role="tooltip">
+          Copy code
+        </span>
+      </button>
+  
+      <!-- update code here fro till -->
+  </div>
+  
+</figure>

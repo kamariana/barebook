@@ -1,55 +1,34 @@
 ---
-layout: page-entry
 title:  Primary nav
-order: 1
+layout: page-system-entry
 type: navigation
+order: 1
 
 
 description: |
-  The button component should be used as the call-to-action in a form, or as a
-  user interaction mechanism. Generally speaking, a button should not be used
-  when a link would do the trick.
-parameters:
-  content: "*(mandatory)* the content of the button"
-  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
-  class: "*(optional)* any extra class"
+
 ---
 
-<div class="cp-header__contain">
-
-  <a class="cp-logo" href="/" title="Home">
-    <span class="cp-logo__text">
-      Barebook
-    </span>
-  </a>
-
-  <nav class="cp-primary-nav" aria-label="Primary Navigation">
-    <ul class="cp-primary-nav__list">
-      <li class="cp-primary-nav__item">
-          <a href="" class="cp-primary-nav__link">Home</a>
+<nav class="cp-primary-nav ut-hidden-tablet-l-no" aria-label="Primary Navigation">
+  <ul class="cp-primary-nav__list">
+    {% for item in site.data.navigation.primary %}
+    {% assign url = item.url | downcase %}
+      <li>
+        <a href="{{ url }}" class="cp-primary-nav__link">{{ item.title }}</a>
       </li>
-      <li class="cp-primary-nav__item">
-          <a href="" class="cp-primary-nav__link">Projects</a>
-      </li>
-      <li class="cp-primary-nav__item">
-          <a href="" class="cp-primary-nav__link">Case studies</a>
-      </li>
-      <li class="cp-primary-nav__item">
-          <a href="" class="cp-primary-nav__link">Blog</a>
-      </li>
-      <li class="cp-primary-nav__item">
-          <a href="" class="cp-primary-nav__link">About</a>
-      </li>
-    </ul>
-  </nav>
-
-  <button class="cp-toggle-nav-icon cp-toggle-nav-icon--mobile js-open-off-canvas" aria-hidden="true">
-    <span class="cp-toggle-nav-icon__text">Menu</span>
-    <div class="cp-toggle-nav-icon__icon">
-      <span>&nbsp;</span>
-      <span>&nbsp;</span>
-      <span>&nbsp;</span>
-    </div>
-  </button>
-
-</div>
+    {% endfor %}
+    <li>
+      <button class="cp-primary-nav__link cp-primary-nav__link--button js-open-nav">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="16" 
+          height="16" 
+          class="ob-icon" 
+          viewBox="0 0 16 16"
+        >
+          <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>

@@ -1,48 +1,37 @@
 ---
-layout: page-entry
-title:  Fullscreen nav
-order: 3
+title:  Full-screen nav
+layout: page-system-entry
+order: 2
 type: navigation
 
 
 description: |
-  The button component should be used as the call-to-action in a form, or as a
-  user interaction mechanism. Generally speaking, a button should not be used
-  when a link would do the trick.
-parameters:
-  content: "*(mandatory)* the content of the button"
-  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
-  class: "*(optional)* any extra class"
+
 ---
-<div class="cp-header__contain">
 
-  <a class="cp-logo" href="/" title="Home">
-    <span class="cp-logo__text">
-      Barebook
-    </span>
-  </a>
-
-  <button class="cp-toggle-nav-icon js-open-off-canvas" aria-hidden="true">
-    <span class="cp-toggle-nav-icon__text">Menu</span>
-    <div class="cp-toggle-nav-icon__icon">
-      <span>&nbsp;</span>
-      <span>&nbsp;</span>
-      <span>&nbsp;</span>
-    </div>
-  </button>
-
-</div>
-
-
-<div class="cp-fullscreen-navigation ob-off-canvas-nav" role="navigation" aria-label="Fullscreen Navigation" hidden>
+<div class="cp-fullscreen-navigation ob-off-canvas-nav js-fullscreen-navigation" role="navigation" aria-label="Fullscreen Navigation" hidden>
   <div class="ob-off-canvas-nav__contain">
 
     <div class="ob-off-canvas-nav__header">
-      <button class="cp-toggle-nav-icon cp-toggle-nav-icon--white cp-toggle-nav-icon--close js-close-off-canvas" aria-hidden="true">
+      <a class="cp-logo" href="/">
+        <div class="cp-logo__contain">
+          <span class="cp-logo__item">A</span>
+          <span class="cp-logo__item">C</span>
+          <span class="cp-logo__item">a</span>
+          <span class="cp-logo__item">m</span>
+          <span class="cp-logo__item">a</span>
+          <span class="cp-logo__item">r</span>
+          <span class="cp-logo__item">i</span>
+          <span class="cp-logo__item">a</span>
+          <span class="cp-logo__item">n</span>
+          <span class="cp-logo__item">a</span>
+        </div>
+      </a>
+      <button class="cp-toggle-nav-icon cp-toggle-nav-icon--alt cp-toggle-nav-icon--close js-close-nav">
         <span class="cp-toggle-nav-icon__text">Close</span>
-        <div class="cp-toggle-nav-icon__icon">
-          <span>&nbsp;</span>
-          <span>&nbsp;</span>
+        <div class="cp-toggle-nav-icon__icons">
+          <i class="cp-toggle-nav-icon__icon">&nbsp;</i>
+          <i class="cp-toggle-nav-icon__icon">&nbsp;</i>
         </div>
       </button>
     </div>
@@ -50,42 +39,39 @@ parameters:
     <div class="ob-off-canvas-nav__main">
       <nav class="cp-fullscreen-nav">
           <ul class="cp-fullscreen-nav__list">
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Home</a>
-              </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Projects</a>
-              </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Case studies</a>
-              </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Blog</a>
-              </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">About</a>
-              </li>
+              {% for item in site.data.navigation.primary %}
+                {% assign url = item.url | downcase %}
+                <li>
+                  <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                </li>
+              {% endfor %}
           </ul>
-
           <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">CV</a>
+            {% for item in site.data.navigation.secondary %}
+              {% assign url = item.url | downcase %}
+              <li>
+                <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
               </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Certificates</a>
-              </li>
-              <li class="cp-fullscreen-nav__item">
-                  <a href="" class="cp-fullscreen-nav__link">Contact</a>
-              </li>
-          </ul>
+            {% endfor %}
+        </ul>
+        <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
+          {% for item in site.data.navigation.tertiary %}
+            {% assign url = item.url | downcase %}
+            <li>
+              <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+      </ul>
       </nav>
     </div>
-
+    
+    
     <div class="ob-off-canvas-nav__footer">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed assumenda provident voluptatibus ex quaerat, consequatur blanditiis, neque error perspiciatis nam aliquam temporibus dolores, porro vitae? Tempora facere magni quibusdam ipsum.
       </p>
     </div>
+
 
   </div>
 </div>

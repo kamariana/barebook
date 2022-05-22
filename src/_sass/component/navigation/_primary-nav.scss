@@ -1,36 +1,29 @@
 .cp-primary-nav {
-  display: flex;
-  align-items:  center;
+  display: none;
 }
 
 .cp-primary-nav__list {
   @include reset-list;
-  display: none;
-}
 
-.cp-primary-nav__item {
-  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .cp-primary-nav__link {
   display: block;
-  text-decoration: none;
-  color: var(--thurab-900);
   padding: var(--size-12) var(--size-16);
-  font-size: var(--font-size-body-medium);
-  font-weight: bold;
+  color: inherit;
+  font-size: var(--fs-body);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--interactive-enabled);
+  }
 }
 
-
-
-
-
-
-
-// MQs
-@include respond(tablet-l) {
-  .cp-primary-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}     // 900px
+.cp-primary-nav__link--button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

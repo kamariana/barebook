@@ -1,6 +1,5 @@
 .ob-page {
-  max-width: var(--container-width-tv);
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 160rem; // 2560px;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
-

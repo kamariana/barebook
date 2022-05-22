@@ -1,0 +1,16 @@
+
+{% if post %}
+  {% assign categories = post.meta.categories %}
+{% else %}
+  {% assign categories = page.meta.categories %}
+{% endif %}
+
+{% for category in categories %}
+  <li>
+    {{ category }}
+  </li>
+  {% unless forloop.last %}
+    &nbsp;
+  {% endunless %}
+{% endfor %}
+ 

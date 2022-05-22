@@ -1,14 +1,9 @@
 a {
+  background-color: transparent;
   color: var(--interactive-enabled);
   text-decoration: underline;
-
-  
-  background-color: transparent;
 
   &:hover {
     text-decoration: none;
   }
 }
-
-
-// make the color of links blue and it hover , focuse and so tints

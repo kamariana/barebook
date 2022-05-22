@@ -1,28 +1,19 @@
 // Base settings
 html {
-  text-rendering: optimizeLegibility;  
+  text-rendering: optimizelegibility;
   text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--canvas);
-  color: var(--canvas-text);
+  color: var(--text-on-canvas);
   font-family: var(--typeface-primary);
-  line-height: var(--base-line-height-mobile);
-  scroll-behavior: smooth;
-  overflow-y: auto;
+  font-size: var(--fs-body);
   font-weight: 400;
-  font-size: var(--font-size-body);
-  // font-size: clamp(
-  //     var(--responsive-font-size-min, 1rem),
-  //     calc(1rem + var(--responsive-font-size-target, 1.25vw)),
-  //     var(--responsive-font-size-max, 1.5rem)
-  // );
+  line-height: var(--lh-base-mobile);
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
-
-
 
 // A consistent vertical rhythm using the base line-height
 ul,
@@ -34,10 +25,8 @@ hr,
 table,
 figure,
 pre {
-  margin-top: var(--size-28);
+  margin-block-start: var(--size-28);
 }
-
-
 
 img,
 svg {
@@ -50,16 +39,16 @@ dfn {
 }
 
 abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 u,
 ins {
   text-decoration: none;
 }
-  
+
 ins {
   border-bottom: 1px solid;
 }
@@ -70,14 +59,14 @@ strong {
 }
 
 small {
-  font-size: var(--font-size-caption);
+  font-size: var(--fs-caption);
 }
 
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -89,25 +78,18 @@ sup {
   top: -0.5em;
 }
 
-
 template {
   display: none;
 }
-
 
 [hidden] {
   display: none;
 }
 
-
-
-
-
-
-// MQs 
+// MQs
 @include respond(tablet-l) {
   body {
-    font-size: var(--font-size-body-large);
-    line-height: var(--base-line-height-laptop);
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-base-laptop);
   }
 } // 900px

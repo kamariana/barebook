@@ -1,15 +1,15 @@
 figure {
-
-    small {
-        display: block;
-        text-transform: uppercase;
-        font-size: var(--font-size-overline);
-        color: var(--canvas-text-subdued);
-        line-height: 1;
-    }
+  small {
+    display: block;
+    color: var(--text-on-canvas-subdued-20);
+    font-size: var(--fs-caption);
+    line-height: 1;
+    text-transform: uppercase;
+  }
 }
 
 figcaption {
-    font-style: italic;
-    font-family: var(--typeface-quotes);
+  padding: var(--size-8);
+  font-size: var(--fs-body-small);
+  font-style: italic;
 }

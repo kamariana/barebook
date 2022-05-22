@@ -4,71 +4,37 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: var(--size-44);
-  font-family: var(--typeface-secondary);  
-  font-weight: bold;
-
-  & + * {
-    margin-top: var(--size-8);
-  }
+  font-family: var(--typeface-secondary);
+  font-weight: 200;
   
-  -webkit-font-smoothing: antialiased;
+  color: var(--text-on-canvas);
+
+  &:not(:first-child) {
+    margin-block-start: var(--size-44);
+  }
 }
 
-
 h1 {
-  font-size: var(--size-40);
+  font-size: var(--fs-heading-1);
   line-height: 1.25;
 }
 
 h2 {
-  font-size: var(--size-32);
+  font-size: var(--fs-heading-2);
   line-height: 1.35;
 }
 
 h3 {
-  font-size: var(--size-24);
+  font-size: var(--fs-heading-3);
   line-height: 1.45;
 }
 
 h4 {
-  font-size: var(--size-24);
+  font-size: var(--fs-heading-4);
   line-height: 1.45;
 }
 
 h5,
 h6 {
-  font-size: var(--size-20);
+  font-size: var(--fs-heading-5);
 }
-
-
-
-
-
-
-// MQs
-@include respond(tablet-l) {
-  h1 {
-    font-size: var(--size-68);
-  }
-  
-  h2 {
-    font-size: var(--size-52);
-    line-height: 1.25;
-  }
-  
-  h3 {
-    font-size: var(--size-36);
-    line-height: 1.35;
-  }
-  
-  h4 {
-    font-size: var(--size-28);
-  }
-  
-  h5,
-  h6 {
-    font-size: var(--size-24);
-  }
-  
-} // 900px

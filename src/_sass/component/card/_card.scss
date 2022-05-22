@@ -1,118 +1,183 @@
 .cp-card {
-    @include dp-flex-direction-column;
-    @include pos-rel-overflow-hidden;
-    padding: var(--size-16);
+  @include dp-flex-direction-column;
+  @include pos-rel-overflow-hidden;
+  padding: var(--size-16);
+  border-radius: var(--bd-radius-largest);
 
-    transition: box-shadow 0.35s ease-in;
+  transition: box-shadow 0.35s ease-in;
 
-    // card interactions
-    &:hover,
-    &:focus {
-        
-        box-shadow: var(--elevation-medium);
-        cursor: pointer;
+  > * + * {
+    margin-block-start: var(--size-32);
+  }
 
-        .cp-card__img {
-            @include scale-out-on-hover-and-focus;
-        }
+  // card interactions
+  &:hover,
+  &:focus {
+    box-shadow: var(--elevation-medium);
+    cursor: pointer;
 
-        .cp-card__icon {
-            transform: translateX(var(--size-4));
-        }
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
     }
 
-    // focus within to match the hover style
-    &:focus-within {
-        outline: 1px dotted red;
-
-        .cp-card__img {
-            @include scale-out-on-hover-and-focus;
-        }
+    .cp-card__icon {
+      transform: translateX(var(--size-4));
     }
+  }
 
-    // remove the unnecessary "basic focus style" only where :focus-within is supported.
-    &:focus-within .cp-card__link:focus {
-        outline: none;
+  // focus within to match the hover style
+  &:focus-within {
+    box-shadow: var(--elevation-medium);
+    outline: 1px dotted var(--interactive-enabled);
+
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
     }
+  }
 
-    .cp-card__link {
-        &::after {
-            @include pos-abs-zero-all-sides-pseudo-class;
-        }
+  // remove the unnecessary "basic focus style" only where :focus-within is supported.
+  &:focus-within .cp-card__link:focus {
+    outline: none;
+  }
+
+  .cp-card__link {
+    &::after {
+      @include pos-abs-zero-all-sides-pseudo-class;
     }
-
+  }
 }
-
-
-
-
 
 // Elements
 .cp-card__text {
-    @include dp-flex-direction-column;
+  @include dp-flex-direction-column;
+  
+
+  flex-grow: 1;
+
+  & > :last-child {
+    margin-top: auto;
+  }
+
+  & > :nth-last-child(2) {
+    margin-block-end: var(--size-16);
+  }
 }
 
 .cp-card__title {
-    margin-top: 0;
-    font-size: 2.5rem;
-    font-weight: 200;
+  font-size: var(--size-32);
+  font-weight: 200;
+  margin-block-start: 0;
 }
 
 .cp-card__link {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
 .cp-card__tag {
-    margin-bottom: var(--size-12);
-    order: -1;
-    font-size: var(--font-size-overline);
-    text-transform: uppercase;
+  order: -1;
+  font-size: var(--fs-body-small);
+  margin-block-end: var(--size-12);
+  text-transform: uppercase;
+}
+
+.cp-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-48);
+  color: var(--text-on-canvas-subdued-10);
+
+  dt {
+    font-weight: normal;
+  }
 }
 
 .cp-card__button {
-    margin-top: var(--size-32);    
-    align-self: start;
+  align-self: start;
+  margin-block-start: var(--size-16);
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 .cp-card__icon {
-    margin-left: var(--size-4);
-    transition: transform 0.35s cubic-bezier(.27,.9,.27,1);
+  margin-left: var(--size-4);
+  transition: transform 0.35s cubic-bezier(0.27, 0.9, 0.27, 1);
 }
 
 .cp-card__media {
-    margin-top: var(--size-32);
-    max-height: 364px;
+  overflow: hidden;
+  border-radius: var(--bd-radius-largest);
 }
 
 .cp-card__img {
-    @include fit-media-into-container;
-    @include trans-and-scale;
+  @include fit-media-into-container;
+  @include trans-and-scale;
 }
-
-
-
 
 // Modifiers
 .cp-card--box {
-    padding: var(--size-16);
-    border-radius: var(--bd-radius-small);
+  padding: var(--size-16);
+  border-radius: var(--bd-radius-small);
 }
 
 .cp-card--apart {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
 .cp-card__media--landscape {
-    max-height: 564px;
+  max-height: 564px;
 }
 
+.cp-card__title--overline {
+  position: relative;
+  padding-block-start: var(--size-16);
 
+  &::before {
+    top: 0;
+    position: absolute;
+    content: "";
+    border: 2px solid var(--primary-enabled);
+    width: 100px;
+  }
+}
 
+.cp-card__tag--list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
 
 // Card Highlighters
 .cp-card--hl-neutral {
-    background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
+
+// MQs
+@include respond(tablet) {
+  .cp-card--box {
+    padding: var(--size-24);
+  }
+
+  .cp-card--apart {
+    flex-direction: row;
+    gap: var(--size-48);
+
+    > * {
+      margin-block-start: 0;
+      flex-basis: 50%;
+    }
+  }
+}   // 600px
+
+@include respond(laptop) {
+  .cp-card--box {
+    padding: var(--size-32);
+  }
+
+  .cp-card--apart {
+    flex-direction: row;
+    gap: var(--size-72);
+  }
+}   // 1240px

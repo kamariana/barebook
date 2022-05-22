@@ -1,16 +1,11 @@
 code {
-  background-color: var(--neutral-25);
-  border: 1px solid var(--border-color-subdued-light);
-  color: var(--canvas-code-text);
+  box-decoration-break: clone;  
   font-family: var(--typeface-code);
-  font-size: var(--font-size-caption);
-  padding: 0.125rem 0.25rem;
+  font-size: inherit;
   hyphens: none;
   tab-size: 2;
   text-align: start;
-  word-spacing: normal;
   word-break: normal;
+  word-spacing: normal;
   word-wrap: normal;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }

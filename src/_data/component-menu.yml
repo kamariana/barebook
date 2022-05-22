@@ -1,14 +1,19 @@
 - title: Logo
   url: /components/logo/
 
-- title: Navigations
-  url: /components/navigation/
+- title: Toggle nav icon
+  url: /components/toggle-nav-icon/
+
+- title: Buttons
+  url: /components/buttons/
 
 - title: Theme Picker
   url: /components/theme-picker/
 
-- title: Toggle nav icon
-  url: /components/toggle-nav-icon/
+- title: Navigations
+  url: /components/navigation/
+
+
 
 - title: Masthead
   url: /components/masthead/
@@ -16,11 +21,13 @@
 - title: Trusted By
   url: /components/trusted-by/
 
-- title: Buttons
-  url: /components/buttons/
+
 
 - title: Quote
   url: /components/quote/
+
+- title: Cards
+  url: /components/cards/
 
 - title: Alerts
   url: /components/alerts/
@@ -33,9 +40,6 @@
 
 - title: Pager
   url: /components/pager/
-
-- title: Pagination
-  url: /components/pagination/
 
 
 

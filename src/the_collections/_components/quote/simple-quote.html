@@ -1,20 +1,14 @@
 ---
 title:  Simple Quote
-layout: page-entry
+layout: page-system-entry
 type: quote
 order: 1
 
 description: |
-  The button component should be used as the call-to-action in a form, or as a
-  user interaction mechanism. Generally speaking, a button should not be used
-  when a link would do the trick.
-parameters:
-  content: "*(mandatory)* the content of the button"
-  type: "*(optional)* either `button` or `submit` for the `type` HTML attribute (default to `button`)"
-  class: "*(optional)* any extra class"
+
 ---
 
-<figure class="cp-quote cp-quote--with-mark-left">
+<figure class="cp-quote cp-quote--center cp-quote--with-mark-left">
   <blockquote>
     <p>
       I kept the copy of the handout
@@ -27,6 +21,10 @@ parameters:
     </p>
   </blockquote>
   <figcaption class="cp-quote__citation">
-    — Participant 2
+     <div class="cp-quote__author cp-quote__author--inline">
+        —
+        <span class="cp-quote__author-name">Ebrima Press Bah,</span>        
+        <span class="cp-quote__author-role">Journalist and Teacher, Jamwally</span>        
+    </div>
   </figcaption>
 </figure>

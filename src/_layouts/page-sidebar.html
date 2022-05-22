@@ -2,32 +2,29 @@
 layout: default
 ---
 
-<header class="cp-header cp-header--page">
-  {% include header.html %}
-</header>
+{% include utilities/banner.html %}
 
-{% include utils/banner.html %}
-
-<main class="cp-sidebar">
+<main>
    
-  <article>
-    <div class="ob-contain ob-contain--center ob-contain--with-v-pad ob-contain--prose-large">
-      <details class="cp-accordion ut-hidden-desktop-yes" aria-label="Table of Content" role="navigation" >
-        <summary class="cp-accordion__title">Table of Content</summary>
-        <div class="cp-accordion__content">
-          {% include toc.html %}
-        </div>
-      </details>
-      {{ content }}
-    </div>
-  </article>
-
-  <aside class="ut-hidden-desktop-no" hidden>
-    <nav class="ut-gap-top-size-large ut-pos-sticky-top">
-      <span class="ut-subtitle">Table of Content</span>
-      {% include toc.html %}
-    </nav>
-  </aside>
+  <div class="bb-sidebar">
+    <article>
+      <div class="ob-contain ob-contain--center ob-contain--with-v-pad">
+        <details class="cp-accordion ut-hidden-desktop-yes" aria-label="Table of Content" role="navigation" >
+          <summary class="cp-accordion__title">Table of Content</summary>
+          <div class="cp-accordion__content">
+            {% include toc.html %}
+          </div>
+        </details>
+        {{ content }}
+      </div>
+    </article>
+    <aside class="ut-hidden-desktop-no" hidden>
+      <nav class="ut-gap-top-size-large ut-pos-sticky-top">
+        <span class="ut-subtitle">Table of Content</span>
+        {% include toc.html %}
+      </nav>
+    </aside>
+  </div>
   
 </main>
 

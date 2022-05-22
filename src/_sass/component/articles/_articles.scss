@@ -1,0 +1,35 @@
+.cp-articles {
+  @include reset-list;
+  column-gap: 48px;
+  columns: 264px;
+}
+
+// Elements
+.cp-articles__item {
+  break-inside: avoid;
+
+  &:not(:last-child) {
+    margin-block-end: 48px;
+  }
+}
+
+
+// MQs
+@include respond(tablet-l) {
+    .cp-articles {
+      columns: 396px;
+      column-gap: 96px;
+    }
+
+    .cp-articles__item {
+      &:not(:last-child) {
+        margin-block-end: 96px;
+      }
+    }
+} // 900px
+
+@include respond(desktop) {
+    .cp-articles {
+        columns: 460px;
+    }
+}  // 1440px

@@ -1,0 +1,14 @@
+<aside class="bb-sidebar">
+  <nav class="bb-sidebar-nav">
+  <ul>
+    {% assign elements = site.elements %}
+    {% for element in elements %}
+      <li class="">
+        <a class="" href="{{ element.url }}">
+          {{ element.title }}
+        </a>
+      </li> 
+    {% endfor %}
+  </ul>
+  </nav>
+</aside>

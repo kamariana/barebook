@@ -1,23 +1,23 @@
 html {
-  scrollbar-color: var(--brand-enabled) var(--border-color-subdued);
+  scrollbar-color: var(--primary-hovered) var(--border-color);
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
+  width: 8px;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--border-color-subdued);
+  background: var(--border-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--brand-enabled);
+  background: var(--primary-hovered);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-hovered);
+  background: var(--primary-focused);
 }

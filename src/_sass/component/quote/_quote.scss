@@ -1,16 +1,18 @@
 .cp-quote {
   position: relative;
-  max-width: var(--container-width-medium);
-  margin: var(--size-16) auto;
+  max-width: 45ch;
+  margin: var(--size-56) auto;
+  font-size: var(--fs-subtitle);
 
   p {
-    margin-top: 0;
     position: relative;
     z-index: var(--layer-back);
+    margin-block-start: 0;
   }
 
   blockquote {
     max-width: 100%;
+    border: none;
   }
 
   > * + * {
@@ -18,18 +20,15 @@
   }
 }
 
-
-
-
-
 // Elements
 .cp-quote__citation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  font-size: var(--font-size-body-large);
-  font-style: normal;
   padding-left: var(--size-24);
+  margin-top: var(--size-24);
+  font-style: normal;
+  font-size: inherit;
 }
 
 .cp-quote__avatar {
@@ -40,43 +39,46 @@
 }
 
 .cp-quote__author {
+  display: flex;
   flex: 1;
-  display: inline-block;
+  flex-direction: column;
+  gap: var(--size-8);
+  line-height: 1.15;
 }
 
 .cp-quote__author-name {
   display: block;
+  font-weight: bold;
 }
 
 .cp-quote__author-role {
-  display: block;
-  color: var(--canvas-text-subdued);
-  font-size: var(--font-size-body-small);
+  color: var(--text-on-canvas-subdued-10);
 }
 
-
-
-
-
 // Modifiers
-.cp-quote--with-mark-left {
-  &::before {
-    content: "\201C";
-    position: absolute;
-    z-index: var(--layer-backward);
-    color: var(--thurab-75);
-    font-size: calc(var(--font-size-title-largest) * 4);
-    line-height: 1;
-    top: calc(var(--size-32) * -1);
-    left: calc(var(--size-32) * -1);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.cp-quote--center {
+  text-align: center;
+
+  .cp-quote__citation {
+    display: block;
   }
 }
 
+.cp-quote--with-mark-left {
+  &::before {
+    position: absolute;
+    z-index: var(--layer-backward);
+    top: calc(var(--size-32) * -1);
+    left: calc(var(--size-32) * -1);
+    color: var(--canvas-subdued-20);
+    content: "\201C";
+    font-family: var(--typeface-quotes);
+    font-size: calc(var(--size-72) * 3);
+    line-height: 1;
+  }
+}
 
 // States
 .cp-quote.is-large {
-  max-width: var(--container-width-large);
+  max-width: 65ch;
 }
-
-

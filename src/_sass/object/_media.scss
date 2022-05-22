@@ -2,11 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--size-24);
+  gap: var(--size-8);
   margin: 0;
 }
-
-
 
 
 
@@ -20,16 +18,14 @@
 .ob-media__author-name {
   display: block;
   font-weight: bold;
-  font-size: var(--font-size-body-medium);
+  font-size: var(--fs-body-large);
 }
 
 .ob-media__author-role {
-  color: var(--canvas-text-subdued);
-  font-size: var(--font-size-caption);
+  color: var(--text-on-canvas-subdued-20);
+  font-size: var(--fs-caption);
   text-transform: uppercase;
 }
-
-
 
 
 

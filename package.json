@@ -6,6 +6,6 @@
   "author": "camariana <camariana40@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "bundle exec jekyll serve  --trace --livereload"
+    "dev": "bundle exec jekyll serve --port 8888  --trace --livereload"
   }
 }

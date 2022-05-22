@@ -1,16 +1,17 @@
 blockquote {
   max-width: var(--container-width-medium);
-  padding: var(--size-8) var(--size-24);
+  padding: 0 var(--size-24);
+  border-left: 4px solid var(--border-color);
   font-family: var(--typeface-quotes);
-  font-size: var(--font-size-subtitle-large);
-  border-left: 8px solid var(--border-color-subdued);
-  
+  font-size: var(--fs-subtitle);
+  margin: var(--size-44) 0 var(--size-44) var(--size-44);
+
   > p {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 
   > * + * {
-    margin-top: var(--size-28);
+    margin-block-start: var(--size-28);
   }
 }
 
