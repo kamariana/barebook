@@ -1,13 +1,23 @@
 # Site settings
-title: Barebook
+title: Barebook 
+siteName: Barebook
 description: "Barebook is a scalable and maintainable Design System base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)"
 keywords:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: 
 type: website
-image: 
-author: A Camariana
+image: /assets/images/image.jpg
+url: https://barebook.gm
 permalink: pretty
+
+author: A Camariana
+
+# Kramdown and Rouge
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 
 # Global Configuration
 source: src
@@ -19,7 +29,7 @@ sass:
   style: :compressed
 
 # Collections Settings
-collections_dir: the_collections
+collections_dir: my_collections
 collections:
   design:
     output: false

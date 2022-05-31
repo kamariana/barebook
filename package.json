@@ -1,11 +1,13 @@
 {
   "name": "barebook",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:camariana/barebook.git",
-  "author": "camariana <camariana40@outlook.com>",
+  "author": "A Camariana <camariana40@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "bundle exec jekyll serve --port 8888  --trace --livereload"
+    "dev": "bundle exec jekyll serve --trace --livereload",
+    "lint:style": "npx stylelint \"**/*.scss\"",
+    "fix:style": "npx stylelint --fix \"**/*.scss\""
   }
 }

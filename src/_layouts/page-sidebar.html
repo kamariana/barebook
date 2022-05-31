@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include utilities/banner.html %}
+{% include components/banner.html %}
 
 <main>
    
@@ -12,7 +12,7 @@ layout: default
         <details class="cp-accordion ut-hidden-desktop-yes" aria-label="Table of Content" role="navigation" >
           <summary class="cp-accordion__title">Table of Content</summary>
           <div class="cp-accordion__content">
-            {% include toc.html %}
+            {% include components/toc.html %}
           </div>
         </details>
         {{ content }}
@@ -21,7 +21,7 @@ layout: default
     <aside class="ut-hidden-desktop-no" hidden>
       <nav class="ut-gap-top-size-large ut-pos-sticky-top">
         <span class="ut-subtitle">Table of Content</span>
-        {% include toc.html %}
+        {% include components/toc.html %}
       </nav>
     </aside>
   </div>
