@@ -1,0 +1,9 @@
+a {
+  background-color: transparent;
+  color: var(--interactive-enabled);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

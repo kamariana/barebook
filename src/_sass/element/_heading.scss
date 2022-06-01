@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--typeface-secondary);
+  font-weight: 200;
+  
+  color: var(--text-on-canvas);
+
+  &:not(:first-child) {
+    margin-block-start: var(--size-44);
+  }
+}
+
+h1 {
+  font-size: var(--fs-heading-1);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--fs-heading-2);
+  line-height: 1.35;
+}
+
+h3 {
+  font-size: var(--fs-heading-3);
+  line-height: 1.45;
+}
+
+h4 {
+  font-size: var(--fs-heading-4);
+  line-height: 1.45;
+}
+
+h5,
+h6 {
+  font-size: var(--fs-heading-5);
+}
