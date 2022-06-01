@@ -1,0 +1,30 @@
+@mixin ref-color {
+  // Neutrals
+  --ref-black: #000000;
+
+  --ref-neutral-5: #f6f7fb;
+  --ref-neutral-10:#edeef2;
+  --ref-neutral-20:#e1e2e6;
+  --ref-neutral-30:#cfd0d3;
+  --ref-neutral-40:#aaabae;
+  --ref-neutral-50:#898a8d;
+  --ref-neutral-60:#626366;
+  --ref-neutral-70:#4f5053;
+  --ref-neutral-80:#313235;
+  --ref-neutral-90:#111215;
+
+  --ref-white:#ffffff;
+
+
+    // Light
+    --ref-light-scheme-base: var(--ref-ref-white);
+    --ref-light-scheme-dark: var(--ref-neutral-10);
+    --ref-light-scheme-darker: var(--ref-neutral-20);
+    --ref-light-scheme-darkest: var(--ref-neutral-30);
+  
+    // Dark
+    --ref-dark-scheme-base: #212332;
+    --ref-dark-scheme-light: #2a2d3e;
+    --ref-dark-scheme-lighter: #3e4156;
+    --ref-dark-scheme-lightest: #1c2033;
+}
