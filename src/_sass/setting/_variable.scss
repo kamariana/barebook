@@ -1,20 +1,30 @@
 // References
 @import './reference/color';
+@import './reference/sizing';
 
 // Context
 
   // Light Scheme
   @import './context/light-scheme/canvas';
-
-
+  @import './context/light-scheme/syntax-highlighting';
   // Dark Scheme
   @import './context/dark-scheme/canvas';
+  @import './context/dark-scheme/syntax-highlighting';
+
+  @import './context/typography';
+  @import './context/spacing';
+  @import './context/border-radius';
 
 
 :root {
   // References
   @include ref-color;
+  @include ref-sizing;
 
+  // Context
+  @include con-typography;
+  @include con-spacing;
+  @include con-border-radius;
 
   color-scheme: light dark;
 }
@@ -23,16 +33,14 @@
 // Prefers-color-scheme
 @media (prefers-color-scheme: light) {
   :root {
-    @include light-canvas;
-
-    // accent-color: var(--interactive-enabled);
+    @include con-light-canvas;
+    @include con-light-syntax-highlighting;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @include dark-canvas;
-
-    // accent-color: var(--interactive-enabled);
+    @include con-dark-canvas;
+    @include con-dark-syntax-highlighting;
   }
 }
