@@ -14,10 +14,10 @@ html {
 body {
   background-color: var(--canvas-background-color);
   color: var(--canvas-text-color);
-  font-family: var(--base-text-font-family);
-  font-size: var(--base-text-font-size);
-  font-weight: var(--base-font-weight);
-  line-height: var(--base-text-leading);
+  font-family: var(--typeface-primary);
+  font-size: var(--typescale-base-text-small);
+  font-weight: var(--typeweight-400);
+  line-height: var(--leading-lager);
   overflow-y: auto;
   scroll-behavior: smooth;
 }

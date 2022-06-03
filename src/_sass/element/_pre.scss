@@ -1,17 +1,19 @@
 pre {
   white-space: pre-wrap;
   border-radius: var(--bd-radius-medium);
-  font-size: var(--fs-body);
-  background-color: var(--canvas-pre);
+  font-size: var(--typescale-base-text-small);
+  background-color: var(--pre-background-color);
+  
 
   code {
     background-color: transparent;
     border-radius: 0;
     display: block;
-    padding: var(--size-24) var(--size-20) var(--size-20);
+    padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-medium);
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overscroll-behavior-x: contain;
+    color: var(--pre-text-color);
   }
 
   pre {

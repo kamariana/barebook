@@ -4,37 +4,38 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--typeface-secondary);
-  font-weight: 200;
+  font-family: var(--typeface-primary);
+  font-weight: var(--typeweight-200);
   
-  color: var(--text-on-canvas);
+  color: var(--headline-text-color);
 
   &:not(:first-child) {
-    margin-block-start: var(--size-44);
+    margin-block-start: var(--spacing-larger);
+  }
+
+  + p {
+    margin-block-start: var(--spacing-medium);
   }
 }
 
 h1 {
-  font-size: var(--fs-heading-1);
-  line-height: 1.25;
+  font-size: var(--typescale-headline-text-small);
+  line-height: var(--leading-medium);
 }
 
 h2 {
-  font-size: var(--fs-heading-2);
-  line-height: 1.35;
+  font-size: var(--typescale-headline-text-tiny);
+  line-height: var(--leading-medium);
 }
 
 h3 {
-  font-size: var(--fs-heading-3);
-  line-height: 1.45;
+  font-size: var(--typescale-title-text-large);
+  line-height: var(--leading-medium);
 }
 
-h4 {
-  font-size: var(--fs-heading-4);
-  line-height: 1.45;
-}
-
+h4,
 h5,
 h6 {
-  font-size: var(--fs-heading-5);
+  font-size: var(--typescale-title-text-medium);
+  line-height: var(--leading-medium);
 }
