@@ -1,8 +1,33 @@
-@mixin light-canvas {
+@mixin con-light-canvas {
   --canvas-background-color: var(--ref-light-scheme-base);
   --canvas-text-color: var(--ref-neutral-90);
 
+  --selection-background-color: var(--ref-primary-60);
+  --selection-text-color: var(--ref-neutral-90);
+
+  --code-background-color: var(--ref-neutral-20);
+  --code-text-color: var(--ref-neutral-90);
+  --pre-background-color: var(--ref-light-scheme-darker);
+  --pre-text-color: var(--ref-neutral-90);
+
+  --border-color: var(--ref-neutral-30);
+
+  --headline-text-color: var(--ref-black);
+
+  --link-text-color-enabled: var(--ref-secondary-70);
+  --link-text-color-hovered: var(--ref-secondary-80);
+  --link-text-color-focused: var(--ref-secondary-90);
+  --article-link-text-color-hovered: var(--ref-neutral-5);
+  --article-link-background-color-hovered: var(--ref-secondary-70);
+
+  --interactive-enabled: var(--ref-primary-70);
+  --interactive-focused: var(--ref-primary-80);
+
   // Variants
+  --canvas-text-color-light: var(--ref-neutral-60);
 
   // States
+
+  // Misc
+  accent-color: var(--interactive-enabled);
 }
