@@ -11,7 +11,7 @@ permalink: /elements/
   <section class="cp-code-block">
     <h2 id="{{ type.name | slugify }}" class="cp-code-block__category-title">{{ type.name | capitalize }}</h2>
     {% for entry in type.items %} 
-      {% include utilities/element-entry.html %} 
+      {% include docs/element-entry.html %} 
     {% endfor %} 
     <a href="#top">[Back to Top]</a>
   </section>
