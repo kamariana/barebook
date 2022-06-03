@@ -1,0 +1,8 @@
+@mixin con-border-radius {
+  --bd-radius-nano: var(--ref-size-2);  
+  --bd-radius-tiny: var(--ref-size-4);  
+  --bd-radius-small: var(--ref-size-8);  
+  --bd-radius-medium:var(--ref-size-28);  
+  --bd-radius-largest: var(--ref-size-64);  
+  --bd-radius-circle: var(--ref-size-100-percent);  
+}
