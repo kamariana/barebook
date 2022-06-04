@@ -40,7 +40,7 @@ textarea {
   padding: var(--size-8) var(--size-12);
   border: 2px solid var(--border-color-subdued);
   background-color: var(--white);
-  border-radius: var(--bd-radius-tiny);
+  border-radius: var(--shape-rounded-tiny);
   color: inherit;
   font-weight: bold;
   transition-duration: 150ms;
@@ -183,7 +183,7 @@ input[type="radio"] {
 
 [type="checkbox"] {
   + label::before {
-    border-radius: var(--bd-radius-nano);
+    border-radius: var(--shape-rounded-nano);
   }
 }
 
