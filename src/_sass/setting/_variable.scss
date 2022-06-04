@@ -13,7 +13,8 @@
 
   @import './context/typography';
   @import './context/spacing';
-  @import './context/border-radius';
+  @import './context/shape';
+  @import './context/container';
 
 
 :root {
@@ -24,7 +25,8 @@
   // Context
   @include con-typography;
   @include con-spacing;
-  @include con-border-radius;
+  @include con-shape;
+  @include con-container;
 
   color-scheme: light dark;
 }
