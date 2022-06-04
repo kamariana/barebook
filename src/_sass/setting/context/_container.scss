@@ -1,0 +1,4 @@
+@mixin con-container {
+  --container-small: var(--ref-size-375);
+  --container-medium: var(--ref-size-768);
+}
