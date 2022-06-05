@@ -1,0 +1,4 @@
+@mixin on-contain {
+  --contain-page: var(--ref-size-2560);
+  --contain-default: var(--ref-size-1440);
+}
