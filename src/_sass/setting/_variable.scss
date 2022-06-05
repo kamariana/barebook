@@ -14,7 +14,8 @@
   @import './context/typography';
   @import './context/spacing';
   @import './context/shape';
-  @import './context/container';
+  @import './context/contain';
+  @import './context/z-index-layer';
 
 
 :root {
@@ -26,7 +27,8 @@
   @include con-typography;
   @include con-spacing;
   @include con-shape;
-  @include con-container;
+  @include con-contain;
+  @include con-z-index-layer;
 
   color-scheme: light dark;
 }
