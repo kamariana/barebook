@@ -1,0 +1,6 @@
+// Container
+@mixin contain($size) {
+  max-width: var($size);
+  padding: 0 var(--spacing-default);
+  margin: 0 auto;
+}

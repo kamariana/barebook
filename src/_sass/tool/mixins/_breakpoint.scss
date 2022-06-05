@@ -1,0 +1,24 @@
+$bps: (
+  mobile-small: var(--ref-size-320),
+  mobile-medium: var(--ref-size-375),
+  mobile-large: var(--ref-size-425),
+  tablet-small: var(--ref-size-768),
+  tablet-medium: var(--ref-size-900),
+  tablet-large: var(--ref-size-1024),
+  laptop-small: var(--ref-size-1240),
+  laptop-medium: var(--ref-size-1440),
+  laptop-large: var(--ref-size-1600)
+) !default;
+
+@mixin respond($bp) {
+  @if map-has-key($bps, $bp) {
+    @media screen and (min-width: #{map-get($bps, $bp)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown `#{$bp}` in $bps, please check";
+  }
+}
+
+// usage - copy paste and rename the argument base in the bp you want
+// @include respond(mobile) {}

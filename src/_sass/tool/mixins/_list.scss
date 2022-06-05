@@ -1,0 +1,6 @@
+// * List bare to reset ol, ul and dl elements
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

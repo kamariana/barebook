@@ -1,0 +1,12 @@
+// Flexboxs
+@mixin dp-flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin dp-flex-apart-center($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var($gap);
+}
