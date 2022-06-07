@@ -1,0 +1,10 @@
+@mixin con-z-index-layer {
+  --layer-surface: var(--ref-index-60);
+  --layer-overlay-content: var(--ref-index-50);
+  --layer-overlay:var(--ref-index-40);
+  --layer-front: var(--ref-index-30);
+  --layer-forward: var(--ref-index-20);
+  --layer-back: var(--ref-index-10);
+  --layer-backward: var(--ref-index-0);
+  --layer-under: var(--ref-index-1);
+}
