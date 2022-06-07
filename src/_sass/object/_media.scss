@@ -1,0 +1,35 @@
+.ob-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--spacing-small);
+  margin: 0;
+}
+
+
+
+// Elements
+.ob-media__caption {
+  flex: 1;
+  display: block;
+  font-style: normal;
+}
+
+.ob-media__author-name {
+  display: block;
+  font-weight: bold;
+  font-size: var(--typescale-base-text-large);
+}
+
+.ob-media__author-role {
+  color: var(--canvas-text-color-light);
+  font-size: var(--typescale-label-text-medium);
+  text-transform: uppercase;
+}
+
+
+
+// Modifiers
+.ob-media--at-center {
+  align-items: center;
+}

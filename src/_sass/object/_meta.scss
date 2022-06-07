@@ -1,0 +1,8 @@
+.ob-meta {
+  font-size: var(--typescale-label-text-medium);
+}
+
+.ob-meta__items {
+  display: flex;
+  gap: var(--spacing-default);
+}

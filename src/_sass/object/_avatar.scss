@@ -1,0 +1,38 @@
+.ob-avatar {
+  background-color: var(--white);
+}
+
+
+
+// Modifiers 
+.ob-avatar--rounded-full {
+  border-radius: var(--shape-rounded-full);
+}
+
+.ob-avatar--rounded {
+  border-radius: var(--shape-rounded-medium);
+}
+
+.ob-avatar--ring {
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-tiny);
+}
+
+
+
+// States
+.ob-avatar.is-tiny {
+  @include box(2.5rem);
+}
+
+.ob-avatar.is-small {
+  @include box(4.5rem);
+}
+
+.ob-avatar.is-medium {
+  @include box(6.5rem);
+}
+
+.ob-avatar.is-large {
+  @include box(8.5rem);
+}

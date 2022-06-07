@@ -1,0 +1,33 @@
+.ob-grid {
+  @include reset-list;
+  display: grid;
+  column-gap: var(--spacing-default);
+}
+
+
+
+// MQs
+@include respond(mobile-medium) {
+  .ob-grid {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  }
+
+  // Modifiers
+  .ob-grid.is-two-col {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+
+  .ob-grid.is-three-col {
+    grid-template-columns: repeat(auto-fit, minmax(33.3333%, 1fr));
+  }
+
+  .ob-grid.is-four-col {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+}
+
+@include respond(tablet-small) {
+  .ob-grid {
+    column-gap: var(--spacing-medium);
+  }
+} 

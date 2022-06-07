@@ -1,0 +1,30 @@
+.ob-off-canvas-nav {
+  @include pos-zero-all-sides;
+  position: fixed;
+}
+
+// Elements
+.ob-off-canvas-nav__contain {
+  @include contain(--contain-default);
+
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.ob-off-canvas-nav__header {
+  @include dp-flex-apart-center(--spacing-default);
+
+  padding: var(--spacing-default);  
+}
+
+.ob-off-canvas-nav__main {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ob-off-canvas-nav__footer {
+  padding: var(--spacing-default);
+}

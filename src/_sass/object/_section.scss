@@ -1,0 +1,37 @@
+.ob-section {
+  padding-block-start: var(--spacing-larger);
+  padding-block-end: var(--spacing-larger);
+}
+
+// Elements
+.ob-section__header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+// Modifiers
+.ob-section--with-no-pad {
+  padding: 0;
+}
+
+.ob-section__header--at-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ob-section__header--apart {
+  gap: var(--spacing-default);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// * MQs
+@include respond(laptop) {
+  .ob-section {
+    padding-block-start: calc(2 * var(--spacing-larger));
+    padding-block-end: calc(2 * var(--spacing-larger));
+  }
+}   // 1240px

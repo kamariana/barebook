@@ -1,0 +1,11 @@
+.ob-icon {
+  @include box(--spacing-medium);
+
+  display: inline-flex;
+  align-items: center;
+  fill: var(--icon-color);
+
+  &:hover {
+    fill: var(--icon-color-hovered);
+  }
+}
