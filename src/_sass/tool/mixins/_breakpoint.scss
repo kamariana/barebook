@@ -1,13 +1,13 @@
-$bps: (
-  mobile-small: var(--ref-size-320),
-  mobile-medium: var(--ref-size-375),
-  mobile-large: var(--ref-size-425),
-  tablet-small: var(--ref-size-768),
-  tablet-medium: var(--ref-size-900),
-  tablet-large: var(--ref-size-1024),
-  laptop-small: var(--ref-size-1240),
-  laptop-medium: var(--ref-size-1440),
-  laptop-large: var(--ref-size-1600)
+$bps: ( //TODO: conver these px to rems equivalent values
+  mobile-small: 320px,
+  mobile-medium: 375px,
+  mobile-large: 425px,
+  tablet-small: 768px,
+  tablet-medium: 900px,
+  tablet-large: 1024px,
+  laptop-small: 1240px,
+  laptop-medium: 1440px,
+  laptop-large: 1600px
 ) !default;
 
 @mixin respond($bp) {
