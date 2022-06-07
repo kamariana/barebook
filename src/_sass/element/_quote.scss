@@ -1,19 +1,31 @@
 blockquote {
-  padding: 0 var(--spacing-large);
+  padding: 0 var(--spacing-default);
   border-left: 4px solid var(--border-color);
   font-family: var(--typeface-secondary);
-  font-size: var(--typescale-title-text-medium);
-  margin: var(--spacing-larger) 0 var(--spacing-larger) var(--spacing-larger);
+  font-size: var(--typescale-title-text-small);
+  margin: var(--spacing-larger) 0 var(--spacing-larger) var(--spacing-default);
+  line-height: var(--leading-lager);
 
   > p {
     margin-block-start: 0;
   }
 
   > * + * {
-    margin-block-start: var(--spacing-larger);
+    margin-block-start: var(--spacing-medium);
   }
 }
 
 q {
   font-style: italic;
 }
+
+
+// MQs
+@include respond(tablet-small) {
+  blockquote {
+    font-size: var(--typescale-title-text-medium);
+    padding: 0 var(--spacing-large);
+    margin: var(--spacing-larger) 0 var(--spacing-larger) var(--spacing-larger);
+  }
+}
+  
