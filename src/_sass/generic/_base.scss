@@ -94,12 +94,10 @@ template {
 }
 
 
-//TODO: check this MQs base on the typo use and update
-
 // MQs 
-// @include respond(tablet-l) {
-//   body {
-//     font-size: var(--base-text-font-size-medium);
-//     line-height: var(--base-text-leading-large);
-//   }
-// } // 900px
+@include respond(tablet-large) {
+  body {
+    font-size: var(--typescale-base-text-medium);
+    line-height: var(--leading-largest);
+  }
+}
