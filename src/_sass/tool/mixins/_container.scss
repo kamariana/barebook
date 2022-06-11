@@ -1,6 +1,18 @@
 // Container
-@mixin contain($size) {
-  max-width: var($size);
-  padding: 0 var(--spacing-default);
+@mixin ob-contain($breadth, $padInline, $padBlock) {
+  max-width: var($breadth);
+  padding: var($padInline) var($padBlock);
+
+  .ob-contain {
+    padding: 0;
+  }
+}
+
+@mixin ob-contain-center {
   margin: 0 auto;
+}
+
+@mixin ob-contain-pad-block-start-end($size) {
+  padding-block-start: var($size);
+  padding-block-end: var($size);
 }
