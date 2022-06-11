@@ -1,4 +1,5 @@
 @mixin con-spacing {
+  --spacing-zero: var(--ref-size-0);
   --spacing-default: var(--ref-size-16);
   --spacing-tiny: var(--ref-size-4);
   --spacing-small: var(--ref-size-8);
@@ -6,4 +7,5 @@
   --spacing-large: var(--ref-size-32);
   --spacing-larger: var(--ref-size-48);
   --spacing-largest: var(--ref-size-64);
+  --spacing-huge: var(--ref-size-96);
 }
