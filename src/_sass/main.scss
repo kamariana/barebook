@@ -3,46 +3,63 @@
 @import './setting/variable';
 
 // Tools
-@import "./tool/mixin";
+@import './tool/mixin';
 
 // Generic
-@import "./generic/normalise";
-@import "./generic/reset";
-@import "./generic/base";
-@import "./generic/selection";
-@import "./generic/scrollbar";
-
+@import './generic/normalise';
+@import './generic/reset';
+@import './generic/base';
+@import './generic/selection';
+@import './generic/scrollbar';
 
 // Elements
-@import "./element/audio";
-@import "./element/code";
-@import "./element/details";
-@import "./element/figure";
-@import "./element/main";
-@import "./element/heading";
-@import "./element/image";
-@import "./element/picture";
-@import "./element/list";
-@import "./element/link";
-@import "./element/quote";
-@import "./element/hr";
-@import "./element/pre";
-@import "./element/video";
-@import "./element/iframe";
-@import "./element/table";
-@import "./element/form";
+@import './element/audio';
+@import './element/code';
+@import './element/details';
+@import './element/figure';
+@import './element/main';
+@import './element/heading';
+@import './element/image';
+@import './element/picture';
+@import './element/list';
+@import './element/link';
+@import './element/quote';
+@import './element/hr';
+@import './element/pre';
+@import './element/video';
+@import './element/iframe';
+@import './element/table';
+@import './element/form';
 
 // Objects
-@import "./object/page";
-@import "./object/container";
-@import "./object/section";
-@import "./object/grid";
-@import "./object/side";
+@import './object/page';
+@import './object/contain';
+@import './object/section';
+@import './object/grid';
+@import './object/side';
 @import './object/artwork';
 @import './object/definition-list';
 
 @import './object/media';
 @import './object/avatar';
 @import './object/meta';
-@import "./object/off-canvas-nav";
-@import "./object/icon";
+@import './object/off-canvas-nav';
+@import './object/icon';
+
+// Layouts
+@import './layout/header/header';
+@import './layout/navigation/primary-nav';
+@import './layout/navigation/fullscreen-nav';
+@import './layout/article/article';
+@import './layout/footer/footer';
+
+// Components
+@import './component/banner/banner';
+
+// Utilities
+@import "./utilities/hidden";
+@import "./utilities/display";
+@import "./utilities/spacer";
+@import './utilities/positions';
+@import './utilities/table';
+@import './utilities/figure-border';
