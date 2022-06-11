@@ -1,0 +1,36 @@
+.lo-article {
+  @include ob-contain(--contain-article-largest, --spacing-default, --spacing-larger); 
+  @include ob-contain-center;
+  @include dp-grid(--spacing-largest);
+  @include owl(--spacing-larger);
+}
+
+.lo-article__content {
+  @include owl(--spacing-larger);
+}
+
+
+
+// MQs
+@include respond(tablet-small) {
+
+  .lo-article {
+    grid-template: 'main aside' / 1fr var(--contain-aside-small);
+  }
+
+  .lo-article__content {
+    grid-area: main;
+  }
+  
+  .lo-article__aside {
+    grid-area: aside;
+  }
+}
+
+
+@include respond(laptop-small) {
+  .lo-article {
+    @include ob-contain-pad-block-start-end(--spacing-huge);
+   gap:var(--spacing-huge);
+  }
+}
