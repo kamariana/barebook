@@ -5,7 +5,8 @@
 
 // Elements
 .ob-off-canvas-nav__contain {
-  @include contain(--contain-default);
+  @include ob-contain(--contain-page-small, --spacing-zero, --spacing-default);
+  
 
   display: flex;
   height: 100vh;
@@ -15,7 +16,8 @@
 }
 
 .ob-off-canvas-nav__header {
-  @include dp-flex-apart-center(--spacing-default);
+  @include dp-flex(--spacing-default);
+  @include dp-flex-center-apart;
 
   padding: var(--spacing-default);  
 }

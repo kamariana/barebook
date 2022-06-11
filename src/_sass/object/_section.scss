@@ -5,9 +5,8 @@
 
 // Elements
 .ob-section__header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  @include dp-flex(--spacing-default);
+  @include dp-flex-direction-column;
 }
 
 // Modifiers
@@ -16,22 +15,19 @@
 }
 
 .ob-section__header--at-center {
-  align-items: center;
-  justify-content: center;
+  @include dp-flex-center;
   text-align: center;
 }
 
 .ob-section__header--apart {
-  gap: var(--spacing-default);
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  @include dp-flex-direction-row;
+  @include dp-flex-center-apart;
 }
 
 // * MQs
-@include respond(laptop) {
+@include respond(laptop-small) {
   .ob-section {
     padding-block-start: calc(2 * var(--spacing-larger));
     padding-block-end: calc(2 * var(--spacing-larger));
   }
-}   // 1240px
+}
