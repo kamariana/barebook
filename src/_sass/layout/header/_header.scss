@@ -1,0 +1,10 @@
+.lo-header {
+  @include ob-contain-pad-block-start-end(--spacing-default);
+}
+
+.lo-header__contain {
+  @include ob-contain(--contain-page-medium, --spacing-zero, --spacing-default);
+  @include ob-contain-center;
+  @include dp-flex(--spacing-default);
+  @include dp-flex-center-apart;
+}
