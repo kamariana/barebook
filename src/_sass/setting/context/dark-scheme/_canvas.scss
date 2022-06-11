@@ -1,5 +1,6 @@
 @mixin con-dark-canvas {
   --canvas-background-color: var(--ref-dark-scheme-base);
+  --canvas-background-color-light: var(--ref-dark-scheme-light);
   --canvas-text-color: var(--ref-neutral-5);  
 
   --selection-background-color: var(--ref-primary-60);
@@ -16,6 +17,11 @@
   --icon-color-hovered: var(--ref-neutral-80);
 
   --headline-text-color: var(--ref-white);
+
+  --primary-enabled: var(--ref-primary-60);
+  --primary-hovered: var(--ref-primary-70);
+  --primary-focused: var(--ref-primary-80);
+  --primary-enabled-text-color: var(--ref-white);
 
   --link-text-color-enabled: var(--ref-secondary-60);
   --link-text-color-hovered: var(--ref-secondary-70);
