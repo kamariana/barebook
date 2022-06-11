@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% include components/banner.html %}
+
+<main>
+
+  <div class="lo-article">
+
+    <article class="lo-article__content">
+  
+      <details class="cp-accordion ut-hidden-tablet-small-yes" aria-label="Table of Content" role="navigation" >
+        <summary class="cp-accordion__title">Table of Content</summary>
+        <div class="cp-accordion__content">
+          {% include components/toc.html %}
+        </div>
+      </details>
+    
+      {{ content }}
+    
+    </article>
+  
+    <aside class="lo-article__aside ut-hidden-tablet-small-no" hidden>
+      <nav class="ut-pos-sticky-top">
+        <span class="ut-subtitle">Table of Content</span>
+        {% include components/toc.html %}
+      </nav>
+    </aside>    
+    
+  </div>
+  
+</main>
+
+
