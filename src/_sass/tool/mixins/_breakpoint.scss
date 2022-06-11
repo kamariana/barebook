@@ -7,7 +7,8 @@ $bps: ( //TODO: conver these px to rems equivalent values
   tablet-large: 1024px,
   laptop-small: 1240px,
   laptop-medium: 1440px,
-  laptop-large: 1600px
+  laptop-large: 1600px,
+  desktop: 1920px
 ) !default;
 
 @mixin respond($bp) {
