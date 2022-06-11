@@ -1,0 +1,53 @@
+.lo-fullscreen-navigation {
+  z-index: var(--layer-under);
+  background-color: var(--primary-enabled);
+  color: var(--primary-enabled-text-color);
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity 0.2s ease;
+}
+
+.lo-fullscreen-nav {
+  @include dp-flex(--spacing-larger);
+  @include dp-flex-direction-column;
+  text-align: center;
+}
+
+// Elements
+.lo-fullscreen-nav__list {
+  @include reset-list;
+}
+
+.lo-fullscreen-nav__link {
+  display: block;
+  padding: var(--spacing-default);
+  color: inherit;
+  font-size: var(--typescale-title-text-medium);
+  text-decoration: none;
+}
+
+// Modifiers
+.lo-fullscreen-nav__list--alt {
+  .lo-fullscreen-nav__link {
+    padding: var(--spacing-tiny) var(--spacing-default);
+    font-size: var(--typescale-title-text-small);
+  }
+}
+
+// States
+.is-open {
+  z-index: var(--layer-surface);
+  display: block;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+// MQs
+@include respond(tablet-small) {
+  .lo-fullscreen-nav {
+    @include dp-flex(--spacing-largest);
+    @include dp-flex-direction-row;
+    @include dp-flex-center-align;
+    text-align: left;
+  }
+}

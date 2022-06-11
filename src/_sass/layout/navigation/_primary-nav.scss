@@ -1,0 +1,27 @@
+.lo-primary-nav {
+  display: none;
+}
+
+.lo-primary-nav__list {
+  @include reset-list;
+  @include dp-flex(--spacing-default);
+  @include dp-flex-center-align;
+}
+
+.lo-primary-nav__link {
+  display: block;
+  padding: var(--spacing-default);
+  color: inherit;
+  font-size: var(--typescale-base-text-medium);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-enabled);
+  }
+}
+
+.lo-primary-nav__link--button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
