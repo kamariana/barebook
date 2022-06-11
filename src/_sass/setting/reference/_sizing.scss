@@ -1,4 +1,5 @@
 @mixin ref-sizing {
+  --ref-size-0: 0;    
   --ref-size-1: 0.063rem;    // 1px   
   --ref-size-2: 0.125rem;    // 2px   
   --ref-size-4: 0.25rem;    // 4px
@@ -30,9 +31,12 @@
   --ref-size-92: 5.75rem;    // 92px
   --ref-size-96: 6rem;       // 96px
 
+  --ref-size-120: 120px;
+  --ref-size-216: 216px;
   --ref-size-320: 320px;
   --ref-size-375: 375px;
   --ref-size-425: 425px;
+  --ref-size-600: 600px;
   --ref-size-768: 768px;
   --ref-size-900: 900px;
   --ref-size-1024: 1024px;
