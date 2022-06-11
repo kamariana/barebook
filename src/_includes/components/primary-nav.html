@@ -1,9 +1,9 @@
-<nav class="cp-primary-nav ut-hidden-tablet-l-no" aria-label="Primary Navigation">
-  <ul class="cp-primary-nav__list">
-    {% for item in site.data.navigation.primary %}
+<nav class="lo-primary-nav ut-hidden-tablet-medium-no" aria-label="Primary Navigation">
+  <ul class="lo-primary-nav__list">
+    {% for item in site.data.navigations.navbar %}
       {% assign url = item.url | downcase %}
       <li>
-        <a href="{{ url }}" class="cp-primary-nav__link">{{ item.title }}</a>
+        <a href="{{ url }}" class="lo-primary-nav__link">{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>
