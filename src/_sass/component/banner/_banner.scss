@@ -1,0 +1,59 @@
+.cp-banner {
+  border-top: 1px solid var(--canvas-background-color-light);
+  border-bottom: 1px solid var(--canvas-background-color-light);
+}
+
+.cp-banner__contain {
+  @include ob-contain(--contain-page-small, --spacing-default, --spacing-larger); 
+  @include ob-contain-center;
+}
+
+.cp-banner__title {
+  font-size: var(--typescale-headline-text-small);
+}
+
+.cp-banner__subtitle {
+  font-size: var(--typescale-base-text-large);
+}
+
+
+
+// Modifiers
+.cp-banner__contain--sides {
+  @include dp-grid(--spacing-larger);
+}
+
+.cp-banner__text--contain {
+  max-width: var(--contain-article-medium);
+}
+
+
+
+// MQs
+@include respond(tablet-medium) {
+  .cp-banner__contain--sides {
+    @include dp-grid(--spacing-larger);
+    @include dp-grid-center-equal-sides;
+    gap: var(--spacing-huge);
+  }
+}
+
+@include respond(tablet-large) {
+  .cp-banner__title {
+    font-size: var(--typescale-headline-text-large);
+  }
+  
+  .cp-banner__subtitle {
+    font-size: var(--typescale-title-text-medium);
+  }
+}
+
+@include respond(laptop-small) {
+  .cp-banner__contain {
+    @include ob-contain-pad-block-start-end(--spacing-huge);
+  }
+}
+
+
+
+
