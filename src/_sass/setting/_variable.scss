@@ -14,7 +14,7 @@
   @import './context/typography';
   @import './context/spacing';
   @import './context/shape';
-  @import './context/contain';
+  @import './context/breadth';
   @import './context/z-index-layer';
 
 
@@ -27,7 +27,7 @@
   @include con-typography;
   @include con-spacing;
   @include con-shape;
-  @include con-contain;
+  @include con-breadth;
   @include con-z-index-layer;
 
   color-scheme: light dark;
