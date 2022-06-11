@@ -1,4 +1,4 @@
-<div class="cp-fullscreen-navigation ob-off-canvas-nav js-fullscreen-navigation" role="navigation" aria-label="Fullscreen Navigation" hidden>
+<div class="lo-fullscreen-navigation ob-off-canvas-nav js-fullscreen-navigation" role="navigation" aria-label="Fullscreen Navigation" hidden>
   <div class="ob-off-canvas-nav__contain">
 
     <div class="ob-off-canvas-nav__header">
@@ -7,16 +7,15 @@
     </div>
 
     <div class="ob-off-canvas-nav__main">
-      <nav class="cp-fullscreen-nav">
-          <ul class="cp-fullscreen-nav__list">
-              {% for item in site.data.navigation.primary %}
+      <nav class="lo-fullscreen-nav">
+          <ul class="lo-fullscreen-nav__list">
+              {% for item in site.data.navigations.navbar %}
               {% assign url = item.url | downcase %}
                 <li>
-                  <a href="{{ .url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                  <a href="{{ .url }}" class="lo-fullscreen-nav__link">{{ item.title }}</a>
                 </li>
               {% endfor %}
           </ul>
-          
       </nav>
     </div>
 
