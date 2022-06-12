@@ -4,7 +4,7 @@
 }
 
 .cp-banner__contain {
-  @include ob-contain(--contain-page-small, --spacing-default, --spacing-larger); 
+  @include ob-contain(--contain-page-small, --spacing-larger, --spacing-default); 
   @include ob-contain-center;
 }
 

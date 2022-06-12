@@ -1,7 +1,6 @@
 .lo-article {
-  @include ob-contain(--contain-article-largest, --spacing-default, --spacing-larger); 
+  @include ob-contain(--contain-article-largest, --spacing-larger, --spacing-default); 
   @include ob-contain-center;
-  @include dp-grid(--spacing-largest);
   @include owl(--spacing-larger);
 }
 
@@ -13,8 +12,8 @@
 
 // MQs
 @include respond(tablet-small) {
-
   .lo-article {
+    @include dp-grid(--spacing-largest);
     grid-template: 'main aside' / 1fr var(--contain-aside-small);
   }
 
@@ -31,6 +30,6 @@
 @include respond(laptop-small) {
   .lo-article {
     @include ob-contain-pad-block-start-end(--spacing-huge);
-   gap:var(--spacing-huge);
+     gap: var(--spacing-huge);
   }
 }
