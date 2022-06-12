@@ -1,7 +1,7 @@
 // Container
-@mixin ob-contain($breadth, $padInline, $padBlock) {
+@mixin ob-contain($breadth, $padBlock, $padInline) {
   max-width: var($breadth);
-  padding: var($padInline) var($padBlock);
+  padding: var($padBlock) var($padInline);
 
   .ob-contain {
     padding: 0;
