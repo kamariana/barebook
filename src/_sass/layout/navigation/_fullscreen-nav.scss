@@ -20,8 +20,8 @@
 
 .lo-fullscreen-nav__link {
   display: block;
-  padding: var(--spacing-default);
-  color: inherit;
+  padding: var(--spacing-small);
+  color: var(--primary-enabled-text-color);
   font-size: var(--typescale-title-text-medium);
   text-decoration: none;
 }
