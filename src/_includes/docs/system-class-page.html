@@ -1,9 +1,9 @@
 {% assign classification = page.classification  %}
 
-<ul class="ob-grid with-gap-32">
-{% assign components = site.data.[classification] %}
+<ul class="ob-grid">
+    {% assign components = site.data.docs.[classification] %}
     {% for component in components %}
-        <li class="cp-card cp-card--hl-neutral cp-card--link cp-card--apart bb-card">
+        <li class="cp-card">
         <a class="cp-card__link" href="{{ component.url }}">
             {{ component.title }}
         </a>
