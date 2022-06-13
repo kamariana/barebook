@@ -8,3 +8,12 @@
   @include dp-flex(--spacing-default);
   @include dp-flex-center-apart;
 }
+
+
+
+// MQs
+@include respond(tablet-small) {
+  .lo-header__contain {
+    @include ob-contain-pad-inline-start-end(--spacing-large)
+  }
+}

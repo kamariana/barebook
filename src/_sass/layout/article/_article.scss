@@ -14,22 +14,23 @@
 @include respond(tablet-small) {
   .lo-article {
     @include dp-grid(--spacing-largest);
-    grid-template: 'main aside' / 1fr var(--contain-aside-small);
+    grid-template: 'm-content toc' / 1fr var(--contain-aside-small);
   }
 
   .lo-article__content {
-    grid-area: main;
+    grid-area: m-content;
   }
   
   .lo-article__aside {
-    grid-area: aside;
+    grid-area: toc;
   }
 }
 
 
-@include respond(laptop-small) {
+
+// MQs
+@include respond(tablet-small) {
   .lo-article {
-    @include ob-contain-pad-block-start-end(--spacing-huge);
-     gap: var(--spacing-huge);
+    @include ob-contain-pad-inline-start-end(--spacing-large)
   }
 }

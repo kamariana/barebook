@@ -25,3 +25,12 @@
     color: var(--interactive-hovered);
   }
 }
+
+
+
+// MQs
+@include respond(tablet-small) {
+  .lo-footer__contain {
+    @include ob-contain-pad-inline-start-end(--spacing-large)
+  }
+}
