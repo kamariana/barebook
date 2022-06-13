@@ -50,11 +50,13 @@
 @import './layout/header/header';
 @import './layout/navigation/primary-nav';
 @import './layout/navigation/fullscreen-nav';
+@import './layout/sidebar/sidebar';
 @import './layout/article/article';
 @import './layout/footer/footer';
 
 // Components
 @import './component/banner/banner';
+@import './component/tabbed/tabbed';
 
 // Utilities
 @import "./utilities/hidden";
