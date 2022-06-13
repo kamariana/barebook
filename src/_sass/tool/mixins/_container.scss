@@ -16,3 +16,9 @@
   padding-block-start: var($size);
   padding-block-end: var($size);
 }
+
+@mixin ob-contain-pad-inline-start-end($size) {
+  padding-inline-start: var($size);
+  padding-inline-end: var($size);
+}
+
