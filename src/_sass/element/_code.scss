@@ -1,6 +1,6 @@
 code {
   background-color: var(--code-background-color);
-  color: var(--code-text-color);
+  color: inherit;
   border-radius: var(--shape-rounded-small);
   padding: var(--spacing-tiny);
   box-decoration-break: clone;  
