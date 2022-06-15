@@ -55,8 +55,15 @@
 @import './layout/footer/footer';
 
 // Components
+@import './component/alert/alert';
+@import './component/button/button';
 @import './component/banner/banner';
 @import './component/tabbed/tabbed';
+@import './component/code/code';
+
+// for my personal site
+@import './component/masthead/masthead';
+
 
 // Utilities
 @import "./utilities/hidden";
