@@ -1,47 +1,10 @@
-- title: Logo
-  url: /components/logo/
-
-- title: Toggle nav icon
-  url: /components/toggle-nav-icon/
-
-- title: Buttons
-  url: /components/buttons/
-
-- title: Theme Picker
-  url: /components/theme-picker/
-
-- title: Navigations
-  url: /components/navigation/
-
-
-
-- title: Masthead
-  url: /components/masthead/
-
-- title: Trusted By
-  url: /components/trusted-by/
-
-
-
-- title: Quote
-  url: /components/quote/
-
-- title: Cards
-  url: /components/cards/
-
 - title: Alerts
   url: /components/alerts/
-
-- title: Form
-  url: /components/form/
-
-- title: Cover
-  url: /components/cover/
-
+- title: Buttons
+  url: /components/buttons/
+- title: Cards
+  url: /components/cards/
+- title: Quote
+  url: /components/quote/
 - title: Pager
   url: /components/pager/
-
-
-
-
-  
