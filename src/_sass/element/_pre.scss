@@ -2,7 +2,7 @@ pre {
   white-space: pre-wrap;
   border-radius: var(--shape-rounded-medium);
   font-size: var(--typescale-base-text-small);
-  background-color: var(--pre-background-color);
+  background-color: var(--code-background-color);
   
 
   code {
@@ -13,7 +13,7 @@ pre {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overscroll-behavior-x: contain;
-    color: var(--pre-text-color);
+    color: inherit;
   }
 
   pre {
