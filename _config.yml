@@ -1,7 +1,7 @@
 # Site settings
 title: Barebook 
 siteName: Barebook
-description: "Barebook is a scalable and maintainable Design System base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)"
+description: "Barebook is a scalable and maintainable Design System base on ITCSS architecture."
 keywords:
 type: website
 image: /assets/images/image.jpg
