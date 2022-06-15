@@ -3,223 +3,45 @@
 
 // Brand
 .cp-logo--barebook {
-    display: flex;
-    align-items: center;
-    gap: var(--size-12);
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-default);
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--typescale-base-text-large);
 }
-
-
-// banner
-.bb-banner {
-  padding: var(--size-48) var(--size-16);
-  max-width: 900px;
-}
-
-
-.bb-card {
-    padding: var(--size-16) var(--size-24); 
-
-    a {
-        white-space: nowrap;
-    }
-}
-
-
-
-
-
-
 
 
 
 // Layouts
-.bb-sidebar {
-    display: grid;
-    gap: var(--size-44);
-    margin-inline: auto;
-    max-width: 90rem;
+.lo-article__content > section {
+  > * + * {
+    margin-block-start: var(--spacing-large);
+  }
 }
 
-
-
-
-.bb-systems-sidebar {
-    
+#variants {
+  > * + * {
+    margin-block-start: var(--spacing-largest);
+  }
 }
 
-.bb-systems-contain {
-    max-width: 1600px;
+.bb-variants__header {
+  display: flex;
+  gap: var(--spacing-default);
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: var(--spacing-default);
 }
 
-.bb-systems-layout {
-    
+.bb-variants__demo {
+  margin-block-end: var(--spacing-small);
 }
 
-//  Code blocks
-.cp-code-block {
-
+.bb-variants__demo,
+.bb-variants__code {
+  > * {
+    margin: 0;
+  }
 }
-
-.cp-code-block__category-title {
-    margin-block-start: var(--size-44);
-}
-
-.cp-code-block__title {
-
-}
-
-.cp-code-block__output {
-    border: 1px solid var(--border-color-subdued);
-    padding: var(--size-16);
-
-    &:not(:first-child) {
-        margin-block-start: var(--size-32);
-    }
-}
-
-
-// Systems
-.bb-systems {
-    display: grid;
-    gap: var(--size-44);
-
-    
-
-    figure,
-    pre {
-        margin: 0;
-    }
-
-    
-}
-
-
-.bb-system {
-    border: 1px solid var(--border-color-subdued-10);
-    border-radius: var(--bd-radius-medium);
-}
-
-.bb-system__doc {
-    padding: var(--size-32);
-}
-
-.bb-system__title {
-    font-size: var(--size-28);
-}
-
-.bb-system__table {
-
-}
-
-.bb-system__hint {
-    
-}
-
-.bb-system__code {    
-    border-top: 1px solid var(--border-color-subdued-light);
-
-    .cp-accordion {
-        border: none;
-        border-top: 1px solid var(--border-color-subdued-light);
-    }
-}
-
-.bb-system__output {
-    position: relative;
-    padding: var(--size-44) var(--size-16);
-}
-
-.bb-system__open {
-    position: absolute;
-    right: var(--size-16);
-    top: var(--size-8);
-}
-
-.bb-system__source {
-    padding: var(--size-32);
-}
-
-
-.bb-systems-entry {
-    margin-inline: auto;
-    padding-block-start: 44px;
-    padding-block-end: 44px;
-    max-width: clamp(16rem, 95vw, 90rem);
-}
-
-
-
-// masthead
-.bb-masthead {
-    height: 70vh;
-    display: grid;
-    place-items: center;
-}
-
-.bb-masthead__text {
-    text-align: center;
-    padding: 16px;
-}
-
-.bb-masthead__title {
-    font-size: 14vw;
-}
-
-.bb-masthead__subtitle {
-    font-size: 1.5rem;
-}
-
-
-
-
-// MQs
-@media (min-width: 900px) {
-    .bb-sidebar {
-        grid-template-columns: 2fr 1fr;
-    }
-    .bb-masthead__title {
-        font-size: 7vw;
-    }
-} // 900px
-
-@media (min-width: 1240px) {
-    .cp-code-block__output {
-        padding: var(--size-44);
-    }
-
-    .bb-system__output {
-        padding: var(--size-64) var(--size-32);
-    }
-    
-    .bb-system__open {
-        right: var(--size-32);
-        top: var(--size-16);
-    }
-}   // 1240px
-
-@media (min-width: 1440px) {
-    .bb-system {
-        display: grid;
-        grid-template-columns: 32rem 1fr;
-    }
-
-    .bb-system__code {
-        border-top: none;
-        border-left: 1px solid var(--border-color-subdued-light);
-    }
-
-    .bb-systems-sidebar {
-        display: block;
-    }
-}   // 1440px
-
-@media (min-width: 1920px) {
-    .bb-systems-sidebar {
-        display: grid;
-        grid-template-columns: 1fr var(--sidebar-target-width);
-        gap: var(--size-44);
-    }
-}   // 1920px
