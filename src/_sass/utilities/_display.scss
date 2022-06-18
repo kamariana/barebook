@@ -1,9 +1,9 @@
 .ut-dp-inline {
-  @include dp-flex(--spacing-default);
+  @include dp-flex;
   @include dp-flex-center-align;
 }
 
 .ut-dp-center {
-  @include dp-flex(--spacing-default);
-  @include dp-flex-center-apart;
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center;
 }
