@@ -6,7 +6,7 @@
 
 // Elements
 .cp-tabbed__tabs {
-  @include dp-flex(--spacing-medium);
+  @include dp-flex-gap(--spacing-medium);
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -30,7 +30,7 @@
 .cp-tabbed__tabs-link[aria-selected="true"] {
   position: relative;
   color: var(--link-text-color-focused);
-  
+
   &::after {
     @include pseudo-class;
     position: absolute;
