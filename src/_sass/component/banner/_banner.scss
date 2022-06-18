@@ -20,7 +20,7 @@
 
 // Modifiers
 .cp-banner__contain--sides {
-  @include dp-grid(--spacing-larger);
+  @include dp-grid-gap(--spacing-larger);
 }
 
 .cp-banner__text--contain {
@@ -32,7 +32,6 @@
 // MQs
 @include respond(tablet-medium) {
   .cp-banner__contain--sides {
-    @include dp-grid(--spacing-larger);
     @include dp-grid-center-equal-sides;
     gap: var(--spacing-huge);
   }
