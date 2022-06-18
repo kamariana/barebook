@@ -1,0 +1,67 @@
+.cp-card {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+}
+
+
+
+// Elements
+.cp-card__text-wrapper {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+}
+
+.cp-card__text {
+  @include dp-flex;
+  @include dp-flex-direction-column;  
+  flex-grow: 1;
+  padding: var(--spacing-medium);
+
+  & > :last-child {
+    margin-top: auto;
+  }
+
+  & > :nth-last-child(2) {
+    margin-block-end: var(--spacing-medium);
+  }
+}
+
+.cp-card__title {
+  font-size: var(--typescale-title-text-medium);
+}
+
+.cp-card__button {
+  align-self: start;
+}
+
+
+
+// Modifiers
+.cp-card--minimalist { // light background
+  background-color: var(--canvas-background-color-v2);
+}
+
+.cp-card--bordered { 
+  border: 2px solid var(--interactive-enabled);
+}
+
+.cp-card--rounded { 
+  border-radius: var(--shape-rounded-larger);
+}
+
+.cp-card--interactive {
+  // for cards with interactions on over or so
+}
+
+
+
+// MQs
+@include respond(tablet-small) {
+  .cp-card__text {
+    padding: var(--spacing-large);
+  }
+
+  .cp-card__title {
+    font-size: var(--typescale-title-text-large);
+  }
+}
