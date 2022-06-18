@@ -4,7 +4,7 @@
 
 .lo-primary-nav__list {
   @include reset-list;
-  @include dp-flex(--spacing-default);
+  @include dp-flex-gap(--spacing-default);
   @include dp-flex-center-align;
 }
 
