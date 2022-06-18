@@ -1,33 +1,43 @@
 .ob-section {
-  padding-block-start: var(--spacing-larger);
-  padding-block-end: var(--spacing-larger);
+  @include ob-contain-pad-block-start-end(--spacing-larger);
 }
 
 // Elements
-.ob-section__header {
-  @include dp-flex(--spacing-default);
-  @include dp-flex-direction-column;
-}
-
-// Modifiers
-.ob-section--with-no-pad {
-  padding: 0;
-}
-
-.ob-section__header--at-center {
-  @include dp-flex-center;
+.ob-section__header-apart {
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-direction-row;
+  @include dp-flex-center-apart;
   text-align: center;
 }
 
-.ob-section__header--apart {
-  @include dp-flex-direction-row;
-  @include dp-flex-center-apart;
+.ob-section__title {
+  font-size: var(--typescale-headline-text-small)
 }
+
+.ob-section__subtitle {
+  font-size: var(--typescale-title-text-small)
+}
+
+
+
+// Modifiers
+.ob-section__title--preline {
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center-align;
+  position: relative;
+
+  &::before {
+    @include pseudo-class;
+    width: 64px;
+    height: 2px;
+    background-color: var(--interactive-enabled);
+  }
+}
+
 
 // * MQs
 @include respond(laptop-small) {
   .ob-section {
-    padding-block-start: calc(2 * var(--spacing-larger));
-    padding-block-end: calc(2 * var(--spacing-larger));
+    @include ob-contain-pad-block-start-end(--spacing-huge);
   }
 }
