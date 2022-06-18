@@ -33,10 +33,12 @@
 
   &:hover {
     background-color: var(--primary-hovered);
+    color: var(--primary-enabled-text-color);
   }
 
   &:focus {
     background-color: var(--primary-focused);
+    color: var(--primary-enabled-text-color);
     outline: none;
   }
 }
