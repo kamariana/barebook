@@ -13,7 +13,7 @@
 // MQs
 @include respond(tablet-small) {
   .lo-article {
-    @include dp-grid(--spacing-largest);
+    @include dp-grid-gap(--spacing-largest);
     grid-template: 'm-content toc' / 1fr var(--contain-aside-small);
   }
 
