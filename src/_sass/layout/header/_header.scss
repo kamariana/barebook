@@ -5,7 +5,7 @@
 .lo-header__contain {
   @include ob-contain(--contain-page-medium, --spacing-zero, --spacing-default);
   @include ob-contain-center;
-  @include dp-flex(--spacing-default);
+  @include dp-flex-gap(--spacing-default);
   @include dp-flex-center-apart;
 }
 
