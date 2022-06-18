@@ -3,10 +3,28 @@
   padding: 0 !important;
 }
 
+
+
 // Margins
 .ut-no-mag {
   margin: 0 !important;
 }
+
+
+
+// Gutters/Gaps 
+.ut-v-gaps-small {
+  @include owl(--spacing-large); // 32px
+}
+
+.ut-v-gaps-medium {
+  @include owl(--spacing-larger); // 48px 
+}
+
+.ut-v-gaps-large {
+  @include owl(--spacing-largest); // 72px 
+}
+
 
 // .ut-mag-medium {}
 // .ut-mag-block-start-medium {}
