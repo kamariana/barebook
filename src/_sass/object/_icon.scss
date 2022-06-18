@@ -9,3 +9,11 @@
     fill: var(--icon-color-hovered);
   }
 }
+
+
+// Modifiers
+.ob-icon--large {
+  @include box(--spacing-larger);
+}
+
+
