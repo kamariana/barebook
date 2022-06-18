@@ -1,8 +1,13 @@
 // Flexboxs
-@mixin dp-flex($gap) {
+@mixin dp-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: var(($gap));
+}
+
+@mixin dp-flex-gap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var($gap);
 }
 
 @mixin dp-flex-direction-column {
