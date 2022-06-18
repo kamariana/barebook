@@ -16,7 +16,7 @@
 }
 
 .ob-off-canvas-nav__header {
-  @include dp-flex(--spacing-default);
+  @include dp-flex-gap(--spacing-default);
   @include dp-flex-center-apart;
 
   padding: var(--spacing-default);  
