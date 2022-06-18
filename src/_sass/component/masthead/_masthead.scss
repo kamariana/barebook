@@ -1,19 +1,22 @@
 .cp-masthead {
   position: relative;
-  @include dp-flex(--spacing-default);
+  @include dp-flex;
+  min-height: 50vh;
 }
 
 // Elements
 // contain is use to contain the text along side the side container
 // somecase this is not necessary in your html
 .cp-masthead__contain {
-  display: flex;
-  flex-direction: column;
+  @include ob-contain(--contain-page-medium, --spacing-zero, --spacing-zero);
+  @include ob-contain-center;
+  @include dp-flex;
+  @include dp-flex-direction-column;
   flex-grow: 1;
 }
 
 .cp-masthead__text {
-  @include dp-flex(--spacing-default);
+  @include dp-flex;
   @include pos-rel-object-forward;
   padding: var(--spacing-default);
   max-width: var(--contain-article-large);
@@ -89,42 +92,12 @@
   @include fit-media-into-container;
 }
 
-.cp-masthead__list {
-  li {
-    padding: var(--spacing-default);
 
-    &:nth-child(2) {
-      border-right: 2px solid var(--primary-enabled);
-      border-left: 2px solid var(--primary-enabled);
-      border-radius: var(--shape-rounded-larger);
-    }
-  }
-}
-
-.cp-masthead__icon {
-  @include box(3.5rem);
-  fill: var(--icon-color);
-  margin-block-end: var(--spacing-medium);
-}
 
 // Modifiers
-.cp-masthead--light-gray {
-  background-color: var(--canvas-background-color-v4);
+.cp-masthead__text--larger {
+  max-width: var(--contain-article-larger);
 }
-
-.cp-masthead--fullscreen {
-  min-height: 100vh;
-}
-
-.cp-masthead--two-third {
-  min-height: 67vh;
-}
-
-// changing the heigh large screen
-.cp-masthead--fluid {
-  min-height: 100vh;
-}
-
 .cp-masthead__text--align-center {
   margin: auto;
   text-align: center;
@@ -149,8 +122,10 @@
 @include respond(tablet-small) {
   .cp-masthead__text {
     @include ob-contain-pad-inline-start-end(--spacing-large)
-  }
+  }  
 }
+
+
 
 @include respond(tablet-large) {
   .cp-masthead__title {
@@ -163,6 +138,14 @@
 }
 
 @include respond(laptop-small) {
+  .cp-masthead {
+    min-height: 66vh;
+  }
+
+  .cp-masthead--fullscreen {
+    min-height: 100vh;
+  }
+
   .cp-masthead__title {
     font-size: var(--typescale-display-text-large);
     line-height: var(--leading-tiny);
@@ -170,10 +153,5 @@
 
   .cp-masthead__sub-title {
     font-size: var(--typescale-title-text-large);
-  }
-
-  // Modifiers
-  .cp-masthead--fluid {
-    min-height: 90vh;
   }
 }
