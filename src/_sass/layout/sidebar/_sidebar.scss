@@ -18,7 +18,7 @@
 
 @include respond(tablet-medium) {
   .lo-sidebar {
-    @include dp-grid(--spacing-largest);
+    @include dp-grid-gap(--spacing-largest);
     grid-template: 'sidebar main' / var(--contain-aside-medium) auto;
   }
     
