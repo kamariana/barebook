@@ -13,10 +13,6 @@
   @include ob-contain-pad-block-start-end(--spacing-larger);
 }
 
-.ob-contain--v-gap {
-  @include owl(--spacing-larger);
-}
-
 // TODO: search for them and remove from the code base
 // .ob-contain--with-v-pad {
 //   padding-block-end: var(--spacing-larger);
