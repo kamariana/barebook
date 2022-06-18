@@ -1,7 +1,11 @@
 // Flexboxs
-@mixin dp-grid($gap) {
+@mixin dp-grid {
   display: grid;
-  gap: var(($gap));
+}
+
+@mixin dp-grid-gap($gap) {
+  display: grid;
+  gap: var($gap);
 }
 
 @mixin dp-grid-center-align {
