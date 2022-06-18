@@ -1,6 +1,5 @@
 .lo-footer {
   border-top: 1px solid var(--border-color-v1);
-  border-bottom: 1px solid var(--border-color-v1);
 }
 
 .lo-footer__contain {
@@ -9,7 +8,7 @@
 }
 
 .lo-footer__apart {
-  @include dp-flex(--spacing-largest);
+  @include dp-flex-gap(--spacing-largest);
 }
 
 
