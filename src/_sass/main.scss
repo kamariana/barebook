@@ -57,9 +57,17 @@
 // Components
 @import './component/alert/alert';
 @import './component/button/button';
-@import './component/banner/banner';
-@import './component/tabbed/tabbed';
+@import './component/toggle-nav-icon/toggle-nav-icon';
 @import './component/code/code';
+@import './component/quote/quote';
+
+@import './component/banner/banner';
+
+@import './component/tabbed/tabbed';
+
+@import './component/card/cards';
+@import './component/card/card';
+@import './component/card/card-alternate';
 
 // for my personal site
 @import './component/masthead/masthead';
