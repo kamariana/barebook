@@ -1,7 +1,6 @@
 // Flexboxs
 @mixin dp-flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
 @mixin dp-flex-gap($gap) {
