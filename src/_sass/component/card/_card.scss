@@ -30,8 +30,38 @@
   font-size: var(--typescale-title-text-medium);
 }
 
+.cp-card__link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.cp-card__tag {
+  order: -1;
+  font-size: var(--typescale-label-text-medium);
+  margin-block-end: var(--spacing-small);
+  text-transform: uppercase;
+}
+
 .cp-card__button {
   align-self: start;
+}
+
+.cp-card__media {
+  margin: 0;
+  overflow: hidden;
+}
+
+.cp-card__img {
+  @include fit-media-into-container;
+  @include trans-and-scale;
+
+  &:hover {
+    @include scale-out-on-hover-and-focus;
+  }
 }
 
 
@@ -46,22 +76,120 @@
 }
 
 .cp-card--rounded { 
-  border-radius: var(--shape-rounded-larger);
+  border-radius: var(--shape-rounded-large);
+}
+
+.cp-card--centered {
+  @include dp-flex-center-align;
+}
+
+.cp-card--link-over {
+  .cp-card__link {
+    &::after {
+      @include pseudo-class;
+      @include pos-abs-object-backward;
+      @include pos-zero-all-sides;
+    }
+  }
+}
+
+.cp-card--stacked {
+  position: relative;
+  overflow: hidden;
+  
+
+  .cp-card__media {
+   order: -1;
+   border-radius: var(--shape-rounded-large);
+   overflow: hidden;
+  }
+}
+
+.cp-cards--alternate {
+  .cp-card__text {
+    position: relative;
+  }
 }
 
 .cp-card--interactive {
-  // for cards with interactions on over or so
-}
+  transition: box-shadow, background 0.35s ease-in;
+  border-radius: var(--shape-rounded-large);
+  padding: var(--spacing-medium);
 
+  .cp-card__text {
+    padding: 0;
+    margin-block-start: var(--spacing-medium);
+  }
+
+    // card interactions
+    &:hover,
+    &:focus {
+      box-shadow: var(--elevation-large);
+      background-color: var(--canvas-background-color-v2);
+      cursor: pointer;
+  
+      .cp-card__img {
+        @include scale-out-on-hover-and-focus;
+      }
+  
+      .cp-card__icon { //TODO: have this on others
+        transform: translateX(var(--spacing-tiny));
+      }
+    }
+  
+    // focus within to match the hover style
+    &:focus-within {
+      box-shadow: var(--elevation-medium);
+      outline: 2px dotted var(--interactive-enabled);
+  
+      .cp-card__img {
+        @include scale-out-on-hover-and-focus;
+      }
+    }
+  
+    // remove the unnecessary "basic focus style" only where :focus-within is supported.
+    &:focus-within .cp-card__link:focus {
+      outline: none;
+    }
+}
+  
 
 
 // MQs
 @include respond(tablet-small) {
+  .cp-cards--alternate {
+    > *:nth-child(even)
+    > *:last-child {
+      order: -1;
+    }
+  }
+
+  .cp-card--sides {
+    @include dp-grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .cp-card__text {
     padding: var(--spacing-large);
   }
 
   .cp-card__title {
     font-size: var(--typescale-title-text-large);
+  }
+
+  // modifiers
+  .cp-card--rounded { 
+    border-radius: var(--shape-rounded-larger);
+  }
+}
+
+@include respond(laptop-medium) {
+  .cp-card--sides {
+    @include dp-flex-direction-row;
+
+    .cp-card__text {
+      max-width: var(--contain-article-medium);
+      padding-inline-start: 10%;
+    }
   }
 }
