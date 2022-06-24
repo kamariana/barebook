@@ -8,7 +8,7 @@
 }
 
 .lo-fullscreen-nav {
-  @include dp-flex(--spacing-larger);
+  @include dp-flex;
   @include dp-flex-direction-column;
   text-align: center;
 }
@@ -45,7 +45,6 @@
 // MQs
 @include respond(tablet-small) {
   .lo-fullscreen-nav {
-    @include dp-flex(--spacing-largest);
     @include dp-flex-direction-row;
     @include dp-flex-center-align;
     text-align: left;
