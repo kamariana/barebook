@@ -16,6 +16,8 @@
   @import './context/shape';
   @import './context/breadth';
   @import './context/z-index-layer';
+  @import './context/elevation';
+
 
 
 :root {
@@ -29,6 +31,7 @@
   @include con-shape;
   @include con-breadth;
   @include con-z-index-layer;
+  @include con-elevation;
 
   color-scheme: light dark;
 }
