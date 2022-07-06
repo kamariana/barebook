@@ -1,0 +1,136 @@
+.cp-post {
+  font-size: var(--typescale-base-text-medium);
+  margin-block-start: var(--spacing-larger);
+  margin-block-end: var(--spacing-larger);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-start: var(--spacing-largest);
+    font-weight: var(--typeweight-800)
+  }
+}
+
+// Elements
+.cp-post__header {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+}
+
+.cp-post__header-contain {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+}
+
+.cp-post__contain {
+  @include ob-contain(--contain-article-larger, --spacing-zero, --spacing-default);
+  @include ob-contain-center;
+
+  .cp-post__contain {
+    padding: 0;
+  }
+}
+
+.cp-post__title,
+.cp-post__subtitle {
+  margin-block-start: 0;
+  margin-block-end: var(--spacing-large);
+}
+
+.cp-post__title {
+  font-size: var(--typescale-headline-text-small);
+}
+
+.cp-post__subtitle {
+  font-size: var(--typescale-base-text-large);
+}
+
+.cp-post__categories {
+  @include reset-list;
+  margin-block-end: var(--spacing-medium);
+  display: flex;
+  align-items: center;
+  order: -1;
+  color: var(--text-on-canvas-subdued-20);
+}
+
+.cp-post__categories-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--typescale-base-text-small);
+  &:hover {
+    color: var(--interactive-enabled);
+  }
+}
+
+.cp-post__meta {
+  @include reset-list;
+  
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+  font-size: var(--typescale-base-text-small);
+}
+
+.cp-post__img {
+  border-radius: var(--shape-rounded-largest);
+  overflow: hidden;
+}
+
+.cp-post__content {
+ a {
+  border-bottom: 2px solid var(--interactive-enabled);
+  padding: 0 2.5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--interactive-enabled);
+    color: var(--text-on-interactive);
+  }
+ }
+}
+
+.cp-post__context-title {
+  color: var(--primary-focused);
+  font-size: var(--fs-subtitle);
+  text-transform: uppercase;
+}
+
+
+// Modifiers
+.cp-post__contain--small {
+  max-width: var(--contain-article-medium);
+}
+
+.cp-post__contain--align-left {
+  margin-inline-start: 0;
+}
+
+
+
+// MQs
+@include respond(tablet-large) {
+  .cp-post {
+    font-size: var(--typescale-title-text-small);
+  }
+
+  .cp-post__title {
+    font-size: var(--typescale-headline-text-large);
+  }
+  
+  .cp-post__subtitle {
+    font-size: var(--typescale-title-text-large);
+  }
+
+  .cp-post__contain {
+    max-width: var(--contain-article-largest);
+  }
+
+  .cp-post__contain--small {
+    max-width: var(--contain-article-large);
+  }
+}
