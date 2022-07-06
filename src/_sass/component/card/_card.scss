@@ -1,6 +1,9 @@
 .cp-card {
   @include dp-flex;
   @include dp-flex-direction-column;
+
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -64,6 +67,17 @@
   }
 }
 
+.cp-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+  color: var(--canvas-text-color-v1);
+
+  dt {
+    font-weight: normal;
+  }
+}
+
 
 
 // Modifiers
@@ -75,7 +89,8 @@
   border: 2px solid var(--interactive-enabled);
 }
 
-.cp-card--rounded { 
+.cp-card--rounded,
+.cp-card__media--rounded { 
   border-radius: var(--shape-rounded-large);
 }
 
@@ -93,23 +108,15 @@
   }
 }
 
-.cp-card--stacked {
-  position: relative;
-  overflow: hidden;
-  
+.cp-card--stacked { 
 
   .cp-card__media {
    order: -1;
-   border-radius: var(--shape-rounded-large);
-   overflow: hidden;
+   margin-block-end: var(--spacing-medium);   
   }
 }
 
-.cp-cards--alternate {
-  .cp-card__text {
-    position: relative;
-  }
-}
+
 
 .cp-card--interactive {
   transition: box-shadow, background 0.35s ease-in;
@@ -117,53 +124,53 @@
   padding: var(--spacing-medium);
 
   .cp-card__text {
-    padding: 0;
-    margin-block-start: var(--spacing-medium);
+    padding: 0;    
   }
 
-    // card interactions
-    &:hover,
-    &:focus {
-      box-shadow: var(--elevation-large);
-      background-color: var(--canvas-background-color-v2);
-      cursor: pointer;
-  
-      .cp-card__img {
-        @include scale-out-on-hover-and-focus;
-      }
-  
-      .cp-card__icon { //TODO: have this on others
-        transform: translateX(var(--spacing-tiny));
-      }
+  // card interactions
+  &:hover,
+  &:focus {
+    box-shadow: var(--elevation-large);
+    background-color: var(--canvas-background-color-v2);
+    cursor: pointer;
+
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
     }
-  
-    // focus within to match the hover style
-    &:focus-within {
-      box-shadow: var(--elevation-medium);
-      outline: 2px dotted var(--interactive-enabled);
-  
-      .cp-card__img {
-        @include scale-out-on-hover-and-focus;
-      }
+
+    .cp-card__icon { //TODO: have this on others
+      transform: translateX(var(--spacing-tiny));
     }
-  
-    // remove the unnecessary "basic focus style" only where :focus-within is supported.
-    &:focus-within .cp-card__link:focus {
-      outline: none;
+  }
+
+  // focus within to match the hover style
+  &:focus-within {
+    box-shadow: var(--elevation-medium);
+    outline: 2px dotted var(--interactive-enabled);
+
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
     }
+  }
+
+  // remove the unnecessary "basic focus style" only where :focus-within is supported.
+  &:focus-within .cp-card__link:focus {
+    outline: none;
+  }
+}
+
+
+
+
+// States
+.cp-card__text.flex-grow-off {
+  flex-grow: unset;
 }
   
 
 
 // MQs
 @include respond(tablet-small) {
-  .cp-cards--alternate {
-    > *:nth-child(even)
-    > *:last-child {
-      order: -1;
-    }
-  }
-
   .cp-card--sides {
     @include dp-grid;
     grid-template-columns: 1fr 1fr;
