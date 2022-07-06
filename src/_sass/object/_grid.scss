@@ -13,21 +13,22 @@
 
 
 // MQs
-@include respond(mobile-medium) {
-  .ob-grid-size-small {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  } 
+@include respond(tablet-tiny) {
+  .ob-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@include respond(tablet-small) {
-  .ob-grid-size-small {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  } 
-}
+// .ob-grid-size-small { shpuld be a modifier
+//   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+// } 
+
+// @include respond(tablet-small) {
+  
+// }
 
 @include respond(tablet-large) {
-  // Modifiers
-  .ob-grid-size-small {
+  .ob-grid {
     &.is-two-col {
       grid-template-columns: 1fr 1fr;
     }
@@ -36,6 +37,28 @@
     }
     &.is-four-col {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+
+  .ob-grid--with-gap {
+    gap: var(--spacing-large);
+  }
+}
+
+@include respond(laptop-medium) {
+  .ob-grid--column {
+
+    display: block;
+
+    column-gap: var(--spacing-huge);
+    columns: 460px;
+    
+    > * {
+      break-inside: avoid;
+
+      &:not(:last-child) {
+        margin-block-end: var(--spacing-huge);
+      }
     }
   }
 }
