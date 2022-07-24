@@ -1,6 +1,6 @@
 # Barebook
 
-Barebook is a scalable and maintainable CSS library base on [ITCSS] architecture. It is also base on a composite of a number of methodologies and principles such as [BEM](http://bem.info/), [SMACSS](https://smacss.com/), and  [OOCSS](http://oocss.org/)
+Barebook is an open-source, side project,  design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on <a href="http://itcss.io/">ITCSS</a> which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as <a href="http://bem.info/">BEM</a>, <a href="https://smacss.com/">SMACSS</a> and   <a href="http://oocss.org/">OOCSS</a>.
 
 ## Folder Organization
 
