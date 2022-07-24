@@ -1,7 +1,7 @@
 # Site settings
 title: Barebook 
 siteName: Barebook
-description: "Barebook is a scalable and maintainable Design System base on ITCSS architecture."
+description: "The CSS is written in Sass, and built on top of Barebook. Barebook is an open-source, side project, design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on ITCSS which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as BEM, SMACSS and OOCSS."
 keywords:
 type: website
 image: /assets/images/image.jpg
