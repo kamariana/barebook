@@ -9,6 +9,12 @@ vendor
 *.sass.map
 *.scss.map
 
+
+package.json
+
+
+
+
 # NODE
 
 # Logs
