@@ -1,0 +1,8 @@
+audio {
+  display: block;
+  max-width: 100%;
+
+  &:not([controls]) {
+    display: none;
+  }
+}

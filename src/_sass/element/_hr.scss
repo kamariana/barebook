@@ -1,0 +1,11 @@
+hr {
+  display: block;
+  overflow: visible;
+  height: 1px;
+  box-sizing: content-box;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--border-color-v1);
+  margin-block-start: var(--spacing-larger);
+  margin-block-end: var(--spacing-larger);
+}

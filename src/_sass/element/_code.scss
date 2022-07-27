@@ -1,0 +1,15 @@
+code {
+  background-color: var(--code-background-color);
+  color: inherit;
+  border-radius: var(--shape-rounded-small);
+  padding: var(--spacing-tiny);
+  box-decoration-break: clone;  
+  font-family: var(--typeface-code);
+  font-size: inherit;
+  hyphens: none;
+  tab-size: 2;
+  text-align: start;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}

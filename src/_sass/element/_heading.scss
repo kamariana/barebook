@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--typeface-primary);
+  font-weight: var(--typeweight-200);
+  color: var(--headline-text-color);
+
+  &:not(:first-child) {
+    margin-block-start: var(--spacing-larger);
+  }
+
+  + p {
+    margin-block-start: var(--spacing-default);
+  }
+}
+
+h1 {
+  font-size: var(--typescale-headline-text-small);
+  line-height: var(--leading-medium);
+}
+
+h2 {
+  font-size: var(--typescale-headline-text-tiny);
+  line-height: var(--leading-medium);
+}
+
+h3 {
+  font-size: var(--typescale-title-text-large);
+  line-height: var(--leading-medium);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--typescale-title-text-medium);
+  line-height: var(--leading-medium);
+}

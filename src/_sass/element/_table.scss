@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: var(--spacing-small);
+  text-align: left;
+}
+
+caption {
+  caption-side: bottom;
+  color: var(--canvas-text-color-light);
+  font-size: var(--font-size-body-small);
+  font-style: italic;
+  line-height: var(--leading-large);
+  text-align: left;
+}

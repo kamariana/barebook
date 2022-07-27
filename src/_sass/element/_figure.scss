@@ -1,0 +1,16 @@
+figure {
+  small {
+    display: block;
+    color: var(--canvas-text-color-light);
+    font-size: var(--typescale-label-text-medium);
+    line-height: 1;
+    text-transform: uppercase;
+    padding-inline-start: var(--spacing-small);;
+  }
+}
+
+figcaption {
+  padding: var(--spacing-small);
+  font-size: var(--typescale-label-text-large);
+  font-style: italic;
+}
