@@ -1,0 +1,26 @@
+$bps: ( //TODO: conver these px to rems equivalent values
+  mobile-small: 320px,
+  mobile-medium: 375px,
+  mobile-large: 425px,
+  tablet-tiny: 600px,
+  tablet-small: 768px,
+  tablet-medium: 900px,
+  tablet-large: 1024px,
+  laptop-small: 1240px,
+  laptop-medium: 1440px,
+  laptop-large: 1600px,
+  desktop: 1920px
+) !default;
+
+@mixin respond($bp) {
+  @if map-has-key($bps, $bp) {
+    @media screen and (min-width: #{map-get($bps, $bp)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown `#{$bp}` in $bps, please check";
+  }
+}
+
+// usage - copy paste and rename the argument base on the bp you want
+// @include respond(mobile-small) {}
