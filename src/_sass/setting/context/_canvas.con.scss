@@ -1,0 +1,88 @@
+@mixin con-light-canvas {
+  --canvas-background-color: var(--ref-light-scheme-5);
+  --canvas-text-color: var(--ref-neutral-90);
+
+  --selection-background-color: var(--ref-primary-60);
+  --selection-text-color: var(--ref-neutral-90);
+
+  --code-background-color: var(--ref-neutral-20);
+
+  --border-color: var(--ref-neutral-30);
+
+  --icon-color: var(--ref-neutral-70);
+  --icon-color-hovered: var(--ref-neutral-80);
+
+  --headline-text-color: var(--ref-black);
+
+  --primary-enabled: var(--ref-primary-70);
+  --primary-hovered: var(--ref-primary-80);
+  --primary-focused: var(--ref-primary-90);
+  --primary-enabled-text-color: var(--ref-black);
+
+  --link-text-color-enabled: var(--ref-secondary-80);
+  --link-text-color-hovered: var(--ref-secondary-90);
+  --link-text-color-focused: var(--ref-secondary-90);
+  --article-link-text-color-hovered: var(--ref-neutral-5);
+  --article-link-background-color-hovered: var(--ref-secondary-70);
+
+  --interactive-enabled: var(--ref-primary-80);
+  --interactive-focused: var(--ref-primary-90);
+
+  // Variants
+  --canvas-background-color-v1: var(--ref-light-scheme-10);
+  --canvas-background-color-v2: var(--ref-light-scheme-20);
+  --canvas-background-color-v3: var(--ref-light-scheme-30);
+  --canvas-background-color-v4: var(--ref-light-scheme-40);
+  --canvas-text-color-v1: var(--ref-neutral-50);
+  --canvas-text-color-v2: var(--ref-neutral-60);
+  --canvas-text-color-v3: var(--ref-neutral-70);
+
+  --border-color-v1: var(--ref-neutral-20);
+
+  // Misc
+  accent-color: var(--interactive-enabled);
+}
+
+@mixin con-dark-canvas {
+  --canvas-background-color: var(--ref-dark-scheme-90);
+  --canvas-text-color: var(--ref-neutral-5);
+
+  --selection-background-color: var(--ref-primary-60);
+  --selection-text-color: var(--ref-neutral-90);
+
+  --code-background-color: var(--canvas-background-color-v4);
+
+  --border-color: var(--ref-dark-scheme-50);
+
+  --icon-color: var(--ref-neutral-40);
+  --icon-color-hovered: var(--ref-neutral-30);
+
+  --headline-text-color: var(--ref-white);
+
+  --primary-enabled: var(--ref-primary-60);
+  --primary-hovered: var(--ref-primary-70);
+  --primary-focused: var(--ref-primary-80);
+  --primary-enabled-text-color: var(--ref-black);
+
+  --link-text-color-enabled: var(--ref-secondary-20);
+  --link-text-color-hovered: var(--ref-secondary-40);
+  --link-text-color-focused: var(--ref-secondary-50);
+  --article-link-text-color-hovered: var(--ref-neutral-5);
+  --article-link-background-color-hovered: var(--ref-secondary-70);
+
+  --interactive-enabled: var(--ref-primary-70);
+  --interactive-focused: var(--ref-primary-80);
+
+  // Variants
+  --canvas-background-color-v1: var(--ref-dark-scheme-80);
+  --canvas-background-color-v2: var(--ref-dark-scheme-70);
+  --canvas-background-color-v3: var(--ref-dark-scheme-60);
+  --canvas-background-color-v4: var(--ref-dark-scheme-50);
+  --canvas-text-color-v1: var(--ref-neutral-30);
+  --canvas-text-color-v2: var(--ref-neutral-40);
+
+  --border-color-v1: var(--ref-dark-scheme-70);
+  
+  // Misc
+  accent-color: var(--interactive-enabled);
+}

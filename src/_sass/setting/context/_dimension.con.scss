@@ -1,0 +1,16 @@
+@mixin con-dimension {
+  --contain-page: var(--ref-size-2560);
+  --contain-page-small: var(--ref-size-1440);
+  --contain-page-medium: var(--ref-size-1600);
+  --contain-page-large: var(--ref-size-1920);
+  
+  --contain-aside-default: var(--ref-size-320);
+  --contain-aside-medium: var(--ref-size-425);
+  --contain-aside-large: var(--ref-size-600);
+
+  --contain-article-small: var(--ref-size-425);
+  --contain-article-medium: var(--ref-size-600);
+  --contain-article-large: var(--ref-size-768);
+  --contain-article-larger: var(--ref-size-900);
+  --contain-article-largest: var(--ref-size-1024);
+}
