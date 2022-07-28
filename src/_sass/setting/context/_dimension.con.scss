@@ -1,16 +1,17 @@
 @mixin con-dimension {
-  --contain-page: var(--ref-size-2560);
-  --contain-page-small: var(--ref-size-1440);
-  --contain-page-medium: var(--ref-size-1600);
-  --contain-page-large: var(--ref-size-1920);
+  --contain-page-wrapper: var(--ref-size-2560);
+  --contain-page-default: var(--ref-size-1440);
+  --contain-page-tiny: var(--ref-size-600);
+  --contain-page-small: var(--ref-size-900);
+  --contain-page-medium: var(--ref-size-1024);
+  --contain-page-large: var(--ref-size-1240);
+  --contain-page-larger: var(--ref-size-1600);
+  --contain-page-largest: var(--ref-size-1920);
   
-  --contain-aside-default: var(--ref-size-320);
-  --contain-aside-medium: var(--ref-size-425);
-  --contain-aside-large: var(--ref-size-600);
-
-  --contain-article-small: var(--ref-size-425);
-  --contain-article-medium: var(--ref-size-600);
-  --contain-article-large: var(--ref-size-768);
-  --contain-article-larger: var(--ref-size-900);
-  --contain-article-largest: var(--ref-size-1024);
+  --contain-block-tiny: var(--ref-size-216);
+  --contain-block-small: var(--ref-size-320);
+  --contain-block-medium: var(--ref-size-375);
+  --contain-block-large: var(--ref-size-425);
+  --contain-block-larger: var(--ref-size-600);
+  --contain-block-largest: var(--ref-size-768);
 }
