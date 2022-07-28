@@ -1,0 +1,40 @@
+// Block
+.ob-contain {
+  @include ob-contain(--contain-page-default, --spacing-zero, --spacing-default);
+}
+
+  // Modifiers
+  .ob-contain--align-center {
+    @include ob-contain-center;
+  }
+
+  .ob-contain--spacing-v-pad {
+    @include ob-contain-pad-block-start-end(--spacing-larger);
+  }
+
+  .ob-contain--spacing-v-gap {
+    > * + * {
+      @include owl(--spacing-larger);
+    }
+  }
+
+  .ob-contain--size-large {
+    max-width: var(--contain-page-large);
+  }
+
+  .ob-contain--size-larger {
+    max-width: var(--contain-page-larger);
+  }
+
+  .ob-contain--size-largest {
+    max-width: var(--contain-page-largest);
+  }
+
+
+
+// MQs
+@include respond(tablet-small) {
+  .ob-contain {
+    @include ob-contain-pad-inline-start-end(--spacing-large)
+  }
+}

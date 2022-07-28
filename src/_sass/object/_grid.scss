@@ -1,0 +1,48 @@
+// Block
+.ob-grid {
+  @include reset-list;
+  @include dp-grid;
+}
+
+  // modifiers
+  .ob-grid--spacing-gap-size-medium {
+    gap: var(--spacing-medium);
+  }
+
+
+
+// MQs
+@include respond(tablet-tiny) {
+  .ob-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include respond(tablet-large) {
+  .ob-grid--columns-three {
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  }
+  .ob-grid--columns-four {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  .ob-grid--spacing-gap-size-medium {
+    --spacing-medium: var(--spacing-large);
+  }
+}
+
+@include respond(laptop-medium) {
+  .ob-grid--layout-columns {
+    display: block;
+    column-gap: var(--spacing-huge);
+    columns: var(--contain-block-large);
+    
+    > * {
+      break-inside: avoid;
+
+      &:not(:last-child) {
+        margin-block-end: var(--spacing-huge);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Block
+.ob-icon {
+  @include box(--spacing-medium);
+  display: inline-flex;
+  align-items: center;
+  fill: var(--icon-color);
+
+  &:hover {
+    fill: var(--icon-color-hovered);
+  }
+}
+
+  // Modifiers
+  .ob-icon--size-large {
+    @include box(--spacing-large);
+  }
+
+  .ob-icon--fill-white {
+    fill: var(--white-light);
+
+    &:hover {
+      fill: var(--white);
+    }
+  }
+
+  .ob-icon--fill-black {
+    fill: var(--black-light);
+
+    &:hover {
+      fill: var(--black);
+    }
+  }
+
+  .ob-icon--fill-primary {
+    fill: var(--primary-enabled);
+
+    &:hover {
+      fill: var(--primary-hovered);;
+    }
+  }
+
+

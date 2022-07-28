@@ -1,0 +1,29 @@
+// Block
+.ob-avatar {
+  background-color: var(--white);
+}
+
+  // Modifiers 
+  .ob-avatar--shape-circle {
+    border-radius: var(--shape-rounded-full);
+  }
+
+  .ob-avatar--shape-rounded {
+    border-radius: var(--shape-rounded-medium);
+  }
+
+  .ob-avatar--size-tiny {
+    @include box(2.5rem);
+  }
+  
+  .ob-avatar--size-small {
+    @include box(4.5rem);
+  }
+  
+  .ob-avatar--size-medium {
+    @include box(6.5rem);
+  }
+  
+  .ob-avatar--size-large {
+    @include box(8.5rem);
+  }
