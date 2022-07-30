@@ -3,41 +3,41 @@
   --typeface-secondary: georgia, times, serif;
   --typeface-code: "Fira Code", "Courier New", courier, monospace;
 
-  --typescale-label-text-small: var(--ref-size-8);
-  --typescale-label-text-medium: var(--ref-size-12);
-  --typescale-label-text-large: var(--ref-size-14);
+  --typescale-body-default: var(--ref-size-16);
+  --typescale-body-tiny: var(--ref-size-8);
+  --typescale-body-small: var(--ref-size-12);
+  --typescale-body-medium: var(--ref-size-14);
+  --typescale-body-large: var(--ref-size-18);
+  --typescale-body-larger: var(--ref-size-20);
 
-  --typescale-base-text-small: var(--ref-size-16);
-  --typescale-base-text-medium: var(--ref-size-18);
-  --typescale-base-text-large: var(--ref-size-20);
+  --typescale-title-small: var(--ref-size-24);
+  --typescale-title-medium: var(--ref-size-26);
+  --typescale-title-large: var(--ref-size-28);
 
-  --typescale-title-text-small: var(--ref-size-20);
-  --typescale-title-text-medium: var(--ref-size-24);
-  --typescale-title-text-large: var(--ref-size-26);
+  --typescale-headline-tiny: var(--ref-size-20);
+  --typescale-headline-small: var(--ref-size-24);
+  --typescale-headline-medium: var(--ref-size-26);
+  --typescale-headline-large: var(--ref-size-28);
+  --typescale-headline-larger: var(--ref-size-36);
 
-  --typescale-headline-text-tiny: var(--ref-size-28);
-  --typescale-headline-text-small: var(--ref-size-36);
-  --typescale-headline-text-medium: var(--ref-size-44);
-  --typescale-headline-text-large: var(--ref-size-52);
+  --typescale-display-small: var(--ref-size-40);
+  --typescale-display-medium: var(--ref-size-56);
+  --typescale-display-large: var(--ref-size-72);
 
-  --typescale-display-text-small: var(--ref-size-36);
-  --typescale-display-text-medium: var(--ref-size-48);
-  --typescale-display-text-large: var(--ref-size-56);
-
-  --typeweight-100: 100;
   --typeweight-200: 200;
-  --typeweight-300: 300;
   --typeweight-400: 400;
-  --typeweight-500: 500;
   --typeweight-600: 600;
-  --typeweight-700: 700;
   --typeweight-800: 800;
 
-  --leading-nano: 1;
-  --leading-tiny: 1.125;
-  --leading-small: 1.25;
-  --leading-medium: 1.35;
-  --leading-large: 1.5;
-  --leading-lager: 1.625;
-  --leading-largest: 1.75;
+  --leading-tiny: 1;
+  --leading-small: 1.25; // 20 px
+  --leading-medium: 1.5;
+  --leading-large: 1.75; // 28
+
+  // Scalable variables in the code base
+  --base-font-size: var(--typescale-body-default);
+  --base-line-height: var(--leading-medium);
+
+  --lead-text: var(--typescale-body-larger);
 }
+

@@ -3,10 +3,19 @@
   --spacing-default: var(--ref-size-16);
   --spacing-tiny: var(--ref-size-4);
   --spacing-small: var(--ref-size-8);
+  --spacing-medium-small: var(--ref-size-12);
   --spacing-medium: var(--ref-size-24);
   --spacing-large: var(--ref-size-32);
   --spacing-large-medium: var(--ref-size-40);
   --spacing-larger: var(--ref-size-48);
   --spacing-largest: var(--ref-size-72);
   --spacing-huge: var(--ref-size-96);
+
+  --vr: var(--ref-size-28);
+
+  // Scalable variables in the code base
+  --padding: var(--spacing-default);
+  --gutter: var(--spacing-medium);
+  
+  --vr-figures: var(--spacing-larger);
 }

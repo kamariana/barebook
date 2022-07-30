@@ -15,9 +15,9 @@ body {
   background-color: var(--canvas-background-color);
   color: var(--canvas-text-color);
   font-family: var(--typeface-primary);
-  font-size: var(--typescale-base-text-small);
+  font-size: var(--base-font-size);
   font-weight: var(--typeweight-400);
-  line-height: var(--leading-lager);
+  line-height: var(--base-line-height);
   overflow-y: auto;
   scroll-behavior: smooth;
 }
@@ -32,7 +32,7 @@ hr,
 table,
 figure,
 pre {
-  margin-block-start: var(--spacing-large);
+  margin-block-start: var(--vr);
 }
 
 img,
@@ -66,7 +66,7 @@ strong {
 }
 
 small {
-  font-size: var(--base-text-font-size-tiny);
+  font-size: var(--typescale-body-small);
 }
 
 sub,
@@ -93,11 +93,10 @@ template {
   display: none;
 }
 
-
 // MQs 
 @include respond(tablet-large) {
   body {
-    font-size: var(--typescale-base-text-medium);
-    line-height: var(--leading-largest);
+    --base-font-size: var(--typescale-body-larger);
+    --base-line-height: var(--leading-large);
   }
 }

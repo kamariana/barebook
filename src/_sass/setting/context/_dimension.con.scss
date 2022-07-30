@@ -7,6 +7,7 @@
   --contain-page-large: var(--ref-size-1240);
   --contain-page-larger: var(--ref-size-1600);
   --contain-page-largest: var(--ref-size-1920);
+  --contain-page-full: var(--ref-size-100-percent);
   
   --contain-block-tiny: var(--ref-size-216);
   --contain-block-small: var(--ref-size-320);
@@ -14,4 +15,5 @@
   --contain-block-large: var(--ref-size-425);
   --contain-block-larger: var(--ref-size-600);
   --contain-block-largest: var(--ref-size-768);
+  --contain-block-huge: var(--ref-size-1024);
 }
