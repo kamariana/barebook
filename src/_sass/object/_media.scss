@@ -20,12 +20,11 @@
 .ob-media__author-name {
   display: block;
   font-weight: bold;
-  font-size: var(--typescale-base-text-large);
+  font-size: var(--typescale-body-large);
 }
 
 .ob-media__author-role {
   color: var(--canvas-text-color-light);
-  font-size: var(--typescale-label-text-medium);
   text-transform: uppercase;
 }
 

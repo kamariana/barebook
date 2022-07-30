@@ -1,21 +1,17 @@
 // Block
 .ob-contain {
-  @include ob-contain(--contain-page-default, --spacing-zero, --spacing-default);
+  max-width: var(--contain-page-default);
+  padding: 0 var(--padding);
+
+  .ob-contain {
+    padding: 0;
+  }
 }
+
 
   // Modifiers
   .ob-contain--align-center {
-    @include ob-contain-center;
-  }
-
-  .ob-contain--spacing-v-pad {
-    @include ob-contain-pad-block-start-end(--spacing-larger);
-  }
-
-  .ob-contain--spacing-v-gap {
-    > * + * {
-      @include owl(--spacing-larger);
-    }
+    margin: 0 auto;
   }
 
   .ob-contain--size-large {
@@ -30,11 +26,16 @@
     max-width: var(--contain-page-largest);
   }
 
+  .ob-contain--size-full {
+    max-width: 100%;
+  }
+
+
 
 
 // MQs
-@include respond(tablet-small) {
+@include respond(tablet-large) {
   .ob-contain {
-    @include ob-contain-pad-inline-start-end(--spacing-large)
+    --padding: var(--spacing-medium);
   }
 }

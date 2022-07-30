@@ -1,0 +1,19 @@
+.ob-tag {
+ display: inline-flex;
+ font-size: var(--typescale-body-medium);
+}
+
+  // Modifiers
+  .ob-tag--meta {
+    
+  }
+
+  .ob-tag--re-order {
+    order: -1;
+    margin-block-end: var(--spacing-tiny);
+  }
+
+  .ob-tag--upcase {
+    text-transform: uppercase;
+    font-size: var(--typescale-body-small);
+  }

@@ -6,8 +6,6 @@
 
 // Elements
 .ob-off-canvas-nav__contain {
-  @include ob-contain(--contain-page-small, --spacing-zero, --spacing-default);
-  @include ob-contain-center;
   display: flex;
   height: 100vh;
   flex-direction: column;

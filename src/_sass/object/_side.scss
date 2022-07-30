@@ -13,9 +13,9 @@
 // Elements
 .ob-sides__text {
   @include owl(--spacing-default);
-  padding: var(--spacing-default);
+  padding: var(--padding);
 
-  & :last-child {
+  & > :last-child {
     margin-block-start: var(--spacing-medium);
   }
 } 
@@ -25,7 +25,7 @@
 // MQs
 @include respond(mobile-large) {
   .ob-sides__text {
-    padding: var(--spacing-medium);
+    --padding: var(--spacing-medium);
   } 
 }
 
@@ -46,7 +46,7 @@
 @include respond(tablet-large) {
   // Elements
   .ob-sides__text {
-    padding: var(--spacing-large); 
+    --padding: var(--spacing-large);
   }
 
   .ob-sides__text--spacing-inline-pad {

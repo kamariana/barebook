@@ -1,0 +1,21 @@
+.ob-meta {
+  @include reset-list;
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center-align;
+  margin-block-start: var(--vr);
+  margin-block-end: var(--vr);
+}
+
+
+// this meta can also work definition list for large datas
+
+.cp-sscard__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+  color: var(--canvas-text-color-v1);
+
+  dt {
+    font-weight: normal;
+  }
+}

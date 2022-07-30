@@ -1,0 +1,57 @@
+// Block
+.ob-slat {
+  padding: var(--vr-figures) 0;
+}
+
+// Elements
+.ob-slat__header { 
+  position: relative;
+}
+
+.ob-slat__sub-title {
+  font-size: var(--lead-text);
+  margin-block-start: var(--spacing-tiny)
+}
+
+  // Element Modifiers
+  .ob-slat__header--align-apart {
+    @include dp-flex-gap(--spacing-default);
+    @include dp-flex-center-apart;
+    @include dp-flex-center-align;
+  }
+  .ob-slat__header--align-center {
+    @include dp-flex-gap(--spacing-default);
+    @include dp-flex-center;
+    @include dp-flex-direction-column;
+    text-align: center;
+  }
+
+  .ob-slat__header--preline {
+    position: relative;
+    margin-block-start: var(--spacing-large);
+    &::before {
+      @include pseudo-class;
+      position: absolute;
+      top: -24px;
+      left: 0;
+      width: 64px;
+      height: 2px;
+      background-color: var(--icon-color);
+    }
+  }
+
+
+// MQs
+@include respond(tablet-large) {
+  .ob-slat__sub-title {
+    --lead-text: var(--typescale-title-small);
+  }
+}
+
+@include respond(laptop-small) {
+  .ob-slat {
+    --vr-figures: var(--spacing-huge);
+  }
+
+  
+}

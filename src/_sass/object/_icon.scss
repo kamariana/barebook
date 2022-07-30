@@ -11,8 +11,8 @@
 }
 
   // Modifiers
-  .ob-icon--size-large {
-    @include box(--spacing-large);
+  .ob-icon--size-larger {
+    @include box(--spacing-larger);
   }
 
   .ob-icon--fill-white {
