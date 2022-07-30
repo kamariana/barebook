@@ -1,0 +1,71 @@
+// Paddings
+.ut-no-pad {
+  padding: 0 !important;
+}
+
+
+
+// Margins
+.ut-no-mag {
+  margin: 0 !important;
+}
+
+
+
+// Spacers/Gaps 
+.ut-v-gaps-size-small {
+  @include owl(--spacing-large); // 32px
+}
+
+.ut-v-gaps-size-medium {
+  @include owl(--spacing-larger); // 48px 
+}
+
+.ut-v-gaps-size-large {
+  @include owl(--spacing-largest); // 72px 
+}
+
+
+// .ut-mag-medium {}
+// .ut-mag-block-start-medium {}
+// .ut-mag-block-end-medium {}
+// .ut-mag-inline-start-medium {}
+// .ut-mag-inline-end-medium {}
+// .ut-mag-block-start-end-medium {}
+// .ut-mag-inline-start-end-medium {}
+// --spacing-medium: var(--ref-size-24);
+
+
+// --spacing-default: var(--ref-size-16);
+// --spacing-tiny: var(--ref-size-4);
+// --spacing-small: var(--ref-size-8);
+
+// --spacing-large: var(--ref-size-32);
+// --spacing-larger: var(--ref-size-48);
+// --spacing-largest: var(--ref-size-64);
+
+
+// TODO: seach for them in the code base and remove them
+
+// .ut-gap-top-size-small {
+//   margin-block-start: var(--size-28) !important;
+// }
+
+// .ut-gap-top-size-medium {
+//   margin-block-start: var(--size-44) !important;
+// }
+
+// .ut-gap-top-size-large {
+//   margin-block-start: var(--size-64) !important;
+// }
+
+// .ut-gap-bottom-size-large {
+//   margin-block-end: var(--size-64) !important;
+// }
+
+// // This will apply a uniform gap between containers/box in the parent o-contain.
+// .ut-v-gaps {
+//   > * + * {
+//     margin-block-start: var(--size-44) !important;
+//   }
+// }

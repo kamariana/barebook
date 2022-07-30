@@ -1,0 +1,17 @@
+.ut-dp-inline {
+  @include dp-flex;
+  @include dp-flex-center-align;
+}
+
+.ut-dp-center {
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center;
+}
+
+.ut-align-self-end {
+  align-self: end;
+}
+
+.ut-align-apart-left {
+  margin-inline-end: auto;
+}

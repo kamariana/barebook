@@ -1,0 +1,43 @@
+// Text Sizes
+.ut-lead-text {
+  font-size: var(--lead-text);
+}
+
+.ut-lead-text-small {
+  max-width: var(--contain-block-larger);
+  font-size: var(--typescale-body-larger);
+}
+
+
+
+// Colors
+.ut-link-text-color-white {
+  a {
+    color: var(--white-light);
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.ut-link-text-color-black {
+  a {
+    color: var(--black-light);
+    &:hover {
+      color: var(--black);
+    }
+  }
+}
+
+
+
+@include respond(tablet-large) {
+  .ut-lead-text {
+    --lead-text: var(--typescale-title-small);
+  }
+}
+
+
+// @include respond(laptop-small) {
+
+// }
