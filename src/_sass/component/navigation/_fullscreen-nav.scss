@@ -1,0 +1,57 @@
+// Block
+.cp-fullscreen-nav-wrapper {
+  z-index: var(--layer-under);
+  background-color: var(--primary-enabled);
+  color: var(--primary-enabled-text-color);
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity 0.2s ease;
+}
+
+.cp-fullscreen-nav {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  text-align: center;
+}
+
+// Elements
+.cp-fullscreen-nav__list {
+  @include reset-list;
+}
+
+.cp-fullscreen-nav__link {
+  display: block;
+  padding: var(--spacing-small);
+  color: var(--black-light);
+  font-size: var(--typescale-title-small);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--black);
+  }
+}
+
+// Elements Modifiers
+.cp-fullscreen-nav__list--alt {
+  .cp-fullscreen-nav__link {
+    padding: var(--spacing-tiny) var(--spacing-default);
+    font-size: var(--typescale-body-large);
+  }
+}
+
+// States
+.cp-fullscreen-nav-wrapper.is-open {
+  z-index: var(--layer-surface);
+  display: block;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+// MQs
+@include respond(tablet-small) {
+  .cp-fullscreen-nav {
+    @include dp-flex-direction-row;
+    @include dp-flex-center-align;
+    text-align: left;
+  }
+}

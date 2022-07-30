@@ -1,0 +1,23 @@
+<div class="cp-fullscreen-nav-wrapper ob-off-canvas-nav js-fullscreen-nav" role="navigation" aria-label="Fullscreen Navigation" hidden>
+  <div class="ob-contain ob-contain--align-center ob-off-canvas-nav__contain">
+
+    <div class="ob-off-canvas-nav__header">
+      {% include components/logo.html color="--white" %}
+      {% include components/toggle-nav-icon-close.html %}
+    </div>
+
+    <div class="ob-off-canvas-nav__main">
+      <nav class="cp-fullscreen-nav">
+          <ul class="cp-fullscreen-nav__list">
+              {% for item in site.data.navigations.navbar %}
+              {% assign url = item.url | downcase %}
+                <li>
+                  <a href="{{ .url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+          </ul>
+      </nav>
+    </div>
+
+  </div>
+</div>

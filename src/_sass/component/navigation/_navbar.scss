@@ -1,0 +1,29 @@
+// Block
+.cp-navbar {
+
+}
+
+  // Modoifiers
+  .cp-navbar--spacing-v-pad-top {
+    margin-block-start: var(--spacing-large);
+  }
+
+  .cp-navbar--fixed {
+    position: fixed;
+    width: 100%;
+    z-index: var(--layer-front);
+  }
+
+  .cp-navbar--fixed-top {
+    top: 0;
+  }
+
+
+// Elements
+.cp-navbar__align-apart {
+  @include dp-flex-gap(--spacing-largest);
+  @include dp-flex-center-apart;
+}
+
+
+
