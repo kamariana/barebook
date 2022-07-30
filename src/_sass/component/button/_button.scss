@@ -1,0 +1,112 @@
+// Block
+.cp-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: auto;
+  height: var(--spacing-larger);
+  padding: var(--spacing-small) var(--spacing-large);
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: var(--shape-rounded-larger);
+  cursor: pointer;
+  font-size: var(--typescale-body-medium);
+  font-weight: bold;
+  letter-spacing: 0.03ch;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.cp-button--primary {
+  background-color: var(--primary-enabled);
+  color: var(--primary-enabled-text-color);
+
+  &:hover {
+    background-color: var(--primary-hovered);
+    color: var(--primary-enabled-text-color);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused);
+    color: var(--primary-enabled-text-color);
+    outline: none;
+  }
+}
+
+.cp-button--secondary {
+  border: 2px solid var(--primary-enabled);
+  color: var(--text-on-secondary-enabled);
+
+  &:hover {
+    background-color: var(--primary-hovered);
+    border-color: var(--primary-hovered);
+    color: var(--primary-enabled-text-color);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused);
+    border-color: var(--primary-focused);
+    color: var(--primary-enabled-text-color);
+    outline: none;
+  }
+}
+
+.cp-button--text {
+  color: var(--link-text-color-enabled);
+  padding-inline-start:  0;
+  padding-inline-end:  0;
+
+  &:hover {
+    color: var(--link-text-color-hovered);
+  }
+
+  &:focus {
+    color: var(--link-text-color-focused);
+  }
+}
+
+.cp-button--seamless {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  gap: var(--spacing-default);  
+}
+
+.cp-button--icon {
+  @include dp-flex;
+  @include dp-flex-center;
+  padding: 0;
+  @include box(--spacing-large-medium);
+}
+
+// .cp-button--size-small {}
+// .cp-button--size-medium {}
+// .cp-button--size-large {}
+
+
+
+// Elements
+.cp-button__icon {
+  @include dp-flex;
+  @include dp-flex-center;
+  border: 2px solid transparent;
+}
+
+  // Elements Modifiers
+  .cp-button__icon--primary {
+    background-color: var(--primary-enabled);
+  }
+
+  .cp-button__icon--secondary {
+    border-color: var(--primary-enabled);
+  }
+
+  .cp-button__icon--size-medium {
+    @include box(--spacing-large-medium);
+  }
+
+  .cp-button__icon--shape-circle {
+    border-radius: var(--shape-rounded-full);
+  }
