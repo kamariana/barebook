@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  <head>
+    {% include utilities/meta-data.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="ob-page">
+     
+      {{ content }}
+      
+    </div>
+
+    {% include components/fullscreen-nav.html %}
+    
+    <script src="{{ "/assets/js/index.js" | relative_url }}"></script>
+
+  </body>
+</html>
