@@ -6,6 +6,14 @@ hr {
   padding: 0;
   border: 0;
   border-top: 1px solid var(--border-color-v1);
-  margin-block-start: var(--spacing-larger);
-  margin-block-end: var(--spacing-larger);
+  margin-block-start: var(--vr);
+  margin-block-end: var(--vr);
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  hr {
+    --vr: var(--vr-figures);
+  }
 }

@@ -1,6 +1,6 @@
 pre {
   border-radius: var(--shape-rounded-medium);
-  font-size: var(--typescale-base-text-small);
+  font-size: var(--typescale-body-medium);
   background-color: var(--code-background-color);
   overflow-x: auto;
 
@@ -8,7 +8,7 @@ pre {
     background-color: transparent;
     border-radius: 0;
     display: block;
-    padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-medium);
+    padding: var(--padding);
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overscroll-behavior-x: contain;
@@ -17,5 +17,15 @@ pre {
 
   pre {
     margin: 0;
+  }
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  pre {
+    code {
+      --padding: var(--spacing-medium);
+    }
   }
 }

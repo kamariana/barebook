@@ -1,17 +1,13 @@
 blockquote {
-  padding: 0 var(--spacing-default);
+  @include owl(--spacing-default);
+  padding: var(--padding);
   border-left: 4px solid var(--border-color);
   font-family: var(--typeface-secondary);
-  font-size: var(--typescale-title-text-small);
-  margin: var(--spacing-larger) 0 var(--spacing-larger) var(--spacing-default);
-  line-height: var(--leading-lager);
+  font-size: var(--lead-text);
+  margin: var(--vr-figures) var(--spacing-default);
 
   > p {
     margin-block-start: 0;
-  }
-
-  > * + * {
-    margin-block-start: var(--spacing-medium);
   }
 }
 
@@ -21,11 +17,18 @@ q {
 
 
 // MQs
-@include respond(tablet-small) {
+@include respond(tablet-large) {
   blockquote {
-    font-size: var(--typescale-title-text-medium);
-    padding: 0 var(--spacing-large);
-    margin: var(--spacing-larger) 0 var(--spacing-larger) var(--spacing-larger);
+    --lead-text: var(--typescale-title-small);
+    --padding: var(--spacing-medium);
+    line-height: var(--leading-small);
+    margin: var(--vr-figures) var(--spacing-large);
   }
 }
-  
+
+
+@include respond(laptop-large) {
+  blockquote {
+    --padding: var(--spacing-large)
+  }
+}

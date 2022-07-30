@@ -1,7 +1,7 @@
 ul,
 ol {
   padding-inline-start: var(--spacing-default);
-  margin-inline-start: var(--spacing-medium);
+  margin-inline-start: var(--spacing-default);
 }
 
 ul ul,
@@ -15,4 +15,13 @@ dt {
 
 ::marker {
   color: var(--interactive-enabled);
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  ul,
+  ol {
+    padding-inline-start: var(--spacing-large);
+  }
 }
