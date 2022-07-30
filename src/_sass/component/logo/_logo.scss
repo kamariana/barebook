@@ -1,0 +1,18 @@
+// Block
+.cp-logo {
+  @include dp-flex;
+  color: inherit;
+  line-height: var(--leading-tiny);
+  text-decoration: none;
+}
+
+  // Modifier - you logo style here
+//.cp-logo--camariana {}
+
+
+
+// Elements
+.cp-logo__text {
+  display: block;
+  font-size: var(--typescale-body-larger);
+}

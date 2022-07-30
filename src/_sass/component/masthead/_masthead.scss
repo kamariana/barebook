@@ -1,0 +1,160 @@
+// Resets - Should come first to respect cascade
+.cp-masthead__list {
+  @include reset-list; 
+}
+
+// Block
+.cp-masthead {
+  @include dp-flex;
+  position: relative;
+  min-height: 66vh;
+}
+
+
+  // Block Modifiers
+  .cp-masthead--fullscreen {
+    min-height: 90vh;
+  }
+
+  .cp-masthead--media-overlay {
+    .cp-masthead__figure {
+      @include pos-zero-all-sides;
+      position: absolute;
+      &::after {
+        @include pseudo-class;
+        @include pos-zero-all-sides;
+        position: absolute;
+        background-color: var(--transparent-neutral-medium); 
+      }
+    }
+  }
+
+  .cp-masthead--media-aside {
+    .cp-masthead__figure {
+      //position: absolute; // the image should be contain with this
+      background-color: transparent;
+    }
+  }
+
+
+
+// Elements
+.cp-masthead__contain { // somecase this is not necessary if you want a full masthead
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  flex-grow: 1;
+}
+
+.cp-masthead__text {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  @include pos-rel-object-forward;
+  @include owl(--spacing-default);  
+  padding: var(--spacing-huge) var(--spacing-default);
+  justify-content: center;
+  max-width: var(--contain-block-huge);
+}
+
+.cp-masthead__title {
+  font-size: var(--typescale-display-small);
+  line-height: var(--leading-small);
+  margin-block-start: 0;
+}
+
+.cp-masthead__sub-title {
+  margin-block-start: var(--spacing-medium-small) !important;
+  font-size: var(--typescale-headline-medium);
+}
+
+.cp-masthead__lead-text {
+  margin-block-start: var(--spacing-large);
+  font-size: var(--lead-text);
+}
+
+.cp-masthead__tag {
+  margin-block-end: var(--spacing-default);
+}
+
+.cp-masthead__button {
+  align-self: start;
+  margin-block-start: var(--spacing-larger);
+}
+
+.cp-masthead__figure {
+  background-color: var(--canvas-background-color-v4);
+}
+
+.cp-masthead__picture {
+  @include fit-media-into-container;
+}
+
+.cp-masthead__video {
+  @include fit-media-into-container;
+}
+
+.cp-masthead__img {
+  @include fit-media-into-container;
+}
+
+  // Element Modifiers
+  .cp-masthead__title--preline {
+    position: relative;
+    &::before {
+      @include pseudo-class;
+      position: absolute;
+      top: 48px;
+      left: -100px;
+      width: 64px;
+      height: 3px;
+      background-color: var(--icon-color);
+    }
+  }
+
+  .cp-masthead__text--align-center {
+    margin: auto;
+  }
+  
+  .cp-masthead__text--align-left-center {
+    margin-block-end: auto;
+    margin-block-start: auto;
+  }
+  
+  .cp-masthead__text--align-bottom {
+    margin-block-start: auto;
+  }
+
+
+
+// MQs
+@include respond(tablet-large) {
+  .cp-masthead__title {
+    font-size: var(--typescale-display-medium);
+  }
+
+  .cp-masthead__sub-title {
+    font-size: var(--typescale-display-small);
+    margin-block-start: var(--spacing-small) !important;
+  }
+
+  .cp-masthead__lead-text {
+    --lead-text: var(--typescale-title-small);
+  }
+
+  .cp-masthead__list-item-button {
+    margin-inline-end: var(--spacing-largest);
+  }
+}
+
+@include respond(laptop-small) {
+  .cp-masthead {
+    min-height: 75vh;
+  }
+
+  .cp-masthead--fullscreen {
+    min-height: 100vh;
+  }
+
+  .cp-masthead__title {
+    font-size: var(--typescale-display-large);
+  }
+}

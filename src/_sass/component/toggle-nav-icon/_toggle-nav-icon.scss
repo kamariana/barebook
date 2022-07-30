@@ -1,0 +1,126 @@
+// Block
+.cp-toggle-nav-icon {
+  @include dp-flex-gap(--spacing-small);
+  @include dp-flex-center;
+  overflow: hidden;
+  padding: var(--spacing-tiny);
+  border: none;
+  background: transparent;
+  color: var(--icon-color);
+  cursor: pointer;
+  font-size: var(--typescale-body-medium);
+
+  .cp-toggle-nav-icon__icon {
+    &:nth-child(1) {
+      transform: scaleX(0.7);
+    }
+
+    &:nth-child(2) {
+      transform: scaleX(0.5);
+    }
+  }
+
+  &:hover {
+    .cp-toggle-nav-icon__text {
+      color: var(--icon-color-hovered);
+    }
+
+    .cp-toggle-nav-icon__icon {
+      background-color: var(--icon-color-hovered);
+      &:nth-child(1),
+      &:nth-child(2) {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+  // Modifiers
+  .cp-toggle-nav-icon--half {
+    .cp-toggle-nav-icon__icon {
+      &:nth-child(2) {
+        transform: scaleX(0.65);
+      }
+    }
+
+    &:hover {
+      .cp-toggle-nav-icon__icon {
+        &:nth-child(2) {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .cp-toggle-nav-icon--white {
+    .cp-toggle-nav-icon__text {
+      color: var(--white-light);
+    }
+  
+    .cp-toggle-nav-icon__icon {
+      background-color: var(--white-light);
+    }
+  
+    &:hover {
+      .cp-toggle-nav-icon__text {
+        color: var(--white);
+      }
+  
+      .cp-toggle-nav-icon__icon {
+        background-color: var(--white);
+      }
+    }
+  }
+  
+  .cp-toggle-nav-icon--black {
+    .cp-toggle-nav-icon__text {
+      color: var(--black-light);
+    }
+  
+    .cp-toggle-nav-icon__icon {
+      background-color: var(--black-light);
+    }
+  
+    &:hover {
+      .cp-toggle-nav-icon__text {
+        color: var(--black);
+      }
+  
+      .cp-toggle-nav-icon__icon {
+        background-color: var(--black);
+      }
+    }
+  }
+  
+  .cp-toggle-nav-icon--close {
+    .cp-toggle-nav-icon__icon {
+      &:nth-child(1) {
+        transform: translate(0, 14px) rotate(45deg);
+      }
+  
+      &:nth-child(2) {
+        transform: translate(0, -14px) rotate(-45deg);
+      }
+    }
+  }
+
+
+
+// Elements
+.cp-toggle-nav-icon__text {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cp-toggle-nav-icon__icons {
+  @include owl(--spacing-tiny);
+}
+
+.cp-toggle-nav-icon__icon {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background-color: var(--icon-color);
+  transform-origin: 100%;
+  transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+}

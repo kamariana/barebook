@@ -1,0 +1,232 @@
+.cp-card {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  border-radius: var(--shape-rounded-large);
+  position: relative;
+  overflow: hidden;
+}
+
+  // Modifiers
+  .cp-card--style-minimalist { // light background
+    background-color: var(--canvas-background-color-v2);
+  }
+
+  .cp-card--highlight-bordered { 
+    border: 3px solid var(--interactive-enabled);
+  }
+
+  .cp-card--bordered {
+    border: 1px solid var(--icon-color);
+  }
+
+
+
+  // Elements
+.cp-card__text-wrapper {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+}
+
+.cp-card__text {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  @include owl(--spacing-default);
+  flex-grow: 1;
+  padding: var(--spacing-medium);
+
+  // & > :last-child { use for a stack card
+  //   margin-block-start: auto;
+  // }
+
+  // & > :nth-last-child(2) {
+  //   margin-block-end: var(--spacing-medium);
+  // }
+}
+
+.cp-card__text-media {  
+  @include owl(--spacing-default);
+  font-size: var(--typescale-body-default);
+}
+
+.cp-card__title {
+  font-size: var(--typescale-title-medium);
+  font-weight: var(--typeweight-200);
+}
+
+.cp-card__link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.cp-card__button {
+  align-self: start;
+}
+
+.cp-card__media {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--shape-rounded-large);
+}
+
+.cp-card__img {
+  @include fit-media-into-container;
+  @include trans-and-scale;
+
+  &:hover {
+    @include scale-out-on-hover-and-focus;
+  }
+}
+
+  // Element Modifiers
+  .cp-card__media--backward {
+    position: relative;
+    border-radius: 0;
+
+    &::before {
+      @include pseudo-class;
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      background-color: var(--canvas-background-color-v3);
+    }
+
+    .cp-card__img {
+      margin-top: var(--spacing-large);
+      margin-left: var(--spacing-large)
+    }
+  }
+
+
+
+
+.cp-card--link-over {
+  .cp-card__link {
+    &::after {
+      @include pseudo-class;
+      @include pos-abs-object-backward;
+      @include pos-zero-all-sides;
+    }
+  }
+}
+
+// .cp-card--stacked { 
+
+//   .cp-card__media {
+//    order: -1;
+//    margin-block-end: var(--spacing-medium);   
+//   }
+// }
+
+.cp-card--interactive {
+  transition: box-shadow, background 0.35s ease-in;
+
+  // card interactions
+  &:hover,
+  &:focus {
+    box-shadow: var(--elevation-large);
+    background-color: var(--canvas-background-color-v3);
+    cursor: pointer;
+
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
+    }
+
+    // .cp-card__icon { //TODO: have this on others
+    //   transform: translateX(var(--spacing-tiny));
+    // }
+  }
+
+  // focus within to match the hover style
+  &:focus-within {
+    box-shadow: var(--elevation-medium);
+    outline: 2px dotted var(--interactive-enabled);
+
+    .cp-card__img {
+      @include scale-out-on-hover-and-focus;
+    }
+  }
+
+  // remove the unnecessary "basic focus style" only where :focus-within is supported.
+  &:focus-within .cp-card__link:focus {
+    outline: none;
+  }
+}
+
+// .cp-card__title--display {
+//   font-size: var(--typescale-display-text-small);
+// }
+
+
+// // States
+// .cp-card__text.flex-grow-off {
+//   flex-grow: unset;
+// }
+
+// .cp-card__text.margin-auto-off {
+//   & > :last-child {
+//     margin-block-start: var(--spacing-medium);
+//   }
+// }
+  
+
+
+// MQs
+@include respond(tablet-small) {
+  .cp-card--sides {
+    @include dp-grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .cp-card__text-media {
+    display: flex;
+    gap: var(--gutter);
+
+    > * {
+      margin: 0;
+    }
+
+    :first-child {
+      flex: none;
+      margin-block-start: var(--spacing-tiny);
+    }
+  }
+ 
+
+  // .cp-card__title {
+  //   font-size: var(--typescale-title-text-large);
+  // }
+
+  // // modifiers
+  // .cp-card--rounded { 
+  //   border-radius: var(--shape-rounded-larger);
+  // }
+}
+
+@include respond(tablet-large) {
+  .cp-card__text {
+    padding: var(--spacing-large);
+  }
+
+  .cp-card__title {
+    font-size: var(--typescale-title-large);
+  }
+
+  .cp-card__title--display {
+    font-size: var(--typescale-display-small);
+  }
+}
+
+@include respond(laptop-medium) {
+  .cp-card--sides {
+    .cp-card__text--contain {
+      max-width: var(--contain-block-largest);
+      padding-inline-start: 10%;
+      padding-inline-end: 10%;
+    }
+  }
+}
