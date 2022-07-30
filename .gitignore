@@ -9,11 +9,9 @@ vendor
 *.sass.map
 *.scss.map
 
-
-package.json
-
-
 # NODE
+package.json
+package-lock.json
 
 # Logs
 logs

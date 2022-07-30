@@ -1,7 +1,7 @@
 # Site settings
 title: Barebook 
 siteName: Barebook
-description: "The CSS is written in Sass, and built on top of Barebook. Barebook is an open-source, side project, design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on ITCSS which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as BEM, SMACSS and OOCSS."
+description: "Barebook is an open-source, side project, design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on ITCSS which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as BEM, SMACSS and OOCSS."
 keywords:
 type: website
 image: /assets/images/image.jpg
@@ -31,13 +31,13 @@ sass:
 # Collections Settings
 collections_dir: my_collections
 collections:
-  design:
-    output: false
   elements:
     output: false
   components:
     output: true
   patterns:
     output: true
+  build-with:
+    output: false
 
 # Contact & Social Details
