@@ -3,13 +3,6 @@
   font-size: var(--lead-text);
 }
 
-.ut-lead-text-small {
-  max-width: var(--contain-block-larger);
-  font-size: var(--typescale-body-larger);
-}
-
-
-
 // Colors
 .ut-link-text-color-white {
   a {
@@ -34,6 +27,7 @@
 @include respond(tablet-large) {
   .ut-lead-text {
     --lead-text: var(--typescale-title-small);
+    line-height: var(--leading-small);
   }
 }
 

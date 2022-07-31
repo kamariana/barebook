@@ -13,31 +13,6 @@
   }
 }
 
-  // Modifiers
-  .cp-theme-switcher--white {
-    
-    border-color: var(--white-light);
-
-    .cp-theme-switcher__button {
-      background: var(--white-light);
-      border-color: var(--white-light);
-
-      &:hover {
-        border-color: var(--white);
-        background: var(--white);
-      }
-    }
-
-    .cp-theme-switcher__icon {
-      fill: var(--black);
-    }
-
-    &:hover {
-      border-color: var(--white);
-    }
-  } 
-
-
 
 // Elements
 .cp-theme-switcher__button {
@@ -52,6 +27,11 @@
   cursor: pointer;
   appearance: none;
   opacity: 0;
+
+  // State
+  &.is-active {
+    opacity: 1;
+  }
 }
 
 .cp-theme-switcher__icon {
@@ -67,16 +47,9 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: var(--layer-forward);
-    opacity: 1;
+    
   }
   
   .cp-theme-switcher__button--light {
     right: -2px;
   }
-
-
-
-
-
-
-

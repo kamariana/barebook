@@ -17,6 +17,10 @@
 
   .cp-card--bordered {
     border: 1px solid var(--icon-color);
+
+    &:hover {
+      border-color: var(--link-text-color-hovered);
+    }
   }
 
 
@@ -80,26 +84,6 @@
     @include scale-out-on-hover-and-focus;
   }
 }
-
-  // Element Modifiers
-  .cp-card__media--backward {
-    position: relative;
-    border-radius: 0;
-
-    &::before {
-      @include pseudo-class;
-      position: absolute;
-      width: 90%;
-      height: 90%;
-      background-color: var(--canvas-background-color-v3);
-    }
-
-    .cp-card__img {
-      margin-top: var(--spacing-large);
-      margin-left: var(--spacing-large)
-    }
-  }
-
 
 
 
@@ -224,9 +208,8 @@
 @include respond(laptop-medium) {
   .cp-card--sides {
     .cp-card__text--contain {
-      max-width: var(--contain-block-largest);
+      max-width: var(--contain-size-medium-small);
       padding-inline-start: 10%;
-      padding-inline-end: 10%;
     }
   }
 }

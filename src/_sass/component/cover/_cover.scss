@@ -1,7 +1,7 @@
 .cp-cover {
-  @include ob-contain-pad-block-start-end(--spacing-larger);
   @include dp-flex;
   @include dp-flex-direction-column;
+  padding: var(--vr-figures) 0;
   position: relative;
   background-color: var(--canvas-background-color-v1);
   color: var(--canvas-text-color);
@@ -11,13 +11,11 @@
 .cp-cover__text {
   @include dp-flex-direction-column;
   @include pos-rel-object-forward;
+  @include owl(--spacing-default);
+
   margin-top: auto;
   margin-bottom: auto;
-  padding: var(--spacing-default);
-
-  > * + * {
-    margin-block-start: var(--spacing-default);
-  }
+  padding: var(--spacing-medium);  
 
   & :last-child {
     margin-block-start: var(--spacing-medium);
@@ -25,48 +23,6 @@
 }
 
 
-
-.cp-cover__title {
-  color: var(--white);
-}
-
-.cp-cover__date {
-  display: block;
-  text-transform: uppercase;
-}
-
-.cp-cover__tag {
-  display: block;
-  order: -1;
-  margin-top: 0;
-  margin-block-end: var(--spacing-larger);
-  font-size: var(--typescale-label-text-medium);
-  text-transform: uppercase;
-
-  &::before {
-    content: "#";
-  }
-}
-
-.cp-cover__button {
-  margin-top: var(--spacing-medium);
-  align-self: flex-start;
-}
-
-.cp-cover__figure {
-  position: absolute;
-  @include pos-zero-all-sides;
-
-  background-color: var(--canvas-background-color-v4);
-
-  &::after {
-    position: absolute;
-    @include pseudo-class;
-    @include pos-zero-all-sides;
-
-    background-color: var(--transparent-neutral-light); //TODO: not yet implemented
-  }
-}
 
 .cp-cover__picture {
   @include fit-media-into-container;
@@ -78,71 +34,15 @@
 
 
 
-
-
-// Modifiers
-.cp-cover__sides {
-  display: grid;  
-}
-
-.cp-cover__text--compact {
-  max-width: var(--contain-width-medium);
-}
-
-.cp-cover__text--bordered {
-  border: 1px solid var(--border-color-subdued);
-  border-radius: var(--bd-radius-tiny);
-}
-
-.cp-cover--zoomable {
-  .cp-cover__img {
-    transition: transform 0.3s ease-in;
-    transform: scale(1);
-  }
-  
-  &:hover  {
-    .cp-cover__img {
-      transform: scale(1.07);
-    }
-  }
-}
-
-
-
-
-
 // MQs
-@include respond(mobile-large) {
-  // Elements
+@include respond(tablet-large) {
   .cp-cover__text {
-    padding: var(--spacing-medium);
+    padding: var(--spacing-large);
   } 
 }
 
-@include respond(tablet-small) {
-  .cp-cover__sides {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  // States
-  .cp-cover__sides.is-two-third {
-    grid-template-columns: 1.5fr 1fr;
-  }
-
-  .cp-cover__sides.is-two-third-reverse  {
-    grid-template-columns: 1fr 1.5fr;
-  }
-} 
-
 @include respond(laptop-small) {
-
   .cp-cover {
-    min-height: 400px; //TODO: find a pattern for all these heights
-    @include ob-contain-pad-block-start-end(--spacing-huge);
+    --vr-figures: var(--spacing-huge);
   }
-
-  .cp-cover__text {
-    max-width: var(--container-width-large);
-  }
-
 }

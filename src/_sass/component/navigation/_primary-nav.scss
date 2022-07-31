@@ -4,7 +4,6 @@
 }
 
 
-
 // Elements
 .cp-primary-nav__list {
   @include reset-list;
@@ -14,7 +13,7 @@
 
 .cp-primary-nav__link {
   display: block;
-  padding: var(--spacing-small);
+  padding: var(--spacing-medium) var(--spacing-small);
   color: inherit;
   font-size: var(--typescale-base-text-medium);
   text-decoration: none;

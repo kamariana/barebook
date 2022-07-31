@@ -36,42 +36,6 @@
 }
 
   // Modifiers
-  .cp-toggle-nav-icon--half {
-    .cp-toggle-nav-icon__icon {
-      &:nth-child(2) {
-        transform: scaleX(0.65);
-      }
-    }
-
-    &:hover {
-      .cp-toggle-nav-icon__icon {
-        &:nth-child(2) {
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
-
-  .cp-toggle-nav-icon--white {
-    .cp-toggle-nav-icon__text {
-      color: var(--white-light);
-    }
-  
-    .cp-toggle-nav-icon__icon {
-      background-color: var(--white-light);
-    }
-  
-    &:hover {
-      .cp-toggle-nav-icon__text {
-        color: var(--white);
-      }
-  
-      .cp-toggle-nav-icon__icon {
-        background-color: var(--white);
-      }
-    }
-  }
-  
   .cp-toggle-nav-icon--black {
     .cp-toggle-nav-icon__text {
       color: var(--black-light);

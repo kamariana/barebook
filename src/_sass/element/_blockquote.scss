@@ -19,9 +19,9 @@ q {
 // MQs
 @include respond(tablet-large) {
   blockquote {
-    --lead-text: var(--typescale-title-small);
+    --lead-text: var(--typescale-title-medium);
     --padding: var(--spacing-medium);
-    line-height: var(--leading-small);
+    line-height: var(--leading-medium);
     margin: var(--vr-figures) var(--spacing-large);
   }
 }

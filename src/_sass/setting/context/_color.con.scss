@@ -8,9 +8,7 @@
 
 
 @mixin con-color-transparent {
-  --transparent-neutral-light: rgba(0, 0, 0, 0.3);
   --transparent-neutral-medium: rgba(0, 0, 0, 0.5);
-  --transparent-neutral-dark: rgba(0, 0, 0, 0.75);
 }
 
 @mixin con-color-notification {

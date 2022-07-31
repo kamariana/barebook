@@ -2,12 +2,8 @@
 .ob-grid {
   @include reset-list;
   @include dp-grid;
+  gap: var(--gutter);
 }
-
-  // modifiers
-  .ob-grid--spacing-gap-size-medium {
-    gap: var(--gutter);
-  }
 
 
 
@@ -19,15 +15,16 @@
 }
 
 @include respond(tablet-large) {
+  .ob-grid {
+    --gutter: var(--spacing-large);
+  }
+
   .ob-grid--columns-three {
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   }
+  
   .ob-grid--columns-four {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-
-  .ob-grid--spacing-gap-size-medium {
-    --gutter: var(--spacing-large);
   }
 }
 
@@ -35,7 +32,7 @@
   .ob-grid--layout-columns {
     display: block;
     column-gap: var(--spacing-larger);
-    columns: var(--contain-block-large);
+    columns: var(--contain-size-tiny);
     
     > * {
       break-inside: avoid;

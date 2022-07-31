@@ -6,6 +6,14 @@
   opacity: 0;
   transform: translate3d(0, -100%, 0);
   transition: opacity 0.2s ease;
+
+  // State
+  &.is-open {
+    z-index: var(--layer-surface);
+    display: block;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .cp-fullscreen-nav {
@@ -39,13 +47,7 @@
   }
 }
 
-// States
-.cp-fullscreen-nav-wrapper.is-open {
-  z-index: var(--layer-surface);
-  display: block;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
+
 
 // MQs
 @include respond(tablet-small) {

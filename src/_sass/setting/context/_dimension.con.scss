@@ -1,19 +1,13 @@
 @mixin con-dimension {
-  --contain-page-wrapper: var(--ref-size-2560);
-  --contain-page-default: var(--ref-size-1440);
-  --contain-page-tiny: var(--ref-size-600);
-  --contain-page-small: var(--ref-size-900);
-  --contain-page-medium: var(--ref-size-1024);
-  --contain-page-large: var(--ref-size-1240);
-  --contain-page-larger: var(--ref-size-1600);
-  --contain-page-largest: var(--ref-size-1920);
-  --contain-page-full: var(--ref-size-100-percent);
-  
-  --contain-block-tiny: var(--ref-size-216);
-  --contain-block-small: var(--ref-size-320);
-  --contain-block-medium: var(--ref-size-375);
-  --contain-block-large: var(--ref-size-425);
-  --contain-block-larger: var(--ref-size-600);
-  --contain-block-largest: var(--ref-size-768);
-  --contain-block-huge: var(--ref-size-1024);
+  --contain-size-wrapper: var(--ref-size-2560);
+  --contain-size-default: var(--ref-size-1440);
+  --contain-size-tiny: var(--ref-size-425);
+  --contain-size-small: var(--ref-size-600);
+  --contain-size-medium-small: var(--ref-size-768);
+  --contain-size-medium: var(--ref-size-900);
+  --contain-size-large: var(--ref-size-1024);
+  --contain-size-larger: var(--ref-size-1240);
+  --contain-size-largest: var(--ref-size-1600);
+  --contain-size-huge: var(--ref-size-1920);
+  --contain-size-full: var(--ref-size-100-percent);
 }

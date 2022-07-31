@@ -1,8 +1,10 @@
 .cp-quote {
   @include owl(--spacing-small);
   position: relative;
-  max-width: var(--contain-block-larger);
+  max-width: var(--contain-size-medium-small);
   margin: var(--spacing-largest) auto;
+  text-align: center;
+  color: var(--canvas-text-color-v2);
 
   p {
     position: relative;
@@ -16,6 +18,17 @@
     margin: 0;
   }
 
+  &::before {
+    position: absolute;
+    z-index: var(--layer-backward);
+    top: calc(var(--spacing-default) * -1);
+    left: calc(var(--spacing-large) * -1);
+    color: var(--canvas-background-color-v4);
+    content: "\201C";
+    font-family: var(--typeface-secondary);
+    font-size: calc(var(--spacing-largest) * 3);
+    line-height: 1;
+  }
   
 }
 
@@ -24,6 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   font-style: normal;
   font-size: inherit;
 }
@@ -39,7 +53,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: var(--spacind-small);
+  gap: var(--spacing-small);
 }
 
 .cp-quote__author-name {
@@ -50,27 +64,4 @@
 .cp-quote__author-role {
   color: var(--canvas-text-color-v1);
   margin-block-start: var(--spacing-tiny);
-}
-
-// Modifiers
-.cp-quote--center {
-  text-align: center;
-
-  .cp-quote__citation {
-    display: block;
-  }
-}
-
-.cp-quote--with-mark-left {
-  &::before {
-    position: absolute;
-    z-index: var(--layer-backward);
-    top: calc(var(--spacing-large) * -1);
-    left: calc(var(--spacing-large) * -1);
-    color: var(--canvas-background-color-v4);
-    content: "\201C";
-    font-family: var(--typeface-secondary);
-    font-size: calc(var(--spacing-largest) * 3);
-    line-height: 1;
-  }
 }

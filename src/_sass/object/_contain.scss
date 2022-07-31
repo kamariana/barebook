@@ -1,7 +1,12 @@
 // Block
 .ob-contain {
-  max-width: var(--contain-page-default);
+  max-width: var(--contain-size-default);
   padding: 0 var(--padding);
+  margin: 0 auto;
+
+  > * + * {
+    margin-block-start: var(--spacing-larger) !important;
+  }
 
   .ob-contain {
     padding: 0;
@@ -10,20 +15,20 @@
 
 
   // Modifiers
-  .ob-contain--align-center {
-    margin: 0 auto;
-  }
-
   .ob-contain--size-large {
-    max-width: var(--contain-page-large);
+    max-width: var(--contain-size-large);
   }
 
   .ob-contain--size-larger {
-    max-width: var(--contain-page-larger);
+    max-width: var(--contain-size-larger);
   }
 
   .ob-contain--size-largest {
-    max-width: var(--contain-page-largest);
+    max-width: var(--contain-size-largest);
+  }
+
+  .ob-contain--size-huge {
+    max-width: var(--contain-size-huge);
   }
 
   .ob-contain--size-full {
