@@ -1,0 +1,54 @@
+  // Block
+  .ob-img-backward {
+    position: relative;
+    border-radius: 0;
+
+    &::before {
+      @include pseudo-class;
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      background-color: var(--canvas-background-color-v3);
+    }
+
+    .ob-img-backward__img {
+      border-radius: 0;
+      padding-block-start: 32px;
+      padding-inline-start: 32px;
+    }
+    
+  }
+
+    // Modifiers
+    .ob-img-backward--alt  {
+      &::before {  
+        top: 32px;
+        left: 32px; 
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border-bottom-right-radius: var(--shape-rounded-large);
+      }
+
+      .ob-img-backward__img {
+        padding: 0;
+        border-radius: 0;
+        border-top-left-radius: var(--shape-rounded-large);
+      }
+    }
+
+
+// Elements
+.ob-img-backward__img {
+  @include fit-media-into-container;
+  @include trans-and-scale;
+  position: var(--layer-forward);   
+
+  &:hover {
+    @include scale-out-on-hover-and-focus;
+  }
+}
+
+  
+
+
