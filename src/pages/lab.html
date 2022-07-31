@@ -7,11 +7,11 @@ permalink: /lab
 
 
 <header class="lo-header">
-  <div class="cp-navbar cp-navbar--fixed cp-navbar--fixed-top cp-navbar--spacing-v-pad-top">
-    <div class="cp-navbar__align-apart ob-contain ob-contain--align-center ob-contain--size-full">
+  <div class="cp-navbar">
+    <div class="cp-navbar__contain">
       {% include components/logo.html %}
       
-      <div class="cp-navbar__align-apart">
+      <div class="cp-navbar__contain">
         {% include components/primary-nav.html %}
         {% include components/theme-switcher.html %}
         {% include components/toggle-nav-icon.html %}
@@ -19,9 +19,9 @@ permalink: /lab
     </div>
   </div>
 
-  <div class="cp-masthead cp-masthead--fullscreen" role="banner">
-    <div class="ob-contain ob-contain--align-center cp-masthead__contain">
-      <div class="cp-masthead__text cp-masthead__text--align-left-center">
+  <div class="cp-masthead" role="banner">
+    <div class="ob-contain  cp-masthead__contain">
+      <div class="cp-masthead__text">
         <h1 id="title" class="cp-masthead__title cp-masthead__title--preline">
           Abd Al Ala Camara.
         </h1>
@@ -30,12 +30,12 @@ permalink: /lab
           I design & build things for the web.
         </h2>
     
-        <p class="cp-masthead__lead-text ut-text-color-light ut-lead-text-small">
+        <p class="cp-masthead__lead-text">
           I'm a design engineer and educator. specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at workplace.
         </p>
 
         
-        <span class="ob-tag ob-tag--re-order cp-masthead__tag">
+        <span class="ob-tag  cp-masthead__tag">
           Peace, my name is
         </span>
 
@@ -49,18 +49,18 @@ permalink: /lab
 </header>
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--size-larger ob-contain--align-center  ut-v-gaps-size-medium">
+  <div class="ob-contain ob-contain--size-largest">
 
-    <header class="ob-slat__header--preline">
-      <h2 class="ob-slat__title ob-slat__title--preline">
+    <header>
+      <h2 class="ob-slat__title-preline">
         Services
       </h2>
-      <p class="ob-slat__sub-title">
+      <p class="ob-slat__lead-text">
         A list of my core services
       </p>
     </header>
 
-    <ul class="ob-grid ob-grid--columns-three ob-grid--spacing-gap-size-medium">
+    <ul class="ob-grid ob-grid--columns-three">
       <li class="cp-card cp-card--style-minimalist">
         <div class="cp-card__text">
           <svg 
@@ -144,27 +144,24 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--align-center">
+  <div class="ob-contain ">
 
-    <header class="ob-slat__header--align-center">
-      <h2 class="ob-slat__title ob-slat__title--preline">
-        Trusted By:
-      </h2>
-    </header>
-    
+    <h2 class="ut-dp-center">
+      Trusted By:
+    </h2>
     
   </div>
 </section>
 
 
 <section class="ob-section">
-  <div class="ob-contain ob-contain--align-center">
+  <div class="ob-contain ">
     
     <h2 class="ut-visually-hidden">
       Testimonials
     </h2>
     
-    <figure class="cp-quote cp-quote--center cp-quote--with-mark-left">
+    <figure class="cp-quote">
       <blockquote>
         <p>
           I kept the copy of the handout
@@ -192,14 +189,13 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--align-center">
+  <div class="ob-contain">
     <div class="ob-sides">
       <div class="ob-sides__text">
-        <header class="ob-slat__header--preline">
-          <h2 class="ob-slat__title ob-slat__title--preline">
-            About me
-          </h2>
-        </header>
+        <h2 class="ob-slat__title-preline">
+          About me
+        </h2>
+
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi perferendis odio nam aliquam ipsam aspernatur fugit facere consectetur, magnam, beatae saepe, quo nemo? Sed, quasi excepturi atque minus ipsa pariatur?
         </p>
@@ -236,8 +232,8 @@ permalink: /lab
         </div>
 
       </div>
-      <div class="cp-banner__media">
-        <img src="/assets/images/image.jpg" alt="">
+      <div class="ob-img-backward ob-img-backward--alt cp-banner__media">
+        <img class="ob-img-backward__img" src="/assets/images/image.jpg" alt="">
       </div>
     </div>
     
@@ -247,13 +243,13 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--align-center ob-contain--size-largest ut-v-gaps-size-medium">
+  <div class="ob-contain ob-contain--size-huge">
 
-    <header class="ob-slat__header--preline">
-      <h2 class="ob-slat__title ob-slat__title--preline">
+    <header>
+      <h2 class="ob-slat__title-preline">
         Projects
       </h2>
-      <p class="ob-slat__sub-title">
+      <p class="ob-slat__lead-text">
         A collection of side projects
       </p>
     </header>
@@ -267,7 +263,7 @@ permalink: /lab
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error illum, fugit, deserunt cupiditate sit ut nisi explicabo, architecto sint quas incidunt quasi delectus libero deleniti debitis culpa voluptates est odio.
         </p>
 
-        <span class="ob-tag ob-tag--re-order">
+        <span class="ob-tag">
           Featured Project
         </span>
 
@@ -314,8 +310,8 @@ permalink: /lab
           </li>
         </ul>
       </div>
-      <div class="cp-card__media cp-card__media--backward">
-        <img class="cp-card__img" src="/assets/images/image.jpg" alt="">
+      <div class="ob-img-backward cp-card__media">
+        <img class="ob-img-backward__img cp-card__img" src="/assets/images/image.jpg" alt="">
       </div>
     </div>
 
@@ -325,26 +321,27 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--size-larger ob-contain--align-center  ut-v-gaps-size-medium">
+  <div class="ob-contain ob-contain--size-largest">
 
-    <div class="ob-slat__header--align-apart">
-      <header class="ob-slat__header--preline">
-        <h2 class="ob-slat__title ob-slat__title--preline">
+    <header class="ob-slat__header">
+      <div>
+        <h2 class="ob-slat__title-preline">
           TILs
         </h2>
-        <p class="ob-slat__sub-title">
+        <p class="ob-slat__lead-text">
           A collection of facts and opinions
         </p>
-      </header>
-  
+      </div>
       <div class="ut-dp-center">
         <a href="/tils/?ref=cta-home-tils" class="cp-button cp-button--secondary" type="button">
           All TILs
         </a>
       </div>
-    </div>
+    </header>
+  
+      
     
-    <ul class="ob-grid ob-grid--spacing-gap-size-medium  ob-grid--layout-columns">
+    <ul class="ob-grid  ob-grid--layout-columns">
       <li class="cp-card cp-card--bordered cp-card--link-over cp-card--interactive">
         <div class="cp-card__text">
             <h3 class="cp-card__title cp-card__title--overline">
@@ -461,27 +458,34 @@ permalink: /lab
         </div>
       </li>
     </ul>
-
     
   </div>
 </section>
 
-
-
-<div class="cp-cover">
-  <div class="ob-contain ob-contain--align-center cp-cover__sides is-two-third">
-    <div class="cp-cover__text">
-      <h2 class="ob-section__title ob-section__title--preline">
+<footer class="lo-footer">
+  <div class="ob-contain ob-sides ob-sides--size-two-third">
+    <div class="ob-sides__text">
+      <h2>
         Do you have any project in mind?
       </h2>
-        <p class="ob-section__subtitle">
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda impedit asperiores exercitationem ad dolorum vitae earum! Doloribus inventore nesciunt eos modi blanditiis dolore ab ipsum est corporis natus? Quam?
         </p>
     </div>
-    <div class="cp-cover__text">
-      <a href="/consultancy/?ref=pitch#consultation" class="cp-button cp-button--secondary" type="button">
-        Arrange a consultation
-      </a>
+    <div>
+      <p>
+        me@mydomain.gm
+      </p>
     </div>
   </div>
-</div>
+</footer>
+
+
+
+<script>
+  let bar = document.querySelector("#progress");
+  window.addEventListener("scroll", () => {
+    let max = document.body.scrollHeight - innerHeight;
+    bar.style.width = `${(pageYOffset / max) * 100}%`;
+  });
+</script>
