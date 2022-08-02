@@ -3,18 +3,19 @@
   max-width: var(--contain-size-default);
   padding: 0 var(--padding);
   margin: 0 auto;
-
-  > * + * {
-    margin-block-start: var(--spacing-larger) !important;
-  }
-
-  .ob-contain {
-    padding: 0;
-  }
 }
 
 
   // Modifiers
+  .ob-contain--owl {
+    > *:not(first-child) {
+      margin-block-start: var(--spacing-larger);
+    }
+    .ob-contain {
+      padding: 0;    
+    }
+  }
+
   .ob-contain--size-large {
     max-width: var(--contain-size-large);
   }
