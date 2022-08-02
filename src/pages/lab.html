@@ -31,12 +31,12 @@ permalink: /lab
         </h2>
     
         <p class="cp-masthead__lead-text">
-          I'm a design engineer and educator. specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at workplace.
+          I'm a design engineer and educator. specializing in building (and occasionally designing) exquisite digital experiences. Currently, I'm focused on building accessible, human-centered products for people and orgs at Camariana Ltd and also teaching at <a href="#">Thuraiya</a>. 
         </p>
 
         
-        <span class="ob-tag  cp-masthead__tag">
-          Peace, my name is
+        <span class="ob-tag cp-masthead__tag">
+          Peace be upon you 👋, I'm
         </span>
 
         <a class="cp-button cp-button--secondary cp-masthead__button" href="#" >
@@ -49,7 +49,7 @@ permalink: /lab
 </header>
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--size-largest">
+  <div class="ob-contain ob-contain--owl ob-contain--size-largest">
 
     <header>
       <h2 class="ob-slat__title-preline">
@@ -144,7 +144,7 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ">
+  <div class="ob-contain ob-contain--owl">
 
     <h2 class="ut-dp-center">
       Trusted By:
@@ -155,7 +155,7 @@ permalink: /lab
 
 
 <section class="ob-section">
-  <div class="ob-contain ">
+  <div class="ob-contain">
     
     <h2 class="ut-visually-hidden">
       Testimonials
@@ -243,7 +243,7 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--size-huge">
+  <div class="ob-contain ob-contain--owl ob-contain--size-huge">
 
     <header>
       <h2 class="ob-slat__title-preline">
@@ -321,7 +321,7 @@ permalink: /lab
 
 
 <section class="ob-slat">
-  <div class="ob-contain ob-contain--size-largest">
+  <div class="ob-contain ob-contain--owl ob-contain--size-largest">
 
     <header class="ob-slat__header">
       <div>
@@ -341,7 +341,7 @@ permalink: /lab
   
       
     
-    <ul class="ob-grid  ob-grid--layout-columns">
+    <ul class="ob-grid ob-grid--layout-columns">
       <li class="cp-card cp-card--bordered cp-card--link-over cp-card--interactive">
         <div class="cp-card__text">
             <h3 class="cp-card__title cp-card__title--overline">
@@ -462,7 +462,7 @@ permalink: /lab
   </div>
 </section>
 
-<footer class="lo-footer">
+<section class="ob-slat">
   <div class="ob-contain ob-sides ob-sides--size-two-third">
     <div class="ob-sides__text">
       <h2>
@@ -478,7 +478,58 @@ permalink: /lab
       </p>
     </div>
   </div>
+</section>
+
+<footer class="lo-footer">
+  <div class="ob-contain ob-contain--size-huge">
+    <div class="ob-grid ob-grid--columns-three">
+      <div>
+        {% include components/logo.html %}
+        <p>
+          Peace be upon you 👋, I'm Abd Al Ala Camara — a design engineer and educator.
+        </p>
+
+        <p>...</p>
+
+        <p>
+          Camariana Ltd is a company registered in The Gambia.<br>
+          Company #. {{ site.companyNumber }}, 
+          VAT #. {{ site.vatNumber }}
+        </p>
+      </div>
+      <div class="lo-footer__apart">
+        <ul class="lo-footer-nav">
+          {% for item in site.data.navigation.primary %}
+            <li>
+              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="lo-footer-nav">
+          {% for item in site.data.navigation.secondary %}
+            <li>
+              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="lo-footer-nav">
+          {% for item in site.data.navigation.tertiary %}
+            <li>
+              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <p>
+          Subscribe to the newsletter to stay up to date with
+          articles, TILs, courses and much more!
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
+
 
 
 
