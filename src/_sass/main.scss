@@ -48,12 +48,13 @@
 @import './object/avatar';
 @import './object/off-canvas-nav';
 @import './object/icon';
+@import './object/image-backward';
 
 // Layouts
 @import './layout/header/header';
 // @import './layout/sidebar/sidebar';
 // @import './layout/article/article';
-// @import './layout/footer/footer';
+@import './layout/footer/footer';
 
 // Components
 @import './component/logo/logo';
@@ -61,22 +62,19 @@
 @import './component/navigation/fullscreen-nav';
 @import './component/navigation/navbar';
 @import './component/masthead/masthead';
-// @import './component/banner/banner';
 
-// @import './component/alert/alert';
 @import './component/button/button';
 @import './component/toggle-nav-icon/toggle-nav-icon';
 @import './component/theme-switcher/theme-switcher';
 
+// @import './component/tabbed/tabbed';
 // @import './component/code/code';
 @import './component/quote/quote';
-// @import './component/tabbed/tabbed';
-
+// @import './component/alert/alert';
 @import './component/card/cards';
 @import './component/card/card';
 // @import './component/card/card-alternate';
-
-// @import './component/cover/cover';
+@import './component/cover/cover';
 
 // Utilities
 @import './utilities/hidden';
