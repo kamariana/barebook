@@ -14,7 +14,7 @@
 .cp-navbar__contain {
   @include dp-flex-gap(--spacing-largest);
   @include dp-flex-center-apart;
-  padding: 0 var(--padding);
+  padding: 0 var(--spacing-default);
 
   .cp-navbar__contain {
     padding: 0;
@@ -58,6 +58,6 @@
 // MQs
 @include respond(tablet-large) {
   .cp-navbar__contain {
-    --padding: var(--spacing-larger);
+    padding: 0 var(--spacing-larger);;
   }
 }

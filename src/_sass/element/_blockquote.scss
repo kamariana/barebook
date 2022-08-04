@@ -1,6 +1,6 @@
 blockquote {
   @include owl(--spacing-default);
-  padding: var(--padding);
+  padding: var(--spacing-default);
   border-left: 4px solid var(--border-color);
   font-family: var(--typeface-secondary);
   font-size: var(--lead-text);
@@ -20,7 +20,7 @@ q {
 @include respond(tablet-large) {
   blockquote {
     --lead-text: var(--typescale-title-medium);
-    --padding: var(--spacing-medium);
+    padding: var(--spacing-medium);
     line-height: var(--leading-medium);
     margin: var(--vr-figures) var(--spacing-large);
   }
@@ -29,6 +29,6 @@ q {
 
 @include respond(laptop-large) {
   blockquote {
-    --padding: var(--spacing-large)
+    padding: var(--spacing-large)
   }
 }

@@ -65,3 +65,15 @@
   color: var(--canvas-text-color-v1);
   margin-block-start: var(--spacing-tiny);
 }
+
+
+
+
+@include respond(tablet-large) {
+  .cp-quote {
+    blockquote {
+      font-size: var(--typescale-title-large);
+      line-height: var(--leading-small);
+    }
+  }
+}

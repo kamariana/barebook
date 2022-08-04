@@ -1,7 +1,7 @@
 // Block
 .ob-contain {
   max-width: var(--contain-size-default);
-  padding: 0 var(--padding);
+  padding: 0 var(--spacing-default);
   margin: 0 auto;
 }
 
@@ -32,16 +32,11 @@
     max-width: var(--contain-size-huge);
   }
 
-  .ob-contain--size-full {
-    max-width: 100%;
-  }
-
-
 
 
 // MQs
 @include respond(tablet-large) {
   .ob-contain {
-    --padding: var(--spacing-medium);
+    padding: 0 var(--spacing-medium);
   }
 }
