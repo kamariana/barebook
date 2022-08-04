@@ -1,4 +1,26 @@
-// Text Sizes
+// Boxes
+.ut-text-box {
+  @include owl(--spacing-default);
+
+  & > :last-child {
+    margin-block-start: var(--spacing-medium);
+  }
+}
+
+.ut-text-box-auto {
+  
+  & > :nth-last-child(2) {
+    margin-block-end: var(--spacing-medium);
+  }
+
+  & > :last-child { 
+    margin-block-start: auto;
+  }
+}
+
+
+
+// Sizes
 .ut-lead-text {
   font-size: var(--lead-text);
 }
@@ -30,8 +52,3 @@
     line-height: var(--leading-small);
   }
 }
-
-
-// @include respond(laptop-small) {
-
-// }
