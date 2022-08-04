@@ -1,31 +1,53 @@
 .cp-card {
   @include dp-flex;
   @include dp-flex-direction-column;
-  border-radius: var(--shape-rounded-large);
+  border-radius: var(--shape-rounded-medium);
   position: relative;
   overflow: hidden;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    .cp-card__link {
+      color:  var(--link-text-color-hovered);
+    }
+  }
+
+  .cp-card__link {
+    &:focus {
+      color:  var(--link-text-color-focused);
+    }
+  }
+
+  // focus within to match the hover style
+  &:focus-within {
+    outline: 2px dotted var(--link-text-color-focused);
+  }
+  // remove the unnecessary "basic focus style" only where :focus-within is supported.
+  &:focus-within .cp-card__link:focus {
+    outline: none;
+  }
 }
 
   // Modifiers
-  .cp-card--style-minimalist { // light background
-    background-color: var(--canvas-background-color-v2);
-  }
-
-  .cp-card--highlight-bordered { 
-    border: 3px solid var(--interactive-enabled);
-  }
-
   .cp-card--bordered {
     border: 1px solid var(--icon-color);
 
     &:hover {
       border-color: var(--link-text-color-hovered);
+      border-radius: var(--shape-rounded-larger);
+    }
+
+    &:focus-within {
+      outline: 2px solid transparent;
+      border-color: var(--link-text-color-hovered);
+      border-radius: var(--shape-rounded-larger);
     }
   }
 
 
 
-  // Elements
+// Elements
 .cp-card__text-wrapper {
   @include dp-flex;
   @include dp-flex-direction-column;
@@ -35,21 +57,8 @@
   @include dp-flex;
   @include dp-flex-direction-column;
   @include owl(--spacing-default);
-  flex-grow: 1;
   padding: var(--spacing-medium);
-
-  // & > :last-child { use for a stack card
-  //   margin-block-start: auto;
-  // }
-
-  // & > :nth-last-child(2) {
-  //   margin-block-end: var(--spacing-medium);
-  // }
-}
-
-.cp-card__text-media {  
-  @include owl(--spacing-default);
-  font-size: var(--typescale-body-default);
+  flex-grow: 1;
 }
 
 .cp-card__title {
@@ -61,8 +70,28 @@
   color: inherit;
   text-decoration: none;
 
+  &::after {
+    @include pseudo-class;
+    @include pos-abs-object-backward;
+    @include pos-zero-all-sides;
+  }
+
   &:hover {
     color: inherit;
+  }
+}
+
+.cp-carp__link-alt {
+  position: relative;
+  z-index: var(--layer-forward);
+  padding: var(--spacing-medium-small);
+
+  &:hover {
+    color: var(--link-text-color-hovered);
+
+    .ob-icon {
+      fill: var(--link-text-color-hovered);
+    }
   }
 }
 
@@ -73,7 +102,8 @@
 .cp-card__media {
   margin: 0;
   overflow: hidden;
-  border-radius: var(--shape-rounded-large);
+  position: relative;
+  z-index: var(--layer-forward);
 }
 
 .cp-card__img {
@@ -84,77 +114,6 @@
     @include scale-out-on-hover-and-focus;
   }
 }
-
-
-
-.cp-card--link-over {
-  .cp-card__link {
-    &::after {
-      @include pseudo-class;
-      @include pos-abs-object-backward;
-      @include pos-zero-all-sides;
-    }
-  }
-}
-
-// .cp-card--stacked { 
-
-//   .cp-card__media {
-//    order: -1;
-//    margin-block-end: var(--spacing-medium);   
-//   }
-// }
-
-.cp-card--interactive {
-  transition: box-shadow, background 0.35s ease-in;
-
-  // card interactions
-  &:hover,
-  &:focus {
-    box-shadow: var(--elevation-large);
-    background-color: var(--canvas-background-color-v3);
-    cursor: pointer;
-
-    .cp-card__img {
-      @include scale-out-on-hover-and-focus;
-    }
-
-    // .cp-card__icon { //TODO: have this on others
-    //   transform: translateX(var(--spacing-tiny));
-    // }
-  }
-
-  // focus within to match the hover style
-  &:focus-within {
-    box-shadow: var(--elevation-medium);
-    outline: 2px dotted var(--interactive-enabled);
-
-    .cp-card__img {
-      @include scale-out-on-hover-and-focus;
-    }
-  }
-
-  // remove the unnecessary "basic focus style" only where :focus-within is supported.
-  &:focus-within .cp-card__link:focus {
-    outline: none;
-  }
-}
-
-// .cp-card__title--display {
-//   font-size: var(--typescale-display-text-small);
-// }
-
-
-// // States
-// .cp-card__text.flex-grow-off {
-//   flex-grow: unset;
-// }
-
-// .cp-card__text.margin-auto-off {
-//   & > :last-child {
-//     margin-block-start: var(--spacing-medium);
-//   }
-// }
   
 
 
@@ -165,30 +124,6 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
-
-  .cp-card__text-media {
-    display: flex;
-    gap: var(--gutter);
-
-    > * {
-      margin: 0;
-    }
-
-    :first-child {
-      flex: none;
-      margin-block-start: var(--spacing-tiny);
-    }
-  }
- 
-
-  // .cp-card__title {
-  //   font-size: var(--typescale-title-text-large);
-  // }
-
-  // // modifiers
-  // .cp-card--rounded { 
-  //   border-radius: var(--shape-rounded-larger);
-  // }
 }
 
 @include respond(tablet-large) {
@@ -206,10 +141,8 @@
 }
 
 @include respond(laptop-medium) {
-  .cp-card--sides {
-    .cp-card__text--contain {
-      max-width: var(--contain-size-medium-small);
-      padding-inline-start: 10%;
-    }
+  .cp-card__text--contain {
+    max-width: var(--contain-size-medium-small);
+    padding-inline-start: 10%;
   }
 }
