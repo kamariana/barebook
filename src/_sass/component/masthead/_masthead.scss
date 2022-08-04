@@ -12,7 +12,9 @@
 
   // Modifiers
   .cp-masthead--banner {
-    min-height: 50vh;
+    min-height: var(--contain-size-tiny);
+
+    outline: 1px solid red;
   }
 
 
@@ -82,7 +84,7 @@
 @include respond(tablet-large) {
 
   .cp-masthead__text {
-    padding-block-end: var(--spacing-huge);
+    padding-block-start: var(--spacing-mega);
   }
 
   .cp-masthead__title {
@@ -103,7 +105,13 @@
 }
 
 @include respond(laptop-small) {
+  .cp-masthead--banner {
+    min-height: var(--contain-size-small);
+  }
+  
   .cp-masthead__title {
     font-size: var(--typescale-display-large);
   }
 }
+
+
