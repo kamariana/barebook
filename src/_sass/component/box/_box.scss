@@ -1,0 +1,27 @@
+.cp-box {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  @include owl(--spacing-default);
+  border-radius: var(--shape-rounded-medium);
+  overflow: hidden;
+  padding: var(--spacing-medium);
+}
+
+
+  // Modifiers
+  .cp-box--light { // light background
+    background-color: var(--canvas-background-color-v2);
+  }
+
+  .cp-box--highlight-bordered { 
+    border: 3px solid var(--icon-color);
+  }
+
+
+  
+// MQs
+@include respond(tablet-large) {
+  .cp-box {
+    --spacing-medium: var(--spacing-large);
+  }
+}
