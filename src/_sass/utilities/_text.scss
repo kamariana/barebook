@@ -10,6 +10,7 @@
 .ut-text-box-auto {
   
   & > :nth-last-child(2) {
+    margin-block-start: var(--spacing-medium);
     margin-block-end: var(--spacing-medium);
   }
 

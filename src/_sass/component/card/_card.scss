@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease-in;
+  
 
   &:hover {
     cursor: pointer;
@@ -42,6 +43,20 @@
       outline: 2px solid transparent;
       border-color: var(--link-text-color-hovered);
       border-radius: var(--shape-rounded-larger);
+    }
+  }
+
+  .cp-card--fill {
+    background-color: var(--canvas-background-color-darker);
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover {
+      transform: scale3d(1.02, 1.02, 1.02);
+    }
+
+    &:focus-within {
+      transform: scale3d(1.02, 1.02, 1.02);
+      outline: 2px solid transparent;
     }
   }
 
@@ -85,6 +100,7 @@
   position: relative;
   z-index: var(--layer-forward);
   padding: var(--spacing-medium-small);
+  color: inherit;
 
   &:hover {
     color: var(--link-text-color-hovered);

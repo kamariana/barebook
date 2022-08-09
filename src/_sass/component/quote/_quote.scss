@@ -4,7 +4,7 @@
   max-width: var(--contain-size-medium-small);
   margin: var(--spacing-largest) auto;
   text-align: center;
-  color: var(--canvas-text-color-v2);
+  color: var(--canvas-text-color-light);
 
   p {
     position: relative;
@@ -23,7 +23,7 @@
     z-index: var(--layer-backward);
     top: calc(var(--spacing-default) * -1);
     left: calc(var(--spacing-large) * -1);
-    color: var(--canvas-background-color-v4);
+    color: var(--canvas-background-color-darker);
     content: "\201C";
     font-family: var(--typeface-secondary);
     font-size: calc(var(--spacing-largest) * 3);
@@ -62,7 +62,7 @@
 }
 
 .cp-quote__author-role {
-  color: var(--canvas-text-color-v1);
+  color: var(--canvas-text-color-light);
   margin-block-start: var(--spacing-tiny);
 }
 

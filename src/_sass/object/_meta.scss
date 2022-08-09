@@ -2,8 +2,8 @@
   @include reset-list;
   @include dp-flex-gap(--spacing-default);
   @include dp-flex-center-align;
-  margin-block-start: var(--vr);
-  margin-block-end: var(--vr);
+  color: var(--canvas-text-color-dark);
+  font-size: var(--typescale-body-medium);
 }
 
 
@@ -13,7 +13,7 @@
 //   display: flex;
 //   flex-wrap: wrap;
 //   gap: var(--spacing-large);
-//   color: var(--canvas-text-color-v1);
+//   color: var(--canvas-text-color-light);
 
 //   dt {
 //     font-weight: normal;

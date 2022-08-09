@@ -10,11 +10,11 @@
 
   // Modifiers
   .cp-box--light { // light background
-    background-color: var(--canvas-background-color-v2);
+    background-color: var(--canvas-background-color-darker);
   }
 
   .cp-box--highlight-bordered { 
-    border: 3px solid var(--icon-color);
+    border: 3px solid var(--border-color);
   }
 
 

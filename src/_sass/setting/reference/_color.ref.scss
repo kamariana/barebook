@@ -1,18 +1,18 @@
 @mixin ref-color {
   // Neutrals
-  --ref-black: #000000;
-  --ref-white:#ffffff;
+  --ref-black: #000;
+  --ref-white: #fff;
 
-  --ref-neutral-5: #f6f7fb;
-  --ref-neutral-10:#edeef2;
-  --ref-neutral-20:#e1e2e6;
-  --ref-neutral-30:#cfd0d3;
-  --ref-neutral-40:#aaabae;
-  --ref-neutral-50:#898a8d;
-  --ref-neutral-60:#626366;
-  --ref-neutral-70:#4f5053;
-  --ref-neutral-80:#313235;
-  --ref-neutral-90:#111215;
+  --ref-neutral-5:  #f9f9f9;
+  --ref-neutral-10: #f3f3f3;
+  --ref-neutral-20: #eaeaea;
+  --ref-neutral-30: #dadada;
+  --ref-neutral-40: #b7b7b7;
+  --ref-neutral-50: #979797;
+  --ref-neutral-60: #6e6e6e;
+  --ref-neutral-70: #5b5b5b;
+  --ref-neutral-80: #3c3c3c;
+  --ref-neutral-90: #1c1c1c;
 
   // Primary 
   --ref-primary-5: #fef8e3;
@@ -24,19 +24,19 @@
   --ref-primary-60: #F8B82A; // p
   --ref-primary-70: #f7a526;
   --ref-primary-80: #f69522;
-  --ref-primary-90: #f4781d;
+  --ref-primary-90: #142392; // p
 
   // Secondary 
-  --ref-secondary-5: #e2f2ff;
-  --ref-secondary-10: #badcff;
-  --ref-secondary-20: #8cc7ff;
-  --ref-secondary-30: #56b1ff;
-  --ref-secondary-40: #2a9fff;
-  --ref-secondary-50: #008eff;
-  --ref-secondary-60: #1d7fff;
-  --ref-secondary-70: #2a6bf8; // p
-  --ref-secondary-80: #3058e5;
-  --ref-secondary-90: #3633c5;
+  --ref-secondary-5: #e7eaf9;
+  --ref-secondary-10: #c3c9ef;
+  --ref-secondary-20: #9ba6e4;
+  --ref-secondary-30: #7184da;
+  --ref-secondary-40: #5068d2;
+  --ref-secondary-50: #284dc9;
+  --ref-secondary-60: #2145bf;
+  --ref-secondary-70: #143bb3; 
+  --ref-secondary-80: #0130a7; // P
+  --ref-secondary-90: #001c94;
 
   // Accents
   // --ref-red-: #b71c1c;
@@ -84,10 +84,10 @@
   --ref-light-scheme-40: var(--ref-neutral-30);
 
   // Dark Schemes
-  --ref-dark-scheme-50: #3e4156;
-  --ref-dark-scheme-60: #2a2d3e;
-  --ref-dark-scheme-70: #272a39;
-  --ref-dark-scheme-80: #242635;
-  --ref-dark-scheme-90: #212332;
+  --ref-dark-scheme-50: #616f84;
+  --ref-dark-scheme-60: #546173;
+  --ref-dark-scheme-70: #434e5d;
+  --ref-dark-scheme-80: #343c48;
+  --ref-dark-scheme-90: #222831; // P
 }
 

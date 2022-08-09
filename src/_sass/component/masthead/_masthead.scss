@@ -51,7 +51,7 @@
   margin-block-start: var(--spacing-large);
   font-size: var(--lead-text);
   max-width: var(--contain-size-medium-small);
-  color: var(--canvas-text-color-v2);
+  color: var(--canvas-text-color-light);
 }
 
 .cp-masthead__tag {
@@ -74,7 +74,7 @@
       left: -100px;
       width: 64px;
       height: 3px;
-      background-color: var(--icon-color);
+      background-color: var(--border-color);
     }
   }
 

@@ -50,9 +50,9 @@
   --selection-background-color: var(--ref-primary-60);
   --selection-text-color: var(--ref-neutral-90);
 
-  --code-background-color: var(--canvas-background-color-v4);
+  --code-background-color: var(--canvas-background-color-darker);
 
-  --border-color: var(--ref-dark-scheme-50);
+  --border-color: var(--ref-dark-scheme-60);
 
   --icon-color: var(--ref-neutral-40);
   --icon-color-hovered: var(--ref-neutral-30);
@@ -64,24 +64,24 @@
   --primary-focused: var(--ref-primary-80);
   --primary-enabled-text-color: var(--ref-black);
 
-  --link-text-color-enabled: var(--ref-secondary-20);
-  --link-text-color-hovered: var(--ref-secondary-40);
-  --link-text-color-focused: var(--ref-secondary-50);
-  --article-link-text-color-hovered: var(--ref-neutral-5);
-  --article-link-background-color-hovered: var(--ref-secondary-70);
+  --link-text-color-enabled: var(--primary-enabled);
+  --link-text-color-hovered: var(--primary-hovered);
+  --link-text-color-focused: var(--primary-focused);
+  --link-background-color-hovered: var(--primary-enabled);
+  --link-text-color-hovered-alt: var(--ref-neutral-90);
 
   --interactive-enabled: var(--ref-primary-70);
   --interactive-focused: var(--ref-primary-80);
 
   // Variants
-  --canvas-background-color-v1: var(--ref-dark-scheme-80);
-  --canvas-background-color-v2: var(--ref-dark-scheme-70);
-  --canvas-background-color-v3: var(--ref-dark-scheme-60);
-  --canvas-background-color-v4: var(--ref-dark-scheme-50);
-  --canvas-text-color-v1: var(--ref-neutral-30);
-  --canvas-text-color-v2: var(--ref-neutral-40);
+  --canvas-background-color-darker: var(--ref-dark-scheme-80);
+  --canvas-background-color-dark: var(--ref-dark-scheme-70);
+  --canvas-background-color-light: var(--ref-dark-scheme-60);
+  --canvas-background-color-lighter: var(--ref-dark-scheme-50);
+  --canvas-text-color-light: var(--ref-neutral-30);
+  --canvas-text-color-dark: var(--ref-neutral-40);
 
-  --border-color-v1: var(--ref-dark-scheme-70);
+  --border-color-dark: var(--ref-dark-scheme-70);
   
   // Misc
   accent-color: var(--interactive-enabled);
