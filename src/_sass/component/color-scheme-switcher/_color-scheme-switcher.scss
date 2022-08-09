@@ -29,10 +29,12 @@
   opacity: 0;
 
   // State
-  &.is-active {
+  &[aria-pressed="true"] {
     opacity: 1;
   }
 }
+
+
 
 .cp-theme-switcher__icon {
  @include box(--spacing-default);

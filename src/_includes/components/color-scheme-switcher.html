@@ -1,6 +1,6 @@
 <div class="ut-hidden-tablet-medium-no" hidden>
-    <div class="cp-theme-switcher" title="Select a color scheme">
-      <button class="cp-theme-switcher__button cp-theme-switcher__button--dark" title="Dark color scheme">
+    <div class="cp-theme-switcher" role="group" title="Select a color scheme">
+      <button data-color-scheme="dark" class="cp-theme-switcher__button cp-theme-switcher__button--dark" type="button" aria-pressed="false" title="Dark color scheme">
           <svg 
               xmlns="http://www.w3.org/2000/svg" 
               width="16" 
@@ -16,7 +16,7 @@
           <span class="ut-visually-hidden">Dark color scheme</span>
       </button>
     
-      <button class="cp-theme-switcher__button cp-theme-switcher__button--system is-active" title="System color scheme">
+      <button data-color-scheme="system" class="cp-theme-switcher__button cp-theme-switcher__button--system" type="button" aria-pressed="true" title="System color scheme">
         <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="16" 
@@ -32,7 +32,7 @@
           <span class="ut-visually-hidden">System color scheme</span>
       </button>
     
-      <button class="cp-theme-switcher__button  cp-theme-switcher__button--light" title="Light color scheme">
+      <button data-color-scheme="light" class="cp-theme-switcher__button  cp-theme-switcher__button--light" type="button" aria-pressed="false" title="Light color scheme">
         <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="16" 
