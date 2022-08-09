@@ -13,7 +13,7 @@ permalink: /lab
       
       <div class="cp-navbar__contain">
         {% include components/primary-nav.html %}
-        {% include components/theme-switcher.html %}
+        {% include components/color-scheme-switcher.html %}
         {% include components/toggle-nav-icon.html %}
       </div>
     </div>
@@ -21,30 +21,6 @@ permalink: /lab
 
   <div class="cp-masthead" role="banner">
     <div class="ob-contain  cp-masthead__contain">
-      <!-- <div class="cp-masthead__text">
-        
-        <h1 id="title" class="cp-masthead__title cp-masthead__title--preline">
-          Abd Al Ala Camara.
-        </h1>
-
-        <h2 class="cp-masthead__sub-title">
-          I design & build things for the web.
-        </h2>
-    
-        <p class="cp-masthead__lead-text">
-          I'm a design engineer and educator. specializing in building (and occasionally designing) exquisite digital experiences. Currently, I'm focused on building accessible, human-centered products for people and orgs at Camariana Ltd and also teaching at <a href="#">Thuraiya</a>. 
-        </p>
-
-        
-        <span class="ob-tag cp-masthead__tag">
-          Peace be upon you 👋
-        </span>
-
-        <a class="cp-button cp-button--secondary cp-masthead__button" href="#" >
-          Meet Abd Al Ala
-        </a>
-
-      </div> -->
 
       <div class="cp-masthead__text">
         
@@ -53,8 +29,10 @@ permalink: /lab
         </h1>
 
         <p class="cp-masthead__lead-text">
-          Design engineer and educator. specializing in building (and occasionally designing) exquisite digital experiences. 
-          Currently, focused on building accessible, human-centered products for people and orgs at Camariana Ltd and also teaching at <a href="#">Csaydimba</a>. 
+          He's a design engineer and teacher — specializing in building (and occasionally designing) exquisite digital experiences — currently leading design at 
+          <a href="#">Eilix</a>
+          and also teaching at 
+          <a href="#">Csaydimba</a>.
         </p>
         
         <span class="ob-tag cp-masthead__tag">
@@ -73,7 +51,7 @@ permalink: /lab
 <section class="ob-slat">
   <div class="ob-contain ob-contain--owl ob-contain--size-largest">
 
-    <header>
+    <header class="ut-dp-center-block">
       <h2 class="ob-slat__title-preline">
         Services
       </h2>
@@ -162,9 +140,11 @@ permalink: /lab
 <section class="ob-slat">
   <div class="ob-contain ob-contain--owl">
 
-    <h2 class="ut-dp-center">
-      Trusted By:
-    </h2>
+    <header class="ut-dp-center-block">
+      <h2 class="ob-slat__title-preline ob-slat__title-preline--center">
+        Trusted By:
+      </h2>
+    </header>
     
   </div>
 </section>
@@ -285,20 +265,14 @@ permalink: /lab
 
         <ul class="ob-meta">
           <li>
-            React
+            Jekyll
           </li>
           <li>
-            Express
-          </li>
-          <li>
-            Redux
+            SCSS
           </li>
         </ul>
 
         <ul class="ob-meta">
-          <li class="ut-align-apart-left">
-            <span class="cp-button cp-button--text" href="#">Learn More</span>
-          </li>
           <li>
             <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.code }}">
               <svg 
@@ -324,6 +298,12 @@ permalink: /lab
               </svg>
             </a>
           </li>
+          <li class="ut-align-apart-right">
+            <span class="cp-button cp-button--text" href="#">
+              Learn More
+              
+            </span>
+          </li>
         </ul>
       </div>
       <div class="ob-img-backward cp-card__media">
@@ -334,12 +314,245 @@ permalink: /lab
   </div>
 </section>
 
+<section class="ob-slat">
+  <div class="ob-contain ob-contain--owl">
+
+    <header class="ut-dp-center-block">
+      <h2 class="ob-slat__title-preline ob-slat__title-preline--center">
+        Other Projects
+      </h2>
+      <p class="ob-slat__lead-text">
+        A collection of other noteworthy projects, you can <a href="#">see the archive</a> for more
+      </p>
+    </header>
+
+    <ul class="ob-grid ob-grid--columns-three">
+      <li class="cp-card cp-card--fill">
+        <div class="cp-card__text ut-text-box-auto">
+          <h3 class="cp-card__title">
+            <a class="cp-card__link" href="#">Blog application - Front-end</a>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error illum, fugit, deserunt cupiditate sit ut nisi explicabo.
+          </p>
+
+          <ul class="ob-meta">
+            <li>
+              React
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Barebook
+            </li>
+          </ul>
+
+          <ul class="ob-meta">
+            <li class="ut-align-apart-left">
+              <span class="cp-button cp-button--text" href="#">Learn More</span>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.code }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.live }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </li>
+      <li class="cp-card cp-card--fill">
+        <div class="cp-card__text ut-text-box-auto">
+          <h3 class="cp-card__title">
+            <a class="cp-card__link" href="#">Blog application - Front-end</a>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+
+          <ul class="ob-meta">
+            <li>
+              React
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Barebook
+            </li>
+          </ul>
+
+          <ul class="ob-meta">
+            <li class="ut-align-apart-left">
+              <span class="cp-button cp-button--text" href="#">Learn More</span>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.code }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.live }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </li>
+      <li class="cp-card cp-card--fill">
+        <div class="cp-card__text ut-text-box-auto">
+          <h3 class="cp-card__title">
+            <a class="cp-card__link" href="#">Blog application - Front-end</a>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error illum, fugit.
+          </p>
+
+          <ul class="ob-meta">
+            <li>
+              React
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Barebook
+            </li>
+          </ul>
+
+          <ul class="ob-meta">
+            <li class="ut-align-apart-left">
+              <span class="cp-button cp-button--text" href="#">Learn More</span>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.code }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.live }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </li>
+      <li class="cp-card cp-card--fill">
+        <div class="cp-card__text ut-text-box-auto">
+          <h3 class="cp-card__title">
+            <a class="cp-card__link" href="#">Blog application - Front-end</a>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error illum, fugit.
+          </p>
+
+          <ul class="ob-meta">
+            <li>
+              React
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Barebook
+            </li>
+          </ul>
+
+          <ul class="ob-meta">
+            <li class="ut-align-apart-left">
+              <span class="cp-button cp-button--text" href="#">Learn More</span>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.code }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="cp-carp__link-alt" class="cp-button cp-button--icon" href="{{ project.live }}">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  class="ob-icon" 
+                  viewBox="0 0 16 16">
+                  <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
 
 <section class="ob-slat">
   <div class="ob-contain ob-contain--owl ob-contain--size-largest">
 
-    <header class="ob-slat__header">
+    <header class="ob-slat__header-apart">
       <div>
         <h2 class="ob-slat__title-preline">
           TILs
@@ -348,7 +561,7 @@ permalink: /lab
           A collection of facts and opinions
         </p>
       </div>
-      <div class="ut-dp-center">
+      <div>
         <a href="/tils/?ref=cta-home-tils" class="cp-button cp-button--secondary" type="button">
           All TILs
         </a>
