@@ -108,6 +108,10 @@
   .cp-masthead--banner {
     min-height: var(--contain-size-small);
   }
+
+  .cp-masthead__text--align-center {
+    margin: auto;
+  }
   
   .cp-masthead__title {
     font-size: var(--typescale-display-large);
