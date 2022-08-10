@@ -17,7 +17,9 @@
   letter-spacing: 0.03ch;
   text-decoration: none;
   user-select: none;
-  white-space: nowrap;
+  white-space: nowrap;  
+  touch-action: manipulation;
+ 
 }
 
 .cp-button--primary {
@@ -59,6 +61,10 @@
   padding-inline-start:  0;
   padding-inline-end:  0;
 
+  .ob-icon {
+    fill: var(--link-text-color-enabled);
+  }
+
   &:hover {
     color: var(--link-text-color-hovered);
   }
@@ -69,8 +75,6 @@
 }
 
 .cp-button--icon {
-  @include dp-flex;
+  @include dp-flex-gap(--spacing-default);
   @include dp-flex-center;
-  padding: 0;
-  @include box(--spacing-large-medium);
 }
