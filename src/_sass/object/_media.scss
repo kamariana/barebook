@@ -2,9 +2,12 @@
 .ob-media {
   @include dp-flex-gap(--spacing-small);
   align-items: center;
-  margin: 0;
 }
 
+  // Modifiers
+  // .ob-media--align-top {
+  //   align-items: center;
+  // }
 
 
 // Elements
