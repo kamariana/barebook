@@ -13,17 +13,17 @@
   }
 
   .ob-avatar--size-tiny {
-    @include box(2.5rem);
+    @include box(--spacing-large-medium);
   }
   
   .ob-avatar--size-small {
-    @include box(4.5rem);
+    @include box(--spacing-largest);
   }
   
   .ob-avatar--size-medium {
-    @include box(6.5rem);
+    @include box(--spacing-huge);
   }
   
   .ob-avatar--size-large {
-    @include box(8.5rem);
+    @include box(--spacing-mega);
   }
