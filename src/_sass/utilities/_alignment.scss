@@ -3,6 +3,11 @@
   @include dp-flex-center-align;
 }
 
+.ut-dp-inline-apart {
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center-apart;
+}
+
 .ut-dp-center {
   @include dp-flex-gap(--spacing-default);
   @include dp-flex-center;
