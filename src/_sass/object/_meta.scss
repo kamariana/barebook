@@ -3,7 +3,7 @@
   @include dp-flex-gap(--spacing-default);
   @include dp-flex-center-align;
   color: var(--canvas-text-color-dark);
-  font-size: var(--typescale-body-medium);
+  margin-block-start: var(--vr);
 }
 
 
