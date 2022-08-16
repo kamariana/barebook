@@ -1,0 +1,78 @@
+.ob-sides {
+  @include dp-grid;
+  gap: var(--spacing-largest);
+  align-items: center;
+}
+
+
+
+// Elements
+.ob-sides__text {
+  @include dp-flex;
+  @include dp-flex-direction-column;
+  @include owl(--spacing-default);
+  flex-grow: 1;
+}
+
+.ob-sides__button {
+  align-self: start;
+}
+
+
+
+// MQs
+@include respond(tablet-tiny) {
+
+  .ob-sides__text {
+    padding: 0 var(--spacing-larger);
+    grid-row: 1;
+  }
+
+  .ob-sides__media {
+    position: relative;
+    min-height: 300px;
+    grid-row: 2;
+  }
+
+}
+
+@include respond(tablet-large) {
+  .ob-sides {
+    grid-template-columns: repeat(12, 1fr);
+    &.reversed {
+      .ob-sides__text {
+        grid-column: 7/span 6;
+      }
+    
+      .ob-sides__media {
+        grid-column: 1/span 6;
+      }
+    }
+  }
+
+  .ob-sides__text {
+    padding: 0;
+    grid-column: 1/span 6;
+  }
+
+  .ob-sides__media {
+    grid-column: 7/span 6;
+    grid-row: 1;
+  }
+
+}
+
+@include respond(laptop-medium) {
+  
+  .ob-sides {
+    gap: var(--spacing-large);
+  }
+
+  .ob-sides__text {
+    padding: 0 var(--spacing-largest);
+  }
+
+  .ob-sides__text--contain {
+    max-width: var(--contain-size-medium-small);
+  }
+}
