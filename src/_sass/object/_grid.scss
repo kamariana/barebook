@@ -3,42 +3,43 @@
   @include reset-list;
   @include dp-grid;
   gap: var(--gutter);
+  //grid-template-columns: repeat(3, 1fr);
 }
 
+  // Modifers
+ 
+
+
+// Elements
+.ob-grid__column {
+  // &.is-two    { grid-column: 1/span 2; }
+  // &.is-three  { grid-column: 1/span 3; }
+  // &.is-four   { grid-column: 1/span 4; }
+  // &.is-five   { grid-column: 1/span 5; }
+  // &.is-six    { grid-column: 1/span 6; }
+  // &.is-seven  { grid-column: 1/span 7; }
+  // &.is-eight  { grid-column: 1/span 8; }
+  // &.is-nine   { grid-column: 1/span 9; }
+  // &.is-ten    { grid-column: 1/span 10; }
+}
 
 
 // MQs
 @include respond(tablet-tiny) {
-  .ob-grid--align-center {
-    align-items: center;
-  }
 
   .ob-grid {
+    --gutter: var(--spacing-large);
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @include respond(tablet-large) {
   .ob-grid {
-    --gutter: var(--spacing-large);
-  }  
-
-  .ob-grid--columns-three {
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  }
-  
-  .ob-grid--columns-four {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-
-  .ob-grid--columns-two-third {
-    grid-template-columns: 1.5fr 1fr;
-  }
-
-  .ob-grid--columns-two-third-reverse {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   }
 }
+
+
 
 @include respond(laptop-medium) {
   .ob-grid--layout-columns {
