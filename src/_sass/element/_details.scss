@@ -7,6 +7,8 @@ summary::-webkit-details-marker {
 }
 
 summary {
+  position: relative;
   display: list-item;
   list-style: none;
+  cursor: pointer;
 }
