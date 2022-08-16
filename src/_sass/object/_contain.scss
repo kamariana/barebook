@@ -1,8 +1,12 @@
 // Block
 .ob-contain {
   max-width: var(--contain-size-default);
-  padding: 0 var(--spacing-default);
+  padding: 0 var(--spacing-medium);
   margin: 0 auto;
+
+  .ob-contain {
+    padding: 0;    
+  }
 }
 
 
@@ -10,9 +14,6 @@
   .ob-contain--owl {
     > *:not(first-child) {
       margin-block-start: var(--spacing-larger);
-    }
-    .ob-contain {
-      padding: 0;    
     }
   }
 
@@ -35,8 +36,14 @@
 
 
 // MQs
+@include respond(tablet-tiny) {
+  .ob-contain {
+    padding: 0 var(--spacing-large);
+  }
+}
+
 @include respond(tablet-large) {
   .ob-contain {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-largest);
   }
 }
