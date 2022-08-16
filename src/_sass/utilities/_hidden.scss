@@ -51,12 +51,12 @@
   }
 }  
 
-@include respond(desktop) {
-  .ut-hidden-desktop-yes {
+@include respond(laptop-large) {
+  .ut-hidden-laptop-large-yes {
     display: none !important;
   }
 
-  .ut-hidden-desktop-no {
+  .ut-hidden-laptop-large-no {
     display: block !important;
   }
 } 
