@@ -2,20 +2,32 @@
 .cp-navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
   z-index: var(--layer-front);
   padding-block-start: var(--spacing-default);
   padding-block-end: var(--spacing-default);
-  background-color: rgba(0, 0, 0, 0.75);
+  transition: height 0.35s;
+  //background-color: rgba(0, 0, 0, 0.75);
+
+  &.on-scroll-down {
+    box-shadow: var(--canvas-shadow);
+    transition: 
+      transform 0.35s, 
+      background 0.35s;
+  }
 }
 
 
-// Elements
-.cp-navbar__contain {
-  @include dp-flex-gap(--spacing-largest);
-  @include dp-flex-center-apart;
-  padding: 0 var(--spacing-default);
 
+
+// Elements
+.cp-navbar__align-apart {
+  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-center-apart;
+}
+.cp-navbar__contain {
+  padding: 0 var(--spacing-default);
   .cp-navbar__contain {
     padding: 0;
   }
