@@ -1,4 +1,5 @@
 .ob-tag {
+  @include reset-list;
   display: inline-flex;
   font-size: var(--typescale-body-medium);
   order: -1;
@@ -11,3 +12,14 @@
     text-transform: uppercase;
     font-size: var(--typescale-body-small);
   }
+
+
+// Elements
+.ob-tag__list-item {
+
+}
+
+.ob-tag__link {
+  text-decoration: none;
+  color: var(--canvas-text-color-dark);
+}
