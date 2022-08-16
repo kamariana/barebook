@@ -1,0 +1,48 @@
+// Block
+.cp-toc {
+    
+}
+
+
+// Elements
+.cp-toc__title {
+  font-size: var(--typescale-title-small);
+}
+
+.cp-toc__nav {
+  margin-block-start: var(--vr);
+}
+
+.cp-toc__list {
+  @include reset-list;
+
+  .cp-toc__list {
+    margin-inline-start: var(--spacing-medium);
+  }
+}
+
+.cp-toc__link {
+  color: var(--canvas-text);
+  text-decoration: none;
+  display: block;
+  padding: var(--spacing-tiny) 0;
+  border-left: 3px solid transparent;
+  font-size: var(--typescale-body-default);
+
+  &:hover {
+    color: var(--link-text-color-hovered);
+  }
+
+  &:focus {
+    color: var(--link-text-color-focused);
+  }
+}
+
+
+
+// States
+.cp-toc__link {
+  &.is-active {
+    color: var(--link-text-color-focused);
+  }
+}
