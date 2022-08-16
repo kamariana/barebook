@@ -76,7 +76,7 @@
     }
   }
 
-
+ 
 
 // Elements
 .cp-card__text-wrapper {
@@ -155,14 +155,6 @@
 
 
 // MQs
-@include respond(tablet-small) {
-  .cp-card--sides {
-    @include dp-grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-}
-
 @include respond(tablet-large) {
   .cp-card__text {
     padding: var(--spacing-large);
@@ -182,8 +174,5 @@
 }
 
 @include respond(laptop-medium) {
-  .cp-card__text--contain {
-    max-width: var(--contain-size-medium-small);
-    padding-inline-start: 10%;
-  }
+  
 }
