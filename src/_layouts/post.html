@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+<main>
+
+  <article class="lo-article">
+
+    <header>
+      <div class="lo-article__contain lo-article__contain--header">
+
+        <h1 class="lo-article__title">
+          {{ page.title }}
+        </h1>
+
+        {% if page.description %}
+          <h2 class="lo-article__sub-title">
+            {{ page.description }}
+          </h2>
+        {% endif %}
+
+        <ul class="ob-tag ob-tag--upcase">
+          {% if post %}
+          {% assign categories = post.meta.categories %}
+          {% else %}
+          {% assign categories = page.meta.categories %}
+          {% endif %}
+
+          {% for category in categories %}
+            <li class="ob-tag__list-item">
+              <a class="ob-tag__link" href="{{site.baseurl}}/categories/#{{category|slugize}}">
+              {{category}}
+              </a>
+            </li>
+            {% unless forloop.last %}
+              ,&nbsp;
+            {% endunless %}
+          {% endfor %}
+        </ul>
+
+        {% if page.meta %}
+          <ul class="ob-meta lo-article__meta">
+            <li>
+              <span>
+                Published:
+              </span>
+              <time class="js-posted-on" datetime="{{ page.meta.date | date_to_xmlschema }}">
+                <span class="js-posted-ago"></span> on 
+                {{ page.meta.date | date: "%d %b, %y" }}
+              </time>
+            </li>
+            <li aria-hidden="true">
+              -
+            </li>
+            <li>
+              <span>
+                <abbr title="Estimated Reading Time">ERT</abbr>
+              </span>
+              <time datetime="">
+                {{ page.meta.ert }}
+              </time>
+            </li>
+          </ul>
+        {% endif %}
+
+      </div>
+
+      {% if page.masthead %}
+        <figure class="ob-pageless-media ob-pageless-media--third lo-article__media" role="banner">
+          <picture>
+            <source srcset="{{ page.masthead.path }}" media="(max-width: 1024px)">
+            <source srcset="{{ page.masthead.path_large }}" media="(min-width: 1025px)">
+            <img class="ob-pageless-media__img" src="{{ page.masthead.path }}" alt="{{ page.masthead.alternate }}"/>
+          </picture>
+          <figcaption class="ob-pageless-media__caption">
+            {{ page.masthead.caption }}
+          </figcaption>
+        </figure>
+      {% endif %}
+
+    </header>
+
+    <div class="lo-article__contain lo-article__contain--content lo-article__sidebar">
+
+      <div class="lo-article__content">
+
+       {% include components/toc-mobile.html %}
+
+        {{ content}}
+
+      </div>
+
+      <aside class="lo-article__aside ut-hidden-laptop-large-no" hidden>
+
+        {% include components/toc.html %}
+      </aside>
+    </div>
+
+    <footer class="lo-article__footer">
+
+    </footer>
+  </article>
+
+</main>
+  
