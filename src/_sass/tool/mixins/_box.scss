@@ -1,4 +1,4 @@
 @mixin box($size) {
-  width: var( $size);
-  height: var( $size);
+  width: var($size);
+  height: var($size);
 }

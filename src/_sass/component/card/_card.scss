@@ -1,32 +1,32 @@
+// Block
 .cp-card {
-  @include dp-flex;
-  @include dp-flex-direction-column;
-  border-radius: var(--shape-rounded-medium);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--rounded-medium);
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease-in;
-  
 
   &:hover {
-    cursor: pointer;
-    .cp-card__link {
-      color:  var(--link-text-color-hovered);
-    }
-
     .cp-card__button-action {
       opacity: 1;
     }
   }
 
   .cp-card__link {
+    &:hover {
+      color:  var(--link-hovered-surface);
+      cursor: pointer;
+    }
+
     &:focus {
-      color:  var(--link-text-color-focused);
+      color:  var(--link-focused-surface);
     }
   }
 
   // focus within to match the hover style
   &:focus-within {
-    outline: 2px dotted var(--link-text-color-focused);
+    outline: 2px dotted var(--link-focused-surface);
   }
   // remove the unnecessary "basic focus style" only where :focus-within is supported.
   &:focus-within .cp-card__link:focus {
@@ -34,67 +34,25 @@
   }
 }
 
-  // Modifiers
-  .cp-card--bordered {
-    border: 1px solid var(--icon-color);
-
-    &:hover {
-      border-color: var(--link-text-color-hovered);
-      border-radius: var(--shape-rounded-larger);
-    }
-
-    &:focus-within {
-      outline: 2px solid transparent;
-      border-color: var(--link-text-color-hovered);
-      border-radius: var(--shape-rounded-larger);
-    }
-  }
-
-  .cp-card--fill {
-    background-color: var(--canvas-background-color-darker);
-    transition: all 0.3s ease-in-out 0s;
-
-    &:hover {
-      transform: scale3d(1.02, 1.02, 1.02);
-    }
-
-    &:focus-within {
-      transform: scale3d(1.02, 1.02, 1.02);
-      outline: 2px solid transparent;
-    }
-  }
-
-  .cp-card--stack {
-    padding: var(--spacing-default);
-
-    .cp-card__text {
-      padding: 0;
-    }
-    
-    .cp-card__media {
-      order: -1;
-    }
-  }
-
- 
 
 // Elements
 .cp-card__text-wrapper {
-  @include dp-flex;
-  @include dp-flex-direction-column;
+  display: flex;
+  flex-direction: column;
 }
 
 .cp-card__text {
-  @include dp-flex;
-  @include dp-flex-direction-column;
-  @include owl(--spacing-default);
+  @include owl(--spacing-medium);
+  display: flex;
+  flex-direction: column;
   padding: var(--spacing-medium);
   flex-grow: 1;
 }
 
 .cp-card__title {
-  font-size: var(--typescale-title-medium);
-  font-weight: var(--typeweight-200);
+  font-size: var(--typescale-title-small);
+  font-weight: var(--typeweight-300);
+  line-height: var(--leading-medium);
 }
 
 .cp-card__link {
@@ -112,19 +70,10 @@
   }
 }
 
+// Button that will standout to be clickable in a entire link card
 .cp-carp__link-alt {
   position: relative;
-  z-index: var(--layer-forward);
-  padding: var(--spacing-medium-small);
-  color: inherit;
-
-  &:hover {
-    color: var(--link-text-color-hovered);
-
-    .ob-icon {
-      fill: var(--link-text-color-hovered);
-    }
-  }
+  z-index: var(--layer-forward); 
 }
 
 .cp-card__button {
@@ -137,10 +86,12 @@
 }
 
 .cp-card__media {
+  @include fit-media-into-container;
+  border-radius: var(--shape-rounded-medium);
+  min-height: var(--contain-size-tiny-small);
   margin: 0;
   overflow: hidden;
-  position: relative;
-  z-index: var(--layer-forward);
+  background-color: var(--canvas-background-color-fade);
 }
 
 .cp-card__img {
@@ -151,28 +102,117 @@
     @include scale-out-on-hover-and-focus;
   }
 }
-  
+
+.cp-card__brand {
+  width: 84px;
+}
+
+
+  // Modifiers
+  .cp-card--bordered {
+    border: 1px solid var(--outline);
+
+    &:hover {
+      border-color: var(--link-hovered-surface);
+      border-radius: var(--rounded-extra-large);
+    }
+
+    &:focus-within {
+      outline: 2px solid transparent;
+      border-color: var(--link-hovered-surface);
+      border-radius: var(--rounded-extra-large);
+    }
+
+    .ob-tag {
+      margin-block-start: 0;
+    }
+  }
+
+  .cp-card--fill {
+    background-color: var(--canvas-background-color-fader);
+    transition: all 0.3s ease-in-out 0s;
+    border: 1px solid var(--border-color-light);
+    box-shadow: var(--elevation-neutral);
+    padding: var(--spacing-large);
+
+    .cp-card__text {
+      padding: 0;
+    }
+
+    &:hover {
+      transform: scale3d(1.02, 1.02, 1.02);
+    }
+
+    &:focus-within {
+      transform: scale3d(1.02, 1.02, 1.02);
+      outline: 2px solid transparent;
+    }
+  }
+
+  .cp-card--stack {
+    .cp-card__text {
+      padding-block-start: 0
+      
+    }
+    .cp-card__media {
+      border-radius: var(--rounded-medium);
+      order: -1;
+    }
+  }
+
+  .cp-card--sides {
+    display: grid;
+    align-items: center;
+    border-radius: 0;
+
+    .cp-card__media {
+      @include pos-rel-object-forward;
+      cursor: zoom-in;
+    }
+    
+  }
 
 
 // MQs
+@include respond(tablet-tiny) {
+  .cp-card--sides {
+    .cp-card__text {
+      padding-inline-start: var(--gutter-extra-large);
+      padding-inline-end: var(--gutter-extra-large);
+    }
+  }
+}
+
 @include respond(tablet-large) {
   .cp-card__text {
     padding: var(--spacing-large);
   }
 
   .cp-card__title {
-    font-size: var(--typescale-title-large);
+    font-size: var(--typescale-title-medium);
+    line-height: var(--leading-small);
   }
 
-  .cp-card__title--display {
-    font-size: var(--typescale-display-small);
-  }
+  .cp-card--sides {
+    grid-template-columns: 1fr 1fr;
 
-  .cp-card--stack {
-    padding: var(--spacing-large);
+    .cp-card__text {
+      padding-inline-start: var(--gutter-large);
+      padding-inline-end: var(--gutter-large);
+    }
   }
 }
 
 @include respond(laptop-medium) {
-  
+  .cp-card__title {
+    font-size: var(--typescale-title-large);
+  }
+
+  .cp-card__text--contain {
+    max-width: var(--contain-medium);
+  }
+
+  .cp-card--fill {
+    padding: var(--spacing-extra-large);
+  }
 }

@@ -4,26 +4,26 @@
 }
 
   // Modifiers 
-  .ob-avatar--shape-circle {
-    border-radius: var(--shape-rounded-full);
+  .ob-avatar--circle {
+    border-radius: var(--rounded-full);
   }
 
-  .ob-avatar--shape-rounded {
-    border-radius: var(--shape-rounded-medium);
+  .ob-avatar--rounded {
+    border-radius: var(--rounded-medium);
   }
 
-  .ob-avatar--size-tiny {
-    @include box(--spacing-large-medium);
+  .ob-avatar-small {
+    @include box(--avatar-small);
   }
   
-  .ob-avatar--size-small {
-    @include box(--spacing-largest);
+  .ob-avatar-medium {
+    @include box(--avatar-medium);
   }
   
-  .ob-avatar--size-medium {
-    @include box(--spacing-huge);
+  .ob-avatar-large {
+    @include box(--avatar-large);
   }
-  
-  .ob-avatar--size-large {
-    @include box(--spacing-mega);
+
+  .ob-avatar-extra-large {
+    @include box(--avatar-extra-large);
   }

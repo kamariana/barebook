@@ -1,10 +1,24 @@
 <nav class="cp-primary-nav ut-hidden-tablet-medium-no" aria-label="Primary Navigation">
   <ul class="cp-primary-nav__list">
-    {% for item in site.data.navigations.navbar %}
+    {% for item in site.data.navigation.primary %}
     {% assign url = item.url | downcase %}
       <li>
         <a href="{{ url }}" class="cp-primary-nav__link">{{ item.title }}</a>
       </li>
     {% endfor %}
+    <li>
+      <button class="cp-primary-nav__link cp-primary-nav__link--button js-open-nav" title="More">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="16" 
+          height="16" 
+          class="ob-icon" 
+          viewBox="0 0 16 16"
+        >
+          <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+        </svg>
+        <span class="ut-visually-hidden">More Links</span>
+      </button>
+    </li>
   </ul>
 </nav>

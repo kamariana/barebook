@@ -1,31 +1,15 @@
-@mixin dp-flex {
-  display: flex;
-}
-
-@mixin dp-flex-gap($gap) {
+@mixin dp-flex-wrap-gap($gap) {
   display: flex;
   flex-wrap: wrap;
   gap: var($gap);
 }
 
-@mixin dp-flex-direction-column {
-  flex-direction: column;
-}
-
-@mixin dp-flex-direction-row {
-  flex-direction: row;
-}
-
-@mixin dp-flex-center-align {
+@mixin dp-flex-center {
   align-items: center;
+  justify-content: center;
 }
 
 @mixin dp-flex-center-apart {
   align-items: center;
   justify-content: space-between;
-}
-
-@mixin dp-flex-center {
-  align-items: center;
-  justify-content: center;
 }

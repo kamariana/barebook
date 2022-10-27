@@ -14,16 +14,17 @@
 }
 
 .ob-off-canvas-nav__header {
-  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-wrap-gap(--gutter-small);
   @include dp-flex-center-apart;
-  padding: var(--spacing-default);  
+  padding: var(--spacing-large) var(--spacing-medium);  
 }
 
 .ob-off-canvas-nav__main {
   margin-top: auto;
   margin-bottom: auto;
+  @include owl(--spacing-large);
 }
 
 .ob-off-canvas-nav__footer {
-  padding: var(--spacing-default);
+  padding: var(--spacing-large) var(--spacing-medium);  
 }

@@ -6,17 +6,34 @@
       {% include components/toggle-nav-icon-close.html %}
     </div>
 
-    <div class="ob-off-canvas-nav__main">
+    <div class="cp-fullscreen-navs ob-off-canvas-nav__main">
       <nav class="cp-fullscreen-nav">
           <ul class="cp-fullscreen-nav__list">
-              {% for item in site.data.navigations.navbar %}
-              {% assign url = item.url | downcase %}
+              {% for item in site.data.navigation.primary %}
                 <li>
-                  <a href="{{ .url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                  <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
                 </li>
               {% endfor %}
           </ul>
       </nav>
+      <nav class="cp-fullscreen-nav">
+        <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
+            {% for item in site.data.navigation.secondary %}
+              <li>
+                <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <nav class="cp-fullscreen-nav">
+      <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
+          {% for item in site.data.navigation.tertiary %}
+            <li>
+              <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+      </ul>
+  </nav>
     </div>
 
   </div>

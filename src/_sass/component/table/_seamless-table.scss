@@ -1,0 +1,21 @@
+// Block
+.cp-seamless-table {
+
+}
+
+.cp-seamless-table__head {
+  border-bottom: 2px solid var(--outline);
+}
+
+.cp-seamless-table__body {
+  tr:nth-child(even) {
+    background-color: var(--canvas-fade);
+  }
+}
+
+// Modifiers
+.cp-seamless-table--center {
+  th, td {
+    text-align: center;
+  }
+}

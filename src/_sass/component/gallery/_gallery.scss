@@ -1,0 +1,62 @@
+.cp-gallery {
+  @include reset-list;
+  display: grid;
+  gap: var(--spacing-tiny);
+  grid-auto-flow: dense;
+}
+
+
+
+// ELements
+.cp-gallery__img {
+  @include fit-media-into-container;
+  cursor: zoom-in;
+}
+
+
+
+
+
+//Modifiers
+.cp-gallery--with-gap {
+  gap: var(--gutter-extra-small);
+}
+
+
+
+
+
+// MQs
+@include respond(tablet-tiny) {
+  .cp-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+} 
+
+
+@include respond(tablet-medium) {
+
+  .cp-gallery.is-half {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cp-gallery__item.is-span-wide {
+    grid-column: span 2;
+  }
+    
+  .cp-gallery__item.is-span-tall {
+    grid-row: span 2;
+  }
+
+  .cp-gallery__item.is-span-box {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+} 
+
+@include respond(laptop-small) {
+  .cp-gallery.is-third {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} 

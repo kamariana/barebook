@@ -1,0 +1,12 @@
+<ul class="ob-tag ob-tag--upcase">
+  {% for category in item.categories %}
+    <li>
+      <a class="ob-tag__link" href="{{site.baseurl}}/categories/#{{category|slugize}}">
+        {{category}}
+      </a>
+    </li>
+    {% unless forloop.last %}
+      ,&nbsp;
+    {% endunless %}
+  {% endfor %}
+</ul>

@@ -1,12 +1,11 @@
 // References
-@import './reference/color.ref';
 @import './reference/sizing.ref';
+@import './reference/color.ref';
 
 // Context
-@import './context/canvas.con';
-@import './context/syntax-highlighting.con';
 @import './context/typography.con';
 @import './context/color.con';
+@import './context/syntax-highlighting.con';
 @import './context/spacing.con';
 @import './context/shape.con';
 @import './context/dimension.con';
@@ -18,19 +17,18 @@
 :root {
   // References
   @include ref-color;
-  @include ref-light-and-dark-schemes;
   @include ref-sizing;
 
   // Context
+  @include con-typography;
   @include con-light-canvas;
   @include con-dark-canvas;
-  @include con-light-syntax-highlighting;
-  @include con-dark-syntax-highlighting;
-  @include con-color;
+  @include con-consistent-color;
   @include con-color-transparent;
   @include con-color-notification;
+  @include con-light-syntax-highlighting;
+  @include con-dark-syntax-highlighting;
   @include con-elevation;
-  @include con-typography;
   @include con-spacing;
   @include con-shape;
   @include con-dimension;
@@ -38,11 +36,6 @@
 
   color-scheme: light dark;  
 }
-
-
-
-
-
 
 
 

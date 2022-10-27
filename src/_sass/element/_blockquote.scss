@@ -1,10 +1,11 @@
 blockquote {
-  @include owl(--spacing-default);
-  padding: var(--spacing-default);
-  border-left: 4px solid var(--border-color);
+  @include owl(--gutter-extra-small);
+  border-left: 4px solid var(--outline);
   font-family: var(--typeface-secondary);
-  font-size: var(--lead-text);
-  margin: var(--vr-figures) var(--spacing-default);
+  font-size: var(--lead-text-small);
+  margin: var(--gutter-small) var(--gutter-extra-small);
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  border-radius: var(--rounded-small);
 
   > p {
     margin-block-start: 0;
@@ -19,16 +20,7 @@ q {
 // MQs
 @include respond(tablet-large) {
   blockquote {
-    --lead-text: var(--typescale-title-medium);
-    padding: var(--spacing-medium);
-    line-height: var(--leading-medium);
-    margin: var(--vr-figures) var(--spacing-large);
-  }
-}
-
-
-@include respond(laptop-large) {
-  blockquote {
-    padding: var(--spacing-large)
+    font-size: var(--lead-text-large);
+    line-height: var(--leading-large);
   }
 }

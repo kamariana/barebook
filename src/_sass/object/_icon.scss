@@ -1,18 +1,18 @@
 // Block
 .ob-icon {
-  @include box(--spacing-medium);
+  @include box(--icon-small);
   display: inline-flex;
   align-items: center;
-  fill: var(--icon-color);
+  fill: var(--surface-fader);
 
   &:hover {
-    fill: var(--icon-color-hovered);
+    fill: var(--surface-fade);
   }
 }
 
   // Modifiers
-  .ob-icon--size-larger {
-    @include box(--spacing-larger);
+  .ob-icon--size-large {
+    @include box(--icon-large);
   }
 
   .ob-icon--fill-white {
@@ -31,11 +31,11 @@
     }
   }
 
-  .ob-icon--fill-primary {
-    fill: var(--primary-enabled);
+  .ob-icon--fill-link {
+    fill: var(--link-enabled-surface);
 
     &:hover {
-      fill: var(--primary-hovered);;
+      fill: var(--link-hovered-surface);
     }
   }
 

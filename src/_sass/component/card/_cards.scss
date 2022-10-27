@@ -3,20 +3,23 @@
 }
 
 
+
 // Modifiers
 .cp-cards--alternate {
-  .cp-card__text {
-    position: relative;
+  &.with-gap {
+    @include owl(--gutter-small);
   }
 }
 
 
+
 // MQs
-@include respond(tablet-small) {
+@include respond(tablet-large) {
   .cp-cards--alternate {
-    > *:nth-child(even)
-    > *:last-child {
-      order: -1;
+    > *:nth-child(even) {
+      & > :last-child {
+        order: -1;
+      }
     }
   }
 }

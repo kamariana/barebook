@@ -1,7 +1,7 @@
 ul,
 ol {
-  padding-inline-start: var(--spacing-default);
-  margin-inline-start: var(--spacing-default);
+  margin-inline-start: var(--gutter-extra-small);
+  padding-inline-start: var(--spacing-small);
 }
 
 ul ul,
@@ -22,6 +22,6 @@ dt {
 @include respond(tablet-large) {
   ul,
   ol {
-    padding-inline-start: var(--spacing-large);
+    padding-inline-start: var(--spacing-extra-large);
   }
 }

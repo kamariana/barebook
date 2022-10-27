@@ -1,7 +1,8 @@
 // Block
 .ob-contain {
-  max-width: var(--contain-size-default);
-  padding: 0 var(--spacing-medium);
+  max-width: var(--page-medium);
+  padding-inline-start: var(--gutter-extra-small);
+  padding-inline-end: var(--gutter-extra-small);
   margin: 0 auto;
 
   .ob-contain {
@@ -9,41 +10,57 @@
   }
 }
 
-
   // Modifiers
+  .ob-contain--article {
+    max-width: var(--page-journal);
+    font-size: var(--typescale-body-larger);
+    line-height: var(--leading-extra-large);
+    margin-block-start: var(--gutter-extra-small);
+    margin-block-end: var(--gutter-extra-small);
+  }
+
   .ob-contain--owl {
-    > *:not(first-child) {
-      margin-block-start: var(--spacing-larger);
-    }
+    @include owl(--gutter-small);
   }
 
-  .ob-contain--size-large {
-    max-width: var(--contain-size-large);
+  .ob-contain--page-extra-small {
+    max-width: var(--page-extra-small); // 1024
   }
 
-  .ob-contain--size-larger {
-    max-width: var(--contain-size-larger);
+  .ob-contain--page-small {
+    max-width: var(--page-extra-small); // 1240
   }
 
-  .ob-contain--size-largest {
-    max-width: var(--contain-size-largest);
+  .ob-contain--page-large {
+    max-width: var(--page-large); // 1600
   }
 
-  .ob-contain--size-huge {
-    max-width: var(--contain-size-huge);
+  .ob-contain--page-extra-large {
+    max-width: var(--page-extra-large); // 1920
   }
-
 
 
 // MQs
 @include respond(tablet-tiny) {
   .ob-contain {
-    padding: 0 var(--spacing-large);
+    padding-inline-start: var(--gutter-extra-large);
+    padding-inline-end: var(--gutter-extra-large);
   }
 }
 
 @include respond(tablet-large) {
+  .ob-contain--article {
+    font-size: var(--typescale-title-small);
+  }
+}
+
+@include respond(laptop-medium) {
   .ob-contain {
-    padding: 0 var(--spacing-largest);
+    padding-inline-start: var(--gutter-extra-small);
+    padding-inline-end: var(--gutter-extra-small);
+  }
+
+  .ob-contain--owl {
+    @include owl(--gutter-large);
   }
 }

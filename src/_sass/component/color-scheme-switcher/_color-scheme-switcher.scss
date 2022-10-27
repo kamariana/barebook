@@ -4,12 +4,12 @@
   display: flex;
   align-items: center;
   width: 72px;
-  height: 20px;
-  border-radius: var(--shape-rounded-larger);
-  border: 2px solid var(--icon-color);
+  height: 24px;
+  border-radius: var(--rounded-extra-large);
+  border: 2px solid var(--outline-darkest);
 
   &:hover {
-    border-color: var(--icon-color-hovered);
+    border-color: var(--outline-darker);
   }
 }
 
@@ -18,15 +18,19 @@
 .cp-theme-switcher__button {
   position: absolute;
   border: none;
-  background: var(--canvas-background-color);
-  border-radius: var(--shape-rounded-full);
-  border: 2px solid var(--icon-color);
-  @include box(--spacing-large);
-  @include dp-flex;
-  @include dp-flex-center;
+  background: var(--canvas);
+  border-radius: var(--rounded-full);
+  border: 2px solid var(--outline-darkest);
+  @include box(--shape-extra-small);
+  display: flex;
+  align-items: center;
   cursor: pointer;
   appearance: none;
   opacity: 0;
+
+  &:hover {
+    border-color: var(--outline-darker);
+  }
 
   // State
   &[aria-pressed="true"] {
@@ -37,7 +41,7 @@
 
 
 .cp-theme-switcher__icon {
- @include box(--spacing-default);
+ @include box(--icon-small);
 }
 
   // Elements Modifiers

@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-
-{% include components/banner.html %}
+{% if page.home %}
+  {% include components/masthead.html %}
+{% elsif page.banner %}
+  {% include components/banner.html %}
+{% else %}
+  
+{% endif %}
 
 <main>
   {{ content }}

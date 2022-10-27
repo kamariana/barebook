@@ -12,12 +12,12 @@ html {
 }
 
 body {
-  background-color: var(--canvas-background-color);
-  color: var(--canvas-text-color);
+  background-color: var(--canvas);
+  color: var(--surface);
   font-family: var(--typeface-primary);
-  font-size: var(--base-font-size);
+  font-size: var(--typescale-body-medium);
   font-weight: var(--typeweight-400);
-  line-height: var(--base-line-height);
+  line-height: var(--leading-body-small);
   overflow-y: auto;
   scroll-behavior: smooth;
 }
@@ -32,7 +32,13 @@ hr,
 table,
 figure,
 pre {
-  margin-block-start: var(--vr);
+  margin-block-start: var(--gutter-extra-small);
+}
+
+p {
+  &:first-child {
+    margin-block-start: 0;
+  }
 }
 
 img,
@@ -66,7 +72,7 @@ strong {
 }
 
 small {
-  font-size: var(--typescale-body-small);
+  font-size: var(--typescale-body-extra-small);
 }
 
 sub,
@@ -96,7 +102,25 @@ template {
 // MQs 
 @include respond(tablet-large) {
   body {
-    --base-font-size: var(--typescale-body-larger);
-    --base-line-height: var(--leading-large);
+    --base-font-size: var(--typescale-body-large);
+    line-height: var(--leading-body-medium);
+  }
+}
+
+@include respond(laptop-large) {
+  body {
+    line-height: var(--leading-body-large);
+  }
+
+  ul,
+  ol,
+  dl,
+  p,
+  address,
+  hr,
+  table,
+  figure,
+  pre {
+    margin-block-start: var(--gutter-small);
   }
 }

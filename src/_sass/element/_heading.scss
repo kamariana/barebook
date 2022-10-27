@@ -5,36 +5,40 @@ h4,
 h5,
 h6 {
   font-family: var(--typeface-primary);
-  color: var(--headline-text-color);
-  line-height: var(--leading-small);
+  color: var(--black);
 
   &:not(:first-child) {
-    margin-block-start: var(--vr);
+    margin-block-start: var(--gutter-medium);
   }
 
   + p {
-    margin-block-start: var(--spacing-medium-small);
+    margin-block-start: var(--gutter-tiny);
   }
 }
 
 h1 {
-  font-size: var(--typescale-headline-larger);
+  font-size: var(--typescale-headline-extra-large);
+  line-height: var(--leading-extra-small);
 }
 
 h2 {
   font-size: var(--typescale-headline-large);
+  line-height: var(--leading-small);
 }
 
 h3 {
   font-size: var(--typescale-headline-medium);
+  font-weight: var(--typeweight-300);
+  line-height: var(--leading-small);
 }
 
 h4 {
   font-size: var(--typescale-headline-small);
-  
+  line-height: var(--leading-medium);
 }
 
 h5,
 h6 {
-  font-size: var(--typescale-headline-tiny);
+  font-size: var(--typescale-headline-extra-small);
+  font-weight: var(--typeweight-700);
 }

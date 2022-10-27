@@ -1,6 +1,4 @@
 @mixin ref-sizing {
-  --ref-size-0: 0;    
-  --ref-size-1: 0.063rem;    // 1px   
   --ref-size-2: 0.125rem;    // 2px   
   --ref-size-4: 0.25rem;    // 4px
   --ref-size-8: 0.5rem;     // 8px
@@ -16,19 +14,9 @@
   --ref-size-32: 2rem;      // 32px
   --ref-size-36: 2.25rem;   // 36px
   --ref-size-40: 2.5rem;    // 40px
-  --ref-size-44: 2.75rem;   // 44px
   --ref-size-48: 3rem;      // 48px
-  --ref-size-52: 3.25rem;   // 52px
-  --ref-size-56: 3.5rem;    // 56px
-  --ref-size-60: 3.75rem;   // 60px
   --ref-size-64: 4rem;      // 64px
-  --ref-size-68: 4.25rem;   // 68px
   --ref-size-72: 4.5rem;    // 72px
-  --ref-size-76: 4.75rem;    // 76px
-  --ref-size-80: 5rem;       // 80px
-  --ref-size-84: 5.25rem;    // 84px
-  --ref-size-88: 5.5rem;     // 88px
-  --ref-size-92: 5.75rem;    // 92px
   --ref-size-96: 6rem;       // 96px
   --ref-size-128: 8rem;       // 128px
 

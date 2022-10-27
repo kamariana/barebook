@@ -1,0 +1,24 @@
+
+{% assign reversed_tils = site.tils | reverse %}
+
+<section class="ob-slat">
+  <div class="ob-contain ob-contain--owl ob-contain--page-large">
+
+    <div>
+      <h2 class="ob-slat__title-preline">
+        TILs
+      </h2>
+      <p class="ob-slat__sub-title">
+        A collection of things I learned day in day out
+      </p>
+    </div>
+      
+
+    <ul class="ob-grid ob-grid--auto ob-grid--layout-columns">
+      {% for item in reversed_tils limit:6 %}
+        {% include utilities/bordered-card-til.html %}
+      {% endfor %}
+    </ul>
+    
+  </div>
+</section>

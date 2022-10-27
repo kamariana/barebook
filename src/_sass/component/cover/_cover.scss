@@ -1,7 +1,7 @@
 .cp-cover {
   @include dp-flex;
   @include dp-flex-direction-column;
-  padding: var(--vr-figures) 0;
+  padding: var(--vr-large) 0;
   position: relative;
   background-color: var(--canvas-background-color-darker);
   color: var(--canvas-text-color);

@@ -1,0 +1,43 @@
+// Block
+.ob-media {
+  @include dp-flex-wrap-gap(--gutter-extra-small);
+  align-items: center;
+}
+
+
+// Elements
+.ob-media__body {
+  @include owl(--spacing-medium);
+  flex: 1;
+}
+
+.ob-media__title {
+  font-size: var(--typescale-title-small);
+  font-weight: var(--typeweight-700);
+  line-height: var(--leading-medium);
+}
+
+
+// Modifiers
+.ob-media--stack {
+  flex-direction: column;
+  align-items: start;
+  gap: var(--gutter-small);
+}
+
+.ob-media--gap-large {
+  gap: var(--gutter-medium);
+}
+
+.ob-media--align-top {
+  align-items: start;
+}
+
+
+// Elements Modifiers
+.ob-media__body--author {
+  font-style: normal;
+  > span {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+{% assign reversed_projects = site.projects | where: 'featured', 'false' | reverse %}
+
+<section class="ob-slat">
+  <div class="ob-contain ob-contain--owl ob-contain--page-small">
+
+    <div class="ut-dp-center-block">
+      <h2 class="ob-slat__title-preline ob-slat__title-preline--center">
+        Other Projects
+      </h2>
+      <p class="ob-slat__sub-title">
+        A collection of other noteworthy projects
+      </p>
+    </div>
+
+    <ul class="ob-grid ">
+    {% for item in reversed_projects limit: 2  %}
+     {% include utilities/fill-card-project.html %}
+    {% endfor %}
+    </ul>
+
+  </div>
+</section>

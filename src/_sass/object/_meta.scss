@@ -1,21 +1,13 @@
 .ob-meta {
   @include reset-list;
-  @include dp-flex-gap(--spacing-default);
-  @include dp-flex-center-align;
-  color: var(--canvas-text-color-dark);
-  margin-block-start: var(--vr);
+  @include dp-flex-wrap-gap(--spacing-medium);
+  color: var(--surface-fader);
+  margin-block-start: var(--gutter-extra-small);
 }
 
 
-// this meta can also work definition list for large datas
-
-// .cp-sscard__meta {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: var(--spacing-large);
-//   color: var(--canvas-text-color-light);
-
-//   dt {
-//     font-weight: normal;
-//   }
-// }
+@include respond(laptop-large) {
+  .ob-meta {
+    margin-block-start: var(--gutter-small);
+  }
+}

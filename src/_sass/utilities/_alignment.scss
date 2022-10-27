@@ -1,32 +1,20 @@
 .ut-dp-inline {
-  @include dp-flex;
-  @include dp-flex-center-align;
+  display: flex;
+  align-items: center
 }
 
 .ut-dp-inline-apart {
-  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-wrap-gap(--gutter-extra-small);
   @include dp-flex-center-apart;
 }
 
 .ut-dp-center {
-  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-wrap-gap(--gutter-extra-small);
   @include dp-flex-center;
 }
 
 .ut-dp-center-block {
-  @include dp-flex-gap(--spacing-default);
+  @include dp-flex-wrap-gap(--gutter-extra-small);
   @include dp-flex-center;
-  @include dp-flex-direction-column;
-}
-
-.ut-align-self-end {
-  align-self: end;
-}
-
-.ut-align-apart-left {
-  margin-inline-end: auto;
-}
-
-.ut-align-apart-right {
-  margin-inline-start: auto;
+  flex-direction: column;
 }

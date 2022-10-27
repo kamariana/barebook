@@ -1,0 +1,129 @@
+.cp-timeline {
+
+}
+
+.cp-timeline__title {
+  
+}
+
+// TImeline List
+.cp-timeline-list {
+  @include reset-list;  
+  padding-inline-start: var(--spacing-extra-large); 
+  border-left: 2px solid var(--outline);
+  // resets
+  .ob-definition-list {
+    margin: 0;
+  }
+}
+
+
+// Elements
+.cp-timeline-list__item {
+  position: relative;
+  padding-block-start: var(--gutter-medium)
+}
+
+.cp-timeline-list__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-small) var(--spacing-small) var(--spacing-small) 0;
+  font-weight: var(--typeweight-700);
+  font-size: var(--lead-text-small);
+
+
+  &::before,
+  &::after {
+    @include pseudo-class;
+    position: absolute;
+    border-radius: var(--rounded-full);
+    left: calc((var(--spacing-extra-large) + 10px) * -1);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+  }
+
+  &::before {
+    @include pseudo-class;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--outline);
+  }
+
+  &.is-active {
+    &::before {
+      @include pseudo-class;
+      width: 28px;
+      height: 28px;
+      left: calc((var(--spacing-extra-large) + 16px) * -1);
+    }
+
+    &::after {
+      background-color: var(--interactive-enabled);
+      width: 16px;
+      height: 16px;
+      left: calc((var(--spacing-extra-large) +  10px) * -1);
+    }
+  }
+}
+
+.cp-timeline-list__content{
+  padding-block-start: var(--spacing-large);
+  padding-block-end: var(--spacing-large);
+}
+
+
+// Modifiers
+.cp-timeline-list--alternate {
+  position: relative;
+
+  &::before {
+    @include pseudo-class;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--outline);
+  }
+}
+
+
+
+// MQs
+@include respond(laptop-medium) {
+  .cp-timeline-list--alternate {
+    padding-inline-start: 0;
+
+
+    &::before {
+      left: 50%;
+    }
+
+    outline: 1px solid red;
+
+    .cp-timeline-list__item {
+      outline: 1px solid blue;
+      width: 50%;
+  
+      &:nth-child(even) {
+        margin-left: 50%;
+  
+        .cp-timeline-list__content{
+          padding-inline-end: 0;
+          padding-inline-start: var(--spacing-extra-large);
+        }
+      }
+    }
+
+    .cp-timeline-list__content{
+      padding-inline-end: var(--spacing-extra-large);
+    }
+  }
+
+  .cp-timeline-list__title {
+    font-size: var(--lead-text-large);
+  }
+}

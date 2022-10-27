@@ -1,10 +1,10 @@
 .cp-quote {
-  @include owl(--spacing-small);
   position: relative;
-  max-width: var(--contain-size-medium-small);
-  margin: var(--spacing-largest) auto;
-  text-align: center;
-  color: var(--canvas-text-color-light);
+  max-width: var(--contain-large);
+  margin: var(--gutter-medium) auto;
+  padding-block-start: var(--gutter-small);
+  //text-align: center;
+  color: var(--surface-fade);
 
   p {
     position: relative;
@@ -21,39 +21,34 @@
   &::before {
     position: absolute;
     z-index: var(--layer-backward);
-    top: calc(var(--spacing-default) * -1);
-    left: calc(var(--spacing-large) * -1);
-    color: var(--canvas-background-color-darker);
+    top: -32px;
+    left: -32px;
+    color: var(--outline-dark);
     content: "\201C";
     font-family: var(--typeface-secondary);
-    font-size: calc(var(--spacing-largest) * 3);
-    line-height: 1;
+    font-size: calc(var(--typescale-display-large) * 3);
+    line-height: var(--leading-tiny);
+  }
+
+  & + h2, 
+  & + h3, 
+  & + h4, 
+  & + h5 {
+    margin-block-start: 0;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
   }
   
 }
 
 // Elements
 .cp-quote__citation {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
+  margin-block-start: var(--spacing-small);
+  line-height: var(--leading-extra-small);
   font-style: normal;
-  font-size: inherit;
-}
-
-.cp-quote__avatar {
-  max-width: 4.375rem;
-  max-height: 4.375rem;
-  margin-inline-end: var(--spacind-default);
-  border-radius: var(--shape-rounded-full);
-}
-
-.cp-quote__author {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: var(--spacing-small);
+  font-size: var(--typescale-body-medium);
 }
 
 .cp-quote__author-name {
@@ -62,18 +57,12 @@
 }
 
 .cp-quote__author-role {
-  color: var(--canvas-text-color-light);
+  display: block;
+  color: var(--surface-fade);
   margin-block-start: var(--spacing-tiny);
 }
 
-
-
-
-@include respond(tablet-large) {
-  .cp-quote {
-    blockquote {
-      font-size: var(--typescale-title-large);
-      line-height: var(--leading-small);
-    }
+  // Element modifiers
+  .cp-quote__citation--align-left {
+    text-align: left;
   }
-}

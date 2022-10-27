@@ -4,7 +4,7 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: var(--spacing-small);
+  width: var(--spacing-extra-small);
 }
 
 /* Track */
@@ -19,5 +19,5 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--interactive-focused);
+  background: var(--interactive-hovered);
 }

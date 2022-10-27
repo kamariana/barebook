@@ -1,0 +1,22 @@
+{% assign featured_reversed_work = site.work | where: 'featured', 'true' | reverse %}
+
+<section class="ob-slat ob-slat--owl">
+  <div class="ob-contain ob-contain--owl ob-contain--page-extra-large">
+
+    <div>
+      <h2 class="ob-slat__title-preline">
+        Work
+      </h2>
+      <p class="ob-slat__sub-title">
+        Stories of helping people and orgs to deliver unprecedented value.
+      </p>
+    </div>  
+
+  </div>
+
+  <ul class="cp-cards cp-cards--alternate">
+    {% for item in featured_reversed_work limit: 2  %}
+     {% include utilities/alternate-card-sides-work.html %}
+    {% endfor %}
+  </ul>
+</section>

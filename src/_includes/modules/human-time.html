@@ -1,0 +1,9 @@
+<time class="js-posted-on" datetime="{{ item.created_at | date_to_xmlschema }}">
+  <span class="js-posted-ago">
+    2 Weeks Ago
+  </span>  
+  -
+  <span>
+    {{ item.created_at | date: "%d %b, %Y" }}
+  </span>
+</time>

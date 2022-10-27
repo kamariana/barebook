@@ -1,20 +1,40 @@
 // Block
 .ob-definition-list  {
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter-tiny);
+}
+
+// ELements
+.ob-definition-list__item {
+
+  &.inline-auto {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
 
 // MQs
-@include respond(tablet-small) {
+@include respond(tablet-tiny) {
   .ob-definition-list--grid {
-    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr)); // 336px - 3 cols @96px per col with 24px gap
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); 
   }
 }
 
 @include respond(tablet-large) {
   .ob-definition-list  {
-    --gutter: var(--spacing-large);
+    //gap: var(--gutter-extra-small);
+  }
+
+  .ob-definition-list__item {
+    &.inline-auto {
+      flex-direction: row;
+      gap: var(--gutter-tiny);
+    }
+  }
+
+  .ob-definition-list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); 
   }
 }

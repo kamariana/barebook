@@ -1,0 +1,23 @@
+{% assign featured_reversed_projects = site.projects | where: 'featured', 'true' | reverse %}
+
+<section class="ob-slat">
+  <div class="ob-contain ob-contain--owl ob-contain--page-extra-large">
+
+    <div>
+      <h2 class="ob-slat__title-preline">
+        Projects
+      </h2>
+      <p class="ob-slat__sub-title">
+        A collection of featured side projects
+      </p>
+    </div>
+   
+    <ul class="cp-cards cp-cards--alternate with-gap">
+      {% for item in featured_reversed_projects limit: 2  %}
+      {% assign url =  | downcase %}
+      {% include utilities/alternate-card-sides-project.html %}
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

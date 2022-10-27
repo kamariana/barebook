@@ -1,8 +1,8 @@
 code {
-  background-color: var(--code-background-color);
-  color: inherit;
-  border-radius: var(--shape-rounded-small);
-  padding: var(--spacing-tiny);
+  background-color: var(--code-canvas);
+  color: var(--code-surface);;
+  border-radius: var(--rounded-tiny);
+  padding: 0 var(--spacing-tiny) var(--spacing-tiny);
   box-decoration-break: clone;  
   font-family: var(--typeface-code);
   font-size: inherit;

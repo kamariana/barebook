@@ -1,0 +1,49 @@
+primary:
+- title: Work
+  url: /work
+
+- title: Projects
+  url: /projects
+
+- title: Journal
+  url: /journal
+
+- title: TILs
+  url: /tils
+
+- title: About
+  url: /about
+
+- title: Contact
+  url: /contact
+
+
+secondary:
+- title: Teaching
+  url: /teaching
+
+- title: CV
+  url: /cv
+
+- title: Certificates
+  url: /certificates
+
+
+tertiary:
+- title: Meaning
+  url: /meaning
+
+- title: Library
+  url: /library
+
+- title: Privacy
+  url: /meaning#privacy
+
+- title: Terms
+  url: /meaning#terms
+
+shop:
+  - title: Browse Themes
+    url: /shop/browse-themes
+  - title: About
+    url: /shop/about

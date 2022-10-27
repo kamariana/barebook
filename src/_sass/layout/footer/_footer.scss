@@ -1,10 +1,12 @@
 .lo-footer {
-  padding: var(--vr-figures) 0;
-  border-top: 1px solid var(--border-color-v1);
+  padding-block-start: var(--gutter-medium);
+  padding-block-end: var(--gutter-medium);
+  border-top: 1px solid var(--outline);
 }
 
 .lo-footer__apart {
-  @include dp-flex-gap(--spacing-largest);
+  @include dp-flex-wrap-gap(--gutter-medium);
+  justify-content: center
 }
 
 
@@ -24,8 +26,16 @@
 
 
 // MQs
-@include respond(laptop-small) {
-  .lo-footer {
-    --vr-figures: var(--spacing-huge);
+@include respond(tablet-large) {
+  .lo-footer  {
+    padding-block-start: var(--gutter-large);
+    padding-block-end: var(--gutter-large);
+  }
+}
+
+@include respond(laptop-medium) {
+  .lo-footer  {
+    padding-block-start: var(--gutter-extra-large);
+    padding-block-end: var(--gutter-extra-large);
   }
 }
