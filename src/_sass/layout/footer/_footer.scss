@@ -6,7 +6,6 @@
 
 .lo-footer__apart {
   @include dp-flex-wrap-gap(--gutter-medium);
-  justify-content: center
 }
 
 
@@ -30,12 +29,5 @@
   .lo-footer  {
     padding-block-start: var(--gutter-large);
     padding-block-end: var(--gutter-large);
-  }
-}
-
-@include respond(laptop-medium) {
-  .lo-footer  {
-    padding-block-start: var(--gutter-extra-large);
-    padding-block-end: var(--gutter-extra-large);
   }
 }

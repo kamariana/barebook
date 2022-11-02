@@ -1,52 +1,10 @@
 <footer class="lo-footer">
-  <div class="ob-contain ob-contain--page-large">
-    <div class="ob-grid ob-grid--auto">
-      <div>
-        {% include components/logo.html %}
-        <p>
-          Peace be upon you 👋, I'm A Camariana — a teacher, UX designer, and front-end engineer. I also dabble in history and data structures & algorithms. A husband to a beautiful wife, and a father of three.
-        </p>             
-      </div>
-      <div class="lo-footer__apart">
-        <ul class="lo-footer-nav">
-          {% for item in site.data.navigation.primary %}
-            <li>
-              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <ul class="lo-footer-nav">
-          {% for item in site.data.navigation.secondary %}
-            <li>
-              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <ul class="lo-footer-nav">
-          {% for item in site.data.navigation.tertiary %}
-            <li>
-              <a href="{{ item.url }}/?ref=footer-links" class="lo-footer-nav__link">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div>
-        <p>
-          Subscribe to the newsletter to stay up to date!
-        </p>
-      </div>
-    </div>
+  <div class="ob-contain ob-contain--owl ob-contain--page-large">
+    <p>
+        Made with love in the Gambia By 
+        <a href="{{ site.author_site }}">A Camariana</a>
+        - An open source side project available at 
+        <a href="{{ site.code }}">GitHub</a>
+    </p>
   </div>
-
-  <hr>
-
-  <div class="ob-contain ob-contain--page-large">
-    <small>
-      Camariana Ltd is a company registered in The Gambia.
-      Company #. {{ site.companyNumber }}, 
-      TIN #. {{ site.vatNumber }}
-    </small>
-  </div>
-
- 
-</footer>"
+</footer>
