@@ -1,0 +1,10 @@
+<nav class="cp-primary-nav md-hidden-tablet-medium-no" aria-label="Primary Navigation">
+  <ul class="cp-primary-nav__list">
+    {% for item in site.data.navigation.primary %}
+    {% assign url = item.url | downcase %}
+      <li>
+        <a href="{{ url }}" class="cp-primary-nav__link">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
