@@ -1,0 +1,34 @@
+{% assign classification = page.classification  %}
+{% assign itemsByType = site[classification] | sort:"order" | group_by: "type" %}
+
+{% for type in itemsByType %}
+
+  <h3>
+    {{ type.name | capitalize }}
+  </h3>
+
+  <ul class="ob-grid ob-grid--third">
+  {% for item in type.items %}
+    <li class="cp-card cp-card--bordered">
+      <div class="cp-card__text">
+
+        {% if item.link %}
+          {% assign url = item.link %}
+          {% else %}
+          {% assign url = item.url %}
+        {% endif %}
+
+        <h4 class="">
+          <a class="cp-card__link" href="{{ url }}">
+            {{ item.title }}
+          </a>
+        </h4>
+    
+        <p>
+          {{ item.description }}
+        </p>
+      </div> 
+    </li>
+  {% endfor %}
+  </ul>
+{% endfor %}

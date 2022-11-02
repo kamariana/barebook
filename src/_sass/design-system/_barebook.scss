@@ -1,0 +1,37 @@
+// Layouts
+.lo-article__content > section {
+  > * + * {
+    margin-block-start: var(--spacing-large);
+  }
+}
+
+.bb-variants {
+  > * + * {
+    margin-block-start: var(--gutter-large);
+  }
+}
+
+.bb-variants__item {
+  > * + * {
+    margin-block-start: var(--gutter-tiny);
+  }
+}
+
+.bb-variants__header {
+  display: flex;
+  gap: var(--spacing-large);
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: var(--spacing-large);
+}
+
+.bb-variants__demo {
+  margin-block-end: var(--spacing-small);
+}
+
+.bb-variants__demo,
+.bb-variants__code {
+  > * {
+    margin: 0;
+  }
+}

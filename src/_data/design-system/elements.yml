@@ -1,0 +1,32 @@
+- title: Content sectioning
+  url: /elements/content-sectioning/
+
+- title: Text content
+  url: /elements/text-content/
+
+- title: Inline text semantics
+  url: /elements/inline-text-semantics/
+
+- title: Image and multimedia
+  url: /elements/image-and-multimedia/
+
+- title: Embedded content
+  url: /elements/embedded-content/
+
+- title: SVG and MathML
+  url: /elements/svg-and-mathML/
+
+- title: Demarcating edits
+  url: /elements/demarcating-edits/
+
+- title: Table content
+  url: /elements/table-content/
+
+- title: Forms
+  url: /elements/form/
+
+- title: Interactive elements
+  url: /elements/interactive-elements/
+
+- title: Web components
+  url: /elements/web-components/
