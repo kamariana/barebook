@@ -24,18 +24,23 @@
       {% if nameType == pageType %}
       {% assign orderedItems = type.items | sort: 'order' %}
 
-        {% for item in orderedItems limit: 1 %}
-          {% assign title = item.title | replace: "-", " " | capitalize %}
-          {% assign description = item.description %}
-          {% assign url = item.url %}
+        {% for firstItem in orderedItems limit: 1 %}
+          {% assign slug = firstItem.slug %}
+          {% assign title = firstItem.title | replace: "-", " " | capitalize %}
+          {% assign description = firstItem.description %}
+          {% assign url = firstItem.url %}
+          {% assign content = firstItem.content %}
+
+          
 
           <div class="cp-tabbed__panel js-tab-panel" id="demo">
             <div class="bb-variants__item">
  
               <div class="bb-variants__header">
-                <h2>
+                <h2 id="{{ slug }}">
                   {{ title }}
                 </h2>
+                
                 <a class="" href="{{ url }}" title="Open in a New window" target="_blank">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -57,7 +62,7 @@
               </p>
             
               <div class="bb-variants__demo">
-                {{ item }}
+                {{ content }}
               </div>
 
               <div class="bb-variants__code">
@@ -77,7 +82,7 @@
                       Copy code
                     </span>
                   </button>
-                  {% highlight html %}{{ item }}{% endhighlight %}
+                  {% highlight html %}{{ content }}{% endhighlight %}
                 </div>
               </div>
 
@@ -87,7 +92,7 @@
         
         <div class="cp-tabbed__panel js-tab-panel bb-variants" id="variants">
           {% for variants in orderedItems offset: 1 %}
-            {% include components/design-system/template.html type = type %}   
+            {% include components/design-system/template.html orderedItems = orderedItems %}   
           {% endfor %}
         </div>
 

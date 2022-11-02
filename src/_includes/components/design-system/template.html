@@ -1,11 +1,8 @@
-{% assign source = variants.url | prepend: site.baseurl %}
 {% assign slug = variants.slug %}
 {% assign title = variants.slug | replace: "-", " " | capitalize %}
 {% assign description = variants.description %}
-{% assign hint = variants.hint %}
-{% assign html = variants.content %}
-{% assign parameters = variants.parameters %}
-{% assign tab_name = slug | append: "-tab" %}
+{% assign url = variants.url  %}
+{% assign content = variants.content %}
 
 
 
@@ -17,7 +14,7 @@
       {{ title }}
     </h2>
     
-    <a class="" href="{{ source }}" title="Open in a New window" target="_blank">
+    <a class="" href="{{ url }}" title="Open in a New window" target="_blank">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="16" 
@@ -38,7 +35,7 @@
   </p>
 
   <div class="bb-variants__demo">
-    {{ html }}
+    {{ content }}
   </div>
 
   <div class="bb-variants__code">
@@ -58,7 +55,7 @@
           Copy code
         </span>
       </button>
-      {% highlight html %}{{ html }}{% endhighlight %}
+      {% highlight html %}{{ content }}{% endhighlight %}
     </div>
   </div>
   
