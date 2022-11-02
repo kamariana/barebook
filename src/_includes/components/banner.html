@@ -1,8 +1,14 @@
-<div class="cp-banner" role="banner">
-  <div class="ob-contain ob-contain--align-center">
-    <div class="cp-banner__text cp-banner__text--contain">
-      <h1 class="cp-banner__title">{{ page.title }}</h1>
-      <p class="cp-banner__subtitle">{{ page.description }}</p>
+<div class="cp-masthead cp-masthead--banner" role="banner">
+  <div class="cp-masthead__contain">
+    <div class="cp-masthead__text">
+      <h1 id="title">
+        {{ page.title }}
+      </h1>
+      {% if page.description %}
+        <p class="cp-masthead__lead-text">
+          {{ page.description }}
+        </p>
+      {% endif %}
     </div>
   </div>
 </div>
