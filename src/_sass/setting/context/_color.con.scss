@@ -1,3 +1,38 @@
+@mixin con-consistent-color {
+  --white: var(--ref-white);
+  --white-light: var(--ref-neutral-20);
+
+  --black: var(--ref-black);
+  --black-light: var(--ref-neutral-80);
+
+  --selection-canvas: var(--ref-primary-60);
+  --selection-surface: var(--ref-neutral-90);
+}
+
+
+@mixin con-color-transparent {
+  --transparent-neutral-medium: rgba(0, 0, 0, 0.5);
+}
+
+
+@mixin con-color-notification {
+  // States/Notifications //TODO: update these to ref variables
+  --success: #1f7b5c;
+  --success-lighter: #b5e0d3;
+  --success-lightest: #e1f2ee;
+  --warning: #b38416;
+  --warning-lighter: #e0b774;
+  --warning-lightest: #f7eedd;
+  --info: #00a0ab;
+  --info-lighter: #94c4cc;
+  --info-lightest: #e1f8fa;
+  --error: #d63312;
+  --error-lighter: #f95446;
+  --error-lightest: #fbe8e7;
+}
+
+
+
 @mixin con-light-canvas {
   --canvas: var(--ref-white);
   --canvas-fadest: var(--ref-neutral-5);
@@ -44,36 +79,5 @@
   accent-color: var(--interactive-enabled);
 }
 
-@mixin con-consistent-color {
-  --white: var(--ref-white);
-  --white-light: var(--ref-neutral-20);
 
-  --black: var(--ref-black);
-  --black-light: var(--ref-neutral-80);
-
-  --selection-canvas: var(--ref-primary-60);
-  --selection-surface: var(--ref-neutral-90);
-}
-
-
-@mixin con-color-transparent {
-  --transparent-neutral-medium: rgba(0, 0, 0, 0.5);
-}
-
-
-@mixin con-color-notification {
-  // States/Notifications //TODO: update these to ref variables
-  --success: #1f7b5c;
-  --success-lighter: #b5e0d3;
-  --success-lightest: #e1f2ee;
-  --warning: #b38416;
-  --warning-lighter: #e0b774;
-  --warning-lightest: #f7eedd;
-  --info: #00a0ab;
-  --info-lighter: #94c4cc;
-  --info-lightest: #e1f8fa;
-  --error: #d63312;
-  --error-lighter: #f95446;
-  --error-lightest: #fbe8e7;
-}
 

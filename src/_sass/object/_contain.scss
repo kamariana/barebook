@@ -11,14 +11,6 @@
 }
 
   // Modifiers
-  .ob-contain--article {
-    max-width: var(--page-journal);
-    font-size: var(--typescale-body-larger);
-    line-height: var(--leading-extra-large);
-    margin-block-start: var(--gutter-extra-small);
-    margin-block-end: var(--gutter-extra-small);
-  }
-
   .ob-contain--owl {
     @include owl(--gutter-small);
   }

@@ -1,0 +1,18 @@
+// Block
+.cp-sidebar-nav {
+  @include reset-list;
+}
+
+
+// Elements
+.cp-sidebar-nav__item {
+
+}
+
+.cp-sidebar-nav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--surface);
+  padding-block-start: var(--spacing-extra-small);
+  padding-block-start: var(--spacing-extra-small);
+}

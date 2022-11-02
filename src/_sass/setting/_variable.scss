@@ -26,8 +26,6 @@
   @include con-consistent-color;
   @include con-color-transparent;
   @include con-color-notification;
-  @include con-light-syntax-highlighting;
-  @include con-dark-syntax-highlighting;
   @include con-elevation;
   @include con-spacing;
   @include con-shape;
@@ -43,11 +41,13 @@
 @media (prefers-color-scheme: light) {
   :root {
     @include con-light-canvas;
+    @include con-light-syntax-highlighting;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     @include con-dark-canvas;
+    @include con-dark-syntax-highlighting;
   }
 }

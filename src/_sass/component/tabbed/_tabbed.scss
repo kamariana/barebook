@@ -1,0 +1,43 @@
+.cp-tabbed {
+  position: relative;  
+}
+
+
+
+// Elements
+.cp-tabbed__tabs {
+  @include dp-flex-wrap-gap(--spacing-medium);
+  border-bottom: 2px solid var(--outline);
+}
+
+.cp-tabbed__tabs-link {
+  text-decoration: none;
+  display: block;
+  padding: var(--spacing-small) 0;
+  color: var(--link-enabled-surface)
+}
+
+.cp-tabbed__content {
+  padding: var(--spacing-large) 0;
+}
+
+.cp-tabbed__panel {
+
+}
+
+
+
+// States
+.cp-tabbed__tabs-link[aria-selected="true"] {
+  position: relative;
+  color: var(--link-focused-surface);
+
+  &::after {
+    @include pseudo-class;
+    position: absolute;
+    bottom: -2.5px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--link-focused-surface);
+  }
+}

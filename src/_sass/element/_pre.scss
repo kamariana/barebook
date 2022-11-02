@@ -3,6 +3,7 @@ pre {
   font-size: var(--typescale-body-small);
   background-color: var(--canvas-fade);
   overflow-x: auto;
+  white-space: pre-wrap;
 
   code {
     background-color: transparent;

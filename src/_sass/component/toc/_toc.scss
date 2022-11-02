@@ -6,11 +6,7 @@
 
 // Elements
 .cp-toc__title {
-  font-size: var(--typescale-title-small);
-}
-
-.cp-toc__nav {
-  margin-block-start: var(--vr);
+  font-size: var(--typescale-body-large);
 }
 
 .cp-toc__list {
@@ -22,20 +18,23 @@
 }
 
 .cp-toc__link {
-  color: var(--canvas-text);
+  color: var(--surface-fade);
   text-decoration: none;
-  display: block;
+  display: inline-block;
   padding: var(--spacing-tiny) 0;
   border-left: 3px solid transparent;
   font-size: var(--typescale-body-default);
 
   &:hover {
-    color: var(--link-text-color-hovered);
+    color: var(--surface);
   }
+}
 
-  &:focus {
-    color: var(--link-text-color-focused);
-  }
+// Modifiers
+.cp-toc--desktop {
+  display: none;
+  position: sticky;
+  top: calc(var(--gutter-extra-large) + var(--gutter-large));
 }
 
 
@@ -43,6 +42,6 @@
 // States
 .cp-toc__link {
   &.is-active {
-    color: var(--link-text-color-focused);
+    //color: var(--link-text-color-focused);
   }
 }
