@@ -53,7 +53,7 @@
 
 // // Layouts
 @import './layout/header/header';
-// // @import './layout/sidebar/sidebar';
+@import './layout/sidebar/sidebar';
 @import './layout/journal/journal';
 @import './layout/footer/footer';
 
@@ -62,17 +62,18 @@
 @import './component/navigation/primary-nav';
 @import './component/navigation/navbar';
 @import './component/navigation/fullscreen-nav';
+@import './component/navigation/sidebar-nav';
 @import './component/masthead/masthead';
 
 @import './component/button/button';
 @import './component/toggle-nav-icon/toggle-nav-icon';
 @import './component/color-scheme-switcher/color-scheme-switcher';
 
-// // @import './component/code/code';
+@import './component/code/code';
 @import './component/quote/quote';
 @import './component/accordion/details';
-// @import './component/toc/toc';
-// // @import './component/tabbed/tabbed';
+@import './component/toc/toc';
+@import './component/tabbed/tabbed';
 @import './component/table/seamless-table';
 
 // @import './component/alert/alert';
@@ -84,11 +85,15 @@
 @import './component/gallery/gallery';
 @import './component/timeline/timeline';
 
-// // Utilities
-@import './utilities/hidden';
-@import './utilities/alignment';
-@import './utilities/text';
-// @import './utilities/spacer';
-// // @import './utilities/positions';
-// // @import './utilities/table';
-// @import './utilities/figure-border';
+// // Modules
+@import './modules/hidden';
+@import './modules/alignment';
+@import './modules/text';
+// @import './modules/spacer';
+// // @import './modules/positions';
+// // @import './modules/table';
+// @import './modules/figure-border';
+
+
+// Design System - only for the bear book
+@import './design-system/barebook';
