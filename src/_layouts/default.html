@@ -7,15 +7,11 @@
   <body>
     <div class="ob-page">
      
-      {% include layouts/header.html %}     
-     
       {{ content }}
-     
-      {% include layouts/footer.html %}
       
     </div>
 
-    {% include components/fullscreen-nav.html %}
+    {% include components/navigation/fullscreen-nav.html %}
     
     <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
   </body>
