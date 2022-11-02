@@ -13,3 +13,9 @@ Barebook is an open-source, side project,  design system with a strong focus on 
 - **Themes** - Contains different theme styles, especially on a large scale multi site with different typography, colors schemes, fonts etc. 
 - **Utilities** - Contains helpers classes that might override other styles above.
 
+
+Attributions
+
+- [The GOV.UK Design System](https://design-system.service.gov.uk/)
+- [Polaris](https://polaris.shopify.com/)
+- []
