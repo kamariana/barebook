@@ -1,0 +1,29 @@
+// Block
+.lo-sidebar {
+  display: grid;
+  gap: var(--gutter-large);
+}
+
+
+
+// Elements
+.lo-sidebar__aside {
+  padding: var(--spacing-medium);
+}
+
+
+
+// MQs
+@include respond(tablet-large) {
+  .lo-sidebar {
+    grid-template-columns: 21rem 1fr;
+    gap: 0;
+  }
+  
+  .lo-sidebar__aside {
+    position: sticky;
+    height: calc(100vh - var(--navbar-height));
+    top: var(--navbar-height);
+    order: -1;
+  }
+}
