@@ -9,23 +9,8 @@ type: Text content
 permalink: /elements/text-content/
 ---
 
-{% assign classification = page.classification  %}
-{% assign itemsByType = site[classification] | group_by: "type" %}
+{% include components/design-system/system-class-collection-elements.html %}
 
-   
-{% for type in itemsByType %}
-  {% if type.name == page.type %}
-  {% assign itemsByOrder = type.items | sort: 'order' %}
-    {% for item in itemsByOrder %}
-    {% assign title = item.title | replace: "-", " " | capitalize %}
-
-      <h2 id="{{ item.title | slugify }}">{{ title }}</h2>
-
-      {{ item }}
-
-    {% endfor %}
-  {% endif %}
-{% endfor %}
 
 
 
