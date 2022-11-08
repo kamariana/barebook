@@ -1,28 +1,38 @@
 # Site settings
-title: Barebook Design System
-siteName: Barebook
+title:  Barebook Design System
+acronym: 
 description: "Barebook is an open-source, side project, design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on ITCSS which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as BEM, SMACSS and OOCSS."
+site_name: Barebook Design System
 keywords:
+image: /assets/images/site-image.jpg
+url: https://barebook.gm/
 type: website
-image: /assets/images/image.jpg
-url: https://barebook.gm
-permalink: pretty
+lang: "en-GB"
 
 author: A Camariana
-author_site: https://camariana.gm
-code: 
-
-# Kramdown and Rouge
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+author_site: https://camariana.gm/
+author_github: https://github.com/camariana/
 
 
 # Global Configuration
 source: src
+timezone: Africa/Banjul
+
+
+# Build Command Options
+#baseurl: 
+
+
+# Serve Command OptionsPermalink
+#port: 40003
+livereload: true
+open_url: true
+
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 # Sass Settings
 sass:
@@ -41,5 +51,3 @@ collections:
     output: true
   build-with:
     output: false
-
-# Contact & Social Details
