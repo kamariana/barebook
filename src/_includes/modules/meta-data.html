@@ -1,13 +1,13 @@
-{% assign title = page.title | strip_html | strip_newlines %}
+{% assign page_title = page.title | strip_html | strip_newlines %}
 {% assign description = page.description | default: site.description | strip_html | strip_newlines %}
 {% assign site_name = site.site_name | strip_html | strip_newlines %}
 {% assign type = site.type | strip_html | strip_newlines %}
-{% assign image = page.image.path | default: site.image | prepend: site.baseurl | prepend: site.url  %}
-{% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+{% assign site_image = page.image.path | default: site.image | prepend: site.baseurl | prepend: site.url  %}
+{% assign site_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 
 
 <meta charset="utf-8">
-<title>{{ page.title }} - {{ site.title }}</title>
+<title>{{ page_title }} - {{ site.title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ site.keywords }}">
 <meta name="author" content="{{ site.author }}">
@@ -23,9 +23,9 @@
 <!-- Open Graph Metadata -->
 <meta property="og:title" content="{{ title }}">
 <meta property="og:locale" content="{{ site.lang }}" />
-<meta property="og:url" content="{{ url }}" />
+<meta property="og:url" content="{{ site_url }}" />
 <meta property="og:type" content="{{ type }}" />
-<meta property="og:image" content="{{ image }}">
+<meta property="og:image" content="{{ site_image }}">
 
 <!--  Recommended -->
 <meta property="og:description" content="{{ description }}">
