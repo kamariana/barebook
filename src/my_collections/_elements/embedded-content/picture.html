@@ -1,0 +1,20 @@
+---
+title: Picture
+type: Embedded content
+description: "The picture HTML element contains zero or more source elements and one img element to offer alternative versions of an image for different display/device scenarios."
+link: /elements/embedded-content/#picture
+
+featured_image:
+  path: /assets/images/self.jpg  
+  path_large: /assets/images/self.jpg
+  alt:
+  caption:
+
+order: 11
+---
+
+<picture>
+  <source srcset="{{ page.featured_image.path }}" media="(max-width: 1024px)">
+  <source srcset="{{ page.featured_image.path_large }}" media="(min-width: 1025px)">
+  <img src="{{ page.featured_image.path }}" alt="{{ page.featured_image.alt }}" loading="eager"/>
+</picture>
