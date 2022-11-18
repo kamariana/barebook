@@ -2,7 +2,7 @@
 title:  Barebook Design System
 acronym: 
 description: "Barebook is an open-source, side project, design system with a strong focus on performance, scalability, maintainability, and a small footprint. Its architecture is based on ITCSS which is designed to aid the growth and maintainability of CSS projects. It also uses a composition of methodologies and principles such as BEM, SMACSS and OOCSS."
-site_name: Barebook Design System
+site_name: Barebook
 keywords:
 image: /assets/images/site-image.jpg
 url: https://barebook.gm/
