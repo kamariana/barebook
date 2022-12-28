@@ -1,0 +1,27 @@
+ul,
+ol {
+  margin-inline-start: var(--gutter-extra-small);
+  padding-inline-start: var(--spacing-small);
+}
+
+ul ul,
+ol ol {
+  margin-block-start: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+::marker {
+  color: var(--interactive-enabled);
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  ul,
+  ol {
+    padding-inline-start: var(--spacing-extra-large);
+  }
+}

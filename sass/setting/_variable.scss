@@ -1,0 +1,53 @@
+// References
+@import './reference/sizing.ref';
+@import './reference/color.ref';
+
+// Context
+@import './context/typography.con';
+@import './context/color.con';
+@import './context/syntax-highlighting.con';
+@import './context/spacing.con';
+@import './context/shape.con';
+@import './context/dimension.con';
+@import './context/z-index-layer.con';
+@import './context/elevation.con';
+
+
+
+:root {
+  // References
+  @include ref-color;
+  @include ref-sizing;
+
+  // Context
+  @include con-typography;
+  @include con-light-canvas;
+  @include con-dark-canvas;
+  @include con-consistent-color;
+  @include con-color-transparent;
+  @include con-color-notification;
+  @include con-elevation;
+  @include con-spacing;
+  @include con-shape;
+  @include con-dimension;
+  @include con-z-index-layer;
+
+  color-scheme: light dark;  
+}
+
+
+
+// Prefers-color-scheme
+@media (prefers-color-scheme: light) {
+  :root {
+    @include con-light-canvas;
+    @include con-light-syntax-highlighting;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include con-dark-canvas;
+    @include con-dark-syntax-highlighting;
+  }
+}

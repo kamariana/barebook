@@ -1,0 +1,14 @@
+details {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  position: relative;
+  display: list-item;
+  list-style: none;
+  cursor: pointer;
+}

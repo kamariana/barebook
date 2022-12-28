@@ -1,0 +1,26 @@
+blockquote {
+  @include owl(--gutter-extra-small);
+  border-left: 4px solid var(--outline);
+  font-family: var(--typeface-secondary);
+  font-size: var(--lead-text-small);
+  margin: var(--gutter-small) var(--gutter-extra-small);
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  border-radius: var(--rounded-small);
+
+  > p {
+    margin-block-start: 0;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  blockquote {
+    font-size: var(--lead-text-large);
+    line-height: var(--leading-large);
+  }
+}

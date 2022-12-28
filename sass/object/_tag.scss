@@ -1,0 +1,21 @@
+.ob-tag {
+  @include reset-list;
+  display: inline-flex;
+  font-size: var(--typescale-body-small);
+  order: -1;  
+  margin-block-end: var(--spacing-small);
+  color: var(--surface-fade);
+}
+
+  // Modifiers
+  .ob-tag--upcase {
+    text-transform: uppercase;
+    font-size: var(--typescale-body-extra-small);
+  }
+
+
+// Elements
+.ob-tag__link {
+  text-decoration: none;
+  color: var(--surface-fade);
+}

@@ -1,0 +1,49 @@
+@mixin ref-sizing {
+  --ref-size-2: 0.125rem;    // 2px   
+  --ref-size-4: 0.25rem;    // 4px
+  --ref-size-8: 0.5rem;     // 8px
+  --ref-size-12: 0.75rem;   // 12px
+  --ref-size-14: 0.875rem;   // 14px  
+  --ref-size-16: 1rem;      // 16px
+  --ref-size-18: 1.125rem;   // 18px 
+  --ref-size-20: 1.25rem;   // 20px 
+  --ref-size-22: 1.375rem;   // 22px 
+  --ref-size-24: 1.5rem;    // 24px
+  --ref-size-26: 1.625rem;    // 26px
+  --ref-size-28: 1.75rem;   // 28px
+  --ref-size-32: 2rem;      // 32px
+  --ref-size-36: 2.25rem;   // 36px
+  --ref-size-40: 2.5rem;    // 40px
+  --ref-size-48: 3rem;      // 48px
+  --ref-size-64: 4rem;      // 64px
+  --ref-size-72: 4.5rem;    // 72px
+  --ref-size-96: 6rem;       // 96px
+  --ref-size-128: 8rem;       // 128px
+
+  --ref-size-120: 120px;
+  --ref-size-216: 216px;
+  --ref-size-320: 320px;
+  --ref-size-375: 375px;
+  --ref-size-425: 425px;
+  --ref-size-600: 600px;
+  --ref-size-768: 768px;
+  --ref-size-900: 900px;
+  --ref-size-1024: 1024px;
+  --ref-size-1240: 1240px;
+  --ref-size-1440: 1440px;
+  --ref-size-1600: 1600px;
+  --ref-size-1920: 1920px;
+  --ref-size-2560: 2560px;
+
+  --ref-size-100-percent: 100%;
+
+  // Indexing - for z-index scales
+  --ref-index-1: -1;
+  --ref-index-0: 0;
+  --ref-index-10: 10;
+  --ref-index-20: 20;
+  --ref-index-30: 30;
+  --ref-index-40: 40;
+  --ref-index-50: 50;
+  --ref-index-60: 60;
+}

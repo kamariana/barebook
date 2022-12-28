@@ -1,0 +1,9 @@
+@mixin con-shape {
+  --rounded-none: 0;  
+  --rounded-tiny: var(--ref-size-4);  
+  --rounded-small: var(--ref-size-8);
+  --rounded-medium: var(--ref-size-12);  
+  --rounded-large: var(--ref-size-16); 
+  --rounded-extra-large: var(--ref-size-28);  
+  --rounded-full: var(--ref-size-100-percent);
+}

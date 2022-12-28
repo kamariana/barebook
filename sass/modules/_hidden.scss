@@ -1,0 +1,62 @@
+.md-visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+@include respond(mobile-medium) {
+  .md-hidden-mobile-medium-yes {
+    display: none !important;
+  }
+
+  .md-hidden-mobile-medium-no {
+    display: block !important;
+  }
+}
+
+@include respond(tablet-small) {
+  .md-hidden-tablet-small-yes {
+    display: none !important;
+  }
+
+  .md-hidden-tablet-small-no {
+    display: block !important;
+  }
+} 
+
+@include respond(tablet-medium) {
+  .md-hidden-tablet-medium-yes {
+    display: none !important;
+  }
+
+  .md-hidden-tablet-medium-no {
+    display: block !important;
+  }
+}
+
+@include respond(laptop-medium) {
+  .md-hidden-laptop-medium-yes {
+    display: none !important;
+  }
+
+  .md-hidden-laptop-medium-no {
+    display: block !important;
+  }
+}  
+
+@include respond(laptop-large) {
+  .md-hidden-laptop-large-yes {
+    display: none !important;
+  }
+
+  .md-hidden-laptop-large-no {
+    display: block !important;
+  }
+} 

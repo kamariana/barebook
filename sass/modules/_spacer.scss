@@ -1,0 +1,26 @@
+// Paddings
+.ut-no-pad {
+  padding: 0 !important;
+}
+
+
+
+// Margins
+.ut-no-mag {
+  margin: 0 !important;
+}
+
+
+
+// Spacers/Gaps 
+.ut-v-gaps-size-small {
+  @include owl(--spacing-large); // 32px
+}
+
+.ut-v-gaps-size-medium {
+  @include owl(--spacing-larger); // 48px 
+}
+
+.ut-v-gaps-size-large {
+  @include owl(--spacing-largest); // 72px 
+}

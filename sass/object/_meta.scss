@@ -1,0 +1,17 @@
+.ob-meta {
+  @include reset-list;
+  @include dp-flex-wrap-gap(--spacing-medium);
+  color: var(--surface-fader);
+  margin-block-start: var(--gutter-small);
+
+  .ob-meta {
+    margin-block-start: 0;
+  }
+}
+
+
+@include respond(laptop-large) {
+  .ob-meta {
+    margin-block-start: var(--gutter-small);
+  }
+}

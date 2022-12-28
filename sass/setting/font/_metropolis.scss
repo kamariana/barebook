@@ -1,0 +1,85 @@
+/* Set up Metropolis */
+
+// Extra Light
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/assets/fonts/metropolis/static/Metropolis-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: italic;
+  font-weight: 200;
+  src: url("/assets/fonts/metropolis/static/Metropolis-ExtraLightItalic.woff2") format("woff2");
+}
+
+// Regular
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/metropolis/static/Metropolis-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/metropolis/static/Metropolis-RegularItalic.woff2")  format("woff2");
+}
+
+// Bold
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/metropolis/static/Metropolis-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/metropolis/static/Metropolis-BoldItalic.woff2") format("woff2");
+}
+
+// Extra Bold
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/fonts/metropolis/static/Metropolis-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: italic;
+  font-weight: 800;
+  src: url("/assets/fonts/metropolis/static/Metropolis-ExtraBoldItalic.woff2") format("woff2");
+}
+
+/* Set up Metropolis modern browser when the variable font is out */
+// @supports (font-variation-settings: normal) {
+//     @font-face {
+//     font-family: Metropolis, sans-serif;
+//     src:
+//         url('/')
+//         format(‘woff2 supports variations’),
+//         url('/')
+//         format('woff2-variations');
+//     font-stretch: 25% 150%;
+//     font-style: oblique 0deg 10deg;
+//     font-weight: 100 900;
+//     font-display: swap;
+//     }
+// }

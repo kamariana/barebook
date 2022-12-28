@@ -1,0 +1,9 @@
+// Timing
+@mixin trans-and-scale {
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+@mixin scale-out-on-hover-and-focus {
+  transform: scale(1.03);
+}

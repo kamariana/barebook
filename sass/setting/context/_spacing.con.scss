@@ -1,0 +1,17 @@
+@mixin con-spacing {
+  // spacing for elements within layouts and components
+  --spacing-tiny: var(--ref-size-4);
+  --spacing-extra-small: var(--ref-size-8);
+  --spacing-small: var(--ref-size-12);
+  --spacing-medium: var(--ref-size-16);
+  --spacing-large: var(--ref-size-24);
+  --spacing-extra-large: var(--ref-size-32);
+
+  // gutters is the space between components that helps separate content.
+  --gutter-tiny: var(--ref-size-16);
+  --gutter-extra-small: var(--ref-size-24);
+  --gutter-small: var(--ref-size-32);
+  --gutter-medium: var(--ref-size-48);
+  --gutter-large: var(--ref-size-64);
+  --gutter-extra-large: var(--ref-size-96);
+}

@@ -1,0 +1,58 @@
+// Block
+.ob-contain {
+  max-width: var(--page-medium);
+  padding-inline-start: var(--gutter-extra-small);
+  padding-inline-end: var(--gutter-extra-small);
+  margin: 0 auto;
+
+  .ob-contain {
+    padding: 0;    
+  }
+}
+
+  // Modifiers
+  .ob-contain--owl {
+    @include owl(--gutter-small);
+  }
+
+  .ob-contain--page-extra-small {
+    max-width: var(--page-extra-small); // 1024
+  }
+
+  .ob-contain--page-small {
+    max-width: var(--page-extra-small); // 1240
+  }
+
+  .ob-contain--page-large {
+    max-width: var(--page-large); // 1600
+  }
+
+  .ob-contain--page-extra-large {
+    max-width: var(--page-extra-large); // 1920
+  }
+
+
+// MQs
+@include respond(tablet-tiny) {
+  .ob-contain {
+    padding-inline-start: var(--gutter-extra-large);
+    padding-inline-end: var(--gutter-extra-large);
+  }
+}
+
+@include respond(tablet-large) {
+  .ob-contain--article {
+    font-size: var(--typescale-title-small);
+  }
+}
+
+@include respond(laptop-medium) {
+  .ob-contain {
+    padding-inline-start: var(--gutter-extra-small);
+    padding-inline-end: var(--gutter-extra-small);
+  }
+
+  .ob-contain--owl {
+    @include owl(--gutter-large);
+  }
+}

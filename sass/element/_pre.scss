@@ -1,0 +1,32 @@
+pre {
+  border-radius: var(--rounded-medium);
+  font-size: var(--typescale-body-small);
+  background-color: var(--canvas-fade);
+  overflow-x: auto;
+  white-space: pre-wrap;
+
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    display: block;
+    padding: var(--spacing-medium);
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    color: inherit;
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+
+// MQs
+@include respond(tablet-large) {
+  pre {
+    code {
+      padding: var(--spacing-large);
+    }
+  }
+}

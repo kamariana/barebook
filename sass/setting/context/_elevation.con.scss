@@ -1,0 +1,11 @@
+@mixin con-elevation {
+  --elevation-neutral: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+
+  // --elevation: 0 1px 4px 0 hsla(220, 12%, 5%, 0.102);
+  // --elevation-medium: 0 3px 13px 0 hsla(218, 13%, 5%, 0.08);
+  // --elevation-large: 0 10px 15px -8px hsla(218, 13%, 5%, 0.35);
+  // --elevation-hover: 0 0 0 5px hsla(0, 0%, 88%, 0.7);
+
+  --elevation-neutral-medium-bottom: 0 8px 12px -12px rgba(0, 0, 0, 0.5);
+
+}

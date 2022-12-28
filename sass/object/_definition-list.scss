@@ -1,0 +1,40 @@
+// Block
+.ob-definition-list  {
+  display: grid;
+  gap: var(--gutter-tiny);
+}
+
+// ELements
+.ob-definition-list__item {
+
+  &.inline-auto {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+// MQs
+@include respond(tablet-tiny) {
+  .ob-definition-list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); 
+  }
+}
+
+@include respond(tablet-large) {
+  .ob-definition-list  {
+    //gap: var(--gutter-extra-small);
+  }
+
+  .ob-definition-list__item {
+    &.inline-auto {
+      flex-direction: row;
+      gap: var(--gutter-tiny);
+    }
+  }
+
+  .ob-definition-list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); 
+  }
+}

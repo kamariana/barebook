@@ -1,0 +1,30 @@
+// Block
+.ob-off-canvas-nav {
+  @include pos-zero-all-sides;
+  position: fixed;
+}
+
+// Elements
+.ob-off-canvas-nav__contain {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.ob-off-canvas-nav__header {
+  @include dp-flex-wrap-gap(--gutter-small);
+  @include dp-flex-center-apart;
+  padding: var(--spacing-large) var(--spacing-medium);  
+}
+
+.ob-off-canvas-nav__main {
+  margin-top: auto;
+  margin-bottom: auto;
+  @include owl(--spacing-large);
+}
+
+.ob-off-canvas-nav__footer {
+  padding: var(--spacing-large) var(--spacing-medium);  
+}

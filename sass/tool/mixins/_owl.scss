@@ -1,0 +1,6 @@
+// Owl selector
+@mixin owl($size) {
+  > * + * {
+    margin-block-start: var($size) !important;
+  }
+}

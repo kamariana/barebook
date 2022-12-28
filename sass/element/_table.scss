@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: var(--spacing-small);
+  text-align: left;
+}
+
+caption {
+  caption-side: bottom;
+  color: var(--surface-fader);
+  font-size: var(--typescale-body-small);
+  font-style: italic;
+  text-align: left;
+}

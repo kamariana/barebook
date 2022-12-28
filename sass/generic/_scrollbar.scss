@@ -1,0 +1,23 @@
+html {
+  scrollbar-color: var(--interactive-enabled) transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: var(--spacing-extra-small);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--interactive-enabled);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--interactive-hovered);
+}

@@ -1,0 +1,15 @@
+@mixin dp-flex-wrap-gap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var($gap);
+}
+
+@mixin dp-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin dp-flex-center-apart {
+  align-items: center;
+  justify-content: space-between;
+}

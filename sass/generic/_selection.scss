@@ -1,0 +1,6 @@
+// * Selection to avoid text-shadow during text highlighting
+::selection {
+  background: var(--selection-canvas);
+  color: var(--selection-surface);
+  text-shadow: none;
+}

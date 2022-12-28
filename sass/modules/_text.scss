@@ -1,0 +1,45 @@
+.md-initial-letter p {
+  &:first-of-type::first-letter {
+    color: var(--primary-enabled);
+    float: left;
+    font-size: var(--typescale-display-medium);
+    line-height: 0.6;
+    padding: var(--spacing-small) var(--spacing-tiny) 0 0;
+  }
+}
+
+
+// Colors
+.md-white-text {
+  h2,
+  h3,
+  .ob-tag,
+  .ob-meta {
+    color: var(--white);
+  }
+}
+
+
+
+// Sizes
+.md-lead-text {
+  font-size: var(--lead-text-small);
+}
+
+
+
+// MQs
+@include respond(tablet-large) {
+  .md-lead-text {
+    font-size: var(--lead-text-large);
+    line-height: var(--leading-large);
+  }
+}
+
+@include respond(laptop-medium) {
+  .md-initial-letter p {
+    &:first-of-type::first-letter {
+      font-size: var(--typescale-display-large);
+    }
+  }
+}

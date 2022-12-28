@@ -1,0 +1,10 @@
+a {
+  background-color: transparent;
+  color: var(--link-enabled-surface);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--link-hovered-surface);
+  }
+}

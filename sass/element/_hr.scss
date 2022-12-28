@@ -1,0 +1,20 @@
+hr {
+  display: block;
+  overflow: visible;
+  height: 1px;
+  box-sizing: content-box;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--outline-light);
+  margin-block-start: var(--gutter-small);
+  margin-block-end: var(--gutter-small);
+}
+
+
+// MQs
+@include respond(laptop-large) {
+  hr {
+    margin-block-start: var(--gutter-medium);
+    margin-block-end: var(--gutter-medium);
+  }
+}

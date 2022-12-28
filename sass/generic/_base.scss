@@ -1,0 +1,126 @@
+// Base settings
+html {
+  /* Make type rendering look crisper */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Deactivate auto-enlargement of small text in Safari */
+  text-size-adjust: 100%;
+
+  /* Enable kerning and optional ligatures */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--surface);
+  font-family: var(--typeface-primary);
+  font-size: var(--typescale-body-medium);
+  font-weight: var(--typeweight-400);
+  line-height: var(--leading-body-small);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+// A consistent vertical rhythm using the base line-height
+ul,
+ol,
+dl,
+p,
+address,
+hr,
+table,
+figure,
+pre {
+  margin-block-start: var(--gutter-extra-small);
+}
+
+p {
+  &:first-child {
+    margin-block-start: 0;
+  }
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+abbr,
+dfn {
+  cursor: help;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+u,
+ins {
+  text-decoration: none;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: var(--typescale-body-extra-small);
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+// MQs 
+@include respond(tablet-large) {
+  body {
+    --base-font-size: var(--typescale-body-large);
+    line-height: var(--leading-body-medium);
+  }
+}
+
+@include respond(laptop-large) {
+  body {
+    line-height: var(--leading-body-large);
+  }
+
+  ul,
+  ol,
+  dl,
+  p,
+  address,
+  hr,
+  table,
+  figure,
+  pre {
+    margin-block-start: var(--gutter-small);
+  }
+}
