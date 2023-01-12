@@ -1,0 +1,18 @@
+ul,
+ol {
+  margin-inline-start: var(--gutter-tiny);
+  padding-inline-start: var(--spacing-small);
+}
+
+ul ul,
+ol ol {
+  margin-block-start: 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+::marker {
+  color: var(--interactive-enabled);
+}

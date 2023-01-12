@@ -16,6 +16,6 @@ Barebook is an open-source, side project,  design system with a strong focus on 
 
 Attributions
 
+- [ITCSS](http://itcss.io/)
 - [The GOV.UK Design System](https://design-system.service.gov.uk/)
 - [Polaris](https://polaris.shopify.com/)
-- []

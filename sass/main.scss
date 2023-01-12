@@ -1,110 +1,52 @@
-//Tools
-@import './tool/breakpoint';
-
+// Tools
+@import './tools/mixin-core';
 
 // Settings
-@import './setting/font/metropolis';
-@import './setting/variable';
-
-
-// Tools
-@import './tool/mixin';
-
+@import './settings/font/settings-font-core';
+@import './settings/settings-core';
 
 // Generic
-@import './generic/normalise';
-@import './generic/reset';
-@import './generic/base';
-@import './generic/selection';
-@import './generic/scrollbar';
-
+@import './generic/generic-normalise';
+@import './generic/generic-reset';
+@import './generic/generic-base';
+@import './generic/generic-selection';
+@import './generic/generic-scrollbar';
 
 // Elements
-@import './element/audio';
-@import './element/code';
-@import './element/details';
-@import './element/figure';
-@import './element/main';
-@import './element/heading';
-@import './element/image';
-@import './element/picture';
-@import './element/list';
-@import './element/link';
-@import './element/blockquote';
-@import './element/hr';
-@import './element/pre';
-@import './element/video';
-@import './element/iframe';
-@import './element/table';
-@import './element/form';
-
+@import './elements/elements-audio';
+@import './elements/elements-code';
+@import './elements/elements-details';
+@import './elements/elements-figure';
+@import './elements/elements-heading';
+@import './elements/elements-image';
+@import './elements/elements-picture';
+@import './elements/elements-list';
+@import './elements/elements-link';
+@import './elements/elements-blockquote';
+@import './elements/elements-hr';
+@import './elements/elements-pre';
+@import './elements/elements-video';
+@import './elements/elements-iframe';
+@import './elements/elements-table';
+@import './elements/elements-form';
 
 // Objects
-@import './object/page';
-@import './object/contain';
-@import './object/slat';
-
-@import './object/grid';
-@import './object/sides';
-
-@import './object/tag';
-@import './object/meta';
-@import './object/media-block';
-@import './object/avatar';
-@import './object/icon';
-@import './object/definition-list';
-@import './object/pageless-media';
-@import './object/off-canvas-nav'; 
+@import './objects/objects-page';
+@import './objects/objects-contain';
+@import './objects/objects-icon';
+@import './objects/objects-media-block';
+@import './objects/objects-avatar';
 
 
 // Layouts
-@import './layout/header/header';
-@import './layout/sidebar/sidebar';
-@import './layout/journal/journal';
-@import './layout/footer/footer';
+// Import your Layouts here
 
 
 // Components
-@import './component/logo/logo';
-
-@import './component/navigation/primary-nav';
-@import './component/navigation/navbar';
-@import './component/navigation/fullscreen-nav';
-@import './component/navigation/sidebar-nav';
-
-@import './component/masthead/masthead';
-
-@import './component/button/button';
-@import './component/toggle-nav-icon/toggle-nav-icon';
-@import './component/color-scheme-switcher/color-scheme-switcher';
-
-@import './component/code/code';
-@import './component/quote/quote';
-@import './component/accordion/details';
-@import './component/toc/toc';
-@import './component/tabbed/tabbed';
-@import './component/table/seamless-table';
-
-// @import './component/alert/alert';
-// @import './component/box/box';
-@import './component/card/cards';
-@import './component/card/card';
-// @import './component/cover/cover';
-@import './component/figure/figure';
-@import './component/gallery/gallery';
-@import './component/timeline/timeline';
-@import './component/panel/panel';
+  // Import your components here
 
 
-// // Modules
-@import './modules/hidden';
-@import './modules/alignment';
-@import './modules/text';
-// @import './modules/spacer';
-// // @import './modules/positions';
-// // @import './modules/table';
-// @import './modules/figure-border';
-
-
-// Design System - only for barebook
-//@import './design-system/barebook';
+// Modules
+@import './modules/modules-alignment';
+@import './modules/modules-hidden';
+@import './modules/modules-text';

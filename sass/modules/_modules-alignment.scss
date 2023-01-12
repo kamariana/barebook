@@ -1,0 +1,20 @@
+.md-dp-inline {
+  display: flex;
+  align-items: center
+}
+
+.md-dp-inline-apart {
+  @include dp-flex-wrap-gap(--gutter-extra-small);
+  @include dp-flex-center-apart;
+}
+
+.md-dp-center-inline {
+  @include dp-flex-wrap-gap(--gutter-extra-small);
+  @include dp-flex-center;
+}
+
+.md-dp-center-block {
+  @include dp-flex-center;
+  display: flex;
+  flex-direction: column;
+}

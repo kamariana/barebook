@@ -1,0 +1,49 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--typeface-primary);
+  color: var(--black);
+  margin-block-start: var(--gutter-medium);
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  + ul,
+  + ol,
+  + dl,
+  + p,
+  + address {
+    margin-block-start: var(--spacing-tiny);
+  }
+}
+
+
+h1 {
+  font-size: var(--typescale-headline-extra-large);
+  line-height: var(--leading-medium);
+}
+
+h2 {
+  font-size: var(--typescale-headline-large);
+  line-height: var(--leading-small);
+}
+
+h3 {
+  font-size: var(--typescale-headline-medium);
+  font-weight: 500;
+  line-height: var(--leading-small);
+}
+
+h4 {
+  font-size: var(--typescale-headline-small);
+}
+
+h5,
+h6 {
+  font-size: var(--typescale-headline-extra-small);
+  font-weight: 700;
+}

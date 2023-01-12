@@ -1,0 +1,37 @@
+// Block
+.ob-contain {
+  padding-inline-start: var(--gutter-extra-small);
+  padding-inline-end: var(--gutter-extra-small);
+
+  .ob-contain {
+    padding: 0;    
+  }
+}
+
+
+
+// Modifiers
+.ob-contain--owl {
+  @include owl(--gutter-small);
+}
+
+ 
+
+// MQs
+@include respond(tablet-tiny) {
+  .ob-contain {
+    padding-inline-start: var(--gutter-extra-large);
+    padding-inline-end: var(--gutter-extra-large);
+  }
+}
+
+@include respond(laptop-small) {
+  .ob-contain {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+
+  .ob-contain--owl {
+    @include owl(--gutter-large);
+  }
+}
