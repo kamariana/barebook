@@ -1,0 +1,32 @@
+// Block
+.ob-pageless {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > *:not(.ob-pageless__item) {
+    min-width: 100%;
+  }
+}
+
+
+
+// MQs
+@include respond(laptop-large) {
+
+  .ob-pageless__item {
+    &.wide {
+     img {
+        width: var(--contain-medium);
+        max-width: var(--contain-medium);
+      }
+    }
+  
+    &.full {
+      img {
+        width: 100vw;
+        max-width: 100vw;
+       }
+     }
+  }
+}

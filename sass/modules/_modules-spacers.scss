@@ -1,0 +1,20 @@
+// Owl Gutters
+.md-owl-tiny {
+  @include owl(--gutter-tiny); // 16px
+}
+
+.md-owl-extra-small {
+  @include owl(--gutter-extra-small); // 24px
+}
+
+.md-owl-small {
+  @include owl(--gutter-small); // 32px
+}
+
+.md-owl-medium {
+  @include owl(--gutter-medium); // 48px
+}
+
+.md-owl-large {
+  @include owl(--gutter-large); // 64px
+}
