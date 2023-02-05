@@ -49,7 +49,8 @@ path/to/sass/$ sass main.scss:main.css
 - **Generic** - Contains low-specificity, far-reaching rulesets (e.g. resets, normalizations)
 - **Elements** - Contains bare HTML elements styles without classes. Examples: body, headings, list links etc.
 - **Objects** - Contains reusable parts of the user interface (UI) styles without cosmetics to support a variety of applications. Examples: page, contain, media etc 
-- **Components** - Contains specific parts of the user interface (UI) styles with  cosmetics such as cards, cover, hero etc. This is the one layer that barebook doesn’t provide code for, as this is completely your terrain.
+- **layouts** - Contains application layout (UI) styles. This is a layer that barebook doesn’t provide code for, as this is completely your terrain.
+- **Components** - Contains specific parts of the user interface (UI) styles with  cosmetics such as cards, cover, hero etc. This is another layer that barebook doesn’t provide code for, as this is completely your terrain.
 - **Modules** - Contains high-specificity, very explicit selectors. Overrides and helper classes that might override other styles above.
 
 ```scss
