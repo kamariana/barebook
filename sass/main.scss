@@ -32,10 +32,15 @@
 
 // Objects
 @import './objects/objects-page';
+@import './objects/objects-pageless';
 @import './objects/objects-contain';
 @import './objects/objects-icon';
 @import './objects/objects-media-block';
 @import './objects/objects-avatar';
+
+
+// Layouts
+// Import your Layouts here
 
 
 // Components
@@ -43,6 +48,7 @@
 
 
 // Modules
+@import './modules/modules-spacers';
 @import './modules/modules-alignment';
 @import './modules/modules-hidden';
 @import './modules/modules-text';
