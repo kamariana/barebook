@@ -8,12 +8,29 @@
   }
 }
 
+.ob-contain-page { 
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  max-width: var(--contain-medium);
+ } // 1440
+
 
 
 // Modifiers
 .ob-contain--owl {
   @include owl(--gutter-small);
 }
+
+
+// States 
+.ob-contain-page {
+  &.tiny { max-width: var(--contain-tiny); } // 900
+  &.extra-small { max-width: var(--contain-extra-small); } // 1024
+  &.small { max-width: var(--contain-extra-small); } // 1240
+  &.large { max-width: var(--contain-large); }  // 1600
+  &.extra-large { max-width: var(--contain-extra-large); }  // 1920
+}
+
 
  
 
@@ -27,8 +44,8 @@
 
 @include respond(laptop-small) {
   .ob-contain {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+    padding-inline-start: var(--gutter-extra-small);
+    padding-inline-end: var(--gutter-extra-small);
   }
 
   .ob-contain--owl {

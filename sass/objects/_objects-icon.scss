@@ -1,6 +1,6 @@
 // Block
 .ob-icon {
-  @include box(--icon-medium);
+  @include box(--icon-small);
   display: inline-flex;
   align-items: center;
   fill: var(--surface-lighter);

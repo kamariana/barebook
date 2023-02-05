@@ -19,8 +19,8 @@
   --success: var(--ref-green-70);
   --success-lightest: var(--ref-green-5);
 
-  --warning: var(--ref-yellow-90);
-  --warning-lightest: var(--ref-yellow-5);
+  --warning: var(--ref-orange-90);
+  --warning-lightest: var(--ref-orange-5);
 
   --info: var(--ref-teal-70);
   --info-lightest: var(--ref-teal-5);
@@ -69,6 +69,11 @@
   --link-focused-surface: var(--ref-secondary-90);
   --link-article-hovered-canvas: var(--link-enabled-surface);
   --link-article-hovered-surface: var(--white);
+
+  --form-field-outline: var(--ref-neutral-60); 
+  --form-field-enabled: var(--interactive-enabled); 
+  --form-field-hovered: var(--interactive-hovered); 
+  --form-field-focused: var(--interactive-focused); 
 
   --interactive-enabled: var(--ref-primary-70);
   --interactive-hovered: var(--ref-primary-80);

@@ -4,17 +4,3 @@
   margin-inline-end: auto;
   margin-inline-start: auto;
 }
-
-
-
-// Modifiers
-.ob-page--app {
-  height: 100vh;
-  margin: 0;
-}
-
-.ob-page--extra-small { max-width: var(--contain-extra-small); } // 1024
-.ob-page--small { max-width: var(--contain-extra-small); } // 1240
-.ob-page--medium { max-width: var(--contain-medium); } // 1440
-.ob-page--large { max-width: var(--contain-large); }  // 1600
-.ob-page--extra-large { max-width: var(--contain-extra-large); }  // 1920

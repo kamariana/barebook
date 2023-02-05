@@ -1,14 +1,18 @@
 // Block
 .ob-media {
-  @include dp-flex-wrap-gap(--gutter-extra-small);  
+  @include dp-flex-wrap-gap(--gutter-tiny);
   align-items: center;
 }
 
 
 // Elements
 .ob-media__body {
-  @include owl(--spacing-small);
+  @include owl(--spacing-tiny);
   flex: 1;
+}
+
+.ob-media__figure {
+  order: -1;
 }
 
 .ob-media__title {
@@ -24,12 +28,16 @@
   gap: var(--gutter-small);
 }
 
-.ob-media--gap-large {
-  gap: var(--gutter-medium);
-}
 
-.ob-media--align-top {
-  align-items: start;
+// States 
+.ob-media {
+  &.large {
+    gap: var(--gutter-medium);
+  }
+
+  &.align-top {
+    align-items: start;
+  }
 }
 
 
