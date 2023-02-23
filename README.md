@@ -93,6 +93,8 @@ path/to/sass/$ sass main.scss:main.css
 @import './objects/objects-media-block';
 @import './objects/objects-avatar';
 
+// Components
+// Import your components here
 
 // Components
 // Import your components here
