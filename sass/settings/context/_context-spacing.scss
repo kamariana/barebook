@@ -1,4 +1,5 @@
 @mixin context-spacing {
+  --zero: 0;
   // spacing for elements within layouts and components
   --spacing-extra-tiny: var(--ref-size-4);
   --spacing-tiny: var(--ref-size-8);
