@@ -24,9 +24,11 @@
 
 // States 
 .ob-contain-page {
+  &.minimum { max-width: var(--contain-minimum); } // 600
+  &.extra-tiny { max-width: var(--contain-extra-tiny); } // 768
   &.tiny { max-width: var(--contain-tiny); } // 900
   &.extra-small { max-width: var(--contain-extra-small); } // 1024
-  &.small { max-width: var(--contain-extra-small); } // 1240
+  &.small { max-width: var(--contain-small); } // 1240
   &.large { max-width: var(--contain-large); }  // 1600
   &.extra-large { max-width: var(--contain-extra-large); }  // 1920
 }
