@@ -34,3 +34,10 @@
   width: 100%;
 }
 
+
+// Positions
+.md-pos-sticky-top {
+  position: sticky;
+  top: var(--gutter-extra-large);
+}
+
