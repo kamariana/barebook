@@ -1,0 +1,44 @@
+// Settings Core:
+// It brings together all other variables that are broken down into smaller chunks
+
+// References 
+@import './references/references-core';
+
+// Context 
+@import './context/context-core';
+
+
+:root {
+  // References  
+  @include reference-sizing;
+  @include reference-color;
+
+  // Context
+  @include context-typography;
+  @include context-consistent-color;
+  @include context-color-transparent;
+  @include context-color-notification;
+  @include context-elevation;
+  @include context-spacing;
+  @include context-shape;
+  @include context-dimension;
+  @include context-z-index-layer;
+
+  color-scheme: light dark;  
+}
+
+
+// Prefers-color-scheme
+@media (prefers-color-scheme: light) {
+  :root {
+    @include context-light-canvas;
+    @include context-light-syntax-highlighting;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include context-dark-canvas;
+    @include context-dark-syntax-highlighting;
+  }
+}

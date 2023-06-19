@@ -1,0 +1,35 @@
+@mixin context-dimension {
+  // Dimensions describe the width and height of component elements.
+  --icon-tiny: var(--ref-size-8);
+  --icon-extra-small: var(--ref-size-16);
+  --icon-small: var(--ref-size-24);
+  --icon-medium: var(--ref-size-32);
+  --icon-large: var(--ref-size-48);
+  --icon-extra-large: var(--ref-size-96);
+
+  --avatar-tiny: var(--ref-size-48);
+  --avatar-extra-small: var(--ref-size-64);
+  --avatar-small: var(--ref-size-128);
+  --avatar-medium: var(--ref-size-216);
+  --avatar-large: var(--ref-size-320);
+  --avatar-extra-large: var(--ref-size-425);
+ 
+  // containers for enclosed things 
+  --contain-minimum: var(--ref-size-600);
+  --contain-extra-tiny: var(--ref-size-768);
+  --contain-tiny: var(--ref-size-900);
+  --contain-extra-small: var(--ref-size-1024);
+  --contain-small: var(--ref-size-1240);
+  --contain-medium: var(--ref-size-1440);
+  --contain-large: var(--ref-size-1600);
+  --contain-extra-large: var(--ref-size-1920);
+  --contain-maximum: var(--ref-size-2560);
+
+  // Navbar
+  --navbar-height: var(--ref-size-96);
+
+  // Sidebar
+  --contain-aside-default: var(--ref-size-320);
+  --contain-aside-medium: var(--ref-size-425);
+  --contain-aside-large: var(--ref-size-600);
+}

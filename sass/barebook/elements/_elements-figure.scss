@@ -1,0 +1,26 @@
+figure {
+  margin-block-end: var(--gutter-extra-small);
+  small {
+    display: block;
+    color: var(--surface-light);
+    font-size: var(--typescale-body-extra-small);
+    line-height: 1;
+    text-transform: uppercase;
+    padding-inline-start: var(--spacing-extra-small);
+  }
+}
+
+figcaption {
+  padding-block-start: var(--spacing-small);
+  font-size: var(--typescale-body-small);
+  font-style: italic;
+}
+
+
+
+// MQs 
+@include respond(laptop-small) {
+  figure {
+    margin-block-end: var(--gutter-small);
+  }
+}

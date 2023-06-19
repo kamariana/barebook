@@ -1,0 +1,9 @@
+p {
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  + a {
+    margin-block-start: var(--gutter-tiny);
+  }
+}

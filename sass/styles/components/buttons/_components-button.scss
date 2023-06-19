@@ -1,0 +1,127 @@
+// Block
+.cp-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: auto;
+  padding: var(--spacing-tiny) var(--spacing-medium);
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: var(--rounded-extra-large);
+  cursor: pointer;
+  font-size: var(--typescale-body-small);
+  font-weight: bold;
+  letter-spacing: 0.03ch;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.cp-button--primary {
+  background-color: var(--primary-enabled);
+  color: var(--primary-enabled-surface);
+
+  &:hover {
+    background-color: var(--primary-hovered);
+    color: var(--primary-hovered-surface);
+  }
+
+  &:focus {
+    background-color: var(--primary-focused);
+    color: var(--primary-focused-surface);
+    outline: none;
+  }
+}
+
+.cp-button--secondary {
+  border: 2px solid var(--secondary-enabled);
+  color: var(--secondary-enabled-surface);
+
+  &:hover {
+    background-color: var(--secondary-hovered);
+    border-color: var(--secondary-hovered);
+    color: var(--secondary-hovered-surface);
+  }
+
+  &:focus {
+    background-color: var(--secondary-focused);
+    border-color: var(--secondary-focused);
+    color: var(--secondary-focused-surface);
+    outline: none;
+  }
+}
+
+.cp-button--text {
+  color: var(--link-enabled-surface);
+  padding: var(--spacing-tiny) 0;
+
+  &:hover {
+    color: var(--link-hovered-surface);
+  }
+
+  &:focus {
+    color: var(--link-focused-surface);
+  }
+}
+
+.cp-button--icon {
+  @include dp-flex-center;
+  @include box(--icon-medium);
+  display: flex;
+  padding: 0;
+  border-radius: var(--rounded-full);
+
+  .ob-icon {
+    fill: var(--link-enabled-surface);
+  }
+
+  &:hover {
+    .ob-icon {
+      fill: var(--link-hovered-surface);
+    }
+  }
+
+  &:focus {
+    .ob-icon {
+      fill: var(--link-focused-surface);
+    }
+  }
+}
+
+.cp-button--fab {
+  @include dp-flex-center;
+  @include box(--icon-large);
+  display: flex;
+  border-radius: var(--rounded-full);
+  padding: 0;
+
+  &:hover {
+    color: var(--link-hovered-surface);
+    background-color: var(--canvas-light);
+
+    .ob-icon {
+      fill: var(--link-hovered-surface);
+    }
+  }
+
+  &:focus {
+    color: var(--link-focused-surface);
+    background-color: var(--canvas-light);
+
+    .ob-icon {
+      fill: var(--link-focused-surface);
+    }
+  }
+}
+
+
+// States
+.cp-button {
+  &.with-icon {
+    @include dp-flex-wrap-gap(--spacing-small);
+    @include dp-flex-center;
+  }
+}

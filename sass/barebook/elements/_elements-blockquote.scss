@@ -1,0 +1,29 @@
+blockquote {
+  @include owl(--gutter-extra-small);
+  border-inline-start: 4px solid var(--outline-lighter);
+  font-family: var(--typeface-secondary);
+  font-size: var(--lead-text-small);
+  margin-block: var(--gutter-medium) ;
+  padding-block: var(--spacing-extra-small);
+  padding-inline: var(--spacing-small);
+  border-radius: var(--rounded-small);
+  font-weight: 500;
+
+  > p {
+    margin-block-start: 0;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+
+// MQs
+@include respond(laptop-small) {
+  blockquote {
+    font-size: var(--lead-text-large);
+    line-height: var(--leading-small);
+    padding: var(--spacing-tiny) var(--spacing-medium);
+  }
+}

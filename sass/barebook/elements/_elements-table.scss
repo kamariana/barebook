@@ -1,0 +1,26 @@
+table {  
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: var(--leading-base);
+}
+
+td,
+th {
+  padding: var(--spacing-small) var(--spacing-extra-small);
+}
+
+th {
+  text-align: start;
+  font-size: var(--typescale-body-large);
+  line-height: var(--leading-tiny);
+  font-weight: bold;
+}
+
+caption {
+  caption-side: bottom;
+  color: var(--surface-light);
+  font-size: var(--typescale-body-small);
+  font-style: italic;
+  text-align: center;
+  padding-block-start: var(--spacing-small);
+}

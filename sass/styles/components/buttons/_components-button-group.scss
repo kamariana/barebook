@@ -1,0 +1,28 @@
+// Block
+.cp-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+// Elements
+.cp-button-group__link {
+  @include box(--shape-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: var(--spacing-tiny);
+}
+
+.cp-button-group__icon {
+  @include box(--icon-small)
+}
+
+
+// States
+.cp-button-group__icon {
+  &.black {
+    fill: var(--black-light);
+  }
+}

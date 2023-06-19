@@ -1,0 +1,71 @@
+// Block
+.ob-contain {
+  padding-inline: var(--gutter-extra-small);
+  .ob-contain {
+    padding: 0;    
+  }
+}
+
+.ob-contain-page { 
+  margin-inline: auto;
+  max-inline-size: var(--contain-medium);
+ } // 1440
+
+
+
+// Modifiers
+.ob-contain--owl {
+  > * + * {
+    margin-block-start: var(--gutter-small) !important;
+  }
+}
+
+.ob-contain--owl-large {
+  > * + * {
+    margin-block-start: var(--gutter-large) !important;
+  }
+}
+
+
+// States 
+.ob-contain {
+  &--size-minimum { max-inline-size: var(--contain-minimum); } // 600
+  &--size-extra-tiny { max-inline-size: var(--contain-extra-tiny); } // 768
+  &--size-tiny { max-inline-size: var(--contain-tiny); } // 900
+  &--size-extra-small { max-inline-size: var(--contain-extra-small); } // 1024
+  &--size-small { max-inline-size: var(--contain-small); } // 1240
+  &--size-large { max-inline-size: var(--contain-large); }  // 1600
+  &--size-extra-large { max-inline-size: var(--contain-extra-large); }  // 1920
+}
+
+
+ 
+
+// MQs
+@include respond(tablet-tiny) {
+  .ob-contain {
+    padding-inline: var(--gutter-extra-large);
+  }
+}
+
+@include respond(laptop-small) {
+  .ob-contain {
+    padding-inline: var(--gutter-extra-small);
+  }
+}
+
+
+@include respond(laptop-medium) {
+
+  .ob-contain--owl {
+    > * + * {
+      margin-block-start: var(--gutter-medium) !important;
+    }
+  }
+  
+  .ob-contain--owl-large {
+    > * + * {
+      margin-block-start: var(--gutter-large) !important;
+    }
+  }
+}

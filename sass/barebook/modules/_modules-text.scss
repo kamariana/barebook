@@ -1,0 +1,65 @@
+.md-initial-letter p {
+  &:first-of-type::first-letter {
+    color: var(--primary-enabled);
+    float: inline-start;
+    font-size: var(--typescale-display-medium);
+    line-height: 0.6;
+    padding: var(--spacing-small) var(--spacing-tiny) 0 0;
+  }
+}
+
+
+// Colors
+.md-white-text {
+  color: var(--white) !important;
+}
+.md-black-text {
+  color: var(--black) !important;
+}
+
+
+
+// Sizes
+.md-lead-text {
+  font-size: var(--lead-text-small);
+}
+
+.md-headline__text {
+  font-size: var(--typescale-display-small);
+  line-height: var(--leading-extra-small);
+}
+
+
+
+
+// MQs
+@include respond(tablet-large) {
+  .md-headline__text {
+    font-size: var(--typescale-display-medium);
+    line-height: var(--leading-tiny);
+  }
+}
+
+@include respond(laptop-small) {
+  .md-medium-text {
+    font-size: var(--typescale-body-extra-large);
+  }
+
+  .md-lead-text {
+    font-size: var(--lead-text-large);
+    line-height: var(--leading-medium);
+  }
+
+  .md-initial-letter p {
+    &:first-of-type::first-letter {
+      font-size: var(--typescale-display-large);
+    }
+  }
+}
+
+@include respond(tablet-large) {
+
+  .md-headline__text {
+    font-size: var(--typescale-display-large);
+  }
+}
