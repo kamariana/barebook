@@ -243,7 +243,7 @@ Depending on how you structure your project, if you move things around, you'ill 
 If all is good, you should be able to run the following command on the `main.scss` and get a compiled stylesheet without any errors:
 
 ```scss
-path/to/sass/$ sass main.scss:main.css
+path/to/sass/$ sass main.scss main.css
 ```
 
 ## References
