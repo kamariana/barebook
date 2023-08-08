@@ -1,7 +1,8 @@
 a {
   background-color: transparent;
   color: var(--link-enabled-surface);
-  text-decoration: underline;  
+  text-decoration: underline;
+  font-weight: 500;
 
   &:hover {
     text-decoration: none;

@@ -1,0 +1,60 @@
+// Block
+.cp-theme-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 72px;
+  height: 24px;
+  border-radius: var(--rounded-extra-large);
+  border: 2px solid var(--surface-lighter);
+
+  &:hover {
+    border-color: var(--surface-light);
+  }
+}
+
+
+// Elements
+.cp-theme-switcher__button {
+  @include box(--icon-medium);
+  position: absolute;
+  border: none;
+  background: var(--canvas);
+  border-radius: var(--rounded-full);
+  border: 2px solid var(--surface-lighter);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  opacity: 0;
+
+  &:hover {
+    border-color: var(--surface-light);
+  }
+}
+
+
+.cp-theme-switcher__icon {
+  fill: var(--surface-light);
+}
+
+// States
+.cp-theme-switcher__button {
+  &.dark {
+    left: -2px;
+  }
+
+  &.system {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.light {
+    right: -2px;
+  }
+
+  &[aria-pressed="true"] {
+    opacity: 1;
+    z-index: var(--layer-forward);
+  }
+}

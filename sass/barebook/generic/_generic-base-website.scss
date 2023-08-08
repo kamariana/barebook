@@ -15,7 +15,7 @@ body {
   background-color: var(--canvas);
   color: var(--surface);
   font-family: var(--typeface-primary);
-  font-size: var(--typescale-body-medium);
+  font-size: var(--typescale-extra-small);
   font-weight: 400;
   line-height: var(--leading-large);
   overflow-y: auto;
@@ -38,7 +38,7 @@ figure,
 audio,
 video,
 pre {
-  margin-block-start: var(--gutter-extra-small);
+  margin-block-start: var(--size-extra-small);
 }
 
 p {
@@ -78,7 +78,7 @@ strong {
 }
 
 small {
-  font-size: var(--typescale-body-extra-small);
+  font-size: var(--typescale-extra-tiny);
 }
 
 sub,
@@ -105,25 +105,26 @@ template {
   display: none;
 }
 
+
 // MQs 
 @include respond(laptop-small) {
+
   body {
-    font-size: var(--typescale-body-large);
+    font-size: var(--typescale-medium);
     line-height: var(--leading-extra-large);
   }
-
+  
   ul,
   ol,
   dl,
   p,
   address,
-  hr,
   table,
-  figure,
   figure,
   audio,
   video,
   pre {
-    margin-block-start: var(--gutter-small);
+    margin-block-start: var(--size-small);
   }
+
 }

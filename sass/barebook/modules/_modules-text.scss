@@ -1,65 +1,94 @@
+// Text
 .md-initial-letter p {
   &:first-of-type::first-letter {
     color: var(--primary-enabled);
     float: inline-start;
-    font-size: var(--typescale-display-medium);
+    font-size: var(--typescale-tera);
     line-height: 0.6;
-    padding: var(--spacing-small) var(--spacing-tiny) 0 0;
+    padding-inline-end: var(--size-nano);
   }
 }
 
 
-// Colors
+
+
+// Text Colors
 .md-white-text {
   color: var(--white) !important;
 }
+
 .md-black-text {
   color: var(--black) !important;
 }
 
+.md-primary-text {
+  color: var(--primary-enabled) !important;
+}
 
 
-// Sizes
+
+
+// Text Sizing
 .md-lead-text {
-  font-size: var(--lead-text-small);
+  font-size: var(--typescale-small);
 }
 
-.md-headline__text {
-  font-size: var(--typescale-display-small);
-  line-height: var(--leading-extra-small);
+.md-display-text-small {
+  font-size: var(--typescale-extra-large);
+  line-height: var(--leading-medium);
+}
+
+.md-display-text-medium {
+  font-size: var(--typescale-extra-large);
+  line-height: var(--leading-medium);
+}
+
+.md-display-text-large {
+  font-size: var(--typescale-extra-large);
+  line-height: var(--leading-medium);
+}
+
+.md-display-text-extra-large {
+  font-size: var(--typescale-extra-large);
+  line-height: var(--leading-medium);
 }
 
 
 
 
-// MQs
-@include respond(tablet-large) {
-  .md-headline__text {
-    font-size: var(--typescale-display-medium);
-    line-height: var(--leading-tiny);
-  }
-}
-
+// MQs 
 @include respond(laptop-small) {
-  .md-medium-text {
-    font-size: var(--typescale-body-extra-large);
-  }
-
-  .md-lead-text {
-    font-size: var(--lead-text-large);
-    line-height: var(--leading-medium);
-  }
-
+  // Text
   .md-initial-letter p {
     &:first-of-type::first-letter {
-      font-size: var(--typescale-display-large);
+      font-size: var(--typescale-peta);
     }
   }
-}
 
-@include respond(tablet-large) {
 
-  .md-headline__text {
-    font-size: var(--typescale-display-large);
+  // Text Sizing
+  .md-lead-text {
+    font-size: var(--typescale-large);
+    line-height: var(--leading-large);
+  }
+
+  .md-display-text-small {
+    font-size: var(--typescale-giga);
+    line-height: var(--leading-large);
+  }
+  
+  .md-display-text-medium {
+    font-size: var(--typescale-tera);
+    line-height: var(--leading-medium);
+  }
+  
+  .md-display-text-large {
+    font-size: var(--typescale-extra-tera);
+    line-height: var(--leading-small);
+  }
+
+  .md-display-text-extra-large {
+    font-size: var(--typescale-peta);
+    line-height: var(--leading-extra-small);
   }
 }

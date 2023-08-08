@@ -1,15 +1,15 @@
 .md-dp-inline {
-  @include dp-flex-wrap-gap(--gutter-extra-small);
+  @include dp-flex-wrap-gap(--size-extra-small);
   align-items: center
 }
 
 .md-dp-inline-apart {
-  @include dp-flex-wrap-gap(--gutter-extra-small);
+  @include dp-flex-wrap-gap(--size-extra-small);
   @include dp-flex-center-apart;
 }
 
 .md-dp-center-inline {
-  @include dp-flex-wrap-gap(--gutter-extra-small);
+  @include dp-flex-wrap-gap(--size-extra-small);
   @include dp-flex-center;
 }
 

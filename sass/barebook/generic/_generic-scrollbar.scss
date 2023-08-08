@@ -1,10 +1,11 @@
 html {
-  scrollbar-color: var(--interactive-enabled) transparent;
+  scrollbar-color: var(--interactive-extra-lighter) transparent;
+  scrollbar-width: thin;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  inline-size: var(--spacing-tiny);
+  inline-size: var(--size-nano);
 }
 
 /* Track */
@@ -14,11 +15,11 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--interactive-enabled);
-  border-radius: var(--rounded-extra-large);
+  background: var(--interactive-extra-lighter);
+  border-radius: var(--rounded-medium);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--interactive-hovered);
+  background: var(--interactive-lighter);
 }

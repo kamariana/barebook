@@ -5,19 +5,32 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: auto;
-  padding: var(--spacing-tiny) var(--spacing-medium);
+  inline-size: auto;
+  padding-block: var(--size-nano);
+  padding-inline: var(--size-extra-small);
   border: 2px solid transparent;
   background-color: transparent;
   border-radius: var(--rounded-extra-large);
   cursor: pointer;
-  font-size: var(--typescale-body-small);
+  color: var(--surface);
+  font-size: var(--typescale-tiny);
   font-weight: bold;
   letter-spacing: 0.03ch;
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
   touch-action: manipulation;
+}
+
+
+// Modifiers
+.cp-button--small {
+  padding-block: var(--size-extra-nano);
+  padding-inline: var(--size-tiny);
+}
+
+.cp-button--large {
+  block-size: var(--size-medium);
 }
 
 .cp-button--primary {
@@ -37,7 +50,7 @@
 }
 
 .cp-button--secondary {
-  border: 2px solid var(--secondary-enabled);
+  border-color: var(--secondary-enabled);
   color: var(--secondary-enabled-surface);
 
   &:hover {
@@ -54,9 +67,28 @@
   }
 }
 
+.cp-button--tertiary {
+  background-color: var(--interactive-extra-lightest);
+  border-color: var(--interactive-lightest);
+
+  &:hover {
+    background-color: var(--interactive-lightest);
+    border-color: var(--interactive-lightest);
+    color: var(--surface);
+  }
+
+  &:focus {
+    background-color: var(--interactive-extra-lighter);
+    border-color: var(--interactive-extra-lighter);
+    color: var(--surface);
+    outline: none;
+  }
+}
+
 .cp-button--text {
   color: var(--link-enabled-surface);
-  padding: var(--spacing-tiny) 0;
+  padding-inline: 0;
+  padding-block: var(--size-nano);
 
   &:hover {
     color: var(--link-hovered-surface);
@@ -64,18 +96,16 @@
 
   &:focus {
     color: var(--link-focused-surface);
+    outline: none;
   }
 }
 
 .cp-button--icon {
-  @include dp-flex-center;
-  @include box(--icon-medium);
-  display: flex;
+  @include box(--size-medium);
   padding: 0;
-  border-radius: var(--rounded-full);
 
   .ob-icon {
-    fill: var(--link-enabled-surface);
+    fill: var(--surface-lighter);
   }
 
   &:hover {
@@ -84,44 +114,39 @@
     }
   }
 
-  &:focus {
-    .ob-icon {
-      fill: var(--link-focused-surface);
-    }
-  }
+  // TODO: for primary and others 
+  //&.primary {}
+  
 }
 
-.cp-button--fab {
+.cp-button--with-icon {
+  @include dp-flex-wrap-gap(--size-nano);
   @include dp-flex-center;
-  @include box(--icon-large);
-  display: flex;
-  border-radius: var(--rounded-full);
-  padding: 0;
-
-  &:hover {
-    color: var(--link-hovered-surface);
-    background-color: var(--canvas-light);
-
-    .ob-icon {
-      fill: var(--link-hovered-surface);
-    }
-  }
-
-  &:focus {
-    color: var(--link-focused-surface);
-    background-color: var(--canvas-light);
-
-    .ob-icon {
-      fill: var(--link-focused-surface);
-    }
-  }
 }
 
 
-// States
-.cp-button {
-  &.with-icon {
-    @include dp-flex-wrap-gap(--spacing-small);
-    @include dp-flex-center;
-  }
-}
+// .cp-button--fab {
+//   @include dp-flex-center;
+//   @include box(--icon-large);
+//   display: flex;
+//   border-radius: var(--rounded-full);
+//   padding: 0;
+
+//   &:hover {
+//     color: var(--link-hovered-surface);
+//     background-color: var(--canvas-light);
+
+//     .ob-icon {
+//       fill: var(--link-hovered-surface);
+//     }
+//   }
+
+//   &:focus {
+//     color: var(--link-focused-surface);
+//     background-color: var(--canvas-light);
+
+//     .ob-icon {
+//       fill: var(--link-focused-surface);
+//     }
+//   }
+// }

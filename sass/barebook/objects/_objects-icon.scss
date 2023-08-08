@@ -1,6 +1,6 @@
 // Block
 .ob-icon {
-  @include box(--icon-small);
+  @include box(--size-extra-small);
   display: inline-flex;
   align-items: center;
   fill: var(--surface-lighter);
@@ -12,7 +12,7 @@
 
   // Modifiers
   .ob-icon--size-large {
-    @include box(--icon-large);
+    @include box(--size-small);
   }
 
   .ob-icon--fill-white {

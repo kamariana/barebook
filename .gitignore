@@ -8,6 +8,7 @@ vendor
 *.css.map
 *.sass.map
 *.scss.map
+main.css
 
 # NODE
 package.json

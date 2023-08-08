@@ -16,18 +16,18 @@
 // States
 .ob-avatar {
   &.small {
-    @include box(--avatar-small);
+    @include box(--size-mega);
   }
 
   &.medium {
-    @include box(--avatar-medium);
+    @include box(--size-extra-mega);
   }
 
   &.large {
-    @include box(--avatar-large);
+    @include box(--size-giga);
   }
 
   &.extra-large {
-    @include box(--avatar-extra-large);
+    @include box(--size-extra-giga);
   }
 }

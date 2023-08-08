@@ -3,7 +3,8 @@ p {
     margin-block-start: 0;
   }
 
-  + a {
-    margin-block-start: var(--gutter-tiny);
+  + a,
+  + button {
+    margin-block-start: var(--size-extra-small);
   }
 }

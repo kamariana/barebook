@@ -5,14 +5,14 @@ hr {
   box-sizing: content-box;
   padding: 0;
   border: 0;
-  border-block-start: 1px solid var(--outline-lightest);
-  margin-block: var(--gutter-medium);
+  border-block-start: 1px solid var(--stroke-dark);
+  margin-block: var(--size-small);
 }
 
 
 // MQs
 @include respond(laptop-small) {
   hr {
-    margin-block: var(--gutter-large);
+    margin-block: var(--size-large);
   }
 }

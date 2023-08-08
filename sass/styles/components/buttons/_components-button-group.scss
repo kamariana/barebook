@@ -7,22 +7,21 @@
 
 // Elements
 .cp-button-group__link {
-  @include box(--shape-medium);
+  @include box(--size-medium);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: var(--spacing-tiny);
+  padding: 0;
 }
 
 .cp-button-group__icon {
-  @include box(--icon-small)
-}
+  @include box(--size-extra-small);
+  fill: var(--surface-lighter);
 
-
-// States
-.cp-button-group__icon {
-  &.black {
-    fill: var(--black-light);
+  &:hover {
+    fill: var(--link-hovered-surface);
   }
 }
+
+

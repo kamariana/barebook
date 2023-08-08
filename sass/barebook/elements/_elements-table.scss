@@ -6,21 +6,20 @@ table {
 
 td,
 th {
-  padding: var(--spacing-small) var(--spacing-extra-small);
+  padding: var(--size-extra-tiny);
 }
 
 th {
   text-align: start;
-  font-size: var(--typescale-body-large);
+  font-size: var(--typescale-small);
   line-height: var(--leading-tiny);
   font-weight: bold;
 }
 
 caption {
-  caption-side: bottom;
   color: var(--surface-light);
-  font-size: var(--typescale-body-small);
+  font-size: var(--typescale-tiny);
   font-style: italic;
   text-align: center;
-  padding-block-start: var(--spacing-small);
+  padding-block-end: var(--size-extra-tiny);
 }

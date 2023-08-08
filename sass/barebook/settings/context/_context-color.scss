@@ -30,27 +30,30 @@
 }
 
 @mixin context-light-canvas {
+  --canvas: var(--ref-white);
   --canvas-extra-lightest: var(--ref-neutral-5);
   --canvas-lightest: var(--ref-neutral-10);
   --canvas-lighter: var(--ref-neutral-20);
   --canvas-light: var(--ref-neutral-30);
-  --canvas: var(--ref-white);
-  --canvas-dark: var(--ref-neutral-40);
-  --canvas-darker: var(--ref-neutral-50);
-  --canvas-darkest: var(--ref-neutral-60);
-  --canvas-extra-darkest: var(--ref-neutral-70);
   
-  --surface-lightest: var(--ref-neutral-60);
-  --surface-lighter: var(--ref-neutral-70);
-  --surface-light: var(--ref-neutral-80);
   --surface: var(--ref-neutral-90);
-  --surface-white: var(--ref-white);
+  --surface-lightest: var(--ref-neutral-80);
+  --surface-lighter: var(--ref-neutral-70);
+  --surface-light: var(--ref-neutral-60);
   --surface-black: var(--ref-black);
+  --surface-white: var(--ref-white);
 
-  --outline-light: var(--ref-neutral-50);
-  --outline-lighter: var(--ref-neutral-40);
-  --outline-lightest: var(--ref-neutral-30);
-  --outline-extra-lightest: var(--ref-neutral-20);
+  --link-enabled-surface: var(--ref-primary-80);
+  --link-hovered-surface: var(--ref-primary-70);
+  --link-focused-surface: var(--ref-primary-60);
+  --link-article-hovered-canvas: var(--ref-primary-70);
+  --link-article-hovered-surface: var(--ref-primary-70);
+  --link-article-hovered-surface: var(--ref-primary-80);
+
+  --stroke: var(--ref-neutral-20);
+  --stroke-dark: var(--ref-neutral-30);
+  --stroke-darker: var(--ref-neutral-40);
+  --stroke-darkest: var(--ref-neutral-50);
 
   --primary-enabled: var(--ref-primary-60);
   --primary-hovered: var(--ref-primary-70);
@@ -66,84 +69,22 @@
   --secondary-hovered-surface: var(--ref-white);
   --secondary-focused-surface: var(--ref-white);
 
-  --link-enabled-surface: var(--ref-primary-70);
-  --link-hovered-surface: var(--ref-primary-80);
-  --link-focused-surface: var(--ref-primary-70);
-  --link-article-hovered-canvas: var(--link-enabled-surface);
-  --link-article-hovered-surface: var(--white);
-
-  --form-field-outline: var(--ref-neutral-60); 
-  --form-field-enabled: var(--interactive-enabled); 
-  --form-field-hovered: var(--interactive-hovered); 
-  --form-field-focused: var(--interactive-focused); 
-
-  --interactive-enabled: var(--ref-primary-70);
-  --interactive-hovered: var(--ref-primary-80);
-  --interactive-focused: var(--ref-primary-90);
-  --interactive-light: var(--ref-primary-40);
+  --interactive-focused: var(--ref-primary-80);
+  --interactive-hovered: var(--ref-primary-70);
+  --interactive-enabled: var(--ref-primary-60);
+  --interactive-light: var(--ref-primary-50);
+  --interactive-extra-light: var(--ref-primary-40);
   --interactive-lighter: var(--ref-primary-30);
-  --interactive-lightest: var(--ref-primary-20);
-  --interactive-extra-lightest: var(--ref-primary-10);
+  --interactive-extra-lighter: var(--ref-primary-20);
+  --interactive-lightest: var(--ref-primary-10);
+  --interactive-extra-lightest: var(--ref-primary-5);
 
   // Misc
   accent-color: var(--ref-primary-90);
 }
 
 @mixin context-dark-canvas {
-  --canvas-extra-lightest: var(--ref-dark-80);
-  --canvas-lightest: var(--ref-dark-70);
-  --canvas-lighter: var(--ref-dark-60);
-  --canvas-light: var(--ref-dark-50);
-  --canvas: var(--ref-dark-90);
-  --canvas-dark: var(--ref-dark-30);
-  --canvas-darker: var(--ref-dark-20);
-  --canvas-darkest: var(--ref-dark-10);
-  --canvas-extra-darkest: var(--ref-dark-5);
   
-  --surface-lightest: var(--ref-neutral-40);
-  --surface-lighter: var(--ref-neutral-30);
-  --surface-light: var(--ref-neutral-20);
-  --surface: var(--ref-neutral-5);
-  --surface-white: var(--ref-black);
-  --surface-black: var(--ref-white);
-
-  --outline-light: var(--ref-neutral-70);
-  --outline-lighter: var(--ref-neutral-60);
-  --outline-lightest: var(--ref-neutral-70);
-  --outline-extra-lightest: var(--ref-neutral-80);
-
-  --primary-enabled: var(--ref-primary-60);
-  --primary-hovered: var(--ref-primary-70);
-  --primary-focused: var(--ref-primary-80);
-  --primary-enabled-surface: var(--ref-white);
-  --primary-hovered-surface: var(--ref-white);
-  --primary-focused-surface: var(--ref-white);
-
-  --secondary-enabled: var(--ref-primary-60);
-  --secondary-hovered: var(--ref-primary-70);
-  --secondary-focused: var(--ref-primary-80);
-  --secondary-enabled-surface: var(--ref-white);
-  --secondary-hovered-surface: var(--ref-white);
-  --secondary-focused-surface: var(--ref-white);
-
-  --link-enabled-surface: var(--ref-primary-20);
-  --link-hovered-surface: var(--ref-primary-30);
-  --link-focused-surface: var(--ref-primary-40);
-  --link-article-hovered-canvas: var(--link-enabled-surface);
-  --link-article-hovered-surface: var(--white);
-
-  --form-field-outline: var(--ref-neutral-60);
-  --form-field-enabled: var(--interactive-enabled);
-  --form-field-hovered: var(--interactive-hovered);
-  --form-field-focused: var(--interactive-focused);
-
-  --interactive-enabled: var(--ref-primary-60);
-  --interactive-hovered: var(--ref-primary-50);
-  --interactive-focused: var(--ref-primary-40);
-  --interactive-light: var(--ref-primary-30);
-  --interactive-lighter: var(--ref-primary-20);
-  --interactive-lightest: var(--ref-primary-10);
-  --interactive-extra-lightest: var(--ref-primary-5);
 
   // Misc
   accent-color: var(--ref-primary-90);

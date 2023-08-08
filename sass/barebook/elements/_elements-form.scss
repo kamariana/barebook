@@ -7,7 +7,7 @@ legend {
   display: table;
   max-inline-size: 100%;
   box-sizing: border-box;
-  margin-block-end: var(--spacing-small);
+  margin-block-end: var(--size-extra-small);
   color: inherit;
   line-height: var(--leading-tiny);
   white-space: normal;
@@ -22,7 +22,7 @@ label {
   + input,
   + select,
   + textarea {
-    margin-block-start: var(--spacing-tiny);
+    margin-block-start: var(--size-extra-nano);
   }
 }
 
@@ -38,29 +38,29 @@ input,
 select,
 textarea {
   inline-size: 100%;
-  padding-block: var(--spacing-extra-small);
-  padding-inline: var(--spacing-small);
-  border: 2px solid var(--form-field-outline);
+  padding-block: var(--size-tiny);
+  padding-inline: var(--size-extra-tiny);
+  border: 2px solid var(--stroke-darkest);
   background-color: var(--white);
   border-radius: var(--rounded-tiny);
-  color: inherit;
+  color: var(--black);
   font-weight: 600;
   transition-duration: 150ms;
   transition-property: border-color;
 
   &:hover {
-    border-color: var(--form-field-hovered);
+    border-color: var(--interactive-hovered);
   }
 
   &:focus {
-    border-color: var(--form-field-focused);
-    box-shadow: 0 0 0 2px var(--form-field-focused);
+    border-color: var(--interactive-focused);
+    box-shadow: 0 0 0 2px var(--interactive-focused);
     outline: none;
   }
 
   &:disabled {
-    border-color: var(--canvas-dark);
-    background-color: var(--canvas-dark);
+    border-color: var(--stroke);
+    background-color: var(--stroke);
     cursor: not-allowed;
     color: var(--surface-lighter)
   }
@@ -119,5 +119,5 @@ progress {
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button
 ) {
-  color: var(--form-field-enabled);
+  color: var(--interactive-enabled);
 }

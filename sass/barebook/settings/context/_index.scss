@@ -2,11 +2,9 @@
 // Context tokens define the primitive nature of the design tokens based on the context. 
 // These tokens point to reference tokens, they shouldn't have any hard coded values.
 
-
 @import './context-typography';
 @import './context-color';
 @import './context-syntax-highlighting';
-@import './context-spacing';
 @import './context-shape';
 @import './context-dimension';
 @import './context-z-index-layer';

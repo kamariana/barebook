@@ -1,6 +1,6 @@
 pre {
   border-radius: var(--rounded-medium);
-  font-size: var(--typescale-body-medium);
+  font-size: var(--typescale-extra-small);
   background-color: var(--canvas-lighter);
   overflow-x: auto;
   white-space: pre-wrap;
@@ -9,10 +9,10 @@ pre {
     background-color: transparent;
     border-radius: 0;
     display: block;
-    padding: var(--spacing-small);
-    -webkit-overflow-scrolling: touch;
+    padding: var(--size-tiny);
     overflow-x: auto;
     overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   pre {
@@ -22,10 +22,10 @@ pre {
 
 
 // MQs
-@include respond(tablet-large) {
+@include respond(laptop-small) {
   pre {
     code {
-      padding: var(--spacing-medium);
+      padding: var(--size-extra-small);
     }
   }
 }

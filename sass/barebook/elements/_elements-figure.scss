@@ -1,18 +1,18 @@
 figure {
-  margin-block-end: var(--gutter-extra-small);
+  margin-block: var(--size-small);
   small {
     display: block;
-    color: var(--surface-light);
-    font-size: var(--typescale-body-extra-small);
+    color: var(--surface-lightest);
+    font-size: var(--typescale-extra-tiny);
     line-height: 1;
     text-transform: uppercase;
-    padding-inline-start: var(--spacing-extra-small);
+    padding-inline-start: var(--size-tiny);
   }
 }
 
 figcaption {
-  padding-block-start: var(--spacing-small);
-  font-size: var(--typescale-body-small);
+  padding-block-start: var(--size-extra-nano);
+  font-size: var(--typescale-tiny);
   font-style: italic;
 }
 
@@ -21,6 +21,6 @@ figcaption {
 // MQs 
 @include respond(laptop-small) {
   figure {
-    margin-block-end: var(--gutter-small);
+    margin-block: var(--size-large);
   }
 }

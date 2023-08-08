@@ -1,11 +1,9 @@
 // Settings Core:
 // It brings together all other variables that are broken down into smaller chunks
 
-// References 
-@import './references/references-core';
-
-// Context 
-@import './context/context-core';
+@import './references/index';
+@import './context/index';
+@import './fonts/index';
 
 
 :root {
@@ -19,7 +17,6 @@
   @include context-color-transparent;
   @include context-color-notification;
   @include context-elevation;
-  @include context-spacing;
   @include context-shape;
   @include context-dimension;
   @include context-z-index-layer;

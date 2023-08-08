@@ -1,0 +1,93 @@
+// Regular
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/montserrat/static/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/montserrat/static/Montserrat-Italic.woff2") format("woff2");
+}
+
+// Bold
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/montserrat/static/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/montserrat/static/Montserrat-BoldItalic.woff2") format("woff2");
+}
+
+
+// TODO: @support not really supported. if ok, remove the lines above and uncomment the one below.
+// Set up Montserrat for old browsers
+// @supports not (font-variation-settings: normal) {
+//   // Regular
+//   @font-face {
+//     font-display: swap;
+//     font-family: Montserrat;
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url("/assets/fonts/montserrat/static/Montserrat-Regular.woff2") format("woff2");
+//   }
+
+//   @font-face {
+//     font-display: swap;
+//     font-family: Montserrat;
+//     font-style: italic;
+//     font-weight: 400;
+//     src: url("/assets/fonts/montserrat/static/Montserrat-Italic.woff2") format("woff2");
+//   }
+
+//   // Bold
+//   @font-face {
+//     font-display: swap;
+//     font-family: Montserrat;
+//     font-style: normal;
+//     font-weight: 700;
+//     src: url("/assets/fonts/montserrat/static/Montserrat-Bold.woff2") format("woff2");
+//   }
+
+//   @font-face {
+//     font-display: swap;
+//     font-family: Montserrat;
+//     font-style: italic;
+//     font-weight: 700;
+//     src: url("/assets/fonts/montserrat/static/Montserrat-BoldItalic.woff2") format("woff2");
+//   }
+
+//   body {
+//     font-family: Montserrat;
+//   }
+// }
+
+
+// Set up Montserrat for modern browser when the variable font is out 
+// @supports (font-variation-settings: normal) {
+//   @font-face {
+//     font-family: Montserrat, sans-serif;
+//     src: 
+//       url('/assets/fonts/montserrat/Montserrat-VF.woff2') 
+//       format('woff2 supports variations'),
+//       url('/assets/fonts/montserrat/Montserrat-VF.woff2') 
+//       format('woff2-variations');
+//     font-stretch: 25% 150%;
+//     font-style: oblique 0deg 10deg;
+//     font-weight: 100 900;
+//     font-display: swap;
+//   }
+// }

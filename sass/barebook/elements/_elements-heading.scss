@@ -6,56 +6,37 @@ h5,
 h6 {
   font-family: var(--typeface-primary);
   color: var(--surface-black);
-  margin-block-start: var(--gutter-medium);
+  margin-block-start: var(--size-medium);
 
   &:first-child {
     margin-block-start: 0;
   }
 
   + * {
-    margin-block-start: var(--gutter-small);
+    margin-block-start: var(--size-small);
   }
 
   + p {
-    margin-block-start: var(--spacing-extra-small);
+    margin-block-start: var(--size-extra-tiny);
   }
 }
 
 
 h1 {
-  font-size: var(--typescale-headline-extra-large);
-  line-height: var(--leading-medium);
-
-  + h2 {
-    margin-block-start: var(--spacing-extra-small);
-  }
+  font-size: var(--typescale-extra-large);
 }
 
 h2 {
-  font-size: var(--typescale-headline-large);
-  line-height: var(--leading-small);
-
-  + h3 {
-    margin-block-start: var(--spacing-extra-small);
-  }
+  font-size: var(--typescale-large);
 }
 
 h3 {
-  font-size: var(--typescale-headline-medium);
+  font-size: var(--typescale-medium);
   font-weight: 500;
-  line-height: var(--leading-small);
-
-  + h4 {
-    margin-block-start: var(--spacing-extra-small);
-  }
 }
 
-h4 {
-  font-size: var(--typescale-headline-small);
-}
-
+h4,
 h5,
 h6 {
-  font-size: var(--typescale-headline-extra-small);
-  font-weight: 700;
+  font-size: var(--typescale-small);
 }
