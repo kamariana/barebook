@@ -1,7 +1,0 @@
-// Reference Core:
-// This imports all the reference tokens that are broken down into small chucks.
-// Reference tokens are hard coded values that should not/rarely be used directly in the code base. 
-// All other tokens point to these tokens, of course reference tokens can point to themselves wherever necessary. 
-
-@import './references-sizing';
-@import './references-color';

@@ -1,0 +1,9 @@
+// Primitive Tokens:
+    // This imports all the primitive tokens.
+// Primitive tokens are hard coded values that should not/rarely be used directly in the code base. 
+// All other tokens point to these tokens, of course primitive tokens can point to themselves wherever necessary. 
+
+
+
+@import './color/color-static';
+@import './color/color-brand';
