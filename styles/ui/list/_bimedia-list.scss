@@ -1,0 +1,13 @@
+// Block
+.cp-list--media  {
+    // Elements
+  .cp-list__item {
+    padding: 0
+  }
+
+  .cp-list__link {
+    @include dp-flex-center-inline-gap(--size-extra-nano);
+  }
+
+  // Modifiers
+}

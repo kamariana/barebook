@@ -1,0 +1,19 @@
+// Block
+.cp-definition-list  {
+    @include reset-list;
+    @include dp-flex-column;
+    gap: var(--space-16, 1rem);
+}
+
+
+// variants
+.cp-definition-list--grid {
+    flex-direction: row;
+}
+
+
+
+// Elements
+.cp-definition-list__item  {
+    display: list-item;
+}

@@ -1,0 +1,130 @@
+// Text sizes and leading
+@mixin font-size-small-mobile {
+    font-size: var(--font-size-small-mobile); 
+    line-height: var(--line-height-1-60);
+}
+
+@mixin font-size-small-desktop {
+    font-size: var(--font-size-small-desktop); 
+    line-height: var(--line-height-1-60);
+}
+
+@mixin font-size-label-mobile {
+    font-size: var(--font-size-label-mobile); 
+    line-height: var(--line-height-1-55);
+}
+
+@mixin font-size-label-desktop {
+    font-size: var(--font-size-label-desktop); 
+    line-height: var(--line-height-1-55);
+}
+
+@mixin font-size-body-mobile {
+    font-size: var(--font-size-body-mobile); 
+    line-height: var(--line-height-1-65);
+}
+
+@mixin font-size-body-desktop {
+    font-size: var(--font-size-body-desktop); 
+    line-height: var(--line-height-1-70);
+}
+
+@mixin font-size-body-large-mobile {
+    font-size: var(--font-size-body-large-mobile); 
+    line-height: var(--line-height-1-45);
+}
+
+@mixin font-size-body-large-desktop {
+    font-size: var(--font-size-body-large-desktop); 
+    line-height: var(--line-height-1-45);
+}
+
+// @mixin font-size-title-small-mobile {
+//     font-size: var(--font-size-title-small-mobile); 
+//     line-height: var(--line-height-1-40);
+// }
+
+// @mixin font-size-title-small-desktop {
+//     font-size: var(--font-size-title-small-desktop); 
+//     line-height: var(--line-height-1-40);
+// }
+
+// @mixin font-size-title-medium-mobile {
+//     font-size: var(--font-size-title-medium-mobile); 
+//     line-height: var(--line-height-1-40);
+// }
+
+// @mixin font-size-title-medium-desktop {
+//     font-size: var(--font-size-title-medium-desktop); 
+//     line-height: var(--line-height-1-35);
+// }
+
+// @mixin font-size-title-large-mobile {
+//     font-size: var(--font-size-title-large-mobile); 
+//     line-height: var(--line-height-1-35);
+// }
+
+// @mixin font-size-title-large-desktop {
+//     font-size: var(--font-size-title-large-desktop); 
+//     line-height: var(--line-height-1-35);
+// }
+
+@mixin font-size-headline-small-mobile {
+    font-size: var(--font-size-headline-small-mobile); 
+    line-height: var(--line-height-1-30);
+}
+
+@mixin font-size-headline-small-desktop {
+    font-size: var(--font-size-headline-small-desktop); 
+    line-height: var(--line-height-1-30);
+}
+
+// @mixin font-size-headline-medium-mobile {
+//     font-size: var(--font-size-headline-medium-mobile); 
+//     line-height: var(--line-height-1-30);
+// }
+
+// @mixin font-size-headline-medium-desktop {
+//     font-size: var(--font-size-headline-medium-desktop); 
+//     line-height: var(--line-height-1-25);
+// }
+
+// @mixin font-size-headline-large-mobile {
+//     font-size: var(--font-size-headline-large-mobile); 
+//     line-height: var(--line-height-1-25);
+// }
+
+// @mixin font-size-headline-large-desktop {
+//     font-size: var(--font-size-headline-large-desktop); 
+//     line-height: var(--line-height-1-25);
+// }
+
+// @mixin font-size-display-small-mobile {
+//     font-size: var(--font-size-display-small-mobile); 
+//     line-height: var(--line-height-1-20);
+// }
+
+// @mixin font-size-display-small-desktop {
+//     font-size: var(--font-size-display-small-desktop); 
+//     line-height: var(--line-height-1-20);
+// }
+
+// @mixin font-size-display-medium-mobile {
+//     font-size: var(--font-size-display-medium-mobile); 
+//     line-height: var(--line-height-1-20);
+// }
+
+// @mixin font-size-display-medium-desktop {
+//     font-size: var(--font-size-display-medium-desktop); 
+//     line-height: var(--line-height-1-15);
+// }
+
+// @mixin font-size-display-large-mobile {
+//     font-size: var(--font-size-display-large-mobile); 
+//     line-height: var(--line-height-1-15);
+// }
+
+// @mixin font-size-display-large-desktop {
+//     font-size: var(--font-size-display-large-desktop); 
+//     line-height: var(--line-height-1-15);
+// }

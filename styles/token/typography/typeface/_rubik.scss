@@ -1,0 +1,149 @@
+$static-font-path: '/assets/fonts/rubik/static';
+$variable-font-path: '/assets/fonts/rubik';
+
+// Light
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    src: url("#{$static-font-path}/Rubik-Light.woff2") format("woff2");
+}
+  
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: 300;
+    src: url("#{$static-font-path}/Rubik-LightItalic.woff2") format("woff2");
+}
+
+// Regular
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 400;
+    src: url("#{$static-font-path}/Rubik-Regular.woff2") format("woff2");
+}
+  
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: 400;
+    src: url("#{$static-font-path}/Rubik-Italic.woff2") format("woff2");
+}
+  
+// Medium
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    src: url("#{$static-font-path}/Rubik-Medium.woff2") format("woff2");
+}
+  
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: 500;
+    src: url("#{$static-font-path}/Rubik-MediumItalic.woff2") format("woff2");
+}
+
+// SemiBold
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    src: url("#{$static-font-path}/Rubik-SemiBold.woff2") format("woff2");
+}
+      
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: 600;
+    src: url("#{$static-font-path}/Rubik-SemiBoldItalic.woff2") format("woff2");
+}
+
+    
+// Bold
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    src: url("#{$static-font-path}/Rubik-Bold.woff2") format("woff2");
+}
+      
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: 700;
+    src: url("#{$static-font-path}/Rubik-BoldItalic.woff2") format("woff2");
+}
+    
+  
+  
+  // TODO: @support not really supported. if ok, remove the lines above and uncomment the one below.
+  // Set up Montserrat for old browsers
+  // @supports not (font-variation-settings: normal) {
+  //   // Regular
+  //   @font-face {
+  //     font-display: swap;
+  //     font-family: Montserrat;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     src: url("/assets/fonts/montserrat/static/Montserrat-Regular.woff2") format("woff2");
+  //   }
+  
+  //   @font-face {
+  //     font-display: swap;
+  //     font-family: Montserrat;
+  //     font-style: italic;
+  //     font-weight: 400;
+  //     src: url("/assets/fonts/montserrat/static/Montserrat-Italic.woff2") format("woff2");
+  //   }
+  
+  //   // Bold
+  //   @font-face {
+  //     font-display: swap;
+  //     font-family: Montserrat;The reason for Muhammad's (pbuh) success was that he was sent with a pure message from Allah, the creator of all mankind. This message would help us understand how to live our lives. It would tell us about good and bad and about wrong and right. This message would tell us about mankind (about you and me), the universe and the rest of creation around us. This message would tell us about Allah and about our relationship with Allah. The message also told us about the Hereafter, the Day of Judgment, Heaven and Hell.
+  //     font-style: normal;The reason for Muhammad's (pbuh) success was that he was sent with a pure message from Allah, the creator of all mankind. This message would help us understand how to live our lives. It would tell us about good and bad and about wrong and right. This message would tell us about mankind (about you and me), the universe and the rest of creation around us. This message would tell us about Allah and about our relationship with Allah. The message also told us about the Hereafter, the Day of Judgment, Heaven and Hell.
+  //     font-weight: 700;
+  //     src: url("/assets/fonts/montserrat/static/Montserrat-Bold.woff2") format("woff2");
+  //   }
+  
+  //   @font-face {
+  //     font-display: swap;
+  //     font-family: Montserrat;
+  //     font-style: italic;
+  //     font-weight: 700;
+  //     src: url("/assets/fonts/montserrat/static/Montserrat-BoldItalic.woff2") format("woff2");
+  //   }
+  
+  //   body {
+  //     font-family: Montserrat;
+  //   }
+  // }
+  
+  
+  // Set up Montserrat for modern browser when the variable font is out 
+  // @supports (font-variation-settings: normal) {
+  //   @font-face {
+  //     font-family: Montserrat, sans-serif;
+  //     src: 
+  //       url('/assets/fonts/montserrat/Montserrat-VF.woff2') 
+  //       format('woff2 supports variations'),
+  //       url('/assets/fonts/montserrat/Montserrat-VF.woff2') 
+  //       format('woff2-variations');
+  //     font-stretch: 25% 150%;
+  //     font-style: oblique 0deg 10deg;
+  //     font-weight: 100 900;
+  //     font-display: swap;
+  //   }
+  // }

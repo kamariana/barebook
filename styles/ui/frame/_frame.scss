@@ -1,0 +1,26 @@
+// Block
+.cp-frame {
+    @include dp-flex-column;
+    background-color: var(--color-background);
+    border-radius: var(--space-24, 1.5rem);
+}
+
+
+
+// Variants
+
+
+
+// Elements
+.cp-frame__head {
+    padding: var(--space-16, 1rem) var(--space-24, 1.5rem);
+}
+
+.cp-frame__body {
+    padding: var(--space-16, 1rem) var(--space-24, 1.5rem);
+    flex: 1;
+}
+
+.cp-frame__foot {
+    padding: var(--space-16, 1rem) var(--space-24, 1.5rem);
+}

@@ -1,0 +1,26 @@
+@import './color/color';
+@import './typography/typography';
+@import './space/space';
+
+
+
+:root {
+    @include typography;
+    @include space;
+    color-scheme: light dark;  
+}
+  
+  
+  // Prefers-color-scheme
+  @media (prefers-color-scheme: light) {
+    :root {
+      @include light-theme;
+      //@include light-theme-syntax-highlighting;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+     
+    }
+  }

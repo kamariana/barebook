@@ -1,0 +1,19 @@
+// Define breakpoints
+$breakpoints: (
+    'mobile-small': 320px,
+    'mobile-medium': 375px,
+    'mobile-large': 425px,
+    'tablet': 768px,
+    'desktop-small': 1024px,
+    'desktop-medium': 1440px,
+    'desktop-large': 1600px,
+    'desktop-huge': 1920px
+);
+
+
+
+
+
+@function breakpoint($size) {
+    @return map-get($breakpoints, $size);
+}

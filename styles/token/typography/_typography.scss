@@ -1,0 +1,94 @@
+@import './typeface/rubik';
+
+@mixin typography {
+
+    // Typeface + Family
+    --font-family-heading: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, system-ui, "Helvetica Neue", sans-serif;
+    --font-family-body: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, system-ui, "Helvetica Neue", sans-serif;
+    --font-family-code: Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace;
+
+
+
+
+
+
+    // Font Sizes
+    
+    // Use in secondary level content such as fine print or semantic messaging. Use sparingly. 
+    --font-size-small-mobile: #{$size-11};
+    --font-size-small-desktop: #{$size-13};
+
+    --font-size-label-mobile: #{$size-12};
+    --font-size-label-desktop: #{$size-15};
+
+    // Use in short descriptions or labels. The default size for text in components. 
+    --font-size-body-mobile: #{$size-16};
+    --font-size-body-desktop: #{$size-19};
+    
+    // For long-form text, such as in blogs.
+    --font-size-body-large-mobile: #{$size-18};
+    --font-size-body-large-desktop: #{$size-22};
+
+    //
+    --font-size-title-small-mobile: #{$size-18};
+    --font-size-title-small-desktop: #{$size-22};
+    --font-size-title-medium-mobile: #{$size-20};
+    --font-size-title-medium-desktop: #{$size-24};
+    --font-size-title-large-mobile: #{$size-25};
+    --font-size-title-large-desktop: #{$size-31};
+
+    //
+    --font-size-headline-small-mobile: #{$size-28};
+    --font-size-headline-small-desktop: #{$size-34};
+    --font-size-headline-medium-mobile: #{$size-32};
+    --font-size-headline-medium-desktop: #{$size-39};
+    --font-size-headline-large-mobile: #{$size-36};
+    --font-size-headline-large-desktop: #{$size-44};
+    
+    //
+    --font-size-display-small-mobile: #{$size-45};
+    --font-size-display-small-desktop: #{$size-55};
+    --font-size-display-medium-mobile: #{$size-50};
+    --font-size-display-medium-desktop: #{$size-62};
+    --font-size-display-large-mobile: #{$size-60};
+    --font-size-display-large-desktop: #{$size-72};
+    
+    
+
+
+
+    // Weight
+    --font-weight-thin: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+
+
+
+
+    // Leading
+    --line-height-1-15: 1.15;
+    --line-height-1-20: 1.20;
+    --line-height-1-25: 1.25;
+    --line-height-1-30: 1.30;
+    --line-height-1-35: 1.35;
+    --line-height-1-40: 1.40;
+    --line-height-1-45: 1.45;
+    --line-height-1-50: 1.50;
+    --line-height-1-55: 1.55;
+    --line-height-1-60: 1.60;
+    --line-height-1-65: 1.65;
+    --line-height-1-70: 1.70;
+    --line-height-1-75: 1.75;
+
+
+
+
+    
+    // Letter Spacing
+}
+
+

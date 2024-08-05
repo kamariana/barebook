@@ -1,0 +1,46 @@
+// Light theme
+@mixin light-theme {
+// Text
+    // Use for primary text, such as body copy, sentence case headers, and buttons.
+    --color-text: #{$neutral-1100};
+    // Use for secondary text, such as navigation, subtle button links, input field labels, and all caps subheadings.
+    --color-text-subtle: #{$neutral-900}; 
+    // Use for tertiary text, such as meta-data, breadcrumbs, input field placeholder and helper text.
+    --color-text-subtlest: #{$neutral-600}; 
+   
+// Background
+    --color-background: #{$neutral-0};
+    --color-background-subtle: #{$neutral-100};
+    --color-background-subtler: #{$neutral-200};
+    --color-background-subtlest: #{$neutral-300};
+
+    --color-background-neutral: #{$neutral-200A};
+    --color-background-neutral-hovered: #{$neutral-300A};
+    --color-background-neutral-pressed: #{$neutral-400A};
+
+    // Use for icon-only buttons, or icons paired with color-text
+    --color-fill-icon: #{$neutral-800};
+    // Use for icons on bold backgrounds.
+    --color-fill-icon-inverse: #{$neutral-300};
+    // Use for icons in selected or opened states, such as those used in dropdown buttons.
+    --color-fill-icon-selected: #{$neutral-0}; // TODO: brand color
+    // Use for icons that reinforce our brand.
+    --color-fill-icon-brand: #{$neutral-0}; // TODO: brand color
+    // Use for icons in a disabled state.
+    --color-fill-icon-disabled: #{$neutral-400A};
+
+
+
+
+// Border
+    // Use to visually group or separate UI elements, such as flat cards or side panel dividers.
+    --color-border: #{$neutral-400A};
+    --color-border-subtle: #{$neutral-300A};
+
+}
+
+
+// Dark theme
+@mixin dark-theme {
+
+}

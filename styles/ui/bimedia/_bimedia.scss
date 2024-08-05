@@ -1,0 +1,47 @@
+// Block
+.cp-bimedia {
+    display: flex;
+    align-items: start;
+    gap: var(--space-24, 1.5rem);
+}
+
+
+// Variants
+.cp-bimedia--center {
+    align-items: center;
+}
+
+.cp-bimedia--responsive {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+// Elements
+.cp-bimedia__body {
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+// MQs
+@include respond-to('tablet') {
+
+    // Variants
+    .cp-bimedia--responsive {
+        flex-direction: row;
+        text-align: start;
+    }
+
+    // Elements Variants
+    .cp-bimedia__figure--reverse {
+        order: 1;
+    }
+}

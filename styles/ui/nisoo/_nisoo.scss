@@ -1,0 +1,142 @@
+// Block
+.nisoo {
+    display: grid;
+    grid-template-rows: 
+        var(--space-72, 4.5rem) 
+        1fr 
+        var(--space-88, 5.5rem)
+        ;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "lo-header"
+        "lo-main"
+        "lo-footer"
+    ;
+
+
+
+    // Elements
+
+
+    
+    // Header
+    .lo-header {
+        grid-area: lo-header;
+    }
+
+    .lo-header__contain {
+        block-size: 100%;
+    }
+
+    // Main
+    .lo-main {        
+        grid-area: lo-main;
+    }
+
+    // Sidebar
+    .lo-sidebar {
+        grid-area: lo-sidebar;
+        display: none;
+    }
+
+    // Aside
+    .lo-aside {
+        grid-area: lo-aside;
+        display: none;
+    }
+
+
+    // Footer
+    .lo-footer {
+        grid-area: lo-footer;  
+    }
+}
+
+
+
+// MQs
+@include respond-to('tablet') {
+    .nisoo {
+        grid-template-rows: 
+        var(--space-72, 4.5rem) 
+        1fr 
+        var(--space-62, 3.875rem)
+        ;
+        grid-template-columns: var(--space-144, 9rem) 1fr;
+        grid-template-areas:
+            "lo-header lo-header"
+            "lo-sidebar lo-main"
+            "lo-sidebar lo-footer"
+        ;
+
+
+        // Elements
+
+        // Header
+        .lo-header {
+            
+        }
+
+        // Main
+        .lo-main {
+            
+        }
+
+
+        // Sidebar
+        .lo-sidebar {
+            display: block;
+        }
+
+        // Aside
+        .lo-aside {
+            display: none;
+        }
+
+
+        // Footer
+        .lo-footer {
+        }
+    }
+}
+
+
+@include respond-to('desktop-medium') {
+    .nisoo {
+        grid-template-columns: var(--space-184, 11.5rem) 1fr 0;
+        grid-template-areas:
+            "lo-header lo-header lo-header"
+            "lo-sidebar lo-main lo-aside"
+            "lo-sidebar lo-footer lo-aside"
+        ;
+
+
+        // Elements
+
+        // Header
+        .lo-header {
+            
+        }
+
+        // Main
+        .lo-main {
+            
+        }
+
+
+        // Sidebar
+        .lo-sidebar {
+           // display: block;
+        }
+
+        // Aside
+        .lo-aside {
+           // display: none;
+        }
+
+
+        // Footer
+        .lo-footer {
+        }
+    }
+}

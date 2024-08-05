@@ -1,0 +1,48 @@
+.cp-list--brand {
+  
+  // TODO: apply grid component where necessary here and maintain only 
+  // what is needed here
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+
+  .cp-list__item { 
+    padding: var(--size-base);
+  }
+
+  .cp-list__img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+
+  }
+
+  .cp-list__link {
+    //color: var(--surface-lighter);
+  }
+}
+
+
+
+
+
+// MQs
+@include respond(tablet-small) {
+  .cp-list--brand {
+    .cp-list__img {
+      aspect-ratio: 4 / 3;
+    }
+  }
+}
+
+@include respond(laptop-small) {
+  .cp-list--brand {
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+
+    .cp-list__img {
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

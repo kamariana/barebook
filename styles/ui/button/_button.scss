@@ -1,0 +1,17 @@
+.cp-button {
+  position: relative;
+  display: inline-flex;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  touch-action: manipulation;
+  overflow: hidden;
+
+  border: 1px solid transparent;
+  letter-spacing: 0.03ch;
+}
+
+@import './button-icon-only';

@@ -1,0 +1,10 @@
+@mixin box-size($size) {
+    inline-size: var($size);
+    block-size: var($size);
+}
+
+@mixin owl($size) {
+    > * + * {
+        margin-block-start: var($size);
+    }
+}

@@ -1,0 +1,24 @@
+.cp-list--meta {
+  @include dp-flex-wrap-gap(--size-base);
+  color: var(--surface-lighter);
+  margin-block-start: var(--size-extra-medium);
+
+  .cp-list__item { 
+    padding: 0;
+  }
+
+  .cp-list--meta  {
+    margin-block-start: 0;
+  }
+}
+
+
+
+
+
+// MQs
+@include respond(laptop-large) {
+  .cp-list--meta {
+    margin-block-start: var(--size-large);
+  }
+}

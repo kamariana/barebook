@@ -1,0 +1,24 @@
+// Inline Sizes aka widths
+.md-inline-size-44 {
+    inline-size: var(--space-44, 2.75rem);
+}
+
+.md-inline-size-96 {
+    inline-size: var(--space-96, 6rem);
+}
+
+
+// Block Sizes aka heights
+
+
+// Block and Inline Sizes aka widths and heights
+.md-box-size-49 {
+    @include box-size(--space-49);
+}
+
+
+.md-box-size-184 {
+    @include box-size(--space-184);
+
+    outline: 1px solid red;
+}

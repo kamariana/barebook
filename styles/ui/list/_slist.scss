@@ -1,0 +1,48 @@
+// Block
+.cp-list {
+  @include reset-list;
+}
+
+// Element
+.cp-list {
+  &__item {
+    display: list-item;
+    padding-block: var(--size-base);
+  }
+
+  &__link {
+    @include reset-link;
+  }
+}
+
+
+// Modifiers
+.cp-list {
+  &--first-child {
+    order: -1;  
+    margin-block-end: var(--size-base);
+  }
+
+  &--upcase {
+    text-transform: uppercase;
+    font-size: var(--typescale-tiny);
+  }
+
+  &--compacted {
+    .cp-list__item {
+      padding-block: var(--size-extra-nano);
+    }
+  }
+
+  &--separated {
+    > * + * {
+      border-block-start: 1px solid var(--stroke);
+    }
+  }
+
+  // Element Modifiers
+  &__item--inline {
+    @include dp-flex-center-inline;
+    gap: var(--size-extra-nano);
+  }
+}

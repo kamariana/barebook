@@ -1,0 +1,62 @@
+// Block
+.cp-data-list {}
+
+// Variants
+
+
+// Elements
+.cp-data-list__head {
+    padding: var(--space-12, 0.75rem) var(--space-24, 1.5rem);
+}
+
+.cp-data-list__body {
+    .cp-data-list__rows {
+        overflow: hidden;
+        border-radius: var(--space-24, 1.5rem);
+    }
+}
+
+.cp-data-list__row {
+    display: grid;
+    grid-template-columns: 
+    var(--space-44, 2.75rem)
+    1fr
+    var(--space-72, 4.5rem);
+    gap: var(--space-16, 0.5rem);
+    align-items: center;
+    padding: var(--space-8, 0.5rem);
+    background-color: var(--color-background);
+}
+
+.cp-data-list__link {
+    @include reset-link;
+}
+
+.cp-data-list__title {}
+
+// for value data (optional)
+.cp-data-list__subtitle {}
+
+// for descriptive paragraphs (optional)
+.cp-data-list__description {}
+
+
+
+// Elements Variants
+
+
+
+
+
+// MQs
+@include respond-to('tablet') {
+    .cp-data-list__row {
+        padding: var(--space-12, 0.75rem);
+    }
+}
+
+@include respond-to('desktop-medium') {
+    .cp-data-list__row {
+        padding: var(--space-16, 1rem);
+    }
+}

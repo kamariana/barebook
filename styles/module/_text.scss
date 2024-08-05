@@ -1,0 +1,63 @@
+// Text
+// .md-initial-letter p {
+//   &:first-of-type::first-letter {
+//     color: var(--primary-enabled);
+//     float: inline-start;
+//     font-size: var(--typescale-tera);
+//     line-height: 0.6;
+//     padding-inline-end: var(--size-nano);
+//   }
+// }
+
+
+
+
+// Text Colors
+// .md-white-text {
+//   color: var(--white) !important;
+// }
+
+// .md-black-text {
+//   color: var(--black) !important;
+// }
+
+// .md-primary-text {
+//   color: var(--primary-enabled) !important;
+// }
+
+
+
+
+// Text Sizing
+// .md-lead-text {
+//   font-size: var(--typescale-small);
+// }
+
+.md-display-headline-small {
+  @include font-size-headline-small-mobile
+}
+
+
+
+
+// MQs 
+@include respond-to('tablet') {
+  
+}
+
+@include respond-to('desktop-medium') {
+  .md-display-headline-small {
+    @include font-size-headline-small-desktop
+  }
+  
+  // Text
+  // .md-initial-letter p {
+  //   &:first-of-type::first-letter {
+  //     font-size: var(--typescale-peta);
+  //   }
+  // }
+
+
+  // Text Sizing
+
+}

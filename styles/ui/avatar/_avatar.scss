@@ -1,0 +1,26 @@
+// Block
+.cp-avatar {
+    @include dp-center-inline;
+    @include box-size(--space-44);
+    overflow: hidden;
+}
+
+
+// Variants
+.cp-avatar--img {
+    > img {
+
+    }
+}
+
+.cp-avatar--text {
+    border: 1px solid var(--color-border);
+    
+    > span {
+        font-weight: var(--font-weight-semibold);
+    }
+}
+
+// Elements
+
+// Elements Variants

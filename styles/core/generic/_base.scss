@@ -1,0 +1,53 @@
+// Base settings
+html {
+  //* Make type rendering look crisper */
+  -webkit-font-smoothing: antialiased;  //* For WebKit-based browsers */
+  -moz-osx-font-smoothing: grayscale;  //* For Firefox on macOS */
+
+  //* Deactivate auto-enlargement of small text in Safari */
+  text-size-adjust: 100%;
+
+  //* Enable kerning and optional ligatures */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @include font-size-body-mobile;
+  background-color: var(--color-background-subtler);
+  color: var(--color-text);
+  font-family: var(--font-family-body);
+  font-optical-sizing: auto;  
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  
+  //overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+// // A consistent vertical rhythm using the base line-height
+// ul,
+// ol,
+// dl,
+// p,
+// address,
+// hr,
+// table,
+// figure,
+// audio,
+// video,
+// pre {
+//   margin-block-start: var(--size-extra-small);
+// }
+
+// p {
+//   &:first-child {
+//     margin-block-start: 0;
+//   }
+// }
+
+// MQs 
+@include respond-to('desktop-small') {
+  body {
+    @include font-size-body-desktop;
+  }
+}

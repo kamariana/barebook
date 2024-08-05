@@ -1,0 +1,19 @@
+@mixin space {
+    --space-0: 0;
+
+    --space-4: #{$size-4};
+    --space-8: #{$size-8};
+    --space-12: #{$size-12};
+    --space-16: #{$size-16};
+    --space-20: #{$size-20};
+    --space-24: #{$size-24};
+    --space-32: #{$size-32};
+    --space-40: #{$size-40};
+    --space-44: #{$size-44};
+    --space-49: #{$size-49};
+    --space-62: #{$size-62};
+    --space-72: #{$size-72};
+    --space-88: #{$size-88};
+    --space-144: #{$size-144};
+    --space-184: #{$size-184};
+}

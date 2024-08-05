@@ -1,0 +1,7 @@
+// Block
+.ob-contain {
+  padding-inline: var(--space-24, 1.5rem);
+  .ob-contain {
+    padding: 0;    
+  }
+}

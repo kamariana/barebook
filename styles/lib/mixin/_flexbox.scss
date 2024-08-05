@@ -1,0 +1,45 @@
+// Display Center inline  Apart 
+@mixin dp-center-inline-apart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Display Center Inline
+@mixin dp-center-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Display Center Block
+@mixin dp-center-block {
+    display: flex;
+    gap: var(--space-4, 0.25rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// Display center inline end
+@mixin dp-center-inline-end {
+    display: flex;
+    gap: var(--space-4, 0.25rem);
+    align-items: center;
+    justify-content: end;
+}
+
+// Display center inline evenly
+@mixin dp-center-inline-evenly {
+    display: flex;
+    gap: var(--space-4, 0.25rem);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+// Display flex column
+@mixin dp-flex-column {
+    display: flex;
+    flex-direction: column;
+}

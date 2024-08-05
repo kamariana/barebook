@@ -1,0 +1,13 @@
+.cp-list--tag {
+  display: inline-flex;
+  font-size: var(--typescale-tiny);
+  color: var(--surface-lighter);
+
+  .cp-list__item { 
+    padding: 0;
+  }
+
+  .cp-list__link {
+    color: var(--surface-lighter);
+  }
+}

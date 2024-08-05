@@ -1,0 +1,71 @@
+// Block
+// A full frame layout with sticky header and footer with a scrollable body
+.lo-metor {
+    block-size: 100%;
+}
+
+
+// Elements
+.lo-metor__caput {
+    position: sticky;
+    inset-block-start: 0; 
+    z-index: 10;
+    align-self: center;
+    padding-inline: var(--space-24, 1.5rem);
+}
+
+.lo-metor__corpus {    
+    block-size: 100%;
+    overflow-y: auto;
+    border-radius: var(--space-24, 1.5rem);
+
+    // TODO: extract to own file and use md-hide-scrollbar
+    //* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        width: 0; /* Remove scrollbar space */
+        background: transparent; /* Optional: just in case */
+    }
+    
+    /* Show scrollbar on hover */
+    &:hover::-webkit-scrollbar {
+        width: 2px; /* Adjust the width as needed */
+        background: red; /* Optional: scrollbar track color */
+    }
+    
+    &:hover::-webkit-scrollbar-thumb {
+        background: red; /* Optional: scrollbar thumb color */
+    }
+}
+
+.lo-metor__pes {
+    position: sticky;
+    inset-block-end: 0;
+    align-self: center;
+}
+
+
+
+// Modifiers
+.lo-metor--page {
+    block-size: 100vh;
+    overflow: hidden;
+}
+
+
+.lo-metor--di {
+    display: grid;
+    grid-template-rows: 
+        var(--space-72, 4.5rem) 
+        1fr 
+    ;
+}
+
+.lo-metor--tri {
+    display: grid;
+    grid-template-rows: 
+        var(--space-72, 4.5rem) 
+        1fr
+        var(--space-88, 5.5rem)
+        ;
+    ;
+}
