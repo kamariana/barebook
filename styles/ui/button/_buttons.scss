@@ -1,160 +1,100 @@
-// @import './components-button';
-// @import './components-button-group';
-// @import './components-button-toggle-nav';
-// //@import './components-button-color-scheme-switcher';
-
-
-
-
-// Block
-.cp-button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    inline-size: auto;
-    padding-block: var(--size-nano);
-    padding-inline: var(--size-extra-small);
-    border: 2px solid transparent;
-    background-color: transparent;
-    border-radius: var(--rounded-extra-large);
-    cursor: pointer;
-    color: var(--surface);
-    font-size: var(--typescale-tiny);
-    font-weight: bold;
-    letter-spacing: 0.03ch;
-    text-decoration: none;
-    user-select: none;
-    white-space: nowrap;
-    touch-action: manipulation;
-  }
-  
-  
-  // Modifiers
-  .cp-button--small {
-    padding-block: var(--size-extra-nano);
-    padding-inline: var(--size-tiny);
-  }
-  
-  .cp-button--large {
-    block-size: var(--size-medium);
-  }
-  
-  .cp-button--primary {
-    background-color: var(--primary-enabled);
-    color: var(--primary-enabled-surface);
-  
-    &:hover {
-      background-color: var(--primary-hovered);
-      color: var(--primary-hovered-surface);
-    }
-  
-    &:focus {
-      background-color: var(--primary-focused);
-      color: var(--primary-focused-surface);
-      outline: none;
-    }
-  }
-  
-  .cp-button--secondary {
-    border-color: var(--secondary-enabled);
-    color: var(--secondary-enabled-surface);
-  
-    &:hover {
-      background-color: var(--secondary-hovered);
-      border-color: var(--secondary-hovered);
-      color: var(--secondary-hovered-surface);
-    }
-  
-    &:focus {
-      background-color: var(--secondary-focused);
-      border-color: var(--secondary-focused);
-      color: var(--secondary-focused-surface);
-      outline: none;
-    }
-  }
-  
-  .cp-button--tertiary {
-    background-color: var(--interactive-extra-lightest);
-    border-color: var(--interactive-lightest);
-  
-    &:hover {
-      background-color: var(--interactive-lightest);
-      border-color: var(--interactive-lightest);
-      color: var(--surface);
-    }
-  
-    &:focus {
-      background-color: var(--interactive-extra-lighter);
-      border-color: var(--interactive-extra-lighter);
-      color: var(--surface);
-      outline: none;
-    }
-  }
-  
-  .cp-button--text {
-    color: var(--link-enabled-surface);
-    padding-inline: 0;
-    padding-block: var(--size-nano);
-  
-    &:hover {
-      color: var(--link-hovered-surface);
-    }
-  
-    &:focus {
-      color: var(--link-focused-surface);
-      outline: none;
-    }
-  }
-  
-  .cp-button--icon {
-    @include box(--size-medium);
-    padding: 0;
-  
-    .ob-icon {
-      fill: var(--surface-lighter);
-    }
-  
-    &:hover {
-      .ob-icon {
-        fill: var(--link-hovered-surface);
-      }
-    }
-  
-    // TODO: for primary and others 
-    //&.primary {}
+// Variants
+.cp-button--brand {
     
-  }
-  
-  .cp-button--with-icon {
-    @include dp-flex-wrap-gap(--size-nano);
-    @include dp-flex-center;
-  }
-  
-  
-  // .cp-button--fab {
-  //   @include dp-flex-center;
-  //   @include box(--icon-large);
-  //   display: flex;
-  //   border-radius: var(--rounded-full);
-  //   padding: 0;
-  
-  //   &:hover {
-  //     color: var(--link-hovered-surface);
-  //     background-color: var(--canvas-light);
-  
-  //     .ob-icon {
-  //       fill: var(--link-hovered-surface);
-  //     }
-  //   }
-  
-  //   &:focus {
-  //     color: var(--link-focused-surface);
-  //     background-color: var(--canvas-light);
-  
-  //     .ob-icon {
-  //       fill: var(--link-focused-surface);
-  //     }
-  //   }
-  // }
+    background-color: var(--color-background-brand);
+    color: var(--color-text-inverse);
+
+    svg {
+        fill: var(--color-fill-icon-inverse);
+    }
+
+    &:hover { // holding the mouse pointer over the item
+        background-color: var(--color-background-brand-hovered);
+        color: var(--color-text-inverse);
+    }
+
+    &:active { // when the item is clicked on
+        background-color: var(--color-background-brand-hovered);
+        color: var(--color-text-inverse);
+    }
+
+    &:focus { //  element has focus
+        background-color: var(--color-background-brand-pressed);
+        color: var(--color-text-inverse);
+        box-shadow: 0 0 0 2px var(--color-border-focused);
+        outline: none;
+    }
+}
+
+
+
+// Variant
+.cp-button--outline {
+
+    border-color: var(--color-background-brand);
+    color: var(--color-text-brand);
+
+    svg {
+        fill: var(--color-fill-icon-brand);
+    }
+
+    &:hover { // holding the mouse pointer over the item
+        background-color: var(--color-background-brand-hovered);
+        border-color: var(--color-background-brand-hovered);
+        color: var(--color-text-inverse);
+
+        svg {
+            fill: var(--color-fill-icon-inverse);
+        }
+    }
+
+    &:active { // when the item is clicked on
+        background-color: var(--color-background-brand-hovered);
+        border-color: var(--color-background-brand-hovered);
+        color: var(--color-text-inverse);
+
+        svg {
+            fill: var(--color-fill-icon-inverse);
+        }
+    }
+
+    &:focus { //  element has focus
+      background-color: var(--color-background-brand-pressed);
+      border-color: var(--color-background-brand-pressed);
+      box-shadow: 0 0 0 2px var(--color-border-focused);
+      color: var(--color-text-inverse);
+      outline: none;
+
+        svg {
+            fill: var(--color-fill-icon-inverse);
+        }
+    }
+}
+
+
+.cp-button--neutral {
+    
+    background-color: var(--color-background-neutral);
+    color: var(--color-text-brand);
+
+    svg {
+        fill: var(--color-fill-icon-brand);
+    }
+
+    &:hover { // holding the mouse pointer over the item
+        background-color: var(--color-background-neutral-hovered);
+        color: var(--color-text-brand);
+    }
+
+    &:active { // when the item is clicked on
+        background-color: var(--color-background-neutral-hovered);
+        color: var(--color-text-brand);
+    }
+
+    &:focus { //  element has focus
+        background-color: var(--color-background-neutral-pressed);
+        color: var(--color-text-brand);
+        box-shadow: 0 0 0 2px var(--color-border-focused);
+        outline: none;
+    }
+}

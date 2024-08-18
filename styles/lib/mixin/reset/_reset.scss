@@ -1,0 +1,26 @@
+// reset lits
+@mixin reset-list {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+// reset link
+@mixin reset-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin reset-button {
+    overflow: hidden;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    letter-spacing: 0.03ch;
+
+    user-select: none;
+    white-space: nowrap;
+    touch-action: manipulation;
+}

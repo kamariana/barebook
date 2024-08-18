@@ -19,21 +19,21 @@
     overflow-y: auto;
     border-radius: var(--space-24, 1.5rem);
 
-    // TODO: extract to own file and use md-hide-scrollbar
     //* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
-        width: 0; /* Remove scrollbar space */
-        background: transparent; /* Optional: just in case */
+        inline-size: 4px; /* Remove scrollbar space */
+        background: transparent; //* Optional: just in case */
     }
     
     /* Show scrollbar on hover */
     &:hover::-webkit-scrollbar {
-        width: 2px; /* Adjust the width as needed */
-        background: red; /* Optional: scrollbar track color */
+        inline-size: 4px; //* Adjust the inline-size as needed */
+        background: var(--color-background-brand-subtlest); //* Optional: scrollbar track color */
     }
     
     &:hover::-webkit-scrollbar-thumb {
-        background: red; /* Optional: scrollbar thumb color */
+        background: var(--color-background-brand); //* Optional: scrollbar thumb color */
+        border-radius: var(--space-4);
     }
 }
 

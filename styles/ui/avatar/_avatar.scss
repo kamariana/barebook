@@ -1,6 +1,6 @@
 // Block
 .cp-avatar {
-    @include dp-center-inline;
+    @include dp-center;
     @include box-size(--space-44);
     overflow: hidden;
 }

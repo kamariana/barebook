@@ -1,0 +1,142 @@
+// Block
+.cp-form {
+    @include owl(--space-24);
+
+    // & {} explicitly scope them to the current selector
+    & {
+        
+    }
+}
+
+
+
+
+// variants
+.cp-form__group--action {
+    margin-block-start: var(--space-40);
+}
+
+
+
+  
+// Elements
+.cp-form__groups {
+    @include owl(--space-24);
+}
+
+.cp-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-form__fieldset {
+    display: flex;
+    //gap: var(--size-tiny);
+    flex-direction: column;
+}
+
+.cp-form__label {
+    align-self: start;
+}
+
+.cp-form__field {}
+
+.cp-form__legend {
+    + .cp-form-checkable  {
+        margin-block-start: var(--space-8);
+    }
+}
+
+.cp-form__hint {
+    @include font-size-label-mobile;
+    display: block;
+    color: var(--color-text-subtlest);
+    margin-block-end: var(--space-8);
+}
+
+.cp-form__error-text {
+    @include font-size-label-mobile;
+    display: block;
+    margin: 0;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-danger);
+    margin-block-start: var(--space-8);
+}
+
+  
+  
+  
+  // Modifiers
+//   .cp-form__groups  {
+//     &--grid { 
+//       @include owl(--size-zero);
+//       @include dp-flex-wrap-gap(--size-base);
+//       row-gap: var(--size-medium);
+//       align-items: center;
+//     }
+  
+//     &--compacted {
+//       @include owl(--size-zero);
+//       display: flex;
+//       gap: var(--size-tiny);
+//     }
+//   }
+  
+
+  
+//     &--fieldset {
+      
+//     }
+  
+//     &--drop-zone {
+//       @include owl(--size-medium);
+//       position: relative;
+//       justify-content: center;
+//       align-items: center;
+//       text-align: center;
+//       padding-block: var(--size-extra-small);
+//       padding-inline: var(--size-base);
+//       border: 2.5px dashed var(--stroke-darkest);
+//       border-radius: var(--rounded-small);
+//       cursor: pointer;
+//       touch-action: manipulation;
+  
+//       .cp-form__field {
+//         @include pos-zero-all-sides;
+//         @include pos-abs-object-forward;
+//         opacity: 0;
+//       }
+//     }
+//   }
+  
+  
+  
+//   .cp-form__field {
+//     &--error {
+//       border-color: var(--error);
+//     }
+//   }
+  
+
+
+
+// MQs
+@include respond-to('desktop-medium') {
+    .cp-form__hint {
+        @include font-size-label-desktop;
+    }
+    
+    .cp-form__error-text {
+        @include font-size-label-desktop;
+    }
+    
+}
+
+
+
+
+
+
+
+// Other Variants or UIs
+@import './checkable';

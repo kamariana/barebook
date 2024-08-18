@@ -1,15 +1,20 @@
 blockquote {
   @include owl(--size-tiny);
-  border-inline-start: 4px solid var(--interactive-extra-lighter);
-  font-family: var(--typeface-secondary);
-  font-size: var(--typescale-small);
-  line-height: var(--leading-medium);
-  margin-block: var(--size-small);
-  padding-block: var(--size-extra-small);
-  padding-inline: var(--size-tiny);
-  border-radius: var(--rounded-small);
-  font-weight: 500;
-  background-color: var(--interactive-extra-lightest);
+
+  // & {} explicitly scope them to the current selector
+  & {
+    border-inline-start: 4px solid var(--interactive-extra-lighter);
+    font-family: var(--typeface-secondary);
+    font-size: var(--typescale-small);
+    line-height: var(--leading-medium);
+    margin-block: var(--size-small);
+    padding-block: var(--size-extra-small);
+    padding-inline: var(--size-tiny);
+    border-radius: var(--rounded-small);
+    font-weight: 500;
+    background-color: var(--interactive-extra-lightest);
+  }
+  
 
   > p {
     margin-block-start: 0;

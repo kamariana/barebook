@@ -1,7 +1,13 @@
 .cp-button--icon-only {
     @include box-size(--space-44);
-    @include dp-center-inline;
-    border-radius: 100%;
+    @include dp-center;
+
+    padding: 0;
+
+    .cp-button__icon {
+        border: 0;
+        border-radius: 0;
+    }
 
     svg {
         @include box-size(--space-20);
@@ -12,10 +18,12 @@
     }
 
     &:active {
-        background-color: var(--color-background-neutral-pressed);
+        background-color: var(--color-background-neutral-hovered);
     }
 
     &:focus {
         background-color: var(--color-background-neutral-pressed);
+        box-shadow: 0 0 0 2px var(--color-background-neutral-pressed);
+        outline: none;
     }
 }

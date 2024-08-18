@@ -1,0 +1,21 @@
+// Block
+.cp-search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  inline-size: var(--contain-extra-tiny);
+  
+  .cp-search-input__icon {
+    @include pos-rel-object-forward;
+    left: var(--size-tiny-1);
+  }
+
+  .cp-search-input__field {
+    position: absolute;
+    inline-size: 100%;
+    block-size: var(--size-medium);
+    padding-inline-start: var(--size-medium);
+    border-radius: var(--rounded-extra-large);
+    border-color: var(--stroke-dark);
+  }
+}

@@ -1,17 +1,37 @@
 .cp-button {
-  position: relative;
+  @include reset-button;
   display: inline-flex;
-  background-color: transparent;
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
-  user-select: none;
-  white-space: nowrap;
-  touch-action: manipulation;
-  overflow: hidden;
-
-  border: 1px solid transparent;
-  letter-spacing: 0.03ch;
+  align-items: center;
+  gap: var(--space-16);
+  block-size: var(--space-44);
+  line-height: var(--line-height-1-15);
+  padding-inline: var(--space-16);
+  border: 2px solid transparent;
 }
 
+
+
+
+// Variants
+.cp-button--rounded {
+  border-radius: var(--space-62, 0.25rem);
+}
+
+
+// Sizes
+.cp-button--small {
+  block-size: var(--space-32);
+  @include font-size-label-mobile;
+
+  svg {
+    @include box-size(--space-20);
+  }
+}
+
+
+
+
+
+// Other Variants or UIs
+@import './buttons';
 @import './button-icon-only';

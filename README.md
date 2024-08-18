@@ -24,6 +24,20 @@ You can download barebook, copy the `sass` directroy to your project and follow 
 
 This method is not recommended (but that is what is available for now) because you lose the ability to easily and quickly manage and update barebook as a dependency. This will change soon for the above one.
 
+
+
+## Project Organization
+
+In the `styles` folder, there are four folders and one file respectively: `core`, `lib`, `module`, `ui`, and `main.scss`
+
+- **core**: This folder contains the core (well-structured foundation) barebook styles which the **UIs** and the **modules**  styles are build on top of.
+-  **lib**: This folder contains the shared the settings files such as: tokes, functions, and, mixins
+-  **ui**: This folder contain specific parts of the user interface (UI) styles with  cosmetics such as cards, cover, hero etc.
+-  **module**: This folder contains high-specificity, very explicit re-usable classes -- aka modules. They override all other styles.
+-  **main.scss**: This folder contains all the partials from the three main folders (`lib`, `module`, `ui`)
+
+
+
 ## Getting Started
 
 Once you got the `sass` directory into your project, there are a handful of things we need to know and do before we're ready to move on.
