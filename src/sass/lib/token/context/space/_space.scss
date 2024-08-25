@@ -1,0 +1,35 @@
+@mixin space {
+    --space-0: 0;
+
+    --space-4: #{$size-4};
+    --space-8: #{$size-8};
+    --space-11: #{$size-11};
+    --space-12: #{$size-12};
+    --space-13: #{$size-13};
+    --space-14: #{$size-14};
+    --space-15: #{$size-15};
+    --space-16: #{$size-16};
+    --space-20: #{$size-20};
+    --space-22: #{$size-22};
+    --space-24: #{$size-24};
+    --space-32: #{$size-32};
+    --space-40: #{$size-40};
+    --space-44: #{$size-44};
+    --space-49: #{$size-49};
+    --space-62: #{$size-62};
+    --space-72: #{$size-72};
+    --space-88: #{$size-88};
+    --space-96: #{$size-96};
+    --space-144: #{$size-144};
+    --space-184: #{$size-184};
+    --space-280: #{$size-280};
+
+    --space-320: #{$size-320};
+    --space-375: #{$size-375};
+    --space-425: #{$size-425};
+    --space-768: #{$size-768};
+    --space-1024: #{$size-1024};
+    --space-1440: #{$size-1440};
+    --space-1600: #{$size-1600};
+    --space-1920: #{$size-1920};
+}

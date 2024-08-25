@@ -1,0 +1,10 @@
+p {
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  + a,
+  + button {
+    margin-block-start: var(--space-12);
+  }
+}

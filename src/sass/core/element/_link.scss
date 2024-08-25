@@ -1,0 +1,19 @@
+a {
+  background-color: transparent;
+  color: var(--color-text-link);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-text-link-hovered);   
+  }
+
+  &:active {
+    text-decoration: none;
+    color: var(--color-text-link-hovered);   
+  }
+
+  &:focus {
+    color: var(--color-text-link-pressed);
+  }
+}

@@ -1,18 +1,14 @@
-# JEKYLL
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# VSCODE
+.vscode
+
 
 *.css.map
 *.sass.map
 *.scss.map
-main.css
 
 # NODE
-package.json
 package-lock.json
+node_modules
 
 # Logs
 logs

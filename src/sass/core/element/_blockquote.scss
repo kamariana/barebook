@@ -1,0 +1,36 @@
+blockquote {
+  @include owl(--space-16);
+
+  // & {} explicitly scope them to the current selector
+  & {
+    @include font-size-body-large-mobile;
+    border-inline-start: 4px solid var(--color-border-brand);
+    font-family: var(--font-family-secondary);
+    
+    margin-block: var(--space-44);
+    padding: var(--space-16);
+    border-radius: var(--shape-medium);
+
+    font-weight: var(--font-weight-medium);
+  }
+  
+
+  > p {
+    margin-block-start: 0;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+
+// MQs
+@include respond-to('desktop-medium') {
+    blockquote {
+      @include font-size-body-large-desktop;
+      margin-block: var(--space-49);
+      padding-inline: var(--space-32);
+  }
+}
+

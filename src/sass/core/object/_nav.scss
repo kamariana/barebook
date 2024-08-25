@@ -1,0 +1,6 @@
+.ob-nav {
+    a {
+        @include reset-link;
+        display: block;
+    }
+}

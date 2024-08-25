@@ -1,0 +1,36 @@
+pre {
+  border-radius: var(--shape-medium);
+  white-space: pre-wrap;
+
+  background-color: var(--color-background-neutral-pressed);
+  overflow-x: auto;
+
+  margin-block: var(--space-44);
+
+  code {
+    background-color: transparent;
+    border-radius: var(--shape-none);
+    display: block;
+    padding-inline: var(--space-16);
+    padding-block: var(--space-24);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+
+
+
+
+@include respond-to('desktop-medium') {
+  pre {
+    code {
+      padding: var(--space-32);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Fit media (img,video,picture) into its parent box
+@mixin fit-media-into-container {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Overlay on media (picture, video)
+@mixin overlay-on-media {
+  @include full-inset-zero-all-sides;
+  &::after {
+    @include pos-abs;
+    @include pseudo-class;
+    @include full-inset-zero-all-sides;
+    background-color: var(--color-background-neutral-pressed); 
+  }
+}

@@ -1,0 +1,25 @@
+figure {
+  margin-block: var(--space-44);
+  
+  small {
+    @include font-size-label-mobile;
+    display: block;
+    color: var(--color-text-subtlest);
+    text-transform: uppercase;
+  }
+}
+
+figcaption {
+  @include font-size-label-mobile;
+  font-style: italic;
+}
+
+
+
+// MQs
+@include respond-to('desktop-medium') {
+  figcaption {
+    @include font-size-label-desktop;
+    
+  }
+}

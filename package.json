@@ -1,0 +1,14 @@
+{
+  "name": "barebook",
+  "version": "1.0.0",
+  "description": "Barebook is an open mini design system with a strong focus on maintainability, scalability, and performance.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass src/sass/main.scss dist/css/main.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}

@@ -1,0 +1,63 @@
+// Positions
+@mixin pos-rel {
+  position: relative;
+}
+  
+  @mixin pos-abs {
+    position: absolute;
+  }
+  
+  @mixin pos-rel-overflow-hidden {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @mixin pos-rel-object-forward {
+    position: relative;
+    z-index: var(--layer-forward);
+  }
+  
+  @mixin pos-rel-object-backward {
+    position: relative;
+    z-index: var(--layer-back);
+  }
+  
+  @mixin pos-abs-object-forward {
+    position: absolute;
+    z-index: var(--layer-forward);
+  }
+  
+  @mixin pos-abs-object-backward {
+    position: absolute;
+    z-index: var(--layer-back);
+  }
+  
+  @mixin full-inset-zero-all-sides {
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+  
+  @mixin inset-zero-all-sides {
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+  }
+  
+  @mixin pos-sticky-zero-start {
+    position: sticky;
+    z-index: var(--layer-front);
+    inset-block-start: 0;
+    inline-size: 100%;
+  }
+  
+  @mixin pos-fixed-zero-start {
+    position: fixed;
+    z-index: var(--layer-front);
+    inset-block-start: 0;
+    inline-size: 100%;
+  }

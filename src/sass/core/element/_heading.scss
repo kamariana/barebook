@@ -1,0 +1,72 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-body);
+  color: var(--color-text);
+  margin-block-start: var(--space-40);
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  + * {
+    margin-block-start: var(--space-24);
+  }
+
+  + p {
+    margin-block-start: var(--space-12);
+  }
+}
+
+
+h1 {
+  @include font-size-headline-large-mobile;
+}
+
+h2 {
+  @include font-size-headline-medium-mobile;
+}
+
+h3 {
+  @include font-size-headline-small-mobile;
+}
+
+h4 {
+  @include font-size-title-large-mobile;
+}
+
+h5,
+h6 {
+  @include font-size-title-medium-mobile;
+}
+
+
+
+
+
+
+@include respond-to('desktop-medium') {
+  h1 {
+    @include font-size-headline-large-desktop;
+  }
+
+  h2 {
+    @include font-size-headline-medium-desktop
+  }
+
+  h3 {
+    @include font-size-headline-small-desktop;
+  }
+
+  h4 {
+    @include font-size-title-large-desktop;
+  }
+  
+  h5,
+  h6 {
+    @include font-size-title-medium-desktop;
+  }
+}

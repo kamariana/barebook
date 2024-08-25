@@ -1,0 +1,136 @@
+  // Neutrals -Use for default text and secondary UI elements, such as secondary buttons or navigation elements.
+  
+  // Solid
+  $neutral-0:  #FFFFFF;
+  $neutral-100: #F7F8F9;
+  $neutral-200: #F1F2F4;
+  $neutral-300: #DCDFE4;
+  $neutral-400: #B3B9C4;
+  $neutral-500: #8590A2;
+  $neutral-600: #758195;
+  $neutral-700: #626F86;
+  $neutral-800: #44546F;
+  $neutral-900: #2C3E5D;
+  $neutral-1000: #172B4D;
+  $neutral-1100: #091E42;
+  $neutral-1200: #091E42;
+  $neutral-1300: #091E42;
+
+  $dark-neutral-0:  #161A1D;
+  $dark-neutral-100: #1D2125;
+  $dark-neutral-200: #22272B;
+  $dark-neutral-300: #38414A;
+  $dark-neutral-400: #454F59;
+  $dark-neutral-500: #596773;
+  $dark-neutral-600: #738496;
+  $dark-neutral-700: #8C9BAB;
+  $dark-neutral-800: #9FADBC;
+  $dark-neutral-900: #B6C2CF;
+  $dark-neutral-1000: #C7D1DB;
+  $dark-neutral-1100: #DEE4EA;
+  $dark-neutral-1200: #DEE4EA;
+  $dark-neutral-1300: #DEE4EA;
+
+
+
+  // Alpha - Alpha colors have varying levels of transparency or opacity.
+  $neutral-100A: #091E4208;
+  $neutral-200A: #091E420F;
+  $neutral-300A: #091E4224;
+  $neutral-400A: #091E424F;
+  $neutral-500A: #091E427D;
+
+  $dark-neutral-100A: #BCD6F00A;
+  $dark-neutral-200A: #A1BDD914;
+  $dark-neutral-300A: #A6C5E229;
+  $dark-neutral-400A: #BFDBF847;
+  $dark-neutral-500A: #9BB4CA80;
+  
+  // transparent
+  $transparent-light: rgba(0, 0, 0, 0.30);
+  $transparent-medium: rgba(0, 0, 0, 0.60);
+  $transparent-dark: rgba(0, 0, 0, 0.80);
+
+
+
+
+  // Accent Colors: Use for colors that don't have any specific meaning tied to them. 
+                // You should be able to exchange one accent color for another, and the experience would remain unchanged.
+
+    // They can be use for:
+        // informative purposes
+        // secondary and tertiary purposes
+
+  // Positive - Use to communicate a favorable outcome, such as a success message.
+  $green-100:     #cef8e0;
+  $green-200:     #adf4ce;
+  $green-300:     #89ecbc;
+  $green-400:     #67dea8;
+  $green-500:     #49cc93;
+  $green-600:     #2fb880;
+  $green-700:     #15a46e; 
+  $green-800:     #008f5d;
+  $green-900:     #007a4d;
+  $green-1000:    #00653e;
+  $green-1100:    #005132;
+  $green-1200:    #053f27;
+  $green-1300:    #0a2e1d;
+
+  // Notice - Use for UI that communicates caution to prevent a mistake or error from occurring.
+  $orange-100:    #ffeccc;
+  $orange-200:    #ffdfad;
+  $orange-300:    #fdd291;
+  $orange-400:    #ffbb63;
+  $orange-500:    #ffa037;
+  $orange-600:    #f68511;
+  $orange-700:    #e46f00;
+  $orange-800:    #cb5d00;
+  $orange-900:    #b14c00;
+  $orange-1000:   #953d00; 
+  $orange-110:    #7a2f00; 
+  $orange-1200:   #612300; 
+  $orange-1300:   #491901; 
+  
+
+  // Informative - Use for informative UI, such as an information icon, or UI that communicates something is in progress.
+  $blue-100:      #e0f2ff;
+  $blue-200:      #cae8ff;
+  $blue-300:      #b5deff;
+  $blue-400:      #96cefd;
+  $blue-500:      #78bbfa;
+  $blue-600:      #59a7f6;
+  $blue-700:      #3892f3;
+  $blue-800:      #147af3;
+  $blue-900:      #0265dc;
+  $blue-1000:     #0054b6;
+  $blue-1100:     #004491;
+  $blue-1200:     #003571;
+  $blue-1300:     #002754;
+
+
+  // Negative - Use for UI that communicates danger or serious error states.
+  $red-50:        #fbe8e6; 
+  $red-75:        #fbe8e6; 
+  $red-100:       #ffebe7;
+  $red-200:       #ffddd6;
+  $red-300:       #ffcdc3;
+  $red-400:       #ffb7a9;
+  $red-500:       #ff9b88;
+  $red-600:       #ff7c65;
+  $red-700:       #f75c46;
+  $red-800:       #ea3829; 
+  $red-900:       #d31510;
+  $red-1000:      #b40000;
+  $red-1100:      #930000;
+  $red-1200:      #740000;
+  $red-1300:      #590000;
+  
+  // Discovery - Use for UI that communicates something new, such as onboarding or new feature information.
+
+  // Yellow
+
+  // Purple
+
+  // Magenta
+
+  // Lime

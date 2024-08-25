@@ -1,0 +1,10 @@
+@mixin shape {
+    --shape-none:           0;
+    --shape-extra-small:    #{$size-4}; // form fields
+    --shape-small:          #{$size-12}; // tool tip, pop ups
+    --shape-medium:         #{$size-16}; // cards
+    --shape-large:          #{$size-24}; // fabs etc
+    --shape-extra-large:    #{$size-4}; // Dialogs
+    --shape-full:           #{$size-96};
+    --shape-circle:         100%;
+}

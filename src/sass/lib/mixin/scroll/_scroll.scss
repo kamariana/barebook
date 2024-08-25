@@ -1,0 +1,19 @@
+@mixin hide-and-show-scrollbar-on-hover {
+    //* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        inline-size: 4px; /* Remove scrollbar space */
+        background: transparent; //* Optional: just in case */
+    }
+
+    /* Show scrollbar on hover */
+    &:hover::-webkit-scrollbar {
+        inline-size: 4px; //* Adjust the inline-size as needed */
+        background: var(--color-background-brand-subtlest); //* Optional: scrollbar track color */
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background: var(--color-background-brand); //* Optional: scrollbar thumb color */
+        border-radius: var(--shape-extra-small);
+    }
+}
+

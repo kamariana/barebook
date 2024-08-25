@@ -1,0 +1,34 @@
+table {  
+    border-collapse: collapse;
+    border-spacing: 0;
+    block-size: 100%;
+
+    margin-block: var(--space-44);
+}
+
+td,
+th {
+  padding: var(--space-12, 0.75rem);
+}
+
+th {
+  text-align: start;
+  font-weight: var(--font-weight-medium);
+}
+
+caption {
+  @include font-size-title-small-mobile;
+  font-weight: var(--font-weight-semibold);
+  text-align: start;
+  padding-block-end: var(--space-16, 1rem);
+}
+
+
+
+
+// MQs
+@include respond-to('desktop-medium') {
+  caption {
+    @include font-size-title-small-desktop;
+  }
+}

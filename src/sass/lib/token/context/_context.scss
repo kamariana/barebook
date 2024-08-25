@@ -1,0 +1,31 @@
+@import './color/color';
+@import './typography/typography';
+@import './space/space';
+@import './z-index/z-index';
+@import './shape/shape';
+
+
+
+:root {
+  @include typography;
+  @include space;
+  @include z-index-layers;
+  @include shape;
+  
+  color-scheme: light dark;  
+}
+  
+  
+// Prefers-color-scheme
+@media (prefers-color-scheme: light) {
+  :root {
+    @include light-theme;
+    //@include light-theme-syntax-highlighting;
+  }
+}
+  
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+  }
+}

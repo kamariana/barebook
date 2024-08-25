@@ -1,0 +1,12 @@
+// Flexbox alignments
+.md-dp-center-inline-apart {
+  @include dp-center-inline-apart;
+}
+
+.md-dp-center-inline {
+  @include dp-center-inline;
+}
+
+.md-dp-center-inline-end {
+  @include dp-center-inline-end;
+}
